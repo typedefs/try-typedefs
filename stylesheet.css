@@ -1,0 +1,26 @@
+.hidden {
+    display: none;
+}
+
+#le-content-container {
+    padding: 0.5em;
+}
+
+#input-tdef, 
+#input-tdef2
+{
+    width: 100%;
+    height: 30%;
+    font-family: monospace;
+}
+
+pre.result {
+    height: 300px;
+    width: 800px;
+    background: #eee;
+    font-family: monospace;
+}
+
+/* .column { */
+/*     /\* padding: 2em; *\/ */
+/* } */

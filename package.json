@@ -1,0 +1,24 @@
+{
+  "name": "typedefs-ide",
+  "version": "1.0.0",
+  "description": "Typedefs IDE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/typedefs/typedefs-ide"
+  },
+  "keywords": [
+    "typedefs",
+    "ide"
+  ],
+  "author": "Erik Post <erik@shinsetsu.nl>",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.7.1",
+    "mathjax": "^2.7.5",
+    "ramda": "^0.25.0"
+  }
+}

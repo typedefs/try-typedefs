@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Typedefs IDE</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css"></style>
+    <link rel="stylesheet" type="text/css" href="node_modules/bulma/css/bulma.min.css"></style>
+  </head>
+  <body>
+
+<nav class="navbar is-dark">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="http://typedefs.com">
+      <!-- <img src="assets/logo-typedefs.png" alt="Typedefs"> -->
+      <!-- <img src="assets/logo-typedefs-dark.png" alt="Typedefs"> -->
+      <!-- &nbsp; -->
+      <!-- &nbsp; -->
+      <h1>Typedefs IDE</h1>
+    </a>
+    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div class="navbar-menu">
+    <div class="navbar-start">
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">
+          Examples
+        </a>
+        <div class="navbar-dropdown is-boxed" id="js-navbar-examples-dropdown">
+          <!-- code should insert examples here -->
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="field is-grouped">
+          <p class="control">
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<!-- <nav class="navbar is-dark" role="navigation" aria-label="main navigation"> -->
+<!--   <div class="navbar-brand"> -->
+<!--     <a class="navbar-item" href="https://bulma.io"> -->
+<!--       <h1>Typedefs IDE</h1> -->
+<!--       <\!-- <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28"> -\-> -->
+<!--     </a> -->
+<!--  -->
+<!--     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"> -->
+<!--       <span aria-hidden="true"></span> -->
+<!--       <span aria-hidden="true"></span> -->
+<!--       <span aria-hidden="true"></span> -->
+<!--     </a> -->
+<!--   </div> -->
+<!-- </nav> -->
+
+<div id="le-content-container">
+    <div class="columns">
+      <div class="column is-half">
+
+        <form
+          class="hidden"
+          >
+          <textarea id="input-tdef" name="input-tdef">
+          </textarea>
+          <br />
+          <input type="submit" value="Compile" class="button is-info" />
+          <br />
+          <div class="content">
+            <section id="examples"></section>
+          </div>
+        </form>
+        <!--  -->
+        <!-- <hr> -->
+
+        Your type definition:
+        <div id="input-tdef2" contentEditable="true" placeholder="Type your type definition here, e.g. (+ 1 (var 0))" autofocus>
+        </div>
+        <br />
+        <button id="compile2" class="button is-info">Compile</button>
+
+      </div>
+      <div class="column">
+        <!-- <div class="content"> -->
+
+          <!-- Mathjax -->
+
+          <!-- <script type="math/tex; mode=display"> -->
+          <!--  -->
+          <!--   F = + \left\{ -->
+          <!--     \begin{array}{ll} -->
+          <!--       \mathrm{nil}  & : 1 \to \\ -->
+          <!--       \mathrm{cons} & : \alpha \times \beta -->
+          <!--     \end{array} -->
+          <!--   \right.\\ -->
+          <!--  -->
+          <!--   List = + \left\{ -->
+          <!--     \begin{array}{ll} -->
+          <!--       \mathrm{nil}  & : 1\\ -->
+          <!--       \mathrm{cons} & : \alpha \times \textrm{List} -->
+          <!--     \end{array} -->
+          <!--   \right.\\ -->
+          <!--  -->
+          <!--   F = 1 + \alpha \times \beta\\ -->
+          <!--   \mathrm{List}_{\alpha} = \mu \beta. 1 + \alpha \times \beta\\ -->
+          <!--   \mathrm{List} = \mu \beta. [\mathrm{nil}, \mathrm{cons}]\\ -->
+          <!--   [\mathrm{zero}, \mathrm{succ}] : 1 + Nat \to Nat -->
+          <!--   % \sum_{n=1}^\infty {1\over n^2} = {\pi^2\over 6} -->
+          <!-- </script> -->
+
+          <!-- Typedef -->
+          <pre id="output-tdef" class="result hidden"></pre>
+          <!-- <br /> -->
+
+          Generated Haskell types
+          <pre id="output-haskell" class="result"></pre>
+        <!-- </div> -->
+      </div>
+    </div>
+</div>
+
+    <script src="node_modules/ramda/dist/ramda.min.js"></script>
+    <script src="main.js"></script>
+    <!-- <script src="typedefs-parser.js"></script> -->
+    <script src="typedefs-parser.alex.js"></script>
+    <script>
+      main();
+    </script>
+    <!-- <script src="node_modules/mathjax/MathJax.js?config=default"></script> -->
+  </body>
+</html>
