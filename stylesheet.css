@@ -12,6 +12,7 @@
     width: 100%;
     height: 30%;
     font-family: monospace;
+    border: 1px solid #ccc;
 }
 
 pre.result {

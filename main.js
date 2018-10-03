@@ -88,6 +88,7 @@ function getSource () {
 
 function setSource (text) {
   document.getElementById("input-tdef").innerHTML = text;
+  document.getElementById("input-tdef2").innerHTML = text;
 }
 
 // currently, this is invoked BY the main function in the Idris JS code!
@@ -98,13 +99,19 @@ function setResult (text, text2) {
   document.getElementById("output-haskell").innerHTML = text;
 }
 
+function copyExample (exampleSourceCode) {
+  console.log('copyExample: exampleSourceCode =', exampleSourceCode)
+  setSource(exampleSourceCode);
+}
+
 function main () {
   var text0 = getIt2()
   console.log('main: text0 =', text0)
   setSource(text0);
 
   // document.getElementById('examples').innerHTML = '<h1>Examples</h1><ul>' + R.compose(R.join('\n'), R.map(ex => '<li><code>' + ex + '</code></li>'))(exampleTerms) + '</ul>'
-  var mkEx = ex => '<a class="navbar-item" href="#"><code>' + ex + '</code></a>'
+  // var mkEx = ex => '<a class="navbar-item" href="#"><code>' + ex + '</code></a>'
+  var mkEx = ex => '<a class="navbar-item" href="#"><code onclick="copyExample(this.innerHTML)">' + ex + '</code></a>'
   var exampleMenuItems = R.compose(R.join('\n'), R.map(mkEx))(exampleTerms)
   document.getElementById('js-navbar-examples-dropdown').innerHTML = exampleMenuItems
 
