@@ -2,8 +2,8 @@ var exampleTerms =
   [ "(name MyVoid 0)"
   , "(name MyUnit 1)"
   , "(name MyVar (var 0))"
-  , "name MySum (+ 1 0))"
-  , "name MyProduct (* 1 1))"
+  , "(name MySum (+ 1 0))"
+  , "(name MyProduct (* 1 1))"
   , "(mu Nat (Zero 1) (Succ (var 0)))" // TODO errr is nat ok like this?
   , "(mu List (Nil 1) (Cons (* (var 1) (var 0))))"
   , "(mu ListNat (NilN 1) (ConsN (* (mu Nat (Z 1) (S (var 0))) (var 0))))" // now if you wanted to generate `data ListNat = NilN | ConsN Nat Nat ListNat` you'll have to copypaste the `nat` mu part
@@ -84,4 +84,7 @@ function main () {
     window.idris_main()
   }
   butCompile.addEventListener('click', onClickButCompile)
+
+  copyExample("(mu ListNat (NilN 1) (ConsN (* (mu Nat (Z 1) (S (var 0))) (var 0))))");
+  window.idris_main()
 }
