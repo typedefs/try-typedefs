@@ -4,7 +4,7 @@
   "description": "Typedefs IDE",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "lite-server -c bs-config.json"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
     "bulma": "^0.7.1",
     "mathjax": "^2.7.5",
     "ramda": "^0.25.0"
+  },
+  "devDependencies": {
+    "lite-server": "^2.4.0"
   }
 }
