@@ -16,11 +16,7 @@
   ],
   "author": "Erik Post <erik@shinsetsu.nl>",
   "license": "ISC",
-  "dependencies": {
-    "bulma": "^0.7.1",
-    "mathjax": "^2.7.5",
-    "ramda": "^0.25.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "lite-server": "^2.4.0"
   }
