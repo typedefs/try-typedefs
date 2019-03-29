@@ -56,8 +56,9 @@ function setSource (text) {
 }
 
 // currently, this is invoked BY the main function in the Idris JS code!
-function setResult (text, text2) {
-  console.log('setResult: text =', text)
+function setResult (text_, text2) {
+  console.log('setResult: text =', text_)
+  let text = (text_ || "").trim()
   document.getElementById("output-haskell").innerHTML = text;
 }
 

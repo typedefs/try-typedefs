@@ -22,6 +22,6 @@ pre.result {
     font-family: monospace;
 }
 
-/* .column { */
-/*     /\* padding: 2em; *\/ */
-/* } */
+pre.result, #input-tdef {
+    padding: 6px;
+}
