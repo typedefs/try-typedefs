@@ -4,6 +4,7 @@
   "description": "Typedefs IDE",
   "main": "index.js",
   "scripts": {
+    "postinstall": "npm run bundle",
     "bundle": "browserify src/typedefs-index.js -o public/typedefs-bundle.js",
     "serve": "lite-server -c bs-config.json"
   },
