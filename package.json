@@ -4,7 +4,9 @@
   "description": "Typedefs IDE",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "npm run bundle",
+    "bundle": "browserify src/typedefs-index.js -o public/typedefs-bundle.js",
+    "serve": "lite-server -c bs-config.json"
   },
   "repository": {
     "type": "git",
@@ -16,9 +18,9 @@
   ],
   "author": "Erik Post <erik@shinsetsu.nl>",
   "license": "ISC",
-  "dependencies": {
-    "bulma": "^0.7.1",
-    "mathjax": "^2.7.5",
-    "ramda": "^0.25.0"
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "lite-server": "^2.4.0"
   }
 }

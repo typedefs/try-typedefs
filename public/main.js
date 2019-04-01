@@ -1,14 +1,25 @@
+// We assume the global 'window.Typedefs' is the Typedefs library.
+
 var exampleTerms =
   [ "(name MyVoid 0)"
   , "(name MyUnit 1)"
-  , "(name MyVar (var 0))"
-  , "name MySum (+ 1 0))"
-  , "name MyProduct (* 1 1))"
-  , "(mu Nat (Zero 1) (Succ (var 0)))" // TODO errr is nat ok like this?
-  , "(mu List (Nil 1) (Cons (* (var 1) (var 0))))"
-  , "(mu ListNat (NilN 1) (ConsN (* (mu Nat (Z 1) (S (var 0))) (var 0))))" // now if you wanted to generate `data ListNat = NilN | ConsN Nat Nat ListNat` you'll have to copypaste the `nat` mu part
+  , "; a type variable, indicated by 'var', is represented by its De Bruijn-index" + "\n" +
+    "(name MyVar (var 0))" + "\n"
+  , "(name MySum (+ 1 0))"
+  , "(name MyProduct (* 1 1))"
+
+  , "(name Nat (mu (Zero 1) (Succ (var 0))))"
+  , "(name List (mu (Nil 1) (Cons (* (var 1) (var 0)))))"
+  , "(name ListNat (mu (NilN 1) (ConsN (* (mu Nat (Z 1) (S (var 0))) (var 0)))))" // now if you wanted to generate `data ListNat = NilN | ConsN Nat Nat ListNat` you'd have to copy/paste the `nat` mu part
   , "(name Maybe (+ 1 (var 0)))"
-  , "(mu   Maybe (Nil 1) (Just (var 1)))"
+  , "(name Maybe (mu (Nil 1) (Just (var 1))))"
+
+  , "(name LeBool (mu (LeFalse 1) (LeTrue 1)))"
+  , "; 'name' allows for let-binding and aliasing" + "\n" +
+    "(name either      (+ (var 0) (var 1)))" + "\n" +
+    "(name bit         (+ 1 1))" + "\n" +
+    "(name nibble      (* bit bit bit bit))" + "\n" +
+    "(name bitOrNibble (either bit nibble))" + "\n"
   ];
 
 // not used atm
@@ -39,14 +50,7 @@ function getSourceTextFromUrlBar () {
 
 function getSourceTextFromInput () {
   var inputElem = document.getElementById('input-tdef2')
-  var text = inputElem.innerHTML
-  return text
-}
-
-// currently, this is invoked BY the main function in the Idris JS code!
-function getSource () {
-  var text = getSourceTextFromInput()
-  console.log('getSource: text =', text)
+  var text = inputElem.value
   return text
 }
 
@@ -55,9 +59,9 @@ function setSource (text) {
   document.getElementById("input-tdef2").innerHTML = text;
 }
 
-// currently, this is invoked BY the main function in the Idris JS code!
-function setResult (text, text2) {
-  console.log('setResult: text =', text)
+function setResult (text_, text2) {
+  console.log('setResult: text =', text_)
+  let text = (text_ || "").trim()
   document.getElementById("output-haskell").innerHTML = text;
 }
 
@@ -66,11 +70,16 @@ function copyExample (exampleSourceCode) {
   setSource(exampleSourceCode);
 }
 
+function Idris_foldMaybe (onNothing, onJust, m) {
+  return m['type'] == 0 ? onNothing() : onJust(m['$1'])
+}
+
 function main () {
   var text = getSourceTextFromInput()
   console.log('main: text =', text)
   setSource(text);
 
+  // TODO replace \n by <br> when rendering an example
   var mkEx = ex => '<a class="navbar-item" href="#"><code onclick="copyExample(this.innerHTML)">' + ex + '</code></a>'
   var exampleMenuItems = R.compose(R.join('\n'), R.map(mkEx))(exampleTerms)
   document.getElementById('js-navbar-examples-dropdown').innerHTML = exampleMenuItems
@@ -78,10 +87,25 @@ function main () {
   var inputElem = document.getElementById('input-tdef2')
   inputElem.focus()
   var butCompile = document.getElementById('compile2')
-  function onClickButCompile (e) {
+  function doCompile () {
+
+    var targetLang = document.querySelector('input[data-target-lang]:checked').dataset['targetLang'] || 'json'
+
+    console.log('targetLang =', targetLang)
+
     var text = getSourceTextFromInput()
     console.log('butCompile clicked: text:', text)
-    window.idris_main()
+    var astMaybe = Typedefs.parseType(text)
+    console.log('astMaybe =', astMaybe)
+    var target = Idris_foldMaybe( ()  => 'Parse error.'
+                                , ast => Typedefs.generateCode(targetLang, ast)
+                                , astMaybe
+                                )
+    setResult(target)
   }
-  butCompile.addEventListener('click', onClickButCompile)
+  butCompile.addEventListener('click', doCompile)
+
+  // TODO examples should be a dictionary, so we can copy by key
+  copyExample("(name LeBool (mu (LeFalse 1) (LeTrue 1)))")
+  doCompile()
 }
