@@ -15,6 +15,10 @@
     border: 1px solid #ccc;
 }
 
+textarea#input-tdef2 {
+    height: 20em;
+}
+
 pre.result {
     height: 300px;
     width: 800px;
@@ -24,4 +28,8 @@ pre.result {
 
 pre.result, #input-tdef {
     padding: 6px;
+}
+
+code {
+    color: #444;
 }

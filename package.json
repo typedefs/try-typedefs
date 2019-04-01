@@ -4,6 +4,7 @@
   "description": "Typedefs IDE",
   "main": "index.js",
   "scripts": {
+    "bundle": "browserify src/typedefs-index.js -o public/typedefs-bundle.js",
     "serve": "lite-server -c bs-config.json"
   },
   "repository": {
@@ -18,6 +19,7 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "browserify": "^16.2.3",
     "lite-server": "^2.4.0"
   }
 }
