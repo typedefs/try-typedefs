@@ -4,7 +4,7 @@ This is a small interactive development environment for playing with [Typedefs](
 
 ## Build
 
-Use `npm install` to download the necessary dependencies and then open `index.html` to start the IDE.
+Type `npm install` to download the necessary dependencies, then do `npm run serve` to start the IDE.
 
 ## Examples
 
