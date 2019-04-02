@@ -10,7 +10,14 @@ var exampleTerms =
 
   , "(name Nat (mu (Zero 1) (Succ (var 0))))"
   , "(name List (mu (Nil 1) (Cons (* (var 1) (var 0)))))"
-  , "(name ListNat (mu (NilN 1) (ConsN (* (mu Nat (Z 1) (S (var 0))) (var 0)))))" // now if you wanted to generate `data ListNat = NilN | ConsN Nat Nat ListNat` you'd have to copy/paste the `nat` mu part
+  , "; for List of Nat, we need type application (TODO)" + "\n" +
+    "(name Nat (mu (Zero 1)" + "\n" +
+    "              (Succ (var 0))))" + "\n" +
+    "" + "\n" +
+    "(name List (mu (Nil 1)" + "\n" +
+    "               (Cons (* (var 1) (var 0)))))" + "\n"
+
+  , "(name ListNat (mu (NilN 1) (ConsN (* (mu (Z 1) (S (var 1))) (var 0)))))" // now if you wanted to generate `data ListNat = NilN | ConsN Nat Nat ListNat` you'd have to copy/paste the `nat` mu part
   , "(name Maybe (+ 1 (var 0)))"
   , "(name Maybe (mu (Nil 1) (Just (var 1))))"
 
@@ -55,7 +62,6 @@ function getSourceTextFromInput () {
 }
 
 function setSource (text) {
-  document.getElementById("input-tdef").innerHTML = text;
   document.getElementById("input-tdef2").innerHTML = text;
 }
 
