@@ -108,7 +108,9 @@ function doCompile () {
   var astMaybe = Typedefs.parseType(text)
   console.log('astMaybe =', astMaybe)
   var target = Idris_foldMaybe( ()  => 'Parse error.'
-                              , ast => Typedefs.generateCode(targetLang, ast)
+                              , ast => R.tryCatch( () => Typedefs.generateCode(targetLang, ast)
+                                                 , e  => 'Compilation error: ' + e
+                                                 )()
                               , astMaybe
                               )
   setResult(target)
