@@ -92,6 +92,28 @@ function copyExample (exampleSourceCode) {
   setSource(exampleSourceCode);
 }
 
+function getTargetLang () {
+  return document.querySelector('input[data-target-lang]:checked')
+                 .dataset['targetLang'] || 'json'
+}
+
+function doCompile () {
+  var targetLang = getTargetLang()
+  console.log('targetLang =', targetLang)
+
+  var textWithComments = getSourceTextFromInput()
+  console.log('doCompile: textWithComments:\n', textWithComments)
+  var text = stripComments(textWithComments)
+  console.log('doCompile: text:\n', text)
+  var astMaybe = Typedefs.parseType(text)
+  console.log('astMaybe =', astMaybe)
+  var target = Idris_foldMaybe( ()  => 'Parse error.'
+                              , ast => Typedefs.generateCode(targetLang, ast)
+                              , astMaybe
+                              )
+  setResult(target)
+}
+
 function Idris_foldMaybe (onNothing, onJust, m) {
   return m['type'] == 0 ? onNothing() : onJust(m['$1'])
 }
@@ -119,28 +141,11 @@ function main () {
 
   var inputElem = document.getElementById('input-tdef2')
   inputElem.focus()
+
   var butCompile = document.getElementById('compile2')
-  function doCompile () {
-
-    var targetLang = document.querySelector('input[data-target-lang]:checked').dataset['targetLang'] || 'json'
-
-    console.log('targetLang =', targetLang)
-
-    var textWithComments = getSourceTextFromInput()
-    console.log('doCompile: textWithComments:\n', textWithComments)
-    var text = stripComments(textWithComments)
-    console.log('doCompile: text:\n', text)
-    var astMaybe = Typedefs.parseType(text)
-    console.log('astMaybe =', astMaybe)
-    var target = Idris_foldMaybe( ()  => 'Parse error.'
-                                , ast => Typedefs.generateCode(targetLang, ast)
-                                , astMaybe
-                                )
-    setResult(target)
-  }
   butCompile.addEventListener('click', doCompile)
 
   // TODO examples should be a dictionary, so we can copy by key
-  copyExample("(name LeBool (mu (LeFalse 1) (LeTrue 1)))")
+  copyExample(exampleTerms[0])
   doCompile()
 }
