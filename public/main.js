@@ -1,7 +1,7 @@
 // We assume the global 'window.Typedefs' is the Typedefs library.
 
 var exampleTerms =
-  [ "; Bool is a sum of unit types." + "\n" +
+  [ "; Booleans correspond to a sum of unit types." + "\n" +
     "(name Bool (+ 1 1))"
 
   , "; The Maybe or Option data type is formed as a sum of Unit and a type variable." + "\n" +
