@@ -16,7 +16,7 @@ var exampleTerms =
     "(name Maybe (mu (Nothing 1)" + "\n" +
     "                (Just (var 1))))" + "\n"
 
-  , "; Basic data types like Bit and Byte are define from scratch." + "\n" +
+  , "; Basic data types like Bit and Byte are defined from scratch." + "\n" +
     "(name Either      (+ (var 0) (var 1)))" + "\n" +
     "(name Bit         (+ 1 1))" + "\n" +
     "(name Byte        (* Bit Bit Bit Bit Bit Bit Bit Bit))" + "\n" +
