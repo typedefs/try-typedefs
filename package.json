@@ -18,7 +18,9 @@
   ],
   "author": "Erik Post <erik@shinsetsu.nl>",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "typedefs": "0.0.3"
+  },
   "devDependencies": {
     "browserify": "^16.2.3",
     "lite-server": "^2.4.0"
