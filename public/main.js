@@ -105,19 +105,11 @@ function doCompile () {
   console.log('doCompile: textWithComments:\n', textWithComments)
   var text = stripComments(textWithComments)
   console.log('doCompile: text:\n', text)
-  var astMaybe = Typedefs.parseType(text)
-  console.log('astMaybe =', astMaybe)
-  var target = Idris_foldMaybe( ()  => 'Parse error.'
-                              , ast => R.tryCatch( () => Typedefs.generateCode(targetLang, ast)
-                                                 , e  => 'Compilation error: ' + e
-                                                 )()
-                              , astMaybe
-                              )
-  setResult(target)
-}
-
-function Idris_foldMaybe (onNothing, onJust, m) {
-  return m['type'] == 0 ? onNothing() : onJust(m['$1'])
+  // $1 exploits the fact that Either values are always placed in $1 and in this case both 
+  // branches of the Either return strings
+  var generated = Typedefs.generateTermSerializers(targetLang, text).$1
+  console.log('generated =', generated)
+  setResult(generated)
 }
 
 function exampleHtml (ex) {

@@ -27,9 +27,7 @@ const $JSRTS = {
     }
 };
 $JSRTS.os = require('os');
-
 $JSRTS.fs = require('fs');
-
 $JSRTS.prim_systemInfo = function (index) {
     switch (index) {
         case 0:
@@ -39,9 +37,7 @@ $JSRTS.prim_systemInfo = function (index) {
     }
     return "";
 };
-
-$JSRTS.prim_writeStr = function (x) { return process.stdout.write(x) };
-
+$JSRTS.prim_writeStr = function (x) { return process.stdout.write(x) }
 $JSRTS.prim_readStr = function () {
     var ret = '';
     var b = new Buffer(1024);
@@ -60,11 +56,6 @@ $JSRTS.prim_readStr = function () {
         }
     }
     return ret;
-};
-
-$JSRTS.die = function (message) {
-    console.error(message);
-    process.exit(-1);
 };
 $JSRTS.jsbn = (function () {
 
@@ -1442,6 +1433,12 @@ function $partial_0_1$prim_95__95_toStrBigInt(){
     });
 }
 
+function $partial_0_1$prim_95__95_toStrInt(){
+    return (function(x1){
+        return prim_95__95_toStrInt(x1);
+    });
+}
+
 function $partial_5_10$TParsec__Combinators__alt(x1, x2, x3, x4, x5){
     return (function(x6){
         return (function(x7){
@@ -1518,15 +1515,49 @@ function $partial_5_8$TParsec__Combinators__anyTok(x1, x2, x3, x4, x5){
     });
 }
 
+function $partial_7_8$TParsec__Combinators__anyTokenBut(x1, x2, x3, x4, x5, x6, x7){
+    return (function(x8){
+        return TParsec__Combinators__anyTokenBut(x1, x2, x3, x4, x5, x6, x7, x8);
+    });
+}
+
+function $partial_8_11$TParsec__Types__commit(x1, x2, x3, x4, x5, x6, x7, x8){
+    return (function(x9){
+        return (function(x10){
+            return (function(x11){
+                return TParsec__Types__commit(x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11);
+            });
+        });
+    });
+}
+
+function $partial_10_11$TParsec__Types__commit(x1, x2, x3, x4, x5, x6, x7, x8, x9, x10){
+    return (function(x11){
+        return TParsec__Types__commit(x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11);
+    });
+}
+
+function $partial_6_7$TParsec__Types__commitT(x1, x2, x3, x4, x5, x6){
+    return (function(x7){
+        return TParsec__Types__commitT(x1, x2, x3, x4, x5, x6, x7);
+    });
+}
+
+function $partial_2_3$Backend__Haskell__encoderDecoderTerm(x1, x2){
+    return (function(x3){
+        return Backend__Haskell__encoderDecoderTerm(x1, x2, x3);
+    });
+}
+
 function $partial_7_8$TParsec__Combinators__exact(x1, x2, x3, x4, x5, x6, x7){
     return (function(x8){
         return TParsec__Combinators__exact(x1, x2, x3, x4, x5, x6, x7, x8);
     });
 }
 
-function $partial_7_8$ParserUtils__except(x1, x2, x3, x4, x5, x6, x7){
-    return (function(x8){
-        return ParserUtils__except(x1, x2, x3, x4, x5, x6, x7, x8);
+function $partial_3_4$TParsec__Result__fromMaybe(x1, x2, x3){
+    return (function(x4){
+        return TParsec__Result__fromMaybe(x1, x2, x3, x4);
     });
 }
 
@@ -1543,6 +1574,18 @@ function $partial_9_12$TParsec__Combinators__guardM(x1, x2, x3, x4, x5, x6, x7, 
 function $partial_0_1$Backend__Haskell__guardParen(){
     return (function(x1){
         return Backend__Haskell__guardParen(x1);
+    });
+}
+
+function $partial_0_1$Backend__Haskell__guardParenTerm(){
+    return (function(x1){
+        return Backend__Haskell__guardParenTerm(x1);
+    });
+}
+
+function $partial_1_2$Prelude__List__head_39_(x1){
+    return (function(x2){
+        return Prelude__List__head_39_(x1, x2);
     });
 }
 
@@ -1620,15 +1663,15 @@ function $partial_8_11$TParsec__Combinators__map(x1, x2, x3, x4, x5, x6, x7, x8)
     });
 }
 
-function $partial_10_11$TParsec__Combinators__map(x1, x2, x3, x4, x5, x6, x7, x8, x9, x10){
-    return (function(x11){
-        return TParsec__Combinators__map(x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11);
+function $partial_3_4$Prelude__List__mapMaybe(x1, x2, x3){
+    return (function(x4){
+        return Prelude__List__mapMaybe(x1, x2, x3, x4);
     });
 }
 
-function $partial_0_1$Parse__parseTNamed(){
-    return (function(x1){
-        return Parse__parseTNamed(x1);
+function $partial_4_5$TParsec__Types__recordChar(x1, x2, x3, x4){
+    return (function(x5){
+        return TParsec__Types__recordChar(x1, x2, x3, x4, x5);
     });
 }
 
@@ -1659,6 +1702,18 @@ function $partial_0_1$Backend__ReasonML__renderType(){
 function $partial_1_2$Typedefs__shiftVars(x1){
     return (function(x2){
         return Typedefs__shiftVars(x1, x2);
+    });
+}
+
+function $partial_0_1$Backend__Haskell__simplify(){
+    return (function(x1){
+        return Backend__Haskell__simplify(x1);
+    });
+}
+
+function $partial_2_3$Backend__Haskell__substHS(x1, x2){
+    return (function(x3){
+        return Backend__Haskell__substHS(x1, x2, x3);
     });
 }
 
@@ -1776,1115 +1831,1695 @@ function $partial_2_4$TParsec__Combinators___123_anyTok_95_14_125_(x1, x2){
     });
 }
 
-function $partial_2_3$Typedefs___123_ap_95_15_125_(x1, x2){
+function $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(){
+    return (function(x1){
+        return TParsec__Combinators___123_anyTokenBut_95_15_125_(x1);
+    });
+}
+
+function $partial_2_3$TParsec__Combinators___123_anyTokenBut_95_16_125_(x1, x2){
     return (function(x3){
-        return Typedefs___123_ap_95_15_125_(x1, x2, x3);
+        return TParsec__Combinators___123_anyTokenBut_95_16_125_(x1, x2, x3);
     });
 }
 
-function $partial_2_3$Typedefs___123_ap_95_16_125_(x1, x2){
+function $partial_2_3$Typedefs___123_ap_95_17_125_(x1, x2){
     return (function(x3){
-        return Typedefs___123_ap_95_16_125_(x1, x2, x3);
+        return Typedefs___123_ap_95_17_125_(x1, x2, x3);
     });
 }
 
-function $partial_0_2$Typedefs___123_apN_95_19_125_(){
-    return (function(x1){
-        return (function(x2){
-            return Typedefs___123_apN_95_19_125_(x1, x2);
-        });
-    });
-}
-
-function $partial_0_1$Typedefs___123_apN_95_20_125_(){
-    return (function(x1){
-        return Typedefs___123_apN_95_20_125_(x1);
-    });
-}
-
-function $partial_0_2$Prelude__Bits___123_b16ToHexString_95_23_125_(){
-    return (function(x1){
-        return (function(x2){
-            return Prelude__Bits___123_b16ToHexString_95_23_125_(x1, x2);
-        });
-    });
-}
-
-function $partial_0_1$Data__NEList___123_consopt_95_24_125_(){
-    return (function(x1){
-        return Data__NEList___123_consopt_95_24_125_(x1);
-    });
-}
-
-function $partial_1_2$TParsec__Combinators__Numbers___123_decimalDigit_95_25_125_(x1){
-    return (function(x2){
-        return TParsec__Combinators__Numbers___123_decimalDigit_95_25_125_(x1, x2);
-    });
-}
-
-function $partial_6_7$TParsec__Combinators__Numbers___123_decimalDigit_95_26_125_(x1, x2, x3, x4, x5, x6){
-    return (function(x7){
-        return TParsec__Combinators__Numbers___123_decimalDigit_95_26_125_(x1, x2, x3, x4, x5, x6, x7);
-    });
-}
-
-function $partial_0_2$TParsec__Combinators__Numbers___123_decimalNat_95_27_125_(){
-    return (function(x1){
-        return (function(x2){
-            return TParsec__Combinators__Numbers___123_decimalNat_95_27_125_(x1, x2);
-        });
-    });
-}
-
-function $partial_0_1$TParsec__Combinators__Numbers___123_decimalNat_95_28_125_(){
-    return (function(x1){
-        return TParsec__Combinators__Numbers___123_decimalNat_95_28_125_(x1);
-    });
-}
-
-function $partial_0_2$Backend__JSON___123_disjointSubSchema_95_29_125_(){
-    return (function(x1){
-        return (function(x2){
-            return Backend__JSON___123_disjointSubSchema_95_29_125_(x1, x2);
-        });
-    });
-}
-
-function $partial_0_1$Parse___123_emptyComments_95_33_125_(){
-    return (function(x1){
-        return Parse___123_emptyComments_95_33_125_(x1);
-    });
-}
-
-function $partial_1_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_34_125_(x1){
-    return (function(x2){
-        return Text__PrettyPrint__WL__Combinators___123_encloseSep_95_34_125_(x1, x2);
-    });
-}
-
-function $partial_0_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_36_125_(){
-    return (function(x1){
-        return (function(x2){
-            return Text__PrettyPrint__WL__Combinators___123_encloseSep_95_36_125_(x1, x2);
-        });
-    });
-}
-
-function $partial_0_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_37_125_(){
-    return (function(x1){
-        return (function(x2){
-            return Text__PrettyPrint__WL__Combinators___123_encloseSep_95_37_125_(x1, x2);
-        });
-    });
-}
-
-function $partial_5_6$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_43_125_(x1, x2, x3, x4, x5){
-    return (function(x6){
-        return Text__PrettyPrint__WL__Combinators___123_encloseSep_95_43_125_(x1, x2, x3, x4, x5, x6);
-    });
-}
-
-function $partial_4_5$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_44_125_(x1, x2, x3, x4){
-    return (function(x5){
-        return Text__PrettyPrint__WL__Combinators___123_encloseSep_95_44_125_(x1, x2, x3, x4, x5);
-    });
-}
-
-function $partial_5_6$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_54_125_(x1, x2, x3, x4, x5){
-    return (function(x6){
-        return Text__PrettyPrint__WL__Combinators___123_encloseSep_95_54_125_(x1, x2, x3, x4, x5, x6);
-    });
-}
-
-function $partial_4_5$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_55_125_(x1, x2, x3, x4){
-    return (function(x5){
-        return Text__PrettyPrint__WL__Combinators___123_encloseSep_95_55_125_(x1, x2, x3, x4, x5);
-    });
-}
-
-function $partial_2_3$TParsec__Combinators___123_exact_95_57_125_(x1, x2){
+function $partial_2_3$Typedefs___123_ap_95_18_125_(x1, x2){
     return (function(x3){
-        return TParsec__Combinators___123_exact_95_57_125_(x1, x2, x3);
+        return Typedefs___123_ap_95_18_125_(x1, x2, x3);
     });
 }
 
-function $partial_2_3$ParserUtils___123_except_95_59_125_(x1, x2){
-    return (function(x3){
-        return ParserUtils___123_except_95_59_125_(x1, x2, x3);
-    });
-}
-
-function $partial_3_4$Data__Vect___123_foldrImpl_95_62_125_(x1, x2, x3){
-    return (function(x4){
-        return Data__Vect___123_foldrImpl_95_62_125_(x1, x2, x3, x4);
-    });
-}
-
-function $partial_1_2$Backend__Utils___123_freshEnv_95_63_125_(x1){
-    return (function(x2){
-        return Backend__Utils___123_freshEnv_95_63_125_(x1, x2);
-    });
-}
-
-function $partial_1_2$Main___123_generateCode_95_64_125_(x1){
-    return (function(x2){
-        return Main___123_generateCode_95_64_125_(x1, x2);
-    });
-}
-
-function $partial_1_2$Main___123_generateCode_95_65_125_(x1){
-    return (function(x2){
-        return Main___123_generateCode_95_65_125_(x1, x2);
-    });
-}
-
-function $partial_0_2$Backend___123_generateDefs_95_66_125_(){
+function $partial_0_2$Typedefs___123_apN_95_21_125_(){
     return (function(x1){
         return (function(x2){
-            return Backend___123_generateDefs_95_66_125_(x1, x2);
+            return Typedefs___123_apN_95_21_125_(x1, x2);
         });
     });
 }
 
-function $partial_1_2$TParsec__Success___123_getTok_95_67_125_(x1){
-    return (function(x2){
-        return TParsec__Success___123_getTok_95_67_125_(x1, x2);
-    });
-}
-
-function $partial_1_3$Typedefs___123_getUsedIndices_95_68_125_(x1){
-    return (function(x2){
-        return (function(x3){
-            return Typedefs___123_getUsedIndices_95_68_125_(x1, x2, x3);
-        });
-    });
-}
-
-function $partial_1_3$Typedefs___123_getUsedIndices_95_69_125_(x1){
-    return (function(x2){
-        return (function(x3){
-            return Typedefs___123_getUsedIndices_95_69_125_(x1, x2, x3);
-        });
-    });
-}
-
-function $partial_1_2$Typedefs___123_getUsedIndices_95_70_125_(x1){
-    return (function(x2){
-        return Typedefs___123_getUsedIndices_95_70_125_(x1, x2);
-    });
-}
-
-function $partial_0_2$Typedefs___123_getUsedIndices_95_72_125_(){
+function $partial_0_2$Prelude__Bits___123_b16ToHexString_95_25_125_(){
     return (function(x1){
         return (function(x2){
-            return Typedefs___123_getUsedIndices_95_72_125_(x1, x2);
+            return Prelude__Bits___123_b16ToHexString_95_25_125_(x1, x2);
         });
     });
 }
 
-function $partial_1_3$Typedefs___123_getUsedIndices_95_73_125_(x1){
-    return (function(x2){
-        return (function(x3){
-            return Typedefs___123_getUsedIndices_95_73_125_(x1, x2, x3);
-        });
-    });
-}
-
-function $partial_2_4$TParsec__Combinators___123_guardM_95_82_125_(x1, x2){
-    return (function(x3){
-        return (function(x4){
-            return TParsec__Combinators___123_guardM_95_82_125_(x1, x2, x3, x4);
-        });
-    });
-}
-
-function $partial_3_4$TParsec__Combinators___123_guardM_95_83_125_(x1, x2, x3){
-    return (function(x4){
-        return TParsec__Combinators___123_guardM_95_83_125_(x1, x2, x3, x4);
-    });
-}
-
-function $partial_3_4$TParsec__Combinators___123_guardM_95_84_125_(x1, x2, x3){
-    return (function(x4){
-        return TParsec__Combinators___123_guardM_95_84_125_(x1, x2, x3, x4);
-    });
-}
-
-function $partial_0_1$Backend__Haskell___123_hsParam_95_86_125_(){
+function $partial_0_1$Parse___123_comment_95_26_125_(){
     return (function(x1){
-        return Backend__Haskell___123_hsParam_95_86_125_(x1);
+        return Parse___123_comment_95_26_125_(x1);
     });
 }
 
-function $partial_0_1$Typedefs___123_idVars_95_87_125_(){
-    return (function(x1){
-        return Typedefs___123_idVars_95_87_125_(x1);
-    });
-}
-
-function $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(){
-    return (function(x1){
-        return (function(x2){
-            return (function(x3){
-                return Backend__Utils___123_ifNotPresent_95_88_125_(x1, x2, x3);
-            });
-        });
-    });
-}
-
-function $partial_0_4$Backend__Utils___123_ifNotPresent_95_91_125_(){
-    return (function(x1){
-        return (function(x2){
-            return (function(x3){
-                return (function(x4){
-                    return Backend__Utils___123_ifNotPresent_95_91_125_(x1, x2, x3, x4);
-                });
-            });
-        });
-    });
-}
-
-function $partial_0_1$Backend__Utils___123_ifNotPresent_95_92_125_(){
-    return (function(x1){
-        return Backend__Utils___123_ifNotPresent_95_92_125_(x1);
-    });
-}
-
-function $partial_1_3$Backend__Utils___123_ifNotPresent_95_104_125_(x1){
-    return (function(x2){
-        return (function(x3){
-            return Backend__Utils___123_ifNotPresent_95_104_125_(x1, x2, x3);
-        });
-    });
-}
-
-function $partial_0_1$Backend__Utils___123_ifNotPresent_95_105_125_(){
-    return (function(x1){
-        return Backend__Utils___123_ifNotPresent_95_105_125_(x1);
-    });
-}
-
-function $partial_3_4$Backend__Utils___123_ifNotPresent_95_106_125_(x1, x2, x3){
-    return (function(x4){
-        return Backend__Utils___123_ifNotPresent_95_106_125_(x1, x2, x3, x4);
-    });
-}
-
-function $partial_7_11$Parse___123_ignorespaces_95_107_125_(x1, x2, x3, x4, x5, x6, x7){
+function $partial_7_12$Parse___123_comment_95_27_125_(x1, x2, x3, x4, x5, x6, x7){
     return (function(x8){
         return (function(x9){
             return (function(x10){
                 return (function(x11){
-                    return Parse___123_ignorespaces_95_107_125_(x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11);
+                    return (function(x12){
+                        return Parse___123_comment_95_27_125_(x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12);
+                    });
                 });
             });
         });
     });
 }
 
-function $partial_0_1$TParsec__Combinators___123_land_95_108_125_(){
+function $partial_0_1$TParsec__Types___123_commitT_95_28_125_(){
     return (function(x1){
-        return TParsec__Combinators___123_land_95_108_125_(x1);
+        return TParsec__Types___123_commitT_95_28_125_(x1);
     });
 }
 
-function $partial_0_2$Backend__Haskell___123_makeDefs_95_123_125_(){
+function $partial_0_1$Data__NEList___123_consopt_95_30_125_(){
+    return (function(x1){
+        return Data__NEList___123_consopt_95_30_125_(x1);
+    });
+}
+
+function $partial_1_2$TParsec__Combinators__Numbers___123_decimalDigit_95_31_125_(x1){
+    return (function(x2){
+        return TParsec__Combinators__Numbers___123_decimalDigit_95_31_125_(x1, x2);
+    });
+}
+
+function $partial_6_7$TParsec__Combinators__Numbers___123_decimalDigit_95_32_125_(x1, x2, x3, x4, x5, x6){
+    return (function(x7){
+        return TParsec__Combinators__Numbers___123_decimalDigit_95_32_125_(x1, x2, x3, x4, x5, x6, x7);
+    });
+}
+
+function $partial_0_2$TParsec__Combinators__Numbers___123_decimalNat_95_33_125_(){
     return (function(x1){
         return (function(x2){
-            return Backend__Haskell___123_makeDefs_95_123_125_(x1, x2);
+            return TParsec__Combinators__Numbers___123_decimalNat_95_33_125_(x1, x2);
         });
     });
 }
 
-function $partial_0_1$Backend__Haskell___123_makeDefs_95_125_125_(){
+function $partial_0_1$TParsec__Combinators__Numbers___123_decimalNat_95_34_125_(){
     return (function(x1){
-        return Backend__Haskell___123_makeDefs_95_125_125_(x1);
+        return TParsec__Combinators__Numbers___123_decimalNat_95_34_125_(x1);
     });
 }
 
-function $partial_0_4$Backend__Haskell___123_makeDefs_95_127_125_(){
+function $partial_0_1$Backend__Haskell___123_decode_95_35_125_(){
+    return (function(x1){
+        return Backend__Haskell___123_decode_95_35_125_(x1);
+    });
+}
+
+function $partial_0_1$Backend__Haskell___123_decode_95_36_125_(){
+    return (function(x1){
+        return Backend__Haskell___123_decode_95_36_125_(x1);
+    });
+}
+
+function $partial_0_1$Backend__Haskell___123_decode_95_37_125_(){
+    return (function(x1){
+        return Backend__Haskell___123_decode_95_37_125_(x1);
+    });
+}
+
+function $partial_0_1$Backend__Haskell___123_decode_95_38_125_(){
+    return (function(x1){
+        return Backend__Haskell___123_decode_95_38_125_(x1);
+    });
+}
+
+function $partial_0_3$Backend__Haskell___123_decode_95_39_125_(){
+    return (function(x1){
+        return (function(x2){
+            return (function(x3){
+                return Backend__Haskell___123_decode_95_39_125_(x1, x2, x3);
+            });
+        });
+    });
+}
+
+function $partial_0_4$Backend__Haskell___123_decode_95_42_125_(){
     return (function(x1){
         return (function(x2){
             return (function(x3){
                 return (function(x4){
-                    return Backend__Haskell___123_makeDefs_95_127_125_(x1, x2, x3, x4);
+                    return Backend__Haskell___123_decode_95_42_125_(x1, x2, x3, x4);
                 });
             });
         });
     });
 }
 
-function $partial_0_3$Backend__Haskell___123_makeDefs_95_128_125_(){
-    return (function(x1){
-        return (function(x2){
-            return (function(x3){
-                return Backend__Haskell___123_makeDefs_95_128_125_(x1, x2, x3);
-            });
-        });
-    });
-}
-
-function $partial_0_4$Backend__Haskell___123_makeDefs_95_133_125_(){
+function $partial_0_4$Backend__Haskell___123_decode_95_48_125_(){
     return (function(x1){
         return (function(x2){
             return (function(x3){
                 return (function(x4){
-                    return Backend__Haskell___123_makeDefs_95_133_125_(x1, x2, x3, x4);
+                    return Backend__Haskell___123_decode_95_48_125_(x1, x2, x3, x4);
                 });
             });
         });
     });
 }
 
-function $partial_1_3$Backend__Haskell___123_makeDefs_95_134_125_(x1){
+function $partial_0_3$Backend__Haskell___123_decode_95_49_125_(){
+    return (function(x1){
+        return (function(x2){
+            return (function(x3){
+                return Backend__Haskell___123_decode_95_49_125_(x1, x2, x3);
+            });
+        });
+    });
+}
+
+function $partial_0_4$Backend__Haskell___123_decode_95_54_125_(){
+    return (function(x1){
+        return (function(x2){
+            return (function(x3){
+                return (function(x4){
+                    return Backend__Haskell___123_decode_95_54_125_(x1, x2, x3, x4);
+                });
+            });
+        });
+    });
+}
+
+function $partial_2_3$Backend__Haskell___123_decode_95_56_125_(x1, x2){
+    return (function(x3){
+        return Backend__Haskell___123_decode_95_56_125_(x1, x2, x3);
+    });
+}
+
+function $partial_2_4$Backend__Haskell___123_decode_95_57_125_(x1, x2){
+    return (function(x3){
+        return (function(x4){
+            return Backend__Haskell___123_decode_95_57_125_(x1, x2, x3, x4);
+        });
+    });
+}
+
+function $partial_0_2$Backend__Haskell___123_decode_95_58_125_(){
+    return (function(x1){
+        return (function(x2){
+            return Backend__Haskell___123_decode_95_58_125_(x1, x2);
+        });
+    });
+}
+
+function $partial_1_3$Backend__Haskell___123_decode_95_60_125_(x1){
     return (function(x2){
         return (function(x3){
-            return Backend__Haskell___123_makeDefs_95_134_125_(x1, x2, x3);
+            return Backend__Haskell___123_decode_95_60_125_(x1, x2, x3);
         });
     });
 }
 
-function $partial_2_3$Backend__Haskell___123_makeDefs_95_135_125_(x1, x2){
+function $partial_2_3$Backend__Haskell___123_decode_95_61_125_(x1, x2){
     return (function(x3){
-        return Backend__Haskell___123_makeDefs_95_135_125_(x1, x2, x3);
+        return Backend__Haskell___123_decode_95_61_125_(x1, x2, x3);
     });
 }
 
-function $partial_0_2$Backend__JSON___123_makeDefs_95_161_125_(){
+function $partial_1_3$Backend__Haskell___123_decode_95_80_125_(x1){
+    return (function(x2){
+        return (function(x3){
+            return Backend__Haskell___123_decode_95_80_125_(x1, x2, x3);
+        });
+    });
+}
+
+function $partial_0_1$Backend__Haskell___123_decode_95_81_125_(){
+    return (function(x1){
+        return Backend__Haskell___123_decode_95_81_125_(x1);
+    });
+}
+
+function $partial_1_3$Backend__Haskell___123_decode_95_86_125_(x1){
+    return (function(x2){
+        return (function(x3){
+            return Backend__Haskell___123_decode_95_86_125_(x1, x2, x3);
+        });
+    });
+}
+
+function $partial_0_1$Backend__Haskell___123_decodeDef_95_87_125_(){
+    return (function(x1){
+        return Backend__Haskell___123_decodeDef_95_87_125_(x1);
+    });
+}
+
+function $partial_0_1$Backend__Haskell___123_decodeDef_95_90_125_(){
+    return (function(x1){
+        return Backend__Haskell___123_decodeDef_95_90_125_(x1);
+    });
+}
+
+function $partial_0_2$Backend__Haskell___123_decodeDef_95_91_125_(){
     return (function(x1){
         return (function(x2){
-            return Backend__JSON___123_makeDefs_95_161_125_(x1, x2);
+            return Backend__Haskell___123_decodeDef_95_91_125_(x1, x2);
         });
     });
 }
 
-function $partial_0_2$Backend__JSON___123_makeDefs_95_162_125_(){
+function $partial_0_1$Backend__Haskell___123_decodeDef_95_93_125_(){
+    return (function(x1){
+        return Backend__Haskell___123_decodeDef_95_93_125_(x1);
+    });
+}
+
+function $partial_2_3$Backend__Haskell___123_dependencies_95_94_125_(x1, x2){
+    return (function(x3){
+        return Backend__Haskell___123_dependencies_95_94_125_(x1, x2, x3);
+    });
+}
+
+function $partial_0_2$Backend__Haskell___123_dependencies_95_95_125_(){
     return (function(x1){
         return (function(x2){
-            return Backend__JSON___123_makeDefs_95_162_125_(x1, x2);
+            return Backend__Haskell___123_dependencies_95_95_125_(x1, x2);
         });
     });
 }
 
-function $partial_0_1$Backend__JSON___123_makeDefs_95_163_125_(){
-    return (function(x1){
-        return Backend__JSON___123_makeDefs_95_163_125_(x1);
-    });
-}
-
-function $partial_0_1$Backend__JSON___123_makeDefs_95_166_125_(){
-    return (function(x1){
-        return Backend__JSON___123_makeDefs_95_166_125_(x1);
-    });
-}
-
-function $partial_2_3$Backend__ReasonML___123_makeDefs_95_213_125_(x1, x2){
-    return (function(x3){
-        return Backend__ReasonML___123_makeDefs_95_213_125_(x1, x2, x3);
-    });
-}
-
-function $partial_1_2$Backend__ReasonML___123_makeDefs_95_243_125_(x1){
+function $partial_1_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_100_125_(x1){
     return (function(x2){
-        return Backend__ReasonML___123_makeDefs_95_243_125_(x1, x2);
+        return Text__PrettyPrint__WL__Combinators___123_encloseSep_95_100_125_(x1, x2);
     });
 }
 
-function $partial_0_1$Backend__ReasonML___123_makeDefs_95_244_125_(){
+function $partial_0_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_102_125_(){
     return (function(x1){
-        return Backend__ReasonML___123_makeDefs_95_244_125_(x1);
+        return (function(x2){
+            return Text__PrettyPrint__WL__Combinators___123_encloseSep_95_102_125_(x1, x2);
+        });
     });
 }
 
-function $partial_0_1$Backend__Haskell___123_makeDefs_39__95_248_125_(){
+function $partial_0_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_103_125_(){
     return (function(x1){
-        return Backend__Haskell___123_makeDefs_39__95_248_125_(x1);
+        return (function(x2){
+            return Text__PrettyPrint__WL__Combinators___123_encloseSep_95_103_125_(x1, x2);
+        });
     });
 }
 
-function $partial_0_1$Backend__Haskell___123_makeDefs_39__95_249_125_(){
-    return (function(x1){
-        return Backend__Haskell___123_makeDefs_39__95_249_125_(x1);
+function $partial_5_6$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_109_125_(x1, x2, x3, x4, x5){
+    return (function(x6){
+        return Text__PrettyPrint__WL__Combinators___123_encloseSep_95_109_125_(x1, x2, x3, x4, x5, x6);
     });
 }
 
-function $partial_0_1$Backend__Haskell___123_makeDefs_39__95_250_125_(){
-    return (function(x1){
-        return Backend__Haskell___123_makeDefs_39__95_250_125_(x1);
-    });
-}
-
-function $partial_2_3$Backend__Haskell___123_makeDefs_39__95_251_125_(x1, x2){
-    return (function(x3){
-        return Backend__Haskell___123_makeDefs_39__95_251_125_(x1, x2, x3);
-    });
-}
-
-function $partial_0_1$Backend__Haskell___123_makeDefs_39__95_258_125_(){
-    return (function(x1){
-        return Backend__Haskell___123_makeDefs_39__95_258_125_(x1);
-    });
-}
-
-function $partial_1_2$Backend__Haskell___123_makeDefs_39__95_267_125_(x1){
-    return (function(x2){
-        return Backend__Haskell___123_makeDefs_39__95_267_125_(x1, x2);
-    });
-}
-
-function $partial_0_1$Backend__Haskell___123_makeDefs_39__95_270_125_(){
-    return (function(x1){
-        return Backend__Haskell___123_makeDefs_39__95_270_125_(x1);
-    });
-}
-
-function $partial_0_1$Backend__Haskell___123_makeDefs_39__95_271_125_(){
-    return (function(x1){
-        return Backend__Haskell___123_makeDefs_39__95_271_125_(x1);
-    });
-}
-
-function $partial_0_1$Backend__Haskell___123_makeDefs_39__95_272_125_(){
-    return (function(x1){
-        return Backend__Haskell___123_makeDefs_39__95_272_125_(x1);
-    });
-}
-
-function $partial_4_6$Backend__Haskell___123_makeDefs_39__95_273_125_(x1, x2, x3, x4){
+function $partial_4_5$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_110_125_(x1, x2, x3, x4){
     return (function(x5){
-        return (function(x6){
-            return Backend__Haskell___123_makeDefs_39__95_273_125_(x1, x2, x3, x4, x5, x6);
+        return Text__PrettyPrint__WL__Combinators___123_encloseSep_95_110_125_(x1, x2, x3, x4, x5);
+    });
+}
+
+function $partial_5_6$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_120_125_(x1, x2, x3, x4, x5){
+    return (function(x6){
+        return Text__PrettyPrint__WL__Combinators___123_encloseSep_95_120_125_(x1, x2, x3, x4, x5, x6);
+    });
+}
+
+function $partial_4_5$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_121_125_(x1, x2, x3, x4){
+    return (function(x5){
+        return Text__PrettyPrint__WL__Combinators___123_encloseSep_95_121_125_(x1, x2, x3, x4, x5);
+    });
+}
+
+function $partial_1_2$Backend__Haskell___123_encode_95_122_125_(x1){
+    return (function(x2){
+        return Backend__Haskell___123_encode_95_122_125_(x1, x2);
+    });
+}
+
+function $partial_0_1$Backend__Haskell___123_encode_95_123_125_(){
+    return (function(x1){
+        return Backend__Haskell___123_encode_95_123_125_(x1);
+    });
+}
+
+function $partial_0_1$Backend__Haskell___123_encode_95_128_125_(){
+    return (function(x1){
+        return Backend__Haskell___123_encode_95_128_125_(x1);
+    });
+}
+
+function $partial_1_3$Backend__Haskell___123_encode_95_129_125_(x1){
+    return (function(x2){
+        return (function(x3){
+            return Backend__Haskell___123_encode_95_129_125_(x1, x2, x3);
         });
     });
 }
 
-function $partial_0_1$Backend__Haskell___123_makeDefs_39__95_278_125_(){
+function $partial_0_1$Backend__Haskell___123_encode_95_134_125_(){
     return (function(x1){
-        return Backend__Haskell___123_makeDefs_39__95_278_125_(x1);
+        return Backend__Haskell___123_encode_95_134_125_(x1);
     });
 }
 
-function $partial_0_1$Backend__Haskell___123_makeDefs_39__95_279_125_(){
-    return (function(x1){
-        return Backend__Haskell___123_makeDefs_39__95_279_125_(x1);
+function $partial_2_4$Backend__Haskell___123_encode_95_152_125_(x1, x2){
+    return (function(x3){
+        return (function(x4){
+            return Backend__Haskell___123_encode_95_152_125_(x1, x2, x3, x4);
+        });
     });
 }
 
-function $partial_0_1$Backend__Haskell___123_makeDefs_39__95_280_125_(){
-    return (function(x1){
-        return Backend__Haskell___123_makeDefs_39__95_280_125_(x1);
+function $partial_2_4$Backend__Haskell___123_encode_95_155_125_(x1, x2){
+    return (function(x3){
+        return (function(x4){
+            return Backend__Haskell___123_encode_95_155_125_(x1, x2, x3, x4);
+        });
     });
 }
 
-function $partial_3_5$Backend__Haskell___123_makeDefs_39__95_281_125_(x1, x2, x3){
+function $partial_3_4$Backend__Haskell___123_encode_95_156_125_(x1, x2, x3){
+    return (function(x4){
+        return Backend__Haskell___123_encode_95_156_125_(x1, x2, x3, x4);
+    });
+}
+
+function $partial_0_1$Backend__Haskell___123_encode_95_161_125_(){
+    return (function(x1){
+        return Backend__Haskell___123_encode_95_161_125_(x1);
+    });
+}
+
+function $partial_1_3$Backend__Haskell___123_encode_95_162_125_(x1){
+    return (function(x2){
+        return (function(x3){
+            return Backend__Haskell___123_encode_95_162_125_(x1, x2, x3);
+        });
+    });
+}
+
+function $partial_2_4$Backend__Haskell___123_encode_95_167_125_(x1, x2){
+    return (function(x3){
+        return (function(x4){
+            return Backend__Haskell___123_encode_95_167_125_(x1, x2, x3, x4);
+        });
+    });
+}
+
+function $partial_0_1$Backend__Haskell___123_encodeDef_95_174_125_(){
+    return (function(x1){
+        return Backend__Haskell___123_encodeDef_95_174_125_(x1);
+    });
+}
+
+function $partial_2_4$Backend__Haskell___123_encoderDecoderTerm_95_189_125_(x1, x2){
+    return (function(x3){
+        return (function(x4){
+            return Backend__Haskell___123_encoderDecoderTerm_95_189_125_(x1, x2, x3, x4);
+        });
+    });
+}
+
+function $partial_3_5$Backend__Haskell___123_encoderDecoderTerm_95_196_125_(x1, x2, x3){
     return (function(x4){
         return (function(x5){
-            return Backend__Haskell___123_makeDefs_39__95_281_125_(x1, x2, x3, x4, x5);
+            return Backend__Haskell___123_encoderDecoderTerm_95_196_125_(x1, x2, x3, x4, x5);
         });
     });
 }
 
-function $partial_1_2$Backend__JSON___123_makeDefs_39__95_284_125_(x1){
-    return (function(x2){
-        return Backend__JSON___123_makeDefs_39__95_284_125_(x1, x2);
-    });
-}
-
-function $partial_0_1$Backend__JSON___123_makeDefs_39__95_301_125_(){
+function $partial_0_1$Backend__Haskell___123_envTerms_95_213_125_(){
     return (function(x1){
-        return Backend__JSON___123_makeDefs_39__95_301_125_(x1);
+        return Backend__Haskell___123_envTerms_95_213_125_(x1);
     });
 }
 
-function $partial_2_4$Backend__JSON___123_makeDefs_39__95_302_125_(x1, x2){
-    return (function(x3){
-        return (function(x4){
-            return Backend__JSON___123_makeDefs_39__95_302_125_(x1, x2, x3, x4);
+function $partial_0_1$Backend__Haskell___123_envTerms_95_214_125_(){
+    return (function(x1){
+        return Backend__Haskell___123_envTerms_95_214_125_(x1);
+    });
+}
+
+function $partial_0_2$Backend__Haskell___123_envTerms_95_215_125_(){
+    return (function(x1){
+        return (function(x2){
+            return Backend__Haskell___123_envTerms_95_215_125_(x1, x2);
         });
     });
 }
 
-function $partial_2_4$Backend__JSON___123_makeDefs_39__95_307_125_(x1, x2){
+function $partial_2_3$TParsec__Combinators___123_exact_95_217_125_(x1, x2){
     return (function(x3){
-        return (function(x4){
-            return Backend__JSON___123_makeDefs_39__95_307_125_(x1, x2, x3, x4);
+        return TParsec__Combinators___123_exact_95_217_125_(x1, x2, x3);
+    });
+}
+
+function $partial_3_4$Data__Vect___123_foldrImpl_95_220_125_(x1, x2, x3){
+    return (function(x4){
+        return Data__Vect___123_foldrImpl_95_220_125_(x1, x2, x3, x4);
+    });
+}
+
+function $partial_0_2$Backend__Haskell___123_freeVars_95_221_125_(){
+    return (function(x1){
+        return (function(x2){
+            return Backend__Haskell___123_freeVars_95_221_125_(x1, x2);
         });
     });
 }
 
-function $partial_2_3$Backend__ReasonML___123_makeDefs_39__95_313_125_(x1, x2){
-    return (function(x3){
-        return Backend__ReasonML___123_makeDefs_39__95_313_125_(x1, x2, x3);
+function $partial_0_2$Backend__Haskell___123_freeVars_95_222_125_(){
+    return (function(x1){
+        return (function(x2){
+            return Backend__Haskell___123_freeVars_95_222_125_(x1, x2);
+        });
     });
 }
 
-function $partial_1_2$Backend__ReasonML___123_makeDefs_39__95_329_125_(x1){
+function $partial_0_2$Backend__Haskell___123_freeVars_95_224_125_(){
+    return (function(x1){
+        return (function(x2){
+            return Backend__Haskell___123_freeVars_95_224_125_(x1, x2);
+        });
+    });
+}
+
+function $partial_0_2$Backend__Haskell___123_freeVars_95_226_125_(){
+    return (function(x1){
+        return (function(x2){
+            return Backend__Haskell___123_freeVars_95_226_125_(x1, x2);
+        });
+    });
+}
+
+function $partial_0_2$Backend__Haskell___123_freeVars_95_227_125_(){
+    return (function(x1){
+        return (function(x2){
+            return Backend__Haskell___123_freeVars_95_227_125_(x1, x2);
+        });
+    });
+}
+
+function $partial_0_1$Backend__Haskell___123_freshEnv_95_238_125_(){
+    return (function(x1){
+        return Backend__Haskell___123_freshEnv_95_238_125_(x1);
+    });
+}
+
+function $partial_0_1$Backend__Haskell___123_freshEnv_95_239_125_(){
+    return (function(x1){
+        return Backend__Haskell___123_freshEnv_95_239_125_(x1);
+    });
+}
+
+function $partial_1_2$Backend__Utils___123_freshEnv_95_240_125_(x1){
     return (function(x2){
-        return Backend__ReasonML___123_makeDefs_39__95_329_125_(x1, x2);
+        return Backend__Utils___123_freshEnv_95_240_125_(x1, x2);
     });
 }
 
-function $partial_5_7$Backend__ReasonML___123_makeDefs_39__95_335_125_(x1, x2, x3, x4, x5){
+function $partial_1_2$Backend__Haskell___123_freshEnvWithTerms_95_241_125_(x1){
+    return (function(x2){
+        return Backend__Haskell___123_freshEnvWithTerms_95_241_125_(x1, x2);
+    });
+}
+
+function $partial_0_1$Backend__Haskell___123_freshVars_95_242_125_(){
+    return (function(x1){
+        return Backend__Haskell___123_freshVars_95_242_125_(x1);
+    });
+}
+
+function $partial_5_6$Backend__Haskell___123_freshVars_95_252_125_(x1, x2, x3, x4, x5){
+    return (function(x6){
+        return Backend__Haskell___123_freshVars_95_252_125_(x1, x2, x3, x4, x5, x6);
+    });
+}
+
+function $partial_2_3$Backend__Haskell___123_freshVars_95_253_125_(x1, x2){
+    return (function(x3){
+        return Backend__Haskell___123_freshVars_95_253_125_(x1, x2, x3);
+    });
+}
+
+function $partial_3_5$Backend__Haskell___123_freshVars_95_254_125_(x1, x2, x3){
+    return (function(x4){
+        return (function(x5){
+            return Backend__Haskell___123_freshVars_95_254_125_(x1, x2, x3, x4, x5);
+        });
+    });
+}
+
+function $partial_2_3$Backend__Haskell___123_freshVars_95_255_125_(x1, x2){
+    return (function(x3){
+        return Backend__Haskell___123_freshVars_95_255_125_(x1, x2, x3);
+    });
+}
+
+function $partial_1_2$Main___123_generateCode_95_256_125_(x1){
+    return (function(x2){
+        return Main___123_generateCode_95_256_125_(x1, x2);
+    });
+}
+
+function $partial_1_2$Main___123_generateCode_95_257_125_(x1){
+    return (function(x2){
+        return Main___123_generateCode_95_257_125_(x1, x2);
+    });
+}
+
+function $partial_1_2$Main___123_generateCode_95_258_125_(x1){
+    return (function(x2){
+        return Main___123_generateCode_95_258_125_(x1, x2);
+    });
+}
+
+function $partial_0_2$Backend___123_generateDefs_95_259_125_(){
+    return (function(x1){
+        return (function(x2){
+            return Backend___123_generateDefs_95_259_125_(x1, x2);
+        });
+    });
+}
+
+function $partial_1_2$TParsec__Success___123_getTok_95_260_125_(x1){
+    return (function(x2){
+        return TParsec__Success___123_getTok_95_260_125_(x1, x2);
+    });
+}
+
+function $partial_1_3$Typedefs___123_getUsedIndices_95_261_125_(x1){
+    return (function(x2){
+        return (function(x3){
+            return Typedefs___123_getUsedIndices_95_261_125_(x1, x2, x3);
+        });
+    });
+}
+
+function $partial_1_3$Typedefs___123_getUsedIndices_95_262_125_(x1){
+    return (function(x2){
+        return (function(x3){
+            return Typedefs___123_getUsedIndices_95_262_125_(x1, x2, x3);
+        });
+    });
+}
+
+function $partial_1_2$Typedefs___123_getUsedIndices_95_263_125_(x1){
+    return (function(x2){
+        return Typedefs___123_getUsedIndices_95_263_125_(x1, x2);
+    });
+}
+
+function $partial_0_2$Typedefs___123_getUsedIndices_95_265_125_(){
+    return (function(x1){
+        return (function(x2){
+            return Typedefs___123_getUsedIndices_95_265_125_(x1, x2);
+        });
+    });
+}
+
+function $partial_1_3$Typedefs___123_getUsedIndices_95_266_125_(x1){
+    return (function(x2){
+        return (function(x3){
+            return Typedefs___123_getUsedIndices_95_266_125_(x1, x2, x3);
+        });
+    });
+}
+
+function $partial_2_4$TParsec__Combinators___123_guardM_95_275_125_(x1, x2){
+    return (function(x3){
+        return (function(x4){
+            return TParsec__Combinators___123_guardM_95_275_125_(x1, x2, x3, x4);
+        });
+    });
+}
+
+function $partial_3_4$TParsec__Combinators___123_guardM_95_276_125_(x1, x2, x3){
+    return (function(x4){
+        return TParsec__Combinators___123_guardM_95_276_125_(x1, x2, x3, x4);
+    });
+}
+
+function $partial_3_4$TParsec__Combinators___123_guardM_95_277_125_(x1, x2, x3){
+    return (function(x4){
+        return TParsec__Combinators___123_guardM_95_277_125_(x1, x2, x3, x4);
+    });
+}
+
+function $partial_0_2$Backend__Haskell___123_hsTypeName_95_282_125_(){
+    return (function(x1){
+        return (function(x2){
+            return Backend__Haskell___123_hsTypeName_95_282_125_(x1, x2);
+        });
+    });
+}
+
+function $partial_0_1$Typedefs___123_idVars_95_284_125_(){
+    return (function(x1){
+        return Typedefs___123_idVars_95_284_125_(x1);
+    });
+}
+
+function $partial_1_3$Backend__Utils___123_ifNotPresent_95_301_125_(x1){
+    return (function(x2){
+        return (function(x3){
+            return Backend__Utils___123_ifNotPresent_95_301_125_(x1, x2, x3);
+        });
+    });
+}
+
+function $partial_0_1$Backend__Utils___123_ifNotPresent_95_302_125_(){
+    return (function(x1){
+        return Backend__Utils___123_ifNotPresent_95_302_125_(x1);
+    });
+}
+
+function $partial_3_4$Backend__Utils___123_ifNotPresent_95_303_125_(x1, x2, x3){
+    return (function(x4){
+        return Backend__Utils___123_ifNotPresent_95_303_125_(x1, x2, x3, x4);
+    });
+}
+
+function $partial_7_11$Parse___123_ignoreSpaces_95_304_125_(x1, x2, x3, x4, x5, x6, x7){
+    return (function(x8){
+        return (function(x9){
+            return (function(x10){
+                return (function(x11){
+                    return Parse___123_ignoreSpaces_95_304_125_(x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11);
+                });
+            });
+        });
+    });
+}
+
+function $partial_0_1$TParsec__Combinators___123_land_95_305_125_(){
+    return (function(x1){
+        return TParsec__Combinators___123_land_95_305_125_(x1);
+    });
+}
+
+function $partial_0_2$Backend__Haskell___123_makeDefs_95_320_125_(){
+    return (function(x1){
+        return (function(x2){
+            return Backend__Haskell___123_makeDefs_95_320_125_(x1, x2);
+        });
+    });
+}
+
+function $partial_0_1$Backend__Haskell___123_makeDefs_95_322_125_(){
+    return (function(x1){
+        return Backend__Haskell___123_makeDefs_95_322_125_(x1);
+    });
+}
+
+function $partial_1_3$Backend__Haskell___123_makeDefs_95_331_125_(x1){
+    return (function(x2){
+        return (function(x3){
+            return Backend__Haskell___123_makeDefs_95_331_125_(x1, x2, x3);
+        });
+    });
+}
+
+function $partial_2_3$Backend__Haskell___123_makeDefs_95_332_125_(x1, x2){
+    return (function(x3){
+        return Backend__Haskell___123_makeDefs_95_332_125_(x1, x2, x3);
+    });
+}
+
+function $partial_0_2$Backend__JSON___123_makeDefs_95_359_125_(){
+    return (function(x1){
+        return (function(x2){
+            return Backend__JSON___123_makeDefs_95_359_125_(x1, x2);
+        });
+    });
+}
+
+function $partial_0_1$Backend__JSON___123_makeDefs_95_360_125_(){
+    return (function(x1){
+        return Backend__JSON___123_makeDefs_95_360_125_(x1);
+    });
+}
+
+function $partial_0_1$Backend__JSON___123_makeDefs_95_363_125_(){
+    return (function(x1){
+        return Backend__JSON___123_makeDefs_95_363_125_(x1);
+    });
+}
+
+function $partial_2_3$Backend__ReasonML___123_makeDefs_95_410_125_(x1, x2){
+    return (function(x3){
+        return Backend__ReasonML___123_makeDefs_95_410_125_(x1, x2, x3);
+    });
+}
+
+function $partial_1_2$Backend__ReasonML___123_makeDefs_95_440_125_(x1){
+    return (function(x2){
+        return Backend__ReasonML___123_makeDefs_95_440_125_(x1, x2);
+    });
+}
+
+function $partial_0_1$Backend__ReasonML___123_makeDefs_95_441_125_(){
+    return (function(x1){
+        return Backend__ReasonML___123_makeDefs_95_441_125_(x1);
+    });
+}
+
+function $partial_0_1$Backend__Haskell___123_makeDefs_39__95_445_125_(){
+    return (function(x1){
+        return Backend__Haskell___123_makeDefs_39__95_445_125_(x1);
+    });
+}
+
+function $partial_2_3$Backend__Haskell___123_makeDefs_39__95_447_125_(x1, x2){
+    return (function(x3){
+        return Backend__Haskell___123_makeDefs_39__95_447_125_(x1, x2, x3);
+    });
+}
+
+function $partial_0_1$Backend__Haskell___123_makeDefs_39__95_454_125_(){
+    return (function(x1){
+        return Backend__Haskell___123_makeDefs_39__95_454_125_(x1);
+    });
+}
+
+function $partial_1_2$Backend__Haskell___123_makeDefs_39__95_463_125_(x1){
+    return (function(x2){
+        return Backend__Haskell___123_makeDefs_39__95_463_125_(x1, x2);
+    });
+}
+
+function $partial_5_7$Backend__Haskell___123_makeDefs_39__95_466_125_(x1, x2, x3, x4, x5){
     return (function(x6){
         return (function(x7){
-            return Backend__ReasonML___123_makeDefs_39__95_335_125_(x1, x2, x3, x4, x5, x6, x7);
+            return Backend__Haskell___123_makeDefs_39__95_466_125_(x1, x2, x3, x4, x5, x6, x7);
         });
     });
 }
 
-function $partial_3_5$Backend__ReasonML___123_makeDefs_39__95_343_125_(x1, x2, x3){
+function $partial_4_6$Backend__Haskell___123_makeDefs_39__95_471_125_(x1, x2, x3, x4){
+    return (function(x5){
+        return (function(x6){
+            return Backend__Haskell___123_makeDefs_39__95_471_125_(x1, x2, x3, x4, x5, x6);
+        });
+    });
+}
+
+function $partial_1_2$Backend__JSON___123_makeDefs_39__95_474_125_(x1){
+    return (function(x2){
+        return Backend__JSON___123_makeDefs_39__95_474_125_(x1, x2);
+    });
+}
+
+function $partial_0_1$Backend__JSON___123_makeDefs_39__95_491_125_(){
+    return (function(x1){
+        return Backend__JSON___123_makeDefs_39__95_491_125_(x1);
+    });
+}
+
+function $partial_2_4$Backend__JSON___123_makeDefs_39__95_492_125_(x1, x2){
+    return (function(x3){
+        return (function(x4){
+            return Backend__JSON___123_makeDefs_39__95_492_125_(x1, x2, x3, x4);
+        });
+    });
+}
+
+function $partial_2_4$Backend__JSON___123_makeDefs_39__95_497_125_(x1, x2){
+    return (function(x3){
+        return (function(x4){
+            return Backend__JSON___123_makeDefs_39__95_497_125_(x1, x2, x3, x4);
+        });
+    });
+}
+
+function $partial_0_1$Backend__ReasonML___123_makeDefs_39__95_500_125_(){
+    return (function(x1){
+        return Backend__ReasonML___123_makeDefs_39__95_500_125_(x1);
+    });
+}
+
+function $partial_0_1$Backend__ReasonML___123_makeDefs_39__95_501_125_(){
+    return (function(x1){
+        return Backend__ReasonML___123_makeDefs_39__95_501_125_(x1);
+    });
+}
+
+function $partial_0_1$Backend__ReasonML___123_makeDefs_39__95_502_125_(){
+    return (function(x1){
+        return Backend__ReasonML___123_makeDefs_39__95_502_125_(x1);
+    });
+}
+
+function $partial_2_3$Backend__ReasonML___123_makeDefs_39__95_503_125_(x1, x2){
+    return (function(x3){
+        return Backend__ReasonML___123_makeDefs_39__95_503_125_(x1, x2, x3);
+    });
+}
+
+function $partial_1_2$Backend__ReasonML___123_makeDefs_39__95_519_125_(x1){
+    return (function(x2){
+        return Backend__ReasonML___123_makeDefs_39__95_519_125_(x1, x2);
+    });
+}
+
+function $partial_0_1$Backend__ReasonML___123_makeDefs_39__95_522_125_(){
+    return (function(x1){
+        return Backend__ReasonML___123_makeDefs_39__95_522_125_(x1);
+    });
+}
+
+function $partial_0_1$Backend__ReasonML___123_makeDefs_39__95_523_125_(){
+    return (function(x1){
+        return Backend__ReasonML___123_makeDefs_39__95_523_125_(x1);
+    });
+}
+
+function $partial_0_1$Backend__ReasonML___123_makeDefs_39__95_524_125_(){
+    return (function(x1){
+        return Backend__ReasonML___123_makeDefs_39__95_524_125_(x1);
+    });
+}
+
+function $partial_5_7$Backend__ReasonML___123_makeDefs_39__95_525_125_(x1, x2, x3, x4, x5){
+    return (function(x6){
+        return (function(x7){
+            return Backend__ReasonML___123_makeDefs_39__95_525_125_(x1, x2, x3, x4, x5, x6, x7);
+        });
+    });
+}
+
+function $partial_0_1$Backend__ReasonML___123_makeDefs_39__95_530_125_(){
+    return (function(x1){
+        return Backend__ReasonML___123_makeDefs_39__95_530_125_(x1);
+    });
+}
+
+function $partial_0_1$Backend__ReasonML___123_makeDefs_39__95_531_125_(){
+    return (function(x1){
+        return Backend__ReasonML___123_makeDefs_39__95_531_125_(x1);
+    });
+}
+
+function $partial_0_1$Backend__ReasonML___123_makeDefs_39__95_532_125_(){
+    return (function(x1){
+        return Backend__ReasonML___123_makeDefs_39__95_532_125_(x1);
+    });
+}
+
+function $partial_3_5$Backend__ReasonML___123_makeDefs_39__95_533_125_(x1, x2, x3){
     return (function(x4){
         return (function(x5){
-            return Backend__ReasonML___123_makeDefs_39__95_343_125_(x1, x2, x3, x4, x5);
+            return Backend__ReasonML___123_makeDefs_39__95_533_125_(x1, x2, x3, x4, x5);
         });
     });
 }
 
-function $partial_0_2$Typedefs___123_makeName_95_348_125_(){
+function $partial_0_2$Typedefs___123_makeName_95_538_125_(){
     return (function(x1){
         return (function(x2){
-            return Typedefs___123_makeName_95_348_125_(x1, x2);
+            return Typedefs___123_makeName_95_538_125_(x1, x2);
         });
     });
 }
 
-function $partial_0_2$Backend__JSON___123_makeSubSchema_95_358_125_(){
+function $partial_0_2$Backend__JSON___123_makeSubSchema_95_548_125_(){
     return (function(x1){
         return (function(x2){
-            return Backend__JSON___123_makeSubSchema_95_358_125_(x1, x2);
+            return Backend__JSON___123_makeSubSchema_95_548_125_(x1, x2);
         });
     });
 }
 
-function $partial_0_1$Backend__Haskell___123_makeType_95_360_125_(){
-    return (function(x1){
-        return Backend__Haskell___123_makeType_95_360_125_(x1);
-    });
-}
-
-function $partial_0_2$Backend__Haskell___123_makeType_95_361_125_(){
+function $partial_0_2$Backend__Haskell___123_makeType_95_549_125_(){
     return (function(x1){
         return (function(x2){
-            return Backend__Haskell___123_makeType_95_361_125_(x1, x2);
+            return Backend__Haskell___123_makeType_95_549_125_(x1, x2);
         });
     });
 }
 
-function $partial_0_1$Backend__ReasonML___123_makeType_95_363_125_(){
+function $partial_0_1$Backend__ReasonML___123_makeType_95_550_125_(){
     return (function(x1){
-        return Backend__ReasonML___123_makeType_95_363_125_(x1);
+        return Backend__ReasonML___123_makeType_95_550_125_(x1);
     });
 }
 
-function $partial_0_1$Backend__ReasonML___123_makeType_95_364_125_(){
+function $partial_0_1$Backend__ReasonML___123_makeType_95_551_125_(){
     return (function(x1){
-        return Backend__ReasonML___123_makeType_95_364_125_(x1);
+        return Backend__ReasonML___123_makeType_95_551_125_(x1);
     });
 }
 
-function $partial_0_2$Backend__ReasonML___123_makeType_95_365_125_(){
+function $partial_0_2$Backend__ReasonML___123_makeType_95_552_125_(){
     return (function(x1){
         return (function(x2){
-            return Backend__ReasonML___123_makeType_95_365_125_(x1, x2);
+            return Backend__ReasonML___123_makeType_95_552_125_(x1, x2);
         });
     });
 }
 
-function $partial_1_2$TParsec__Combinators___123_mand_95_367_125_(x1){
+function $partial_0_1$Backend__ReasonML___123_makeType_39__95_555_125_(){
+    return (function(x1){
+        return Backend__ReasonML___123_makeType_39__95_555_125_(x1);
+    });
+}
+
+function $partial_1_2$TParsec__Combinators___123_mand_95_556_125_(x1){
     return (function(x2){
-        return TParsec__Combinators___123_mand_95_367_125_(x1, x2);
+        return TParsec__Combinators___123_mand_95_556_125_(x1, x2);
     });
 }
 
-function $partial_5_6$TParsec__Combinators___123_mand_95_368_125_(x1, x2, x3, x4, x5){
+function $partial_5_6$TParsec__Combinators___123_mand_95_557_125_(x1, x2, x3, x4, x5){
     return (function(x6){
-        return TParsec__Combinators___123_mand_95_368_125_(x1, x2, x3, x4, x5, x6);
+        return TParsec__Combinators___123_mand_95_557_125_(x1, x2, x3, x4, x5, x6);
     });
 }
 
-function $partial_1_2$TParsec__Combinators___123_map_95_369_125_(x1){
+function $partial_1_2$TParsec__Combinators___123_map_95_558_125_(x1){
     return (function(x2){
-        return TParsec__Combinators___123_map_95_369_125_(x1, x2);
+        return TParsec__Combinators___123_map_95_558_125_(x1, x2);
     });
 }
 
-function $partial_0_2$Backend__Utils___123_nameMu_95_370_125_(){
+function $partial_0_2$Backend__Utils___123_mapWithIndexA_95_559_125_(){
     return (function(x1){
         return (function(x2){
-            return Backend__Utils___123_nameMu_95_370_125_(x1, x2);
+            return Backend__Utils___123_mapWithIndexA_95_559_125_(x1, x2);
         });
     });
 }
 
-function $partial_1_2$Backend__JSON___123_nary_95_372_125_(x1){
+function $partial_1_2$Backend__Utils___123_mapWithIndexA_95_560_125_(x1){
     return (function(x2){
-        return Backend__JSON___123_nary_95_372_125_(x1, x2);
+        return Backend__Utils___123_mapWithIndexA_95_560_125_(x1, x2);
     });
 }
 
-function $partial_7_11$Parse___123_neComments_95_374_125_(x1, x2, x3, x4, x5, x6, x7){
-    return (function(x8){
-        return (function(x9){
-            return (function(x10){
-                return (function(x11){
-                    return Parse___123_neComments_95_374_125_(x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11);
-                });
-            });
-        });
-    });
-}
-
-function $partial_7_11$Parse___123_neComments_95_375_125_(x1, x2, x3, x4, x5, x6, x7){
-    return (function(x8){
-        return (function(x9){
-            return (function(x10){
-                return (function(x11){
-                    return Parse___123_neComments_95_375_125_(x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11);
-                });
-            });
-        });
-    });
-}
-
-function $partial_0_1$TParsec__Combinators___123_nelist_95_376_125_(){
+function $partial_0_2$Backend__Utils___123_nameMu_95_562_125_(){
     return (function(x1){
-        return TParsec__Combinators___123_nelist_95_376_125_(x1);
+        return (function(x2){
+            return Backend__Utils___123_nameMu_95_562_125_(x1, x2);
+        });
     });
 }
 
-function $partial_1_3$TParsec__Combinators___123_nelist_95_377_125_(x1){
+function $partial_1_2$Backend__JSON___123_nary_95_564_125_(x1){
+    return (function(x2){
+        return Backend__JSON___123_nary_95_564_125_(x1, x2);
+    });
+}
+
+function $partial_0_1$TParsec__Combinators___123_nelist_95_565_125_(){
+    return (function(x1){
+        return TParsec__Combinators___123_nelist_95_565_125_(x1);
+    });
+}
+
+function $partial_1_3$TParsec__Combinators___123_nelist_95_566_125_(x1){
     return (function(x2){
         return (function(x3){
-            return TParsec__Combinators___123_nelist_95_377_125_(x1, x2, x3);
+            return TParsec__Combinators___123_nelist_95_566_125_(x1, x2, x3);
         });
     });
 }
 
-function $partial_2_5$TParsec__Combinators___123_nelist_95_378_125_(x1, x2){
+function $partial_2_5$TParsec__Combinators___123_nelist_95_567_125_(x1, x2){
     return (function(x3){
         return (function(x4){
             return (function(x5){
-                return TParsec__Combinators___123_nelist_95_378_125_(x1, x2, x3, x4, x5);
+                return TParsec__Combinators___123_nelist_95_567_125_(x1, x2, x3, x4, x5);
             });
         });
     });
 }
 
-function $partial_2_5$TParsec__Combinators___123_nelist_95_379_125_(x1, x2){
+function $partial_2_5$TParsec__Combinators___123_nelist_95_568_125_(x1, x2){
     return (function(x3){
         return (function(x4){
             return (function(x5){
-                return TParsec__Combinators___123_nelist_95_379_125_(x1, x2, x3, x4, x5);
+                return TParsec__Combinators___123_nelist_95_568_125_(x1, x2, x3, x4, x5);
             });
         });
     });
 }
 
-function $partial_0_1$TParsec__Combinators___123_optand_95_380_125_(){
+function $partial_0_1$TParsec__Combinators___123_optand_95_569_125_(){
     return (function(x1){
-        return TParsec__Combinators___123_optand_95_380_125_(x1);
+        return TParsec__Combinators___123_optand_95_569_125_(x1);
     });
 }
 
-function $partial_0_1$TParsec__Combinators___123_optand_95_382_125_(){
+function $partial_0_1$TParsec__Combinators___123_optand_95_571_125_(){
     return (function(x1){
-        return TParsec__Combinators___123_optand_95_382_125_(x1);
+        return TParsec__Combinators___123_optand_95_571_125_(x1);
     });
 }
 
-function $partial_7_11$TParsec__Combinators__Chars___123_parens_95_383_125_(x1, x2, x3, x4, x5, x6, x7){
+function $partial_7_11$TParsec__Combinators__Chars___123_parens_95_572_125_(x1, x2, x3, x4, x5, x6, x7){
     return (function(x8){
         return (function(x9){
             return (function(x10){
                 return (function(x11){
-                    return TParsec__Combinators__Chars___123_parens_95_383_125_(x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11);
+                    return TParsec__Combinators__Chars___123_parens_95_572_125_(x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11);
                 });
             });
         });
     });
 }
 
-function $partial_0_4$TParsec__Running___123_parseMaybe_95_384_125_(){
+function $partial_0_1$TParsec__Running___123_parseResults_95_574_125_(){
+    return (function(x1){
+        return TParsec__Running___123_parseResults_95_574_125_(x1);
+    });
+}
+
+function $partial_0_4$TParsec__Running___123_parseResults_95_575_125_(){
     return (function(x1){
         return (function(x2){
             return (function(x3){
                 return (function(x4){
-                    return TParsec__Running___123_parseMaybe_95_384_125_(x1, x2, x3, x4);
+                    return TParsec__Running___123_parseResults_95_575_125_(x1, x2, x3, x4);
                 });
             });
         });
     });
 }
 
-function $partial_0_2$TParsec__Running___123_parseMaybe_95_385_125_(){
+function $partial_0_2$TParsec__Running___123_parseResults_95_576_125_(){
     return (function(x1){
         return (function(x2){
-            return TParsec__Running___123_parseMaybe_95_385_125_(x1, x2);
+            return TParsec__Running___123_parseResults_95_576_125_(x1, x2);
         });
     });
 }
 
-function $partial_0_4$TParsec__Running___123_parseMaybe_95_386_125_(){
+function $partial_0_4$TParsec__Running___123_parseResults_95_577_125_(){
     return (function(x1){
         return (function(x2){
             return (function(x3){
                 return (function(x4){
-                    return TParsec__Running___123_parseMaybe_95_386_125_(x1, x2, x3, x4);
+                    return TParsec__Running___123_parseResults_95_577_125_(x1, x2, x3, x4);
                 });
             });
         });
     });
 }
 
-function $partial_0_1$TParsec__Running___123_parseMaybe_95_388_125_(){
-    return (function(x1){
-        return TParsec__Running___123_parseMaybe_95_388_125_(x1);
-    });
-}
-
-function $partial_0_2$Parse___123_parseTNamed_95_389_125_(){
+function $partial_0_2$Parse___123_parseTNamed_95_579_125_(){
     return (function(x1){
         return (function(x2){
-            return Parse___123_parseTNamed_95_389_125_(x1, x2);
+            return Parse___123_parseTNamed_95_579_125_(x1, x2);
         });
     });
 }
 
-function $partial_0_2$Parse___123_parseTNamed_95_390_125_(){
+function $partial_0_2$Parse___123_parseTNamed_95_580_125_(){
     return (function(x1){
         return (function(x2){
-            return Parse___123_parseTNamed_95_390_125_(x1, x2);
+            return Parse___123_parseTNamed_95_580_125_(x1, x2);
         });
     });
 }
 
-function $partial_0_1$Parse___123_parseTNamed_95_391_125_(){
+function $partial_0_1$Parse___123_parseTNamed_95_581_125_(){
     return (function(x1){
-        return Parse___123_parseTNamed_95_391_125_(x1);
+        return Parse___123_parseTNamed_95_581_125_(x1);
     });
 }
 
-function $partial_0_1$Parse___123_parseTNamed_95_392_125_(){
+function $partial_0_1$Parse___123_parseTNamed_95_582_125_(){
     return (function(x1){
-        return Parse___123_parseTNamed_95_392_125_(x1);
+        return Parse___123_parseTNamed_95_582_125_(x1);
     });
 }
 
-function $partial_0_1$Backend__JSON___123_productSubSchema_95_395_125_(){
+function $partial_0_1$Backend__JSON___123_productSubSchema_95_585_125_(){
     return (function(x1){
-        return Backend__JSON___123_productSubSchema_95_395_125_(x1);
+        return Backend__JSON___123_productSubSchema_95_585_125_(x1);
     });
 }
 
-function $partial_0_1$TParsec__Combinators___123_rand_95_399_125_(){
+function $partial_0_1$TParsec__Combinators___123_rand_95_589_125_(){
     return (function(x1){
-        return TParsec__Combinators___123_rand_95_399_125_(x1);
+        return TParsec__Combinators___123_rand_95_589_125_(x1);
     });
 }
 
-function $partial_0_1$TParsec__Combinators___123_randbindm_95_401_125_(){
+function $partial_0_1$TParsec__Combinators___123_randbindm_95_591_125_(){
     return (function(x1){
-        return TParsec__Combinators___123_randbindm_95_401_125_(x1);
+        return TParsec__Combinators___123_randbindm_95_591_125_(x1);
     });
 }
 
-function $partial_0_1$Data__Vect___123_range_95_402_125_(){
+function $partial_0_1$Data__Vect___123_range_95_592_125_(){
     return (function(x1){
-        return Data__Vect___123_range_95_402_125_(x1);
+        return Data__Vect___123_range_95_592_125_(x1);
     });
 }
 
-function $partial_0_2$Backend__Haskell___123_renderApp_95_403_125_(){
-    return (function(x1){
-        return (function(x2){
-            return Backend__Haskell___123_renderApp_95_403_125_(x1, x2);
-        });
-    });
-}
-
-function $partial_0_1$Backend__Haskell___123_renderDef_95_410_125_(){
-    return (function(x1){
-        return Backend__Haskell___123_renderDef_95_410_125_(x1);
-    });
-}
-
-function $partial_0_1$Backend__Haskell___123_renderDef_95_414_125_(){
-    return (function(x1){
-        return Backend__Haskell___123_renderDef_95_414_125_(x1);
-    });
-}
-
-function $partial_0_1$Typedefs___123_shiftVars_95_427_125_(){
-    return (function(x1){
-        return Typedefs___123_shiftVars_95_427_125_(x1);
-    });
-}
-
-function $partial_0_2$Language__JSON__Data___123_showString_95_428_125_(){
-    return (function(x1){
-        return (function(x2){
-            return Language__JSON__Data___123_showString_95_428_125_(x1, x2);
-        });
-    });
-}
-
-function $partial_7_8$TParsec__Combinators__Chars___123_string_95_430_125_(x1, x2, x3, x4, x5, x6, x7){
-    return (function(x8){
-        return TParsec__Combinators__Chars___123_string_95_430_125_(x1, x2, x3, x4, x5, x6, x7, x8);
-    });
-}
-
-function $partial_0_3$Parse___123_tdef_95_431_125_(){
-    return (function(x1){
-        return (function(x2){
-            return (function(x3){
-                return Parse___123_tdef_95_431_125_(x1, x2, x3);
-            });
-        });
-    });
-}
-
-function $partial_0_4$Parse___123_tdef_95_434_125_(){
-    return (function(x1){
-        return (function(x2){
-            return (function(x3){
-                return (function(x4){
-                    return Parse___123_tdef_95_434_125_(x1, x2, x3, x4);
-                });
-            });
-        });
-    });
-}
-
-function $partial_0_4$Parse___123_tdef_95_447_125_(){
-    return (function(x1){
-        return (function(x2){
-            return (function(x3){
-                return (function(x4){
-                    return Parse___123_tdef_95_447_125_(x1, x2, x3, x4);
-                });
-            });
-        });
-    });
-}
-
-function $partial_0_2$Parse___123_tdef_95_448_125_(){
-    return (function(x1){
-        return (function(x2){
-            return Parse___123_tdef_95_448_125_(x1, x2);
-        });
-    });
-}
-
-function $partial_0_4$Parse___123_tdef_95_462_125_(){
-    return (function(x1){
-        return (function(x2){
-            return (function(x3){
-                return (function(x4){
-                    return Parse___123_tdef_95_462_125_(x1, x2, x3, x4);
-                });
-            });
-        });
-    });
-}
-
-function $partial_0_1$Parse___123_tdef_95_477_125_(){
-    return (function(x1){
-        return Parse___123_tdef_95_477_125_(x1);
-    });
-}
-
-function $partial_0_3$Parse___123_tdef_95_491_125_(){
-    return (function(x1){
-        return (function(x2){
-            return (function(x3){
-                return Parse___123_tdef_95_491_125_(x1, x2, x3);
-            });
-        });
-    });
-}
-
-function $partial_0_4$Parse___123_tdef_95_536_125_(){
-    return (function(x1){
-        return (function(x2){
-            return (function(x3){
-                return (function(x4){
-                    return Parse___123_tdef_95_536_125_(x1, x2, x3, x4);
-                });
-            });
-        });
-    });
-}
-
-function $partial_0_2$Parse___123_tdef_95_538_125_(){
-    return (function(x1){
-        return (function(x2){
-            return Parse___123_tdef_95_538_125_(x1, x2);
-        });
-    });
-}
-
-function $partial_0_2$Parse___123_tdef_95_539_125_(){
-    return (function(x1){
-        return (function(x2){
-            return Parse___123_tdef_95_539_125_(x1, x2);
-        });
-    });
-}
-
-function $partial_0_2$Parse___123_tdef_95_540_125_(){
-    return (function(x1){
-        return (function(x2){
-            return Parse___123_tdef_95_540_125_(x1, x2);
-        });
-    });
-}
-
-function $partial_0_1$Parse___123_tdef_95_706_125_(){
-    return (function(x1){
-        return Parse___123_tdef_95_706_125_(x1);
-    });
-}
-
-function $partial_1_2$Parse___123_tdef_95_982_125_(x1){
-    return (function(x2){
-        return Parse___123_tdef_95_982_125_(x1, x2);
-    });
-}
-
-function $partial_0_1$Parse___123_tdef_95_983_125_(){
-    return (function(x1){
-        return Parse___123_tdef_95_983_125_(x1);
-    });
-}
-
-function $partial_1_2$Parse___123_tdef_95_1244_125_(x1){
-    return (function(x2){
-        return Parse___123_tdef_95_1244_125_(x1, x2);
-    });
-}
-
-function $partial_0_1$Parse___123_tdef_95_1245_125_(){
-    return (function(x1){
-        return Parse___123_tdef_95_1245_125_(x1);
-    });
-}
-
-function $partial_1_4$Parse___123_tdef_95_1631_125_(x1){
-    return (function(x2){
-        return (function(x3){
-            return (function(x4){
-                return Parse___123_tdef_95_1631_125_(x1, x2, x3, x4);
-            });
-        });
-    });
-}
-
-function $partial_2_6$Parse___123_tdef_95_1632_125_(x1, x2){
-    return (function(x3){
-        return (function(x4){
-            return (function(x5){
-                return (function(x6){
-                    return Parse___123_tdef_95_1632_125_(x1, x2, x3, x4, x5, x6);
-                });
-            });
-        });
-    });
-}
-
-function $partial_0_1$Parse___123_tdef_95_1636_125_(){
-    return (function(x1){
-        return Parse___123_tdef_95_1636_125_(x1);
-    });
-}
-
-function $partial_0_1$Parse___123_tdef_95_1750_125_(){
-    return (function(x1){
-        return Parse___123_tdef_95_1750_125_(x1);
-    });
-}
-
-function $partial_0_3$Parse___123_tdef_95_1861_125_(){
-    return (function(x1){
-        return (function(x2){
-            return (function(x3){
-                return Parse___123_tdef_95_1861_125_(x1, x2, x3);
-            });
-        });
-    });
-}
-
-function $partial_0_3$Parse___123_tdef_95_1862_125_(){
-    return (function(x1){
-        return (function(x2){
-            return (function(x3){
-                return Parse___123_tdef_95_1862_125_(x1, x2, x3);
-            });
-        });
-    });
-}
-
-function $partial_0_1$Parse___123_tdef_95_1866_125_(){
-    return (function(x1){
-        return Parse___123_tdef_95_1866_125_(x1);
-    });
-}
-
-function $partial_1_5$Parse___123_tdef_95_2462_125_(x1){
+function $partial_1_5$TParsec__Types___123_recordChar_95_593_125_(x1){
     return (function(x2){
         return (function(x3){
             return (function(x4){
                 return (function(x5){
-                    return Parse___123_tdef_95_2462_125_(x1, x2, x3, x4, x5);
+                    return TParsec__Types___123_recordChar_95_593_125_(x1, x2, x3, x4, x5);
                 });
             });
         });
     });
 }
 
-function $partial_1_5$Parse___123_tdef_95_2463_125_(x1){
+function $partial_1_5$TParsec__Types___123_recordChar_95_595_125_(x1){
     return (function(x2){
         return (function(x3){
             return (function(x4){
                 return (function(x5){
-                    return Parse___123_tdef_95_2463_125_(x1, x2, x3, x4, x5);
+                    return TParsec__Types___123_recordChar_95_595_125_(x1, x2, x3, x4, x5);
                 });
             });
         });
     });
 }
 
-function $partial_0_1$Parse___123_tdef_95_2467_125_(){
-    return (function(x1){
-        return Parse___123_tdef_95_2467_125_(x1);
-    });
-}
-
-function $partial_0_1$Parse___123_tdef_95_2468_125_(){
-    return (function(x1){
-        return Parse___123_tdef_95_2468_125_(x1);
-    });
-}
-
-function $partial_1_2$Parse___123_tdef_95_2469_125_(x1){
+function $partial_1_3$TParsec__Types___123_recordChar_95_596_125_(x1){
     return (function(x2){
-        return Parse___123_tdef_95_2469_125_(x1, x2);
+        return (function(x3){
+            return TParsec__Types___123_recordChar_95_596_125_(x1, x2, x3);
+        });
     });
 }
 
-function $partial_0_1$Parse___123_tdef_95_2470_125_(){
+function $partial_1_5$TParsec__Types___123_recordChar_95_597_125_(x1){
+    return (function(x2){
+        return (function(x3){
+            return (function(x4){
+                return (function(x5){
+                    return TParsec__Types___123_recordChar_95_597_125_(x1, x2, x3, x4, x5);
+                });
+            });
+        });
+    });
+}
+
+function $partial_1_5$TParsec__Types___123_recordChar_95_598_125_(x1){
+    return (function(x2){
+        return (function(x3){
+            return (function(x4){
+                return (function(x5){
+                    return TParsec__Types___123_recordChar_95_598_125_(x1, x2, x3, x4, x5);
+                });
+            });
+        });
+    });
+}
+
+function $partial_1_2$TParsec__Types___123_recordChar_95_599_125_(x1){
+    return (function(x2){
+        return TParsec__Types___123_recordChar_95_599_125_(x1, x2);
+    });
+}
+
+function $partial_2_4$TParsec__Types___123_recordChar_95_600_125_(x1, x2){
+    return (function(x3){
+        return (function(x4){
+            return TParsec__Types___123_recordChar_95_600_125_(x1, x2, x3, x4);
+        });
+    });
+}
+
+function $partial_0_2$Backend__Haskell___123_renderApp_95_601_125_(){
     return (function(x1){
-        return Parse___123_tdef_95_2470_125_(x1);
+        return (function(x2){
+            return Backend__Haskell___123_renderApp_95_601_125_(x1, x2);
+        });
     });
 }
 
-function $partial_3_8$Parse___123_tdef_95_3437_125_(x1, x2, x3){
+function $partial_0_1$Backend__Haskell___123_renderDef_95_608_125_(){
+    return (function(x1){
+        return Backend__Haskell___123_renderDef_95_608_125_(x1);
+    });
+}
+
+function $partial_0_1$Backend__Haskell___123_renderDef_95_614_125_(){
+    return (function(x1){
+        return Backend__Haskell___123_renderDef_95_614_125_(x1);
+    });
+}
+
+function $partial_2_3$Backend__Haskell___123_renderTerm_95_623_125_(x1, x2){
+    return (function(x3){
+        return Backend__Haskell___123_renderTerm_95_623_125_(x1, x2, x3);
+    });
+}
+
+function $partial_1_2$Backend__Haskell___123_renderTerm_95_624_125_(x1){
+    return (function(x2){
+        return Backend__Haskell___123_renderTerm_95_624_125_(x1, x2);
+    });
+}
+
+function $partial_2_3$Backend__Haskell___123_renderTerm_95_627_125_(x1, x2){
+    return (function(x3){
+        return Backend__Haskell___123_renderTerm_95_627_125_(x1, x2, x3);
+    });
+}
+
+function $partial_1_2$Backend__Haskell___123_renderTerm_95_628_125_(x1){
+    return (function(x2){
+        return Backend__Haskell___123_renderTerm_95_628_125_(x1, x2);
+    });
+}
+
+function $partial_0_1$Backend__Haskell___123_renderTerm_95_629_125_(){
+    return (function(x1){
+        return Backend__Haskell___123_renderTerm_95_629_125_(x1);
+    });
+}
+
+function $partial_2_3$Backend__Haskell___123_renderTerm_95_630_125_(x1, x2){
+    return (function(x3){
+        return Backend__Haskell___123_renderTerm_95_630_125_(x1, x2, x3);
+    });
+}
+
+function $partial_1_2$Backend__Haskell___123_renderTerm_95_631_125_(x1){
+    return (function(x2){
+        return Backend__Haskell___123_renderTerm_95_631_125_(x1, x2);
+    });
+}
+
+function $partial_3_4$Backend__Haskell___123_renderTerm_95_632_125_(x1, x2, x3){
+    return (function(x4){
+        return Backend__Haskell___123_renderTerm_95_632_125_(x1, x2, x3, x4);
+    });
+}
+
+function $partial_2_3$Backend__Haskell___123_renderTerm_95_633_125_(x1, x2){
+    return (function(x3){
+        return Backend__Haskell___123_renderTerm_95_633_125_(x1, x2, x3);
+    });
+}
+
+function $partial_2_3$Backend__Haskell___123_renderTerm_95_635_125_(x1, x2){
+    return (function(x3){
+        return Backend__Haskell___123_renderTerm_95_635_125_(x1, x2, x3);
+    });
+}
+
+function $partial_1_2$Backend__Haskell___123_renderTerm_95_636_125_(x1){
+    return (function(x2){
+        return Backend__Haskell___123_renderTerm_95_636_125_(x1, x2);
+    });
+}
+
+function $partial_0_1$Backend__Haskell___123_renderTerm_95_637_125_(){
+    return (function(x1){
+        return Backend__Haskell___123_renderTerm_95_637_125_(x1);
+    });
+}
+
+function $partial_2_3$Backend__Haskell___123_renderTerm_95_638_125_(x1, x2){
+    return (function(x3){
+        return Backend__Haskell___123_renderTerm_95_638_125_(x1, x2, x3);
+    });
+}
+
+function $partial_1_2$Backend__Haskell___123_renderTerm_95_639_125_(x1){
+    return (function(x2){
+        return Backend__Haskell___123_renderTerm_95_639_125_(x1, x2);
+    });
+}
+
+function $partial_2_3$Backend__Haskell___123_renderTerm_95_640_125_(x1, x2){
+    return (function(x3){
+        return Backend__Haskell___123_renderTerm_95_640_125_(x1, x2, x3);
+    });
+}
+
+function $partial_1_2$Backend__Haskell___123_renderTerm_95_641_125_(x1){
+    return (function(x2){
+        return Backend__Haskell___123_renderTerm_95_641_125_(x1, x2);
+    });
+}
+
+function $partial_0_2$Backend__Haskell___123_runTermGen_95_654_125_(){
+    return (function(x1){
+        return (function(x2){
+            return Backend__Haskell___123_runTermGen_95_654_125_(x1, x2);
+        });
+    });
+}
+
+function $partial_0_2$Backend__Haskell___123_runTermGen_95_655_125_(){
+    return (function(x1){
+        return (function(x2){
+            return Backend__Haskell___123_runTermGen_95_655_125_(x1, x2);
+        });
+    });
+}
+
+function $partial_0_1$Typedefs___123_shiftVars_95_656_125_(){
+    return (function(x1){
+        return Typedefs___123_shiftVars_95_656_125_(x1);
+    });
+}
+
+function $partial_0_2$Language__JSON__Data___123_showString_95_657_125_(){
+    return (function(x1){
+        return (function(x2){
+            return Language__JSON__Data___123_showString_95_657_125_(x1, x2);
+        });
+    });
+}
+
+function $partial_0_1$Backend__Haskell___123_simplify_95_658_125_(){
+    return (function(x1){
+        return Backend__Haskell___123_simplify_95_658_125_(x1);
+    });
+}
+
+function $partial_0_1$Backend__Haskell___123_simplify_95_659_125_(){
+    return (function(x1){
+        return Backend__Haskell___123_simplify_95_659_125_(x1);
+    });
+}
+
+function $partial_7_8$TParsec__Combinators__Chars___123_string_95_663_125_(x1, x2, x3, x4, x5, x6, x7){
+    return (function(x8){
+        return TParsec__Combinators__Chars___123_string_95_663_125_(x1, x2, x3, x4, x5, x6, x7, x8);
+    });
+}
+
+function $partial_0_4$Parse___123_tdef_95_676_125_(){
+    return (function(x1){
+        return (function(x2){
+            return (function(x3){
+                return (function(x4){
+                    return Parse___123_tdef_95_676_125_(x1, x2, x3, x4);
+                });
+            });
+        });
+    });
+}
+
+function $partial_0_4$Parse___123_tdef_95_679_125_(){
+    return (function(x1){
+        return (function(x2){
+            return (function(x3){
+                return (function(x4){
+                    return Parse___123_tdef_95_679_125_(x1, x2, x3, x4);
+                });
+            });
+        });
+    });
+}
+
+function $partial_0_2$Parse___123_tdef_95_693_125_(){
+    return (function(x1){
+        return (function(x2){
+            return Parse___123_tdef_95_693_125_(x1, x2);
+        });
+    });
+}
+
+function $partial_0_4$Parse___123_tdef_95_707_125_(){
+    return (function(x1){
+        return (function(x2){
+            return (function(x3){
+                return (function(x4){
+                    return Parse___123_tdef_95_707_125_(x1, x2, x3, x4);
+                });
+            });
+        });
+    });
+}
+
+function $partial_0_1$Parse___123_tdef_95_721_125_(){
+    return (function(x1){
+        return Parse___123_tdef_95_721_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdef_95_722_125_(){
+    return (function(x1){
+        return Parse___123_tdef_95_722_125_(x1);
+    });
+}
+
+function $partial_0_3$Parse___123_tdef_95_736_125_(){
+    return (function(x1){
+        return (function(x2){
+            return (function(x3){
+                return Parse___123_tdef_95_736_125_(x1, x2, x3);
+            });
+        });
+    });
+}
+
+function $partial_0_4$Parse___123_tdef_95_781_125_(){
+    return (function(x1){
+        return (function(x2){
+            return (function(x3){
+                return (function(x4){
+                    return Parse___123_tdef_95_781_125_(x1, x2, x3, x4);
+                });
+            });
+        });
+    });
+}
+
+function $partial_0_2$Parse___123_tdef_95_783_125_(){
+    return (function(x1){
+        return (function(x2){
+            return Parse___123_tdef_95_783_125_(x1, x2);
+        });
+    });
+}
+
+function $partial_0_2$Parse___123_tdef_95_784_125_(){
+    return (function(x1){
+        return (function(x2){
+            return Parse___123_tdef_95_784_125_(x1, x2);
+        });
+    });
+}
+
+function $partial_0_2$Parse___123_tdef_95_785_125_(){
+    return (function(x1){
+        return (function(x2){
+            return Parse___123_tdef_95_785_125_(x1, x2);
+        });
+    });
+}
+
+function $partial_0_1$Parse___123_tdef_95_830_125_(){
+    return (function(x1){
+        return Parse___123_tdef_95_830_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdef_95_831_125_(){
+    return (function(x1){
+        return Parse___123_tdef_95_831_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdef_95_849_125_(){
+    return (function(x1){
+        return Parse___123_tdef_95_849_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdef_95_907_125_(){
+    return (function(x1){
+        return Parse___123_tdef_95_907_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdef_95_908_125_(){
+    return (function(x1){
+        return Parse___123_tdef_95_908_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdef_95_975_125_(){
+    return (function(x1){
+        return Parse___123_tdef_95_975_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdef_95_1033_125_(){
+    return (function(x1){
+        return Parse___123_tdef_95_1033_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdef_95_1034_125_(){
+    return (function(x1){
+        return Parse___123_tdef_95_1034_125_(x1);
+    });
+}
+
+function $partial_0_3$Parse___123_tdef_95_1098_125_(){
+    return (function(x1){
+        return (function(x2){
+            return (function(x3){
+                return Parse___123_tdef_95_1098_125_(x1, x2, x3);
+            });
+        });
+    });
+}
+
+function $partial_0_3$Parse___123_tdef_95_1099_125_(){
+    return (function(x1){
+        return (function(x2){
+            return (function(x3){
+                return Parse___123_tdef_95_1099_125_(x1, x2, x3);
+            });
+        });
+    });
+}
+
+function $partial_0_2$Parse___123_tdef_95_1100_125_(){
+    return (function(x1){
+        return (function(x2){
+            return Parse___123_tdef_95_1100_125_(x1, x2);
+        });
+    });
+}
+
+function $partial_0_1$Parse___123_tdefMu_95_1104_125_(){
+    return (function(x1){
+        return Parse___123_tdefMu_95_1104_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefMu_95_1105_125_(){
+    return (function(x1){
+        return Parse___123_tdefMu_95_1105_125_(x1);
+    });
+}
+
+function $partial_1_2$Parse___123_tdefMu_95_1106_125_(x1){
+    return (function(x2){
+        return Parse___123_tdefMu_95_1106_125_(x1, x2);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefMu_95_1107_125_(){
+    return (function(x1){
+        return Parse___123_tdefMu_95_1107_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefMu_95_1165_125_(){
+    return (function(x1){
+        return Parse___123_tdefMu_95_1165_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefMu_95_1166_125_(){
+    return (function(x1){
+        return Parse___123_tdefMu_95_1166_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefMu_95_1332_125_(){
+    return (function(x1){
+        return Parse___123_tdefMu_95_1332_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefMu_95_1333_125_(){
+    return (function(x1){
+        return Parse___123_tdefMu_95_1333_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefMu_95_1454_125_(){
+    return (function(x1){
+        return Parse___123_tdefMu_95_1454_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefMu_95_1455_125_(){
+    return (function(x1){
+        return Parse___123_tdefMu_95_1455_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefMu_95_1565_125_(){
+    return (function(x1){
+        return Parse___123_tdefMu_95_1565_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefMu_95_1566_125_(){
+    return (function(x1){
+        return Parse___123_tdefMu_95_1566_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefMu_95_1683_125_(){
+    return (function(x1){
+        return Parse___123_tdefMu_95_1683_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefMu_95_1684_125_(){
+    return (function(x1){
+        return Parse___123_tdefMu_95_1684_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefMu_95_1805_125_(){
+    return (function(x1){
+        return Parse___123_tdefMu_95_1805_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefMu_95_1806_125_(){
+    return (function(x1){
+        return Parse___123_tdefMu_95_1806_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefMu_95_1972_125_(){
+    return (function(x1){
+        return Parse___123_tdefMu_95_1972_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefMu_95_1973_125_(){
+    return (function(x1){
+        return Parse___123_tdefMu_95_1973_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefMu_95_2094_125_(){
+    return (function(x1){
+        return Parse___123_tdefMu_95_2094_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefMu_95_2095_125_(){
+    return (function(x1){
+        return Parse___123_tdefMu_95_2095_125_(x1);
+    });
+}
+
+function $partial_3_8$Parse___123_tdefMu_95_2160_125_(x1, x2, x3){
     return (function(x4){
         return (function(x5){
             return (function(x6){
                 return (function(x7){
                     return (function(x8){
-                        return Parse___123_tdef_95_3437_125_(x1, x2, x3, x4, x5, x6, x7, x8);
+                        return Parse___123_tdefMu_95_2160_125_(x1, x2, x3, x4, x5, x6, x7, x8);
                     });
                 });
             });
@@ -2892,53 +3527,485 @@ function $partial_3_8$Parse___123_tdef_95_3437_125_(x1, x2, x3){
     });
 }
 
-function $partial_3_7$Parse___123_tdef_95_3438_125_(x1, x2, x3){
+function $partial_3_7$Parse___123_tdefMu_95_2161_125_(x1, x2, x3){
     return (function(x4){
         return (function(x5){
             return (function(x6){
                 return (function(x7){
-                    return Parse___123_tdef_95_3438_125_(x1, x2, x3, x4, x5, x6, x7);
+                    return Parse___123_tdefMu_95_2161_125_(x1, x2, x3, x4, x5, x6, x7);
                 });
             });
         });
     });
 }
 
-function $partial_1_3$Parse___123_tdef_95_3439_125_(x1){
+function $partial_1_3$Parse___123_tdefMu_95_2162_125_(x1){
     return (function(x2){
         return (function(x3){
-            return Parse___123_tdef_95_3439_125_(x1, x2, x3);
+            return Parse___123_tdefMu_95_2162_125_(x1, x2, x3);
         });
     });
 }
 
-function $partial_2_6$Parse___123_tdef_95_3440_125_(x1, x2){
+function $partial_2_6$Parse___123_tdefMu_95_2163_125_(x1, x2){
     return (function(x3){
         return (function(x4){
             return (function(x5){
                 return (function(x6){
-                    return Parse___123_tdef_95_3440_125_(x1, x2, x3, x4, x5, x6);
+                    return Parse___123_tdefMu_95_2163_125_(x1, x2, x3, x4, x5, x6);
                 });
             });
         });
     });
 }
 
-function $partial_0_2$Parse___123_tdef_95_3441_125_(){
+function $partial_0_1$Parse___123_tdefName_95_2208_125_(){
     return (function(x1){
-        return (function(x2){
-            return Parse___123_tdef_95_3441_125_(x1, x2);
+        return Parse___123_tdefName_95_2208_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefName_95_2209_125_(){
+    return (function(x1){
+        return Parse___123_tdefName_95_2209_125_(x1);
+    });
+}
+
+function $partial_1_2$Parse___123_tdefName_95_2269_125_(x1){
+    return (function(x2){
+        return Parse___123_tdefName_95_2269_125_(x1, x2);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefName_95_2270_125_(){
+    return (function(x1){
+        return Parse___123_tdefName_95_2270_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefName_95_2328_125_(){
+    return (function(x1){
+        return Parse___123_tdefName_95_2328_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefName_95_2329_125_(){
+    return (function(x1){
+        return Parse___123_tdefName_95_2329_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefName_95_2482_125_(){
+    return (function(x1){
+        return Parse___123_tdefName_95_2482_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefName_95_2483_125_(){
+    return (function(x1){
+        return Parse___123_tdefName_95_2483_125_(x1);
+    });
+}
+
+function $partial_1_2$Parse___123_tdefName_95_2543_125_(x1){
+    return (function(x2){
+        return Parse___123_tdefName_95_2543_125_(x1, x2);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefName_95_2544_125_(){
+    return (function(x1){
+        return Parse___123_tdefName_95_2544_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefName_95_2661_125_(){
+    return (function(x1){
+        return Parse___123_tdefName_95_2661_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefName_95_2662_125_(){
+    return (function(x1){
+        return Parse___123_tdefName_95_2662_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefName_95_2771_125_(){
+    return (function(x1){
+        return Parse___123_tdefName_95_2771_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefName_95_2772_125_(){
+    return (function(x1){
+        return Parse___123_tdefName_95_2772_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefName_95_2889_125_(){
+    return (function(x1){
+        return Parse___123_tdefName_95_2889_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefName_95_2890_125_(){
+    return (function(x1){
+        return Parse___123_tdefName_95_2890_125_(x1);
+    });
+}
+
+function $partial_1_4$Parse___123_tdefName_95_2954_125_(x1){
+    return (function(x2){
+        return (function(x3){
+            return (function(x4){
+                return Parse___123_tdefName_95_2954_125_(x1, x2, x3, x4);
+            });
         });
     });
 }
 
-function $partial_1_6$Parse___123_tnamed_95_4348_125_(x1){
+function $partial_2_6$Parse___123_tdefName_95_2955_125_(x1, x2){
+    return (function(x3){
+        return (function(x4){
+            return (function(x5){
+                return (function(x6){
+                    return Parse___123_tdefName_95_2955_125_(x1, x2, x3, x4, x5, x6);
+                });
+            });
+        });
+    });
+}
+
+function $partial_1_2$Parse___123_tdefNary_95_2959_125_(x1){
+    return (function(x2){
+        return Parse___123_tdefNary_95_2959_125_(x1, x2);
+    });
+}
+
+function $partial_1_2$Parse___123_tdefNary_95_2960_125_(x1){
+    return (function(x2){
+        return Parse___123_tdefNary_95_2960_125_(x1, x2);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefNary_95_3018_125_(){
+    return (function(x1){
+        return Parse___123_tdefNary_95_3018_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefNary_95_3019_125_(){
+    return (function(x1){
+        return Parse___123_tdefNary_95_3019_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefNary_95_3185_125_(){
+    return (function(x1){
+        return Parse___123_tdefNary_95_3185_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefNary_95_3186_125_(){
+    return (function(x1){
+        return Parse___123_tdefNary_95_3186_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefNary_95_3307_125_(){
+    return (function(x1){
+        return Parse___123_tdefNary_95_3307_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefNary_95_3308_125_(){
+    return (function(x1){
+        return Parse___123_tdefNary_95_3308_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefNary_95_3476_125_(){
+    return (function(x1){
+        return Parse___123_tdefNary_95_3476_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefNary_95_3477_125_(){
+    return (function(x1){
+        return Parse___123_tdefNary_95_3477_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefNary_95_3589_125_(){
+    return (function(x1){
+        return Parse___123_tdefNary_95_3589_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefNary_95_3590_125_(){
+    return (function(x1){
+        return Parse___123_tdefNary_95_3590_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefNary_95_3707_125_(){
+    return (function(x1){
+        return Parse___123_tdefNary_95_3707_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefNary_95_3708_125_(){
+    return (function(x1){
+        return Parse___123_tdefNary_95_3708_125_(x1);
+    });
+}
+
+function $partial_3_8$Parse___123_tdefNary_95_3772_125_(x1, x2, x3){
+    return (function(x4){
+        return (function(x5){
+            return (function(x6){
+                return (function(x7){
+                    return (function(x8){
+                        return Parse___123_tdefNary_95_3772_125_(x1, x2, x3, x4, x5, x6, x7, x8);
+                    });
+                });
+            });
+        });
+    });
+}
+
+function $partial_1_3$Parse___123_tdefNary_95_3773_125_(x1){
+    return (function(x2){
+        return (function(x3){
+            return Parse___123_tdefNary_95_3773_125_(x1, x2, x3);
+        });
+    });
+}
+
+function $partial_3_7$Parse___123_tdefNary_95_3774_125_(x1, x2, x3){
+    return (function(x4){
+        return (function(x5){
+            return (function(x6){
+                return (function(x7){
+                    return Parse___123_tdefNary_95_3774_125_(x1, x2, x3, x4, x5, x6, x7);
+                });
+            });
+        });
+    });
+}
+
+function $partial_0_1$Parse___123_tdefRef_95_3819_125_(){
+    return (function(x1){
+        return Parse___123_tdefRef_95_3819_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefRef_95_3820_125_(){
+    return (function(x1){
+        return Parse___123_tdefRef_95_3820_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefRef_95_3880_125_(){
+    return (function(x1){
+        return Parse___123_tdefRef_95_3880_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefRef_95_3997_125_(){
+    return (function(x1){
+        return Parse___123_tdefRef_95_3997_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefRef_95_3998_125_(){
+    return (function(x1){
+        return Parse___123_tdefRef_95_3998_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefVar_95_4066_125_(){
+    return (function(x1){
+        return Parse___123_tdefVar_95_4066_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefVar_95_4124_125_(){
+    return (function(x1){
+        return Parse___123_tdefVar_95_4124_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefVar_95_4125_125_(){
+    return (function(x1){
+        return Parse___123_tdefVar_95_4125_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefVar_95_4291_125_(){
+    return (function(x1){
+        return Parse___123_tdefVar_95_4291_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefVar_95_4292_125_(){
+    return (function(x1){
+        return Parse___123_tdefVar_95_4292_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefVar_95_4413_125_(){
+    return (function(x1){
+        return Parse___123_tdefVar_95_4413_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefVar_95_4414_125_(){
+    return (function(x1){
+        return Parse___123_tdefVar_95_4414_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefVar_95_4535_125_(){
+    return (function(x1){
+        return Parse___123_tdefVar_95_4535_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefVar_95_4536_125_(){
+    return (function(x1){
+        return Parse___123_tdefVar_95_4536_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefVar_95_4659_125_(){
+    return (function(x1){
+        return Parse___123_tdefVar_95_4659_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tdefVar_95_4660_125_(){
+    return (function(x1){
+        return Parse___123_tdefVar_95_4660_125_(x1);
+    });
+}
+
+function $partial_1_5$Parse___123_tdefVar_95_4724_125_(x1){
+    return (function(x2){
+        return (function(x3){
+            return (function(x4){
+                return (function(x5){
+                    return Parse___123_tdefVar_95_4724_125_(x1, x2, x3, x4, x5);
+                });
+            });
+        });
+    });
+}
+
+function $partial_1_5$Parse___123_tdefVar_95_4725_125_(x1){
+    return (function(x2){
+        return (function(x3){
+            return (function(x4){
+                return (function(x5){
+                    return Parse___123_tdefVar_95_4725_125_(x1, x2, x3, x4, x5);
+                });
+            });
+        });
+    });
+}
+
+function $partial_0_1$Parse___123_tnamed_95_4783_125_(){
+    return (function(x1){
+        return Parse___123_tnamed_95_4783_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tnamed_95_4784_125_(){
+    return (function(x1){
+        return Parse___123_tnamed_95_4784_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tnamed_95_4950_125_(){
+    return (function(x1){
+        return Parse___123_tnamed_95_4950_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tnamed_95_4951_125_(){
+    return (function(x1){
+        return Parse___123_tnamed_95_4951_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tnamed_95_5117_125_(){
+    return (function(x1){
+        return Parse___123_tnamed_95_5117_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tnamed_95_5118_125_(){
+    return (function(x1){
+        return Parse___123_tnamed_95_5118_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tnamed_95_5239_125_(){
+    return (function(x1){
+        return Parse___123_tnamed_95_5239_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tnamed_95_5240_125_(){
+    return (function(x1){
+        return Parse___123_tnamed_95_5240_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tnamed_95_5406_125_(){
+    return (function(x1){
+        return Parse___123_tnamed_95_5406_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tnamed_95_5407_125_(){
+    return (function(x1){
+        return Parse___123_tnamed_95_5407_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tnamed_95_5528_125_(){
+    return (function(x1){
+        return Parse___123_tnamed_95_5528_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tnamed_95_5529_125_(){
+    return (function(x1){
+        return Parse___123_tnamed_95_5529_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tnamed_95_5651_125_(){
+    return (function(x1){
+        return Parse___123_tnamed_95_5651_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tnamed_95_5652_125_(){
+    return (function(x1){
+        return Parse___123_tnamed_95_5652_125_(x1);
+    });
+}
+
+function $partial_1_6$Parse___123_tnamed_95_5716_125_(x1){
     return (function(x2){
         return (function(x3){
             return (function(x4){
                 return (function(x5){
                     return (function(x6){
-                        return Parse___123_tnamed_95_4348_125_(x1, x2, x3, x4, x5, x6);
+                        return Parse___123_tnamed_95_5716_125_(x1, x2, x3, x4, x5, x6);
                     });
                 });
             });
@@ -2946,252 +4013,230 @@ function $partial_1_6$Parse___123_tnamed_95_4348_125_(x1){
     });
 }
 
-function $partial_1_5$Parse___123_tnamed_95_4349_125_(x1){
+function $partial_1_5$Parse___123_tnamed_95_5717_125_(x1){
     return (function(x2){
         return (function(x3){
             return (function(x4){
                 return (function(x5){
-                    return Parse___123_tnamed_95_4349_125_(x1, x2, x3, x4, x5);
+                    return Parse___123_tnamed_95_5717_125_(x1, x2, x3, x4, x5);
                 });
             });
         });
     });
 }
 
-function $partial_1_5$Parse___123_tnamed_95_4350_125_(x1){
+function $partial_1_5$Parse___123_tnamed_95_5718_125_(x1){
     return (function(x2){
         return (function(x3){
             return (function(x4){
                 return (function(x5){
-                    return Parse___123_tnamed_95_4350_125_(x1, x2, x3, x4, x5);
+                    return Parse___123_tnamed_95_5718_125_(x1, x2, x3, x4, x5);
                 });
             });
         });
     });
 }
 
-function $partial_3_5$Parse___123_tnamed_95_4385_125_(x1, x2, x3){
+function $partial_3_5$Parse___123_tnamed_95_5753_125_(x1, x2, x3){
     return (function(x4){
         return (function(x5){
-            return Parse___123_tnamed_95_4385_125_(x1, x2, x3, x4, x5);
+            return Parse___123_tnamed_95_5753_125_(x1, x2, x3, x4, x5);
         });
     });
 }
 
-function $partial_0_1$Parse___123_tnamed_95_4399_125_(){
+function $partial_0_1$Parse___123_tnamed_95_5767_125_(){
     return (function(x1){
-        return Parse___123_tnamed_95_4399_125_(x1);
+        return Parse___123_tnamed_95_5767_125_(x1);
     });
 }
 
-function $partial_0_1$Parse___123_tnamedRec_95_4403_125_(){
+function $partial_0_1$Parse___123_tnamedRec_95_5771_125_(){
     return (function(x1){
-        return Parse___123_tnamedRec_95_4403_125_(x1);
+        return Parse___123_tnamedRec_95_5771_125_(x1);
     });
 }
 
-function $partial_0_2$Parse___123_tnamedRec_95_4510_125_(){
+function $partial_0_1$Parse___123_tnamedRec_95_5861_125_(){
+    return (function(x1){
+        return Parse___123_tnamedRec_95_5861_125_(x1);
+    });
+}
+
+function $partial_0_1$Parse___123_tnamedRec_95_5862_125_(){
+    return (function(x1){
+        return Parse___123_tnamedRec_95_5862_125_(x1);
+    });
+}
+
+function $partial_0_2$Parse___123_tnamedRec_95_5878_125_(){
     return (function(x1){
         return (function(x2){
-            return Parse___123_tnamedRec_95_4510_125_(x1, x2);
+            return Parse___123_tnamedRec_95_5878_125_(x1, x2);
         });
     });
 }
 
-function $partial_0_1$Text__PrettyPrint__WL__Core___123_toString_95_4511_125_(){
+function $partial_0_1$Text__PrettyPrint__WL__Core___123_toString_95_5879_125_(){
     return (function(x1){
-        return Text__PrettyPrint__WL__Core___123_toString_95_4511_125_(x1);
+        return Text__PrettyPrint__WL__Core___123_toString_95_5879_125_(x1);
     });
 }
 
-function $partial_7_11$TParsec__Combinators__Chars___123_withSpaces_95_4512_125_(x1, x2, x3, x4, x5, x6, x7){
-    return (function(x8){
-        return (function(x9){
-            return (function(x10){
-                return (function(x11){
-                    return TParsec__Combinators__Chars___123_withSpaces_95_4512_125_(x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11);
-                });
-            });
+function $partial_0_2$Backend___123_Backend__Haskell___64_Backend__ASTGen_36_Haskell_58_HsType_58_n_58__33_generateTermDefs_58_0_95_lam_95_6113_125_(){
+    return (function(x1){
+        return (function(x2){
+            return Backend___123_Backend__Haskell___64_Backend__ASTGen_36_Haskell_58_HsType_58_n_58__33_generateTermDefs_58_0_95_lam_95_6113_125_(x1, x2);
         });
     });
 }
 
-function $partial_3_4$Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33__60__124__62__58_0_95_lam_95_5272_125_(x1, x2, x3){
+function $partial_3_4$Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33__60__124__62__58_0_95_lam_95_6114_125_(x1, x2, x3){
     return (function(x4){
-        return Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33__60__124__62__58_0_95_lam_95_5272_125_(x1, x2, x3, x4);
+        return Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33__60__124__62__58_0_95_lam_95_6114_125_(x1, x2, x3, x4);
     });
 }
 
-function $partial_2_3$Prelude__Applicative___123_TParsec__Result___64_Prelude__Applicative__Applicative_36_ResultT_32_e_32_m_58__33__60__42__62__58_0_95_lam_95_5273_125_(x1, x2){
+function $partial_2_3$Prelude__Applicative___123_TParsec__Result___64_Prelude__Applicative__Applicative_36_ResultT_32_e_32_m_58__33__60__42__62__58_0_95_lam_95_6115_125_(x1, x2){
     return (function(x3){
-        return Prelude__Applicative___123_TParsec__Result___64_Prelude__Applicative__Applicative_36_ResultT_32_e_32_m_58__33__60__42__62__58_0_95_lam_95_5273_125_(x1, x2, x3);
+        return Prelude__Applicative___123_TParsec__Result___64_Prelude__Applicative__Applicative_36_ResultT_32_e_32_m_58__33__60__42__62__58_0_95_lam_95_6115_125_(x1, x2, x3);
     });
 }
 
-function $partial_2_3$Prelude__Applicative___123_TParsec__Result___64_Prelude__Applicative__Applicative_36_ResultT_32_e_32_m_58__33__60__42__62__58_0_95_lam_95_5274_125_(x1, x2){
+function $partial_2_3$Prelude__Applicative___123_TParsec__Result___64_Prelude__Applicative__Applicative_36_ResultT_32_e_32_m_58__33__60__42__62__58_0_95_lam_95_6116_125_(x1, x2){
     return (function(x3){
-        return Prelude__Applicative___123_TParsec__Result___64_Prelude__Applicative__Applicative_36_ResultT_32_e_32_m_58__33__60__42__62__58_0_95_lam_95_5274_125_(x1, x2, x3);
+        return Prelude__Applicative___123_TParsec__Result___64_Prelude__Applicative__Applicative_36_ResultT_32_e_32_m_58__33__60__42__62__58_0_95_lam_95_6116_125_(x1, x2, x3);
     });
 }
 
-function $partial_2_3$Prelude__Applicative___123_Control__Monad__State___64_Prelude__Applicative__Applicative_36_StateT_32_stateType_32_f_58__33__60__42__62__58_0_95_lam_95_5275_125_(x1, x2){
+function $partial_2_3$Prelude__Applicative___123_Control__Monad__State___64_Prelude__Applicative__Applicative_36_StateT_32_stateType_32_f_58__33__60__42__62__58_0_95_lam_95_6117_125_(x1, x2){
     return (function(x3){
-        return Prelude__Applicative___123_Control__Monad__State___64_Prelude__Applicative__Applicative_36_StateT_32_stateType_32_f_58__33__60__42__62__58_0_95_lam_95_5275_125_(x1, x2, x3);
+        return Prelude__Applicative___123_Control__Monad__State___64_Prelude__Applicative__Applicative_36_StateT_32_stateType_32_f_58__33__60__42__62__58_0_95_lam_95_6117_125_(x1, x2, x3);
     });
 }
 
-function $partial_2_3$Prelude__Applicative___123_Control__Monad__State___64_Prelude__Applicative__Applicative_36_StateT_32_stateType_32_f_58__33__60__42__62__58_0_95_lam_95_5276_125_(x1, x2){
+function $partial_2_3$Prelude__Applicative___123_Control__Monad__State___64_Prelude__Applicative__Applicative_36_StateT_32_stateType_32_f_58__33__60__42__62__58_0_95_lam_95_6118_125_(x1, x2){
     return (function(x3){
-        return Prelude__Applicative___123_Control__Monad__State___64_Prelude__Applicative__Applicative_36_StateT_32_stateType_32_f_58__33__60__42__62__58_0_95_lam_95_5276_125_(x1, x2, x3);
+        return Prelude__Applicative___123_Control__Monad__State___64_Prelude__Applicative__Applicative_36_StateT_32_stateType_32_f_58__33__60__42__62__58_0_95_lam_95_6118_125_(x1, x2, x3);
     });
 }
 
-function $partial_1_5$Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_5277_125_(x1){
+function $partial_1_5$Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_6119_125_(x1){
     return (function(x2){
         return (function(x3){
             return (function(x4){
                 return (function(x5){
-                    return Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_5277_125_(x1, x2, x3, x4, x5);
+                    return Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_6119_125_(x1, x2, x3, x4, x5);
                 });
             });
         });
     });
 }
 
-function $partial_1_3$Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_5278_125_(x1){
+function $partial_1_3$Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_6120_125_(x1){
     return (function(x2){
         return (function(x3){
-            return Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_5278_125_(x1, x2, x3);
+            return Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_6120_125_(x1, x2, x3);
         });
     });
 }
 
-function $partial_1_5$Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_5279_125_(x1){
+function $partial_1_3$Prelude__Interfaces___123_Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0_95_lam_95_6123_125_(x1){
+    return (function(x2){
+        return (function(x3){
+            return Prelude__Interfaces___123_Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0_95_lam_95_6123_125_(x1, x2, x3);
+        });
+    });
+}
+
+function $partial_1_3$Prelude__Interfaces___123_Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0_95_lam_95_6124_125_(x1){
+    return (function(x2){
+        return (function(x3){
+            return Prelude__Interfaces___123_Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0_95_lam_95_6124_125_(x1, x2, x3);
+        });
+    });
+}
+
+function $partial_1_3$Prelude__Interfaces___123_Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0_95_lam_95_6125_125_(x1){
+    return (function(x2){
+        return (function(x3){
+            return Prelude__Interfaces___123_Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0_95_lam_95_6125_125_(x1, x2, x3);
+        });
+    });
+}
+
+function $partial_1_3$Prelude__Interfaces___123_Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0_95_lam_95_6126_125_(x1){
+    return (function(x2){
+        return (function(x3){
+            return Prelude__Interfaces___123_Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0_95_lam_95_6126_125_(x1, x2, x3);
+        });
+    });
+}
+
+function $partial_1_2$Prelude__Functor___123_TParsec__Result___64_Prelude__Functor__Functor_36_ResultT_32_e_32_m_58__33_map_58_0_95_lam_95_6131_125_(x1){
+    return (function(x2){
+        return Prelude__Functor___123_TParsec__Result___64_Prelude__Functor__Functor_36_ResultT_32_e_32_m_58__33_map_58_0_95_lam_95_6131_125_(x1, x2);
+    });
+}
+
+function $partial_1_2$Prelude__Functor___123_Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0_95_lam_95_6132_125_(x1){
+    return (function(x2){
+        return Prelude__Functor___123_Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0_95_lam_95_6132_125_(x1, x2);
+    });
+}
+
+function $partial_1_5$Prelude__Functor___123_TParsec__Types___64_Prelude__Functor__Functor_36_TParsecT_32_e_32_a_32_m_58__33_map_58_0_95_lam_95_6133_125_(x1){
     return (function(x2){
         return (function(x3){
             return (function(x4){
                 return (function(x5){
-                    return Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_5279_125_(x1, x2, x3, x4, x5);
+                    return Prelude__Functor___123_TParsec__Types___64_Prelude__Functor__Functor_36_TParsecT_32_e_32_a_32_m_58__33_map_58_0_95_lam_95_6133_125_(x1, x2, x3, x4, x5);
                 });
             });
         });
     });
 }
 
-function $partial_1_5$Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_5280_125_(x1){
-    return (function(x2){
-        return (function(x3){
-            return (function(x4){
-                return (function(x5){
-                    return Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_5280_125_(x1, x2, x3, x4, x5);
-                });
-            });
-        });
-    });
-}
-
-function $partial_1_2$Prelude__Functor___123_TParsec__Result___64_Prelude__Functor__Functor_36_ResultT_32_e_32_m_58__33_map_58_0_95_lam_95_5281_125_(x1){
-    return (function(x2){
-        return Prelude__Functor___123_TParsec__Result___64_Prelude__Functor__Functor_36_ResultT_32_e_32_m_58__33_map_58_0_95_lam_95_5281_125_(x1, x2);
-    });
-}
-
-function $partial_1_2$Prelude__Functor___123_Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0_95_lam_95_5282_125_(x1){
-    return (function(x2){
-        return Prelude__Functor___123_Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0_95_lam_95_5282_125_(x1, x2);
-    });
-}
-
-function $partial_1_5$Prelude__Functor___123_TParsec__Types___64_Prelude__Functor__Functor_36_TParsecT_32_e_32_a_32_m_58__33_map_58_0_95_lam_95_5283_125_(x1){
-    return (function(x2){
-        return (function(x3){
-            return (function(x4){
-                return (function(x5){
-                    return Prelude__Functor___123_TParsec__Types___64_Prelude__Functor__Functor_36_TParsecT_32_e_32_a_32_m_58__33_map_58_0_95_lam_95_5283_125_(x1, x2, x3, x4, x5);
-                });
-            });
-        });
-    });
-}
-
-function $partial_2_3$Prelude__Monad___123_TParsec__Result___64_Prelude__Monad__Monad_36_ResultT_32_e_32_m_58__33__62__62__61__58_0_95_lam_95_5284_125_(x1, x2){
+function $partial_2_3$Prelude__Monad___123_TParsec__Result___64_Prelude__Monad__Monad_36_ResultT_32_e_32_m_58__33__62__62__61__58_0_95_lam_95_6134_125_(x1, x2){
     return (function(x3){
-        return Prelude__Monad___123_TParsec__Result___64_Prelude__Monad__Monad_36_ResultT_32_e_32_m_58__33__62__62__61__58_0_95_lam_95_5284_125_(x1, x2, x3);
+        return Prelude__Monad___123_TParsec__Result___64_Prelude__Monad__Monad_36_ResultT_32_e_32_m_58__33__62__62__61__58_0_95_lam_95_6134_125_(x1, x2, x3);
     });
 }
 
-function $partial_1_2$Prelude__Monad___123_Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0_95_lam_95_5285_125_(x1){
+function $partial_1_2$Prelude__Monad___123_Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0_95_lam_95_6135_125_(x1){
     return (function(x2){
-        return Prelude__Monad___123_Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0_95_lam_95_5285_125_(x1, x2);
+        return Prelude__Monad___123_Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0_95_lam_95_6135_125_(x1, x2);
     });
 }
 
-function $partial_0_2$TParsec__Running___123_TParsec__Running___64_TParsec__Running__MonadRun_36_ResultT_32_e_32_m_58__33_runMonad_58_0_95_lam_95_5290_125_(){
+function $partial_0_1$Control__Monad__Trans___123_TParsec__Result___64_Control__Monad__Trans__MonadTrans_36_ResultT_32_e_58__33_lift_58_0_95_lam_95_6141_125_(){
     return (function(x1){
-        return (function(x2){
-            return TParsec__Running___123_TParsec__Running___64_TParsec__Running__MonadRun_36_ResultT_32_e_32_m_58__33_runMonad_58_0_95_lam_95_5290_125_(x1, x2);
-        });
+        return Control__Monad__Trans___123_TParsec__Result___64_Control__Monad__Trans__MonadTrans_36_ResultT_32_e_58__33_lift_58_0_95_lam_95_6141_125_(x1);
     });
 }
 
-function $partial_0_2$TParsec__Running___123_Parse___64_TParsec__Running__MonadRun_36_StateT_32_PState_32_Identity_58__33_runMonad_58_0_95_lam_95_5293_125_(){
-    return (function(x1){
-        return (function(x2){
-            return TParsec__Running___123_Parse___64_TParsec__Running__MonadRun_36_StateT_32_PState_32_Identity_58__33_runMonad_58_0_95_lam_95_5293_125_(x1, x2);
-        });
-    });
-}
-
-function $partial_0_2$TParsec__Running___123_Parse___64_TParsec__Running__MonadRun_36_StateT_32_PState_32_Identity_58__33_runMonad_58_0_95_lam_95_5294_125_(){
-    return (function(x1){
-        return (function(x2){
-            return TParsec__Running___123_Parse___64_TParsec__Running__MonadRun_36_StateT_32_PState_32_Identity_58__33_runMonad_58_0_95_lam_95_5294_125_(x1, x2);
-        });
-    });
-}
-
-function $partial_0_1$TParsec__Running___123_TParsec__Running___64_TParsec__Running__MonadRun_36_TParsecT_32_e_32_a_32_m_58__33_runMonad_58_0_95_lam_95_5295_125_(){
-    return (function(x1){
-        return TParsec__Running___123_TParsec__Running___64_TParsec__Running__MonadRun_36_TParsecT_32_e_32_a_32_m_58__33_runMonad_58_0_95_lam_95_5295_125_(x1);
-    });
-}
-
-function $partial_0_1$Control__Monad__Trans___123_TParsec__Result___64_Control__Monad__Trans__MonadTrans_36_ResultT_32_e_58__33_lift_58_0_95_lam_95_5296_125_(){
-    return (function(x1){
-        return Control__Monad__Trans___123_TParsec__Result___64_Control__Monad__Trans__MonadTrans_36_ResultT_32_e_58__33_lift_58_0_95_lam_95_5296_125_(x1);
-    });
-}
-
-function $partial_2_3$Control__Monad__Trans___123_Control__Monad__State___64_Control__Monad__Trans__MonadTrans_36_StateT_32_stateType_58__33_lift_58_0_95_lam_95_5297_125_(x1, x2){
+function $partial_2_3$Control__Monad__Trans___123_Control__Monad__State___64_Control__Monad__Trans__MonadTrans_36_StateT_32_stateType_58__33_lift_58_0_95_lam_95_6142_125_(x1, x2){
     return (function(x3){
-        return Control__Monad__Trans___123_Control__Monad__State___64_Control__Monad__Trans__MonadTrans_36_StateT_32_stateType_58__33_lift_58_0_95_lam_95_5297_125_(x1, x2, x3);
+        return Control__Monad__Trans___123_Control__Monad__State___64_Control__Monad__Trans__MonadTrans_36_StateT_32_stateType_58__33_lift_58_0_95_lam_95_6142_125_(x1, x2, x3);
     });
 }
 
-function $partial_1_5$Control__Monad__Trans___123_TParsec__Types___64_Control__Monad__Trans__MonadTrans_36_TParsecT_32_e_32_a_58__33_lift_58_0_95_lam_95_5298_125_(x1){
+function $partial_1_5$Control__Monad__Trans___123_TParsec__Types___64_Control__Monad__Trans__MonadTrans_36_TParsecT_32_e_32_a_58__33_lift_58_0_95_lam_95_6143_125_(x1){
     return (function(x2){
         return (function(x3){
             return (function(x4){
                 return (function(x5){
-                    return Control__Monad__Trans___123_TParsec__Types___64_Control__Monad__Trans__MonadTrans_36_TParsecT_32_e_32_a_58__33_lift_58_0_95_lam_95_5298_125_(x1, x2, x3, x4, x5);
+                    return Control__Monad__Trans___123_TParsec__Types___64_Control__Monad__Trans__MonadTrans_36_TParsecT_32_e_32_a_58__33_lift_58_0_95_lam_95_6143_125_(x1, x2, x3, x4, x5);
                 });
             });
         });
     });
 }
 
-function $partial_1_3$Control__Monad__Trans___123_TParsec__Types___64_Control__Monad__Trans__MonadTrans_36_TParsecT_32_e_32_a_58__33_lift_58_0_95_lam_95_5299_125_(x1){
+function $partial_1_3$Control__Monad__Trans___123_TParsec__Types___64_Control__Monad__Trans__MonadTrans_36_TParsecT_32_e_32_a_58__33_lift_58_0_95_lam_95_6144_125_(x1){
     return (function(x2){
         return (function(x3){
-            return Control__Monad__Trans___123_TParsec__Types___64_Control__Monad__Trans__MonadTrans_36_TParsecT_32_e_32_a_58__33_lift_58_0_95_lam_95_5299_125_(x1, x2, x3);
-        });
-    });
-}
-
-function $partial_0_2$Prelude__Traversable___123_Data__Vect___64_Prelude__Traversable__Traversable_36_Vect_32_n_58__33_traverse_58_0_95_lam_95_5303_125_(){
-    return (function(x1){
-        return (function(x2){
-            return Prelude__Traversable___123_Data__Vect___64_Prelude__Traversable__Traversable_36_Vect_32_n_58__33_traverse_58_0_95_lam_95_5303_125_(x1, x2);
+            return Control__Monad__Trans___123_TParsec__Types___64_Control__Monad__Trans__MonadTrans_36_TParsecT_32_e_32_a_58__33_lift_58_0_95_lam_95_6144_125_(x1, x2, x3);
         });
     });
 }
@@ -3238,80 +4283,346 @@ function $partial_5_6$Control__Monad__Trans__Control__Monad__State___64_Control_
     });
 }
 
-function $partial_0_1$$_4513_Induction__Nat__fixBox_58_go_58_0_95_lam(){
-    return (function(x1){
-        return $_4513_Induction__Nat__fixBox_58_go_58_0_95_lam(x1);
-    });
-}
-
-function $partial_2_4$$_4514_Induction__Nat__fixBox_58_go_58_0_95_lam(x1, x2){
-    return (function(x3){
-        return (function(x4){
-            return $_4514_Induction__Nat__fixBox_58_go_58_0_95_lam(x1, x2, x3, x4);
-        });
-    });
-}
-
-function $partial_3_4$$_4515_Induction__Nat__fixBox_58_go_58_0_95_lam(x1, x2, x3){
-    return (function(x4){
-        return $_4515_Induction__Nat__fixBox_58_go_58_0_95_lam(x1, x2, x3, x4);
-    });
-}
-
-function $partial_3_4$$_4516_Backend__Utils__flattenMus_58_flattenMu_58_0_95_lam(x1, x2, x3){
-    return (function(x4){
-        return $_4516_Backend__Utils__flattenMus_58_flattenMu_58_0_95_lam(x1, x2, x3, x4);
-    });
-}
-
-function $partial_6_7$$_4517_Text__PrettyPrint__WL__Core__render_58_best_58_0_95_lam(x1, x2, x3, x4, x5, x6){
-    return (function(x7){
-        return $_4517_Text__PrettyPrint__WL__Core__render_58_best_58_0_95_lam(x1, x2, x3, x4, x5, x6, x7);
-    });
-}
-
-function $partial_1_2$$_4522_Parse__tdef_58_nary_58_0_95_lam(x1){
-    return (function(x2){
-        return $_4522_Parse__tdef_58_nary_58_0_95_lam(x1, x2);
-    });
-}
-
-function $partial_1_2$$_4523_Parse__tdef_58_nary_58_0_95_lam(x1){
-    return (function(x2){
-        return $_4523_Parse__tdef_58_nary_58_0_95_lam(x1, x2);
-    });
-}
-
-function $partial_3_8$$_5269_Parse__tdef_58_nary_58_0_95_lam(x1, x2, x3){
-    return (function(x4){
-        return (function(x5){
-            return (function(x6){
-                return (function(x7){
-                    return (function(x8){
-                        return $_5269_Parse__tdef_58_nary_58_0_95_lam(x1, x2, x3, x4, x5, x6, x7, x8);
-                    });
-                });
-            });
-        });
-    });
-}
-
-function $partial_1_3$$_5270_Parse__tdef_58_nary_58_0_95_lam(x1){
+function $partial_1_3$$_5899_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam(x1){
     return (function(x2){
         return (function(x3){
-            return $_5270_Parse__tdef_58_nary_58_0_95_lam(x1, x2, x3);
+            return $_5899_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam(x1, x2, x3);
         });
     });
 }
 
-function $partial_3_7$$_5271_Parse__tdef_58_nary_58_0_95_lam(x1, x2, x3){
+function $partial_0_1$$_5900_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam(){
+    return (function(x1){
+        return $_5900_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam(x1);
+    });
+}
+
+function $partial_1_3$$_5919_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam(x1){
+    return (function(x2){
+        return (function(x3){
+            return $_5919_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam(x1, x2, x3);
+        });
+    });
+}
+
+function $partial_0_1$$_5920_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam(){
+    return (function(x1){
+        return $_5920_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam(x1);
+    });
+}
+
+function $partial_1_3$$_5939_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam(x1){
+    return (function(x2){
+        return (function(x3){
+            return $_5939_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam(x1, x2, x3);
+        });
+    });
+}
+
+function $partial_0_1$$_5940_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam(){
+    return (function(x1){
+        return $_5940_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam(x1);
+    });
+}
+
+function $partial_1_3$$_5959_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam(x1){
+    return (function(x2){
+        return (function(x3){
+            return $_5959_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam(x1, x2, x3);
+        });
+    });
+}
+
+function $partial_0_1$$_5960_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam(){
+    return (function(x1){
+        return $_5960_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam(x1);
+    });
+}
+
+function $partial_2_3$$_5961_Backend__Haskell__decodeDef_58_genCases_58_0_95_lam(x1, x2){
+    return (function(x3){
+        return $_5961_Backend__Haskell__decodeDef_58_genCases_58_0_95_lam(x1, x2, x3);
+    });
+}
+
+function $partial_0_1$$_5966_Backend__Haskell__decodeDef_58_genCases_58_0_95_lam(){
+    return (function(x1){
+        return $_5966_Backend__Haskell__decodeDef_58_genCases_58_0_95_lam(x1);
+    });
+}
+
+function $partial_0_1$$_5967_Backend__Haskell__decodeDef_58_genCases_58_0_95_lam(){
+    return (function(x1){
+        return $_5967_Backend__Haskell__decodeDef_58_genCases_58_0_95_lam(x1);
+    });
+}
+
+function $partial_2_4$$_5968_Backend__Haskell__decodeDef_58_genCases_58_0_95_lam(x1, x2){
+    return (function(x3){
+        return (function(x4){
+            return $_5968_Backend__Haskell__decodeDef_58_genCases_58_0_95_lam(x1, x2, x3, x4);
+        });
+    });
+}
+
+function $partial_2_4$$_5989_Backend__Haskell__decodeDef_58_genConstructor_58_0_95_lam(x1, x2){
+    return (function(x3){
+        return (function(x4){
+            return $_5989_Backend__Haskell__decodeDef_58_genConstructor_58_0_95_lam(x1, x2, x3, x4);
+        });
+    });
+}
+
+function $partial_2_4$$_5990_Backend__Haskell__decodeDef_58_genConstructor_58_0_95_lam(x1, x2){
+    return (function(x3){
+        return (function(x4){
+            return $_5990_Backend__Haskell__decodeDef_58_genConstructor_58_0_95_lam(x1, x2, x3, x4);
+        });
+    });
+}
+
+function $partial_0_2$$_5993_Backend__Haskell__decodeDef_58_genConstructor_58_0_95_lam(){
+    return (function(x1){
+        return (function(x2){
+            return $_5993_Backend__Haskell__decodeDef_58_genConstructor_58_0_95_lam(x1, x2);
+        });
+    });
+}
+
+function $partial_2_3$$_5994_Backend__Haskell__decodeDef_58_genConstructor_58_0_95_lam(x1, x2){
+    return (function(x3){
+        return $_5994_Backend__Haskell__decodeDef_58_genConstructor_58_0_95_lam(x1, x2, x3);
+    });
+}
+
+function $partial_1_3$$_6003_Backend__Haskell__decodeDef_58_genConstructor_58_0_95_lam(x1){
+    return (function(x2){
+        return (function(x3){
+            return $_6003_Backend__Haskell__decodeDef_58_genConstructor_58_0_95_lam(x1, x2, x3);
+        });
+    });
+}
+
+function $partial_2_3$$_6004_Backend__Haskell__decodeDef_58_genConstructor_58_0_95_lam(x1, x2){
+    return (function(x3){
+        return $_6004_Backend__Haskell__decodeDef_58_genConstructor_58_0_95_lam(x1, x2, x3);
+    });
+}
+
+function $partial_1_3$$_6005_Backend__Haskell__dependencies_58_go_58_0_95_lam(x1){
+    return (function(x2){
+        return (function(x3){
+            return $_6005_Backend__Haskell__dependencies_58_go_58_0_95_lam(x1, x2, x3);
+        });
+    });
+}
+
+function $partial_1_3$$_6007_Backend__Haskell__dependencies_58_go_58_0_95_lam(x1){
+    return (function(x2){
+        return (function(x3){
+            return $_6007_Backend__Haskell__dependencies_58_go_58_0_95_lam(x1, x2, x3);
+        });
+    });
+}
+
+function $partial_1_3$$_6013_Backend__Haskell__dependencies_58_goMu_58_0_95_lam(x1){
+    return (function(x2){
+        return (function(x3){
+            return $_6013_Backend__Haskell__dependencies_58_goMu_58_0_95_lam(x1, x2, x3);
+        });
+    });
+}
+
+function $partial_3_4$$_6015_Backend__Haskell__encodeDef_58_genClause_58_0_95_lam(x1, x2, x3){
+    return (function(x4){
+        return $_6015_Backend__Haskell__encodeDef_58_genClause_58_0_95_lam(x1, x2, x3, x4);
+    });
+}
+
+function $partial_2_4$$_6020_Backend__Haskell__encodeDef_58_genClause_58_0_95_lam(x1, x2){
+    return (function(x3){
+        return (function(x4){
+            return $_6020_Backend__Haskell__encodeDef_58_genClause_58_0_95_lam(x1, x2, x3, x4);
+        });
+    });
+}
+
+function $partial_1_3$$_6035_Backend__Haskell__encodeDef_58_genClauses_58_0_95_lam(x1){
+    return (function(x2){
+        return (function(x3){
+            return $_6035_Backend__Haskell__encodeDef_58_genClauses_58_0_95_lam(x1, x2, x3);
+        });
+    });
+}
+
+function $partial_2_4$$_6087_Backend__Haskell__encodeDef_58_genConstructor_58_0_95_lam(x1, x2){
+    return (function(x3){
+        return (function(x4){
+            return $_6087_Backend__Haskell__encodeDef_58_genConstructor_58_0_95_lam(x1, x2, x3, x4);
+        });
+    });
+}
+
+function $partial_3_4$$_6088_Backend__Haskell__encodeDef_58_genConstructor_58_0_95_lam(x1, x2, x3){
+    return (function(x4){
+        return $_6088_Backend__Haskell__encodeDef_58_genConstructor_58_0_95_lam(x1, x2, x3, x4);
+    });
+}
+
+function $partial_2_4$$_6097_Backend__Haskell__encodeDef_58_genConstructor_58_0_95_lam(x1, x2){
+    return (function(x3){
+        return (function(x4){
+            return $_6097_Backend__Haskell__encodeDef_58_genConstructor_58_0_95_lam(x1, x2, x3, x4);
+        });
+    });
+}
+
+function $partial_3_4$$_6098_Backend__Haskell__encodeDef_58_genConstructor_58_0_95_lam(x1, x2, x3){
+    return (function(x4){
+        return $_6098_Backend__Haskell__encodeDef_58_genConstructor_58_0_95_lam(x1, x2, x3, x4);
+    });
+}
+
+function $partial_0_1$$_6099_Induction__Nat__fixBox_58_go_58_0_95_lam(){
+    return (function(x1){
+        return $_6099_Induction__Nat__fixBox_58_go_58_0_95_lam(x1);
+    });
+}
+
+function $partial_2_4$$_6100_Induction__Nat__fixBox_58_go_58_0_95_lam(x1, x2){
+    return (function(x3){
+        return (function(x4){
+            return $_6100_Induction__Nat__fixBox_58_go_58_0_95_lam(x1, x2, x3, x4);
+        });
+    });
+}
+
+function $partial_3_4$$_6101_Induction__Nat__fixBox_58_go_58_0_95_lam(x1, x2, x3){
+    return (function(x4){
+        return $_6101_Induction__Nat__fixBox_58_go_58_0_95_lam(x1, x2, x3, x4);
+    });
+}
+
+function $partial_3_4$$_6102_Backend__Utils__flattenMus_58_flattenMu_58_0_95_lam(x1, x2, x3){
+    return (function(x4){
+        return $_6102_Backend__Utils__flattenMus_58_flattenMu_58_0_95_lam(x1, x2, x3, x4);
+    });
+}
+
+function $partial_0_1$$_6103_Main__generateType_58_genType_58_0_95_lam(){
+    return (function(x1){
+        return $_6103_Main__generateType_58_genType_58_0_95_lam(x1);
+    });
+}
+
+function $partial_0_1$$_6104_Main__generateType_58_genType_58_0_95_lam(){
+    return (function(x1){
+        return $_6104_Main__generateType_58_genType_58_0_95_lam(x1);
+    });
+}
+
+function $partial_0_1$$_6105_Main__generateType_58_genType_58_0_95_lam(){
+    return (function(x1){
+        return $_6105_Main__generateType_58_genType_58_0_95_lam(x1);
+    });
+}
+
+function $partial_0_2$$_6106_Main__generateType_58_genType_58_0_95_lam(){
+    return (function(x1){
+        return (function(x2){
+            return $_6106_Main__generateType_58_genType_58_0_95_lam(x1, x2);
+        });
+    });
+}
+
+function $partial_1_2$$_6107_Main__generateType_58_genType_58_0_95_lam(x1){
+    return (function(x2){
+        return $_6107_Main__generateType_58_genType_58_0_95_lam(x1, x2);
+    });
+}
+
+function $partial_1_2$$_6108_Main__generateType_58_genType_58_0_95_lam(x1){
+    return (function(x2){
+        return $_6108_Main__generateType_58_genType_58_0_95_lam(x1, x2);
+    });
+}
+
+function $partial_6_7$$_6110_Text__PrettyPrint__WL__Core__render_58_best_58_0_95_lam(x1, x2, x3, x4, x5, x6){
+    return (function(x7){
+        return $_6110_Text__PrettyPrint__WL__Core__render_58_best_58_0_95_lam(x1, x2, x3, x4, x5, x6, x7);
+    });
+}
+
+function $partial_2_3$$_6112_Backend__Haskell__simplify_58_simpDo_58_0_95_lam(x1, x2){
+    return (function(x3){
+        return $_6112_Backend__Haskell__simplify_58_simpDo_58_0_95_lam(x1, x2, x3);
+    });
+}
+
+function $partial_3_5$$_6161_Backend__Haskell__decode_58_f_58_2_95_lam(x1, x2, x3){
     return (function(x4){
         return (function(x5){
-            return (function(x6){
-                return (function(x7){
-                    return $_5271_Parse__tdef_58_nary_58_0_95_lam(x1, x2, x3, x4, x5, x6, x7);
-                });
-            });
+            return $_6161_Backend__Haskell__decode_58_f_58_2_95_lam(x1, x2, x3, x4, x5);
+        });
+    });
+}
+
+function $partial_2_3$$_6162_Backend__Haskell__decode_58_f_58_2_95_lam(x1, x2){
+    return (function(x3){
+        return $_6162_Backend__Haskell__decode_58_f_58_2_95_lam(x1, x2, x3);
+    });
+}
+
+function $partial_0_1$$_6175_Backend__Haskell__encode_58_injectionInv_58_2_95_lam(){
+    return (function(x1){
+        return $_6175_Backend__Haskell__encode_58_injectionInv_58_2_95_lam(x1);
+    });
+}
+
+function $partial_2_4$$_6176_Backend__Haskell__encode_58_injectionInv_58_2_95_lam(x1, x2){
+    return (function(x3){
+        return (function(x4){
+            return $_6176_Backend__Haskell__encode_58_injectionInv_58_2_95_lam(x1, x2, x3, x4);
+        });
+    });
+}
+
+function $partial_5_6$$_6177_Backend__Haskell__encode_58_injectionInv_58_2_95_lam(x1, x2, x3, x4, x5){
+    return (function(x6){
+        return $_6177_Backend__Haskell__encode_58_injectionInv_58_2_95_lam(x1, x2, x3, x4, x5, x6);
+    });
+}
+
+function $partial_5_6$$_6178_Backend__Haskell__encode_58_injectionInv_58_2_95_lam(x1, x2, x3, x4, x5){
+    return (function(x6){
+        return $_6178_Backend__Haskell__encode_58_injectionInv_58_2_95_lam(x1, x2, x3, x4, x5, x6);
+    });
+}
+
+function $partial_2_4$$_6191_Backend__Haskell__encode_58_injectionInv_58_2_95_lam(x1, x2){
+    return (function(x3){
+        return (function(x4){
+            return $_6191_Backend__Haskell__encode_58_injectionInv_58_2_95_lam(x1, x2, x3, x4);
+        });
+    });
+}
+
+function $partial_3_4$$_6192_Backend__Haskell__encode_58_injectionInv_58_2_95_lam(x1, x2, x3){
+    return (function(x4){
+        return $_6192_Backend__Haskell__encode_58_injectionInv_58_2_95_lam(x1, x2, x3, x4);
+    });
+}
+
+function $partial_3_4$$_6193_Backend__Haskell__encode_58_injectionInv_58_2_95_lam(x1, x2, x3){
+    return (function(x4){
+        return $_6193_Backend__Haskell__encode_58_injectionInv_58_2_95_lam(x1, x2, x3, x4);
+    });
+}
+
+function $partial_5_7$Backend__Haskell__decodeDef_58_genCases_58_0(x1, x2, x3, x4, x5){
+    return (function(x6){
+        return (function(x7){
+            return Backend__Haskell__decodeDef_58_genCases_58_0(x1, x2, x3, x4, x5, x6, x7);
         });
     });
 }
@@ -3319,6 +4630,14 @@ function $partial_3_7$$_5271_Parse__tdef_58_nary_58_0_95_lam(x1, x2, x3){
 function $partial_2_3$Backend__JSON__disjointSubSchema_58_makeCase_58_0(x1, x2){
     return (function(x3){
         return Backend__JSON__disjointSubSchema_58_makeCase_58_0(x1, x2, x3);
+    });
+}
+
+function $partial_6_8$Backend__Haskell__encodeDef_58_genClause_58_0(x1, x2, x3, x4, x5, x6){
+    return (function(x7){
+        return (function(x8){
+            return Backend__Haskell__encodeDef_58_genClause_58_0(x1, x2, x3, x4, x5, x6, x7, x8);
+        });
     });
 }
 
@@ -3337,6 +4656,26 @@ function $partial_3_4$Backend__Haskell__renderDef_58_renderConstructor_58_1(x1, 
 function $partial_3_4$Backend__ReasonML__renderDef_58_renderConstructor_58_1(x1, x2, x3){
     return (function(x4){
         return Backend__ReasonML__renderDef_58_renderConstructor_58_1(x1, x2, x3, x4);
+    });
+}
+
+function $partial_4_6$Backend__Haskell__decode_58_f_58_2(x1, x2, x3, x4){
+    return (function(x5){
+        return (function(x6){
+            return Backend__Haskell__decode_58_f_58_2(x1, x2, x3, x4, x5, x6);
+        });
+    });
+}
+
+function $partial_3_4$Backend__Haskell__renderDef_58_renderClause_58_2(x1, x2, x3){
+    return (function(x4){
+        return Backend__Haskell__renderDef_58_renderClause_58_2(x1, x2, x3, x4);
+    });
+}
+
+function $partial_4_5$Backend__Haskell__substHS_58_captureAvoid_58_5(x1, x2, x3, x4){
+    return (function(x5){
+        return Backend__Haskell__substHS_58_captureAvoid_58_5(x1, x2, x3, x4, x5);
     });
 }
 
@@ -3399,6 +4738,17 @@ function $HC_2_1$Text__PrettyPrint__WL__Core__PrettyDoc__Chara($1, $2){
     this.$2 = $2;
 }
 
+const $HC_0_1$Prelude__Nat__CmpEQ = ({type: 1});
+function $HC_1_2$Prelude__Nat__CmpGT($1){
+    this.type = 2;
+    this.$1 = $1;
+}
+
+function $HC_1_0$Prelude__Nat__CmpLT($1){
+    this.type = 0;
+    this.$1 = $1;
+}
+
 function $HC_1_7$Text__PrettyPrint__WL__Core__Column($1){
     this.type = 7;
     this.$1 = $1;
@@ -3417,16 +4767,83 @@ function $HC_1_1$Data__Fin__FS($1){
 }
 
 const $HC_0_0$Data__Fin__FZ = ({type: 0});
+function $HC_3_2$Backend__Haskell__FunDef($1, $2, $3){
+    this.type = 2;
+    this.$1 = $1;
+    this.$2 = $2;
+    this.$3 = $3;
+}
+
 function $HC_1_0$TParsec__Result__HardFail($1){
     this.type = 0;
     this.$1 = $1;
 }
 
-function $HC_3_4$Backend__Haskell__HsParam($1, $2, $3){
+function $HC_2_6$Backend__Haskell__HsApp($1, $2){
+    this.type = 6;
+    this.$1 = $1;
+    this.$2 = $2;
+}
+
+function $HC_2_6$Backend__Haskell__HsArrow($1, $2){
+    this.type = 6;
+    this.$1 = $1;
+    this.$2 = $2;
+}
+
+function $HC_2_5$Backend__Haskell__HsCase($1, $2){
+    this.type = 5;
+    this.$1 = $1;
+    this.$2 = $2;
+}
+
+function $HC_1_11$Backend__Haskell__HsConcat($1){
+    this.type = 11;
+    this.$1 = $1;
+}
+
+function $HC_1_8$Backend__Haskell__HsDo($1){
+    this.type = 8;
+    this.$1 = $1;
+}
+
+function $HC_1_7$Backend__Haskell__HsFun($1){
+    this.type = 7;
+    this.$1 = $1;
+}
+
+function $HC_2_4$Backend__Haskell__HsInn($1, $2){
     this.type = 4;
     this.$1 = $1;
     this.$2 = $2;
+}
+
+function $HC_1_10$Backend__Haskell__HsInt($1){
+    this.type = 10;
+    this.$1 = $1;
+}
+
+function $HC_3_5$Backend__Haskell__HsParam($1, $2, $3){
+    this.type = 5;
+    this.$1 = $1;
+    this.$2 = $2;
     this.$3 = $3;
+}
+
+function $HC_2_3$Backend__Haskell__HsSum($1, $2){
+    this.type = 3;
+    this.$1 = $1;
+    this.$2 = $2;
+}
+
+function $HC_1_2$Backend__Haskell__HsTermVar($1){
+    this.type = 2;
+    this.$1 = $1;
+}
+
+function $HC_1_1$Backend__Haskell__HsTupC($1){
+    this.type = 1;
+    this.$1 = $1;
 }
 
 function $HC_1_2$Backend__Haskell__HsTuple($1){
@@ -3435,12 +4852,19 @@ function $HC_1_2$Backend__Haskell__HsTuple($1){
 }
 
 const $HC_0_1$Backend__Haskell__HsUnit = ({type: 1});
-function $HC_1_3$Backend__Haskell__HsVar($1){
-    this.type = 3;
+const $HC_0_0$Backend__Haskell__HsUnitTT = ({type: 0});
+function $HC_1_4$Backend__Haskell__HsVar($1){
+    this.type = 4;
     this.$1 = $1;
 }
 
 const $HC_0_0$Backend__Haskell__HsVoid = ({type: 0});
+const $HC_0_3$Backend__Haskell__HsWildcard = ({type: 3});
+function $HC_1_9$Backend__Haskell__HsWord8($1){
+    this.type = 9;
+    this.$1 = $1;
+}
+
 const $HC_0_0$Prelude__List__IsNonEmpty = ({type: 0});
 function $HC_1_4$Language__JSON__Data__JArray($1){
     this.type = 4;
@@ -3500,10 +4924,11 @@ function $HC_2_3$Text__PrettyPrint__WL__Core__PrettyDoc__Line($1, $2){
     this.$2 = $2;
 }
 
-function $HC_2_1$Data__SortedMap__M($1, $2){
+function $HC_3_1$Data__SortedMap__M($1, $2, $3){
     this.type = 1;
     this.$1 = $1;
     this.$2 = $2;
+    this.$3 = $3;
 }
 
 function $HC_2_0$Builtins__MkDPair($1, $2){
@@ -3531,7 +4956,12 @@ function $HC_2_0$Builtins__MkPair($1, $2){
     this.$2 = $2;
 }
 
-const $HC_0_0$TParsec__Types__MkPosition = ({type: 0});
+function $HC_2_0$TParsec__Types__MkPosition($1, $2){
+    this.type = 0;
+    this.$1 = $1;
+    this.$2 = $2;
+}
+
 function $HC_4_0$TParsec__Success__MkSuccess($1, $2, $3, $4){
     this.type = 0;
     this.$1 = $1;
@@ -3556,6 +4986,11 @@ const $HC_0_0$Data__Vect__Nil = ({type: 0});
 const $HC_0_1$Prelude__Basics__No = ({type: 1});
 const $HC_0_0$Prelude__Maybe__Nothing = ({type: 0});
 const $HC_0_0$Prelude__Show__Open = ({type: 0});
+function $HC_1_0$Parse__ParseError($1){
+    this.type = 0;
+    this.$1 = $1;
+}
+
 function $HC_3_3$Backend__ReasonML__RMLParam($1, $2, $3){
     this.type = 3;
     this.$1 = $1;
@@ -3580,6 +5015,7 @@ function $HC_1_1$Prelude__Either__Right($1){
     this.$1 = $1;
 }
 
+const $HC_0_1$Parse__RunError = ({type: 1});
 function $HC_1_1$TParsec__Result__SoftFail($1){
     this.type = 1;
     this.$1 = $1;
@@ -3693,6 +5129,13 @@ function $HC_1_0$Prelude__Basics__Yes($1){
     this.$1 = $1;
 }
 
+function $HC_3_0$Backend__ASTGen_95_ictor($1, $2, $3){
+    this.type = 0;
+    this.$1 = $1;
+    this.$2 = $2;
+    this.$3 = $3;
+}
+
 function $HC_3_0$Prelude__Applicative__Alternative_95_ictor($1, $2, $3){
     this.type = 0;
     this.$1 = $1;
@@ -3705,6 +5148,12 @@ function $HC_3_0$Prelude__Applicative__Applicative_95_ictor($1, $2, $3){
     this.$1 = $1;
     this.$2 = $2;
     this.$3 = $3;
+}
+
+function $HC_2_0$Backend__CodegenIndep_95_ictor($1, $2){
+    this.type = 0;
+    this.$1 = $1;
+    this.$2 = $2;
 }
 
 function $HC_2_0$Prelude__Interfaces__Eq_95_ictor($1, $2){
@@ -3742,6 +5191,12 @@ function prim_95__95_strCons($_0_arg, $_1_arg){
 
 function prim_95__95_toStrBigInt($_0_arg){
     return (($_0_arg).toString());
+}
+
+// prim__toStrInt
+
+function prim_95__95_toStrInt($_0_arg){
+    return (''+($_0_arg));
 }
 
 // Prelude.List.++
@@ -3832,6 +5287,12 @@ function TParsec__Combinators__ands($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg,
     return Data__NEList__foldr1_58_go_58_0(null, $partial_1_3$TParsec__Combinators___123_ands_95_9_125_($_3_arg), null, null, $partial_8_11$TParsec__Combinators__map(null, null, null, null, $cg$2, $partial_0_1$TParsec__Combinators___123_ands_95_10_125_(), null, $_5_arg.$1), Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $partial_7_11$TParsec__Combinators__map(null, null, null, null, $cg$5, $partial_0_1$TParsec__Combinators___123_ands_95_10_125_(), null), $_5_arg.$2));
 }
 
+// TParsec.Combinators.Chars.anyCharBut
+
+function TParsec__Combinators__Chars__anyCharBut($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_in){
+    return $partial_7_8$TParsec__Combinators__anyTokenBut(null, $_1_arg, $_2_arg, $_3_arg, $_6_arg, $_5_arg, $_4_arg($_7_in));
+}
+
 // TParsec.Combinators.anyOf
 
 function TParsec__Combinators__anyOf($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg){
@@ -3844,6 +5305,12 @@ function TParsec__Combinators__anyTok($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_ar
     let $cg$1 = null;
     $cg$1 = $_2_arg.$2(null);
     return Prelude__Foldable__Prelude__Maybe___64_Prelude__Foldable__Foldable_36_Maybe_58__33_foldr_58_0(null, null, $partial_2_4$TParsec__Combinators___123_anyTok_95_14_125_($_2_arg, $_1_arg), $cg$1, TParsec__Success__getTok(null, null, $_3_arg, $_5_m1, $_7_ts));
+}
+
+// TParsec.Combinators.anyTokenBut
+
+function TParsec__Combinators__anyTokenBut($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg){
+    return $partial_9_12$TParsec__Combinators__guardM(null, null, null, null, $_2_arg, $_3_arg, $partial_2_3$TParsec__Combinators___123_anyTokenBut_95_16_125_($_5_arg, $_6_arg), null, $partial_5_8$TParsec__Combinators__anyTok(null, $_1_arg, $_2_arg, $_4_arg, null));
 }
 
 // Typedefs.ap
@@ -3860,17 +5327,17 @@ function Typedefs__ap($_0_arg, $_1_arg, $_2_arg, $_3_arg){
             const $cg$3 = $_2_arg.$2;
             let $cg$2 = null;
             $cg$2 = $cg$3.$2;
-            $tco$$_3_arg = Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_2_3$Typedefs___123_ap_95_15_125_($_0_arg, $_3_arg), $_2_arg.$3);
+            $tco$$_3_arg = Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_2_3$Typedefs___123_ap_95_17_125_($_0_arg, $_3_arg), $_2_arg.$3);
             $_0_arg = $_0_arg;
             $_1_arg = null;
             $_2_arg = $cg$2;
             $_3_arg = $tco$$_3_arg;
         } else if(($_2_arg.type === 5)) {
-            return new $HC_2_5$Typedefs__TMu($_2_arg.$1, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_2_3$Typedefs___123_ap_95_16_125_($_0_arg, $_3_arg), $_2_arg.$2));
+            return new $HC_2_5$Typedefs__TMu($_2_arg.$1, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_2_3$Typedefs___123_ap_95_18_125_($_0_arg, $_3_arg), $_2_arg.$2));
         } else if(($_2_arg.type === 3)) {
-            return new $HC_2_3$Typedefs__TProd($_2_arg.$1, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_2_3$Typedefs___123_ap_95_15_125_($_0_arg, $_3_arg), $_2_arg.$2));
+            return new $HC_2_3$Typedefs__TProd($_2_arg.$1, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_2_3$Typedefs___123_ap_95_17_125_($_0_arg, $_3_arg), $_2_arg.$2));
         } else if(($_2_arg.type === 2)) {
-            return new $HC_2_2$Typedefs__TSum($_2_arg.$1, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_2_3$Typedefs___123_ap_95_15_125_($_0_arg, $_3_arg), $_2_arg.$2));
+            return new $HC_2_2$Typedefs__TSum($_2_arg.$1, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_2_3$Typedefs___123_ap_95_17_125_($_0_arg, $_3_arg), $_2_arg.$2));
         } else {
             return Data__Vect__index(null, null, $_2_arg.$1, $_3_arg);
         }
@@ -3882,10 +5349,10 @@ function Typedefs__ap($_0_arg, $_1_arg, $_2_arg, $_3_arg){
 function Typedefs__apN($_0_arg, $_1_arg, $_2_arg){
     
     let $cg$2 = null;
-    if((Data__Vect__foldrImpl(null, null, null, $partial_0_2$Typedefs___123_apN_95_19_125_(), "", $partial_0_1$Typedefs___123_apN_95_20_125_(), Data__Vect__intersperse(null, null, ",", Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Typedefs__makeName(), Typedefs__getUsedVars(null, $_0_arg, $_2_arg, $_1_arg.$2)))) === "")) {
+    if((Data__Vect__foldrImpl(null, null, null, $partial_0_2$Typedefs___123_apN_95_21_125_(), "", $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), Data__Vect__intersperse(null, null, ",", Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Typedefs__makeName(), Typedefs__getUsedVars(null, $_0_arg, $_2_arg, $_1_arg.$2)))) === "")) {
         $cg$2 = "";
     } else {
-        $cg$2 = ("(" + (Data__Vect__foldrImpl(null, null, null, $partial_0_2$Typedefs___123_apN_95_19_125_(), "", $partial_0_1$Typedefs___123_apN_95_20_125_(), Data__Vect__intersperse(null, null, ",", Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Typedefs__makeName(), Typedefs__getUsedVars(null, $_0_arg, $_2_arg, $_1_arg.$2)))) + ")"));
+        $cg$2 = ("(" + (Data__Vect__foldrImpl(null, null, null, $partial_0_2$Typedefs___123_apN_95_21_125_(), "", $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), Data__Vect__intersperse(null, null, ",", Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Typedefs__makeName(), Typedefs__getUsedVars(null, $_0_arg, $_2_arg, $_1_arg.$2)))) + ")"));
     }
     
     return new $HC_2_0$Typedefs__TName(($_1_arg.$1 + $cg$2), Typedefs__ap((new $JSRTS.jsbn.BigInteger(("0"))), null, $_1_arg.$2, $_2_arg));
@@ -3894,13 +5361,37 @@ function Typedefs__apN($_0_arg, $_1_arg, $_2_arg){
 // Prelude.Bits.b16ToHexString
 
 function Prelude__Bits__b16ToHexString($_0_arg){
-    return Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldr_58_0(null, null, $partial_0_2$Prelude__Bits___123_b16ToHexString_95_23_125_(), "", new $HC_2_1$Prelude__List___58__58_((((($_0_arg) >>> ((8 & 0xFFFF)))) & 0xFF), new $HC_2_1$Prelude__List___58__58_((($_0_arg) & 0xFF), $HC_0_0$Prelude__List__Nil)));
+    return Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldr_58_0(null, null, $partial_0_2$Prelude__Bits___123_b16ToHexString_95_25_125_(), "", new $HC_2_1$Prelude__List___58__58_((((($_0_arg) >>> ((8 & 0xFFFF)))) & 0xFF), new $HC_2_1$Prelude__List___58__58_((($_0_arg) & 0xFF), $HC_0_0$Prelude__List__Nil)));
 }
 
 // Prelude.Bits.b8ToHexString
 
 function Prelude__Bits__b8ToHexString($_0_arg){
     return Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldr_58_0(null, null, $partial_0_2$prim_95__95_strCons(), "", new $HC_2_1$Prelude__List___58__58_(Prelude__Bits__b8ToHexString_58_getDigit_58_0(null, (((($_0_arg) >>> ((4 & 0xFF)))) & ((15 & 0xFF)))), new $HC_2_1$Prelude__List___58__58_(Prelude__Bits__b8ToHexString_58_getDigit_58_0(null, (($_0_arg) & ((15 & 0xFF)))), $HC_0_0$Prelude__List__Nil)));
+}
+
+// Data.SortedMap.branch4
+
+function Data__SortedMap__branch4($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg, $_8_arg, $_9_arg, $_10_arg){
+    return new $HC_3_1$Data__SortedMap__Branch2(new $HC_3_1$Data__SortedMap__Branch2($_4_arg, $_5_arg, $_6_arg), $_7_arg, new $HC_3_1$Data__SortedMap__Branch2($_8_arg, $_9_arg, $_10_arg));
+}
+
+// Data.SortedMap.branch5
+
+function Data__SortedMap__branch5($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg, $_8_arg, $_9_arg, $_10_arg, $_11_arg, $_12_arg){
+    return new $HC_3_1$Data__SortedMap__Branch2(new $HC_3_1$Data__SortedMap__Branch2($_4_arg, $_5_arg, $_6_arg), $_7_arg, new $HC_5_2$Data__SortedMap__Branch3($_8_arg, $_9_arg, $_10_arg, $_11_arg, $_12_arg));
+}
+
+// Data.SortedMap.branch6
+
+function Data__SortedMap__branch6($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg, $_8_arg, $_9_arg, $_10_arg, $_11_arg, $_12_arg, $_13_arg, $_14_arg){
+    return new $HC_5_2$Data__SortedMap__Branch3(new $HC_3_1$Data__SortedMap__Branch2($_4_arg, $_5_arg, $_6_arg), $_7_arg, new $HC_3_1$Data__SortedMap__Branch2($_8_arg, $_9_arg, $_10_arg), $_11_arg, new $HC_3_1$Data__SortedMap__Branch2($_12_arg, $_13_arg, $_14_arg));
+}
+
+// Data.SortedMap.branch7
+
+function Data__SortedMap__branch7($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg, $_8_arg, $_9_arg, $_10_arg, $_11_arg, $_12_arg, $_13_arg, $_14_arg, $_15_arg, $_16_arg){
+    return new $HC_5_2$Data__SortedMap__Branch3(new $HC_5_2$Data__SortedMap__Branch3($_4_arg, $_5_arg, $_6_arg, $_7_arg, $_8_arg), $_9_arg, new $HC_3_1$Data__SortedMap__Branch2($_10_arg, $_11_arg, $_12_arg), $_13_arg, new $HC_3_1$Data__SortedMap__Branch2($_14_arg, $_15_arg, $_16_arg));
 }
 
 // TParsec.Combinators.Chars.char
@@ -3945,16 +5436,62 @@ function Prelude__Chars__chr($_0_arg){
     }
 }
 
-// Parse.comments
+// Prelude.Nat.cmp
 
-function Parse__comments($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg){
-    return $partial_7_10$TParsec__Combinators__alt(null, null, null, $_2_arg, null, Parse__emptyComments(null, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg), Parse__neComments(null, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg));
+function Prelude__Nat__cmp($_0_arg, $_1_arg){
+    
+    if($_1_arg.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
+        
+        if($_0_arg.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
+            return $HC_0_1$Prelude__Nat__CmpEQ;
+        } else {
+            const $_2_in = $_0_arg.subtract((new $JSRTS.jsbn.BigInteger(("1"))));
+            return new $HC_1_2$Prelude__Nat__CmpGT($_2_in);
+        }
+    } else {
+        const $_3_in = $_1_arg.subtract((new $JSRTS.jsbn.BigInteger(("1"))));
+        
+        if($_0_arg.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
+            return new $HC_1_0$Prelude__Nat__CmpLT($_3_in);
+        } else {
+            const $_4_in = $_0_arg.subtract((new $JSRTS.jsbn.BigInteger(("1"))));
+            const $cg$5 = Prelude__Nat__cmp($_4_in, $_3_in);
+            if(($cg$5.type === 1)) {
+                return $HC_0_1$Prelude__Nat__CmpEQ;
+            } else if(($cg$5.type === 2)) {
+                return new $HC_1_2$Prelude__Nat__CmpGT($cg$5.$1);
+            } else {
+                return new $HC_1_0$Prelude__Nat__CmpLT($cg$5.$1);
+            }
+        }
+    }
+}
+
+// Parse.comment
+
+function Parse__comment($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg){
+    let $cg$1 = null;
+    const $cg$3 = $_3_arg.$1;
+    $cg$1 = $cg$3.$1;
+    return $partial_8_11$TParsec__Combinators__map(null, null, null, null, $cg$1, $partial_0_1$Parse___123_comment_95_26_125_(), null, $partial_8_11$TParsec__Combinators__andbind(null, null, null, null, $_3_arg, null, TParsec__Combinators__Chars__char(null, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, ";")($_7_arg), $partial_7_12$Parse___123_comment_95_27_125_($_3_arg, $_2_arg, $_7_arg, $_1_arg, $_4_arg, $_5_arg, $_6_arg)));
+}
+
+// TParsec.Types.commit
+
+function TParsec__Types__commit($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg, $_8_m1, $_9_mlen, $_10_ts){
+    return $partial_6_7$TParsec__Types__commitT(null, null, null, null, $_5_arg, $_7_arg($_8_m1)($_9_mlen)($_10_ts));
+}
+
+// TParsec.Types.commitT
+
+function TParsec__Types__commitT($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_pos){
+    return $_4_arg(null)(null)($partial_0_1$TParsec__Types___123_commitT_95_28_125_())($_5_arg($_6_pos));
 }
 
 // Data.NEList.consopt
 
 function Data__NEList__consopt($_0_arg, $_1_arg, $_2_arg){
-    const $cg$2 = Prelude__Functor__Prelude___64_Prelude__Functor__Functor_36_Maybe_58__33_map_58_0(null, null, $partial_0_1$Data__NEList___123_consopt_95_24_125_(), $_2_arg);
+    const $cg$2 = Prelude__Functor__Prelude___64_Prelude__Functor__Functor_36_Maybe_58__33_map_58_0(null, null, $partial_0_1$Data__NEList___123_consopt_95_30_125_(), $_2_arg);
     let $cg$1 = null;
     if(($cg$2.type === 1)) {
         $cg$1 = $cg$2.$1;
@@ -3968,7 +5505,7 @@ function Data__NEList__consopt($_0_arg, $_1_arg, $_2_arg){
 // TParsec.Combinators.Numbers.decimalDigit
 
 function TParsec__Combinators__Numbers__decimalDigit($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg){
-    return TParsec__Combinators__alts(null, null, null, $_2_arg, null, Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $partial_6_7$TParsec__Combinators__Numbers___123_decimalDigit_95_26_125_($_3_arg, $_1_arg, $_2_arg, $_6_arg, $_5_arg, $_4_arg), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair((new $JSRTS.jsbn.BigInteger(("0"))), "0"), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair((new $JSRTS.jsbn.BigInteger(("1"))), "1"), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair((new $JSRTS.jsbn.BigInteger(("2"))), "2"), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair((new $JSRTS.jsbn.BigInteger(("3"))), "3"), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair((new $JSRTS.jsbn.BigInteger(("4"))), "4"), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair((new $JSRTS.jsbn.BigInteger(("5"))), "5"), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair((new $JSRTS.jsbn.BigInteger(("6"))), "6"), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair((new $JSRTS.jsbn.BigInteger(("7"))), "7"), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair((new $JSRTS.jsbn.BigInteger(("8"))), "8"), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair((new $JSRTS.jsbn.BigInteger(("9"))), "9"), $HC_0_0$Prelude__List__Nil))))))))))));
+    return TParsec__Combinators__alts(null, null, null, $_2_arg, null, Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $partial_6_7$TParsec__Combinators__Numbers___123_decimalDigit_95_32_125_($_3_arg, $_1_arg, $_2_arg, $_6_arg, $_5_arg, $_4_arg), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair((new $JSRTS.jsbn.BigInteger(("0"))), "0"), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair((new $JSRTS.jsbn.BigInteger(("1"))), "1"), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair((new $JSRTS.jsbn.BigInteger(("2"))), "2"), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair((new $JSRTS.jsbn.BigInteger(("3"))), "3"), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair((new $JSRTS.jsbn.BigInteger(("4"))), "4"), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair((new $JSRTS.jsbn.BigInteger(("5"))), "5"), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair((new $JSRTS.jsbn.BigInteger(("6"))), "6"), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair((new $JSRTS.jsbn.BigInteger(("7"))), "7"), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair((new $JSRTS.jsbn.BigInteger(("8"))), "8"), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair((new $JSRTS.jsbn.BigInteger(("9"))), "9"), $HC_0_0$Prelude__List__Nil))))))))))));
 }
 
 // TParsec.Combinators.Numbers.decimalNat
@@ -3977,13 +5514,158 @@ function TParsec__Combinators__Numbers__decimalNat($_0_arg, $_1_arg, $_2_arg, $_
     let $cg$1 = null;
     const $cg$3 = $_3_arg.$1;
     $cg$1 = $cg$3.$1;
-    return $partial_8_11$TParsec__Combinators__map(null, null, null, null, $cg$1, $partial_0_1$TParsec__Combinators__Numbers___123_decimalNat_95_28_125_(), null, TParsec__Combinators__nelist(null, null, null, $_2_arg, $_3_arg, $_7_arg)(TParsec__Combinators__Numbers__decimalDigit(null, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, null)));
+    return $partial_8_11$TParsec__Combinators__map(null, null, null, null, $cg$1, $partial_0_1$TParsec__Combinators__Numbers___123_decimalNat_95_34_125_(), null, TParsec__Combinators__nelist(null, null, null, $_2_arg, $_3_arg, $_7_arg)(TParsec__Combinators__Numbers__decimalDigit(null, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, null)));
+}
+
+// Backend.Haskell.decode
+
+function Backend__Haskell__decode($_0_arg, $_1_arg){
+    
+    if(($_1_arg.type === 0)) {
+        return $partial_0_1$Backend__Haskell___123_decode_95_35_125_();
+    } else if(($_1_arg.type === 1)) {
+        return $partial_0_1$Backend__Haskell___123_decode_95_36_125_();
+    } else if(($_1_arg.type === 6)) {
+        return Backend__Haskell__encoderDecoderTerm($_0_arg, $partial_0_1$Backend__Haskell___123_decode_95_37_125_(), new $HC_3_6$Typedefs__TApp($_1_arg.$1, $_1_arg.$2, $_1_arg.$3));
+    } else if(($_1_arg.type === 5)) {
+        return Backend__Haskell__encoderDecoderTerm($_0_arg, $partial_0_1$Backend__Haskell___123_decode_95_38_125_(), new $HC_2_5$Typedefs__TMu($_1_arg.$1, $_1_arg.$2));
+    } else if(($_1_arg.type === 3)) {
+        return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__freshVars(null, (new $JSRTS.jsbn.BigInteger(("2"))).add($_1_arg.$1), "x"), $partial_2_3$Backend__Haskell___123_decode_95_61_125_($_0_arg, $_1_arg.$2));
+    } else if(($_1_arg.type === 2)) {
+        return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Utils__mapWithIndexA(null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), null, $partial_4_6$Backend__Haskell__decode_58_f_58_2($_0_arg, $_1_arg.$1, null, null), $_1_arg.$2), $partial_0_1$Backend__Haskell___123_decode_95_81_125_());
+    } else {
+        return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__envTerms(null), $partial_1_3$Backend__Haskell___123_decode_95_86_125_($_1_arg.$1));
+    }
+}
+
+// Backend.Haskell.decodeDef
+
+function Backend__Haskell__decodeDef($_0_arg, $_1_arg){
+    
+    const $_4_in = Backend__Haskell__freshEnvWithTerms($_0_arg, "decode");
+    const $_5_in = Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__Haskell___123_decodeDef_95_87_125_(), $_4_in);
+    let $_9_in = null;
+    if((((($_1_arg.$1 == "")) ? 1|0 : 0|0) === 0)) {
+        let $cg$3 = null;
+        if((((($_1_arg.$1 == "")) ? 1|0 : 0|0) === 0)) {
+            $cg$3 = true;
+        } else {
+            $cg$3 = false;
+        }
+        
+        const $cg$5 = Decidable__Equality__Decidable__Equality___64_Decidable__Equality__DecEq_36_Bool_58__33_decEq_58_0($cg$3, true);
+        let $cg$4 = null;
+        if(($cg$5.type === 1)) {
+            $cg$4 = "";
+        } else {
+            let $cg$6 = null;
+            if(Prelude__Chars__isLower($_1_arg.$1[0])) {
+                $cg$6 = String.fromCharCode(((($_1_arg.$1[0]).charCodeAt(0)|0) - 32));
+            } else {
+                $cg$6 = $_1_arg.$1[0];
+            }
+            
+            $cg$4 = (($cg$6)+($_1_arg.$1.slice(1)));
+        }
+        
+        $_9_in = ("decode" + $cg$4);
+    } else {
+        let $cg$7 = null;
+        if(((((Backend__Haskell__hsTypeName(Backend__Haskell__makeType($_0_arg, $_5_in, $_1_arg.$2)) == "")) ? 1|0 : 0|0) === 0)) {
+            $cg$7 = true;
+        } else {
+            $cg$7 = false;
+        }
+        
+        const $cg$9 = Decidable__Equality__Decidable__Equality___64_Decidable__Equality__DecEq_36_Bool_58__33_decEq_58_0($cg$7, true);
+        let $cg$8 = null;
+        if(($cg$9.type === 1)) {
+            $cg$8 = "";
+        } else {
+            let $cg$10 = null;
+            if(Prelude__Chars__isLower(Backend__Haskell__hsTypeName(Backend__Haskell__makeType($_0_arg, $_5_in, $_1_arg.$2))[0])) {
+                $cg$10 = String.fromCharCode((((Backend__Haskell__hsTypeName(Backend__Haskell__makeType($_0_arg, $_5_in, $_1_arg.$2))[0]).charCodeAt(0)|0) - 32));
+            } else {
+                $cg$10 = Backend__Haskell__hsTypeName(Backend__Haskell__makeType($_0_arg, $_5_in, $_1_arg.$2))[0];
+            }
+            
+            $cg$8 = (($cg$10)+(Backend__Haskell__hsTypeName(Backend__Haskell__makeType($_0_arg, $_5_in, $_1_arg.$2)).slice(1)));
+        }
+        
+        $_9_in = ("decode" + $cg$8);
+    }
+    
+    const $_18_in = Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), Typedefs__getUsedVars(null, $_0_arg, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__Haskell___123_decodeDef_95_90_125_(), $_4_in), $_1_arg.$2));
+    let $cg$11 = null;
+    if(($_1_arg.$1 === "")) {
+        $cg$11 = Backend__Haskell__makeType($_0_arg, $_5_in, $_1_arg.$2);
+    } else {
+        $cg$11 = new $HC_3_5$Backend__Haskell__HsParam(Prelude__List__length(null, Typedefs__getUsedIndices($_0_arg, $_1_arg.$2)), $_1_arg.$1, Typedefs__getUsedVars(null, $_0_arg, $_5_in, $_1_arg.$2));
+    }
+    
+    let $cg$12 = null;
+    if((((($_1_arg.$1 == "")) ? 1|0 : 0|0) === 0)) {
+        $cg$12 = new $HC_3_5$Backend__Haskell__HsParam((new $JSRTS.jsbn.BigInteger(("0"))), $_1_arg.$1, $HC_0_0$Data__Vect__Nil);
+    } else {
+        $cg$12 = Backend__Haskell__makeType($_0_arg, $_5_in, $_1_arg.$2);
+    }
+    
+    return new $HC_3_2$Backend__Haskell__FunDef($_9_in, Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decodeDef_95_91_125_(), new $HC_3_5$Backend__Haskell__HsParam((new $JSRTS.jsbn.BigInteger(("1"))), "Deserialiser", new $HC_2_1$Data__Vect___58__58_($cg$11, $HC_0_0$Data__Vect__Nil)), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__Haskell___123_decodeDef_95_93_125_(), Typedefs__getUsedVars(null, $_0_arg, $_5_in, $_1_arg.$2))), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair($_18_in, Backend__Haskell__decodeDef_58_genCase_58_0(null, null, null, $_0_arg, $cg$12, new $HC_2_6$Backend__Haskell__HsApp(new $HC_1_7$Backend__Haskell__HsFun($_9_in), $_18_in), $_4_in, $_1_arg.$2)), $HC_0_0$Prelude__List__Nil));
+}
+
+// Data.SortedMap.delete
+
+function Data__SortedMap__delete($_0_arg, $_1_arg, $_2_arg, $_3_arg){
+    
+    if(($_3_arg.type === 0)) {
+        return $_3_arg;
+    } else {
+        
+        if($_3_arg.$2.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
+            const $cg$4 = Data__SortedMap__treeDelete(null, null, $_3_arg.$1, (new $JSRTS.jsbn.BigInteger(("0"))), $_2_arg, $_3_arg.$3);
+            if(($cg$4.type === 0)) {
+                return new $HC_3_1$Data__SortedMap__M($_3_arg.$1, (new $JSRTS.jsbn.BigInteger(("0"))), $cg$4.$1);
+            } else {
+                return new $HC_1_0$Data__SortedMap__Empty($_3_arg.$1);
+            }
+        } else {
+            const $_10_in = $_3_arg.$2.subtract((new $JSRTS.jsbn.BigInteger(("1"))));
+            const $cg$6 = Data__SortedMap__treeDelete(null, null, $_3_arg.$1, $_10_in.add((new $JSRTS.jsbn.BigInteger(("1")))), $_2_arg, $_3_arg.$3);
+            if(($cg$6.type === 0)) {
+                return new $HC_3_1$Data__SortedMap__M($_3_arg.$1, $_10_in.add((new $JSRTS.jsbn.BigInteger(("1")))), $cg$6.$1);
+            } else {
+                return new $HC_3_1$Data__SortedMap__M($_3_arg.$1, $_10_in, $cg$6.$1);
+            }
+        }
+    }
+}
+
+// Prelude.List.deleteBy
+
+function Prelude__List__deleteBy($_0_arg, $_1_arg, $_2_arg, $_3_arg){
+    
+    if(($_3_arg.type === 1)) {
+        
+        if($_1_arg($_2_arg)($_3_arg.$1)) {
+            return $_3_arg.$2;
+        } else {
+            return new $HC_2_1$Prelude__List___58__58_($_3_arg.$1, Prelude__List__deleteBy(null, $_1_arg, $_2_arg, $_3_arg.$2));
+        }
+    } else {
+        return $_3_arg;
+    }
+}
+
+// Backend.Haskell.dependencies
+
+function Backend__Haskell__dependencies($_0_arg, $_1_arg, $_2_arg){
+    return Prelude__List__filter(null, $partial_2_3$Backend__Haskell___123_dependencies_95_94_125_($_0_arg, $_2_arg), Prelude__List__nubBy_58_nubBy_39__58_0(null, $HC_0_0$Prelude__List__Nil, $partial_0_2$Backend__Haskell___123_dependencies_95_95_125_(), Backend__Haskell__dependencies_58_go_58_0($_0_arg, null, null, null, null, $_2_arg)));
 }
 
 // Backend.JSON.disjointSubSchema
 
 function Backend__JSON__disjointSubSchema($_0_arg, $_1_arg){
-    return new $HC_1_5$Language__JSON__Data__JObject(new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair("oneOf", new $HC_1_4$Language__JSON__Data__JArray(Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__JSON___123_disjointSubSchema_95_29_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$Typedefs___123_apN_95_20_125_(), Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_2_3$Backend__JSON__disjointSubSchema_58_makeCase_58_0(null, null), $_1_arg)))), $HC_0_0$Prelude__List__Nil));
+    return new $HC_1_5$Language__JSON__Data__JObject(new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair("oneOf", new $HC_1_4$Language__JSON__Data__JArray(Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_2_3$Backend__JSON__disjointSubSchema_58_makeCase_58_0(null, null), $_1_arg)))), $HC_0_0$Prelude__List__Nil));
 }
 
 // Prelude.List.elemBy
@@ -4007,15 +5689,6 @@ function Prelude__List__elemBy($_0_arg, $_1_arg, $_2_arg, $_3_arg){
     }
 }
 
-// Parse.emptyComments
-
-function Parse__emptyComments($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg){
-    let $cg$1 = null;
-    const $cg$3 = $_3_arg.$1;
-    $cg$1 = $cg$3.$1;
-    return $partial_8_11$TParsec__Combinators__map(null, null, null, null, $cg$1, $partial_0_1$Parse___123_emptyComments_95_33_125_(), null, TParsec__Combinators__Chars__string(null, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_6_arg, $_5_arg, ";\n", null, $_7_arg));
-}
-
 // Text.PrettyPrint.WL.Combinators.encloseSep
 
 function Text__PrettyPrint__WL__Combinators__encloseSep($_0_arg, $_1_arg, $_2_arg, $_3_arg){
@@ -4025,13 +5698,134 @@ function Text__PrettyPrint__WL__Combinators__encloseSep($_0_arg, $_1_arg, $_2_ar
         if(($_3_arg.$2.type === 0)) {
             return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(new $HC_2_4$Text__PrettyPrint__WL__Core__Cat($_0_arg, $_3_arg.$1), $_1_arg);
         } else {
-            return new $HC_1_7$Text__PrettyPrint__WL__Core__Column($partial_4_5$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_44_125_($_0_arg, $_3_arg, $_2_arg, $_1_arg));
+            return new $HC_1_7$Text__PrettyPrint__WL__Core__Column($partial_4_5$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_110_125_($_0_arg, $_3_arg, $_2_arg, $_1_arg));
         }
     } else if(($_3_arg.type === 0)) {
         return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat($_0_arg, $_1_arg);
     } else {
-        return new $HC_1_7$Text__PrettyPrint__WL__Core__Column($partial_4_5$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_55_125_($_0_arg, $_3_arg, $_2_arg, $_1_arg));
+        return new $HC_1_7$Text__PrettyPrint__WL__Core__Column($partial_4_5$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_121_125_($_0_arg, $_3_arg, $_2_arg, $_1_arg));
     }
+}
+
+// Backend.Haskell.encode
+
+function Backend__Haskell__encode($_0_arg, $_1_arg, $_2_arg){
+    
+    if(($_1_arg.type === 0)) {
+        return $partial_1_2$Backend__Haskell___123_encode_95_122_125_($_2_arg);
+    } else if(($_1_arg.type === 1)) {
+        return $partial_0_1$Backend__Haskell___123_encode_95_123_125_();
+    } else if(($_1_arg.type === 6)) {
+        return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__encoderDecoderTerm($_0_arg, $partial_0_1$Backend__Haskell___123_encode_95_128_125_(), new $HC_3_6$Typedefs__TApp($_1_arg.$1, $_1_arg.$2, $_1_arg.$3)), $partial_1_3$Backend__Haskell___123_encode_95_129_125_($_2_arg));
+    } else if(($_1_arg.type === 5)) {
+        return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__encoderDecoderTerm($_0_arg, $partial_0_1$Backend__Haskell___123_encode_95_134_125_(), new $HC_2_5$Typedefs__TMu($_1_arg.$1, $_1_arg.$2)), $partial_1_3$Backend__Haskell___123_encode_95_129_125_($_2_arg));
+    } else if(($_1_arg.type === 3)) {
+        return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__freshVars(null, (new $JSRTS.jsbn.BigInteger(("2"))).add($_1_arg.$1), "y"), $partial_3_4$Backend__Haskell___123_encode_95_156_125_($_0_arg, $_1_arg.$2, $_2_arg));
+    } else if(($_1_arg.type === 2)) {
+        return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__encode_58_injectionInv_58_2($_0_arg, null, null, null, null, null, $_1_arg.$2), $partial_1_3$Backend__Haskell___123_encode_95_162_125_($_2_arg));
+    } else {
+        return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__envTerms(null), $partial_2_4$Backend__Haskell___123_encode_95_167_125_($_1_arg.$1, $_2_arg));
+    }
+}
+
+// Backend.Haskell.encodeDef
+
+function Backend__Haskell__encodeDef($_0_arg, $_1_arg){
+    
+    const $_4_in = Backend__Haskell__freshEnvWithTerms($_0_arg, "encode");
+    const $_5_in = Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__Haskell___123_decodeDef_95_87_125_(), $_4_in);
+    let $_9_in = null;
+    if((((($_1_arg.$1 == "")) ? 1|0 : 0|0) === 0)) {
+        let $cg$3 = null;
+        if((((($_1_arg.$1 == "")) ? 1|0 : 0|0) === 0)) {
+            $cg$3 = true;
+        } else {
+            $cg$3 = false;
+        }
+        
+        const $cg$5 = Decidable__Equality__Decidable__Equality___64_Decidable__Equality__DecEq_36_Bool_58__33_decEq_58_0($cg$3, true);
+        let $cg$4 = null;
+        if(($cg$5.type === 1)) {
+            $cg$4 = "";
+        } else {
+            let $cg$6 = null;
+            if(Prelude__Chars__isLower($_1_arg.$1[0])) {
+                $cg$6 = String.fromCharCode(((($_1_arg.$1[0]).charCodeAt(0)|0) - 32));
+            } else {
+                $cg$6 = $_1_arg.$1[0];
+            }
+            
+            $cg$4 = (($cg$6)+($_1_arg.$1.slice(1)));
+        }
+        
+        $_9_in = ("encode" + $cg$4);
+    } else {
+        let $cg$7 = null;
+        if(((((Backend__Haskell__hsTypeName(Backend__Haskell__makeType($_0_arg, $_5_in, $_1_arg.$2)) == "")) ? 1|0 : 0|0) === 0)) {
+            $cg$7 = true;
+        } else {
+            $cg$7 = false;
+        }
+        
+        const $cg$9 = Decidable__Equality__Decidable__Equality___64_Decidable__Equality__DecEq_36_Bool_58__33_decEq_58_0($cg$7, true);
+        let $cg$8 = null;
+        if(($cg$9.type === 1)) {
+            $cg$8 = "";
+        } else {
+            let $cg$10 = null;
+            if(Prelude__Chars__isLower(Backend__Haskell__hsTypeName(Backend__Haskell__makeType($_0_arg, $_5_in, $_1_arg.$2))[0])) {
+                $cg$10 = String.fromCharCode((((Backend__Haskell__hsTypeName(Backend__Haskell__makeType($_0_arg, $_5_in, $_1_arg.$2))[0]).charCodeAt(0)|0) - 32));
+            } else {
+                $cg$10 = Backend__Haskell__hsTypeName(Backend__Haskell__makeType($_0_arg, $_5_in, $_1_arg.$2))[0];
+            }
+            
+            $cg$8 = (($cg$10)+(Backend__Haskell__hsTypeName(Backend__Haskell__makeType($_0_arg, $_5_in, $_1_arg.$2)).slice(1)));
+        }
+        
+        $_9_in = ("encode" + $cg$8);
+    }
+    
+    const $_18_in = Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), Typedefs__getUsedVars(null, $_0_arg, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__Haskell___123_decodeDef_95_90_125_(), $_4_in), $_1_arg.$2));
+    let $cg$11 = null;
+    if(($_1_arg.$1 === "")) {
+        $cg$11 = Backend__Haskell__makeType($_0_arg, $_5_in, $_1_arg.$2);
+    } else {
+        $cg$11 = new $HC_3_5$Backend__Haskell__HsParam(Prelude__List__length(null, Typedefs__getUsedIndices($_0_arg, $_1_arg.$2)), $_1_arg.$1, Typedefs__getUsedVars(null, $_0_arg, $_5_in, $_1_arg.$2));
+    }
+    
+    let $cg$12 = null;
+    if((((($_1_arg.$1 == "")) ? 1|0 : 0|0) === 0)) {
+        $cg$12 = new $HC_3_5$Backend__Haskell__HsParam((new $JSRTS.jsbn.BigInteger(("0"))), $_1_arg.$1, $HC_0_0$Data__Vect__Nil);
+    } else {
+        $cg$12 = Backend__Haskell__makeType($_0_arg, $_5_in, $_1_arg.$2);
+    }
+    
+    return new $HC_3_2$Backend__Haskell__FunDef($_9_in, Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decodeDef_95_91_125_(), new $HC_3_5$Backend__Haskell__HsParam((new $JSRTS.jsbn.BigInteger(("1"))), "Serialiser", new $HC_2_1$Data__Vect___58__58_($cg$11, $HC_0_0$Data__Vect__Nil)), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__Haskell___123_encodeDef_95_174_125_(), Typedefs__getUsedVars(null, $_0_arg, $_5_in, $_1_arg.$2))), Backend__Haskell__encodeDef_58_genClauses_58_0(null, null, null, $_0_arg, $cg$12, new $HC_2_6$Backend__Haskell__HsApp(new $HC_1_7$Backend__Haskell__HsFun($_9_in), $_18_in), $_4_in, $_18_in, $_1_arg.$2));
+}
+
+// Backend.Haskell.encoderDecoderTerm
+
+function Backend__Haskell__encoderDecoderTerm($_0_arg, $_1_arg, $_2_arg){
+    
+    if(($_2_arg.type === 6)) {
+        return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Prelude__Traversable__Data__Vect___64_Prelude__Traversable__Traversable_36_Vect_32_n_58__33_traverse_58_0(null, null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_2_3$Backend__Haskell__encoderDecoderTerm($_0_arg, $_1_arg), $_2_arg.$3), $partial_2_4$Backend__Haskell___123_encoderDecoderTerm_95_189_125_($_1_arg, $_2_arg.$2));
+    } else if(($_2_arg.type === 4)) {
+        
+        if($_0_arg.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
+            return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__envTerms(null), $partial_3_5$Backend__Haskell___123_encoderDecoderTerm_95_196_125_($_1_arg, $_0_arg, $_2_arg));
+        } else {
+            const $_76_in = $_0_arg.subtract((new $JSRTS.jsbn.BigInteger(("1"))));
+            return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__envTerms(null), $partial_1_3$Backend__Haskell___123_decode_95_86_125_($_2_arg.$1));
+        }
+    } else {
+        return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__envTerms(null), $partial_3_5$Backend__Haskell___123_encoderDecoderTerm_95_196_125_($_1_arg, $_0_arg, $_2_arg));
+    }
+}
+
+// Backend.Haskell.envTerms
+
+function Backend__Haskell__envTerms($_0_arg){
+    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), $partial_0_1$Backend__Haskell___123_envTerms_95_213_125_(), $partial_0_2$Backend__Haskell___123_envTerms_95_215_125_());
 }
 
 // Control.Monad.State.evalState
@@ -4044,13 +5838,27 @@ function Control__Monad__State__evalState($_0_arg, $_1_arg, $_2_arg, $_8_in){
 // TParsec.Combinators.exact
 
 function TParsec__Combinators__exact($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg){
-    return $partial_9_12$TParsec__Combinators__guardM(null, null, null, null, $_2_arg, $_3_arg, $partial_2_3$TParsec__Combinators___123_exact_95_57_125_($_5_arg, $_6_arg), null, $partial_5_8$TParsec__Combinators__anyTok(null, $_1_arg, $_2_arg, $_4_arg, null));
+    return $partial_9_12$TParsec__Combinators__guardM(null, null, null, null, $_2_arg, $_3_arg, $partial_2_3$TParsec__Combinators___123_exact_95_217_125_($_5_arg, $_6_arg), null, $partial_5_8$TParsec__Combinators__anyTok(null, $_1_arg, $_2_arg, $_4_arg, null));
 }
 
-// ParserUtils.except
+// Prelude.List.filter
 
-function ParserUtils__except($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg){
-    return $partial_9_12$TParsec__Combinators__guardM(null, null, null, null, $_2_arg, $_3_arg, $partial_2_3$ParserUtils___123_except_95_59_125_($_5_arg, $_6_arg), null, $partial_5_8$TParsec__Combinators__anyTok(null, $_1_arg, $_2_arg, $_4_arg, null));
+function Prelude__List__filter($_0_arg, $_1_arg, $_2_arg){
+    for(;;) {
+        
+        if(($_2_arg.type === 1)) {
+            
+            if($_1_arg($_2_arg.$1)) {
+                return new $HC_2_1$Prelude__List___58__58_($_2_arg.$1, Prelude__List__filter(null, $_1_arg, $_2_arg.$2));
+            } else {
+                $_0_arg = null;
+                $_1_arg = $_1_arg;
+                $_2_arg = $_2_arg.$2;
+            }
+        } else {
+            return $_2_arg;
+        }
+    }
 }
 
 // Data.Vect.filter
@@ -4135,7 +5943,7 @@ function Text__PrettyPrint__WL__Core__flatten($_0_arg){
         if(($_0_arg.type === 4)) {
             return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__flatten($_0_arg.$1), Text__PrettyPrint__WL__Core__flatten($_0_arg.$2));
         } else if(($_0_arg.type === 7)) {
-            return new $HC_1_7$Text__PrettyPrint__WL__Core__Column($partial_1_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_34_125_($_0_arg.$1));
+            return new $HC_1_7$Text__PrettyPrint__WL__Core__Column($partial_1_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_100_125_($_0_arg.$1));
         } else if(($_0_arg.type === 3)) {
             
             if($_0_arg.$1) {
@@ -4146,7 +5954,7 @@ function Text__PrettyPrint__WL__Core__flatten($_0_arg){
         } else if(($_0_arg.type === 5)) {
             return new $HC_2_5$Text__PrettyPrint__WL__Core__Nest($_0_arg.$1, Text__PrettyPrint__WL__Core__flatten($_0_arg.$2));
         } else if(($_0_arg.type === 8)) {
-            return new $HC_1_8$Text__PrettyPrint__WL__Core__Nesting($partial_1_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_34_125_($_0_arg.$1));
+            return new $HC_1_8$Text__PrettyPrint__WL__Core__Nesting($partial_1_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_100_125_($_0_arg.$1));
         } else if(($_0_arg.type === 6)) {
             $_0_arg = $_0_arg.$1;
         } else {
@@ -4174,7 +5982,7 @@ function Data__Vect__foldrImpl($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_
     for(;;) {
         
         if(($_6_arg.type === 1)) {
-            $tco$$_5_arg = $partial_3_4$Data__Vect___123_foldrImpl_95_62_125_($_5_arg, $_3_arg, $_6_arg.$1);
+            $tco$$_5_arg = $partial_3_4$Data__Vect___123_foldrImpl_95_220_125_($_5_arg, $_3_arg, $_6_arg.$1);
             $_0_arg = null;
             $_1_arg = null;
             $_2_arg = null;
@@ -4188,10 +5996,79 @@ function Data__Vect__foldrImpl($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_
     }
 }
 
+// Backend.Haskell.freeVars
+
+function Backend__Haskell__freeVars($_0_arg){
+    
+    if(($_0_arg.type === 6)) {
+        return Prelude__List__nubBy_58_nubBy_39__58_0(null, $HC_0_0$Prelude__List__Nil, $partial_0_2$Backend__Haskell___123_freeVars_95_221_125_(), Prelude__List___43__43_(null, Backend__Haskell__freeVars($_0_arg.$1), Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldr_58_0(null, null, $partial_0_2$Backend__Haskell___123_freeVars_95_222_125_(), $HC_0_0$Prelude__List__Nil, $_0_arg.$2)));
+    } else if(($_0_arg.type === 5)) {
+        return Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Backend__Haskell___123_freeVars_95_224_125_(), Prelude__List__nubBy_58_nubBy_39__58_0(null, $HC_0_0$Prelude__List__Nil, $partial_0_2$Backend__Haskell___123_freeVars_95_221_125_(), Prelude__List___43__43_(null, Backend__Haskell__freeVars($_0_arg.$1), Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldr_58_0(null, null, $partial_0_2$Backend__Haskell___123_freeVars_95_226_125_(), $HC_0_0$Prelude__List__Nil, $_0_arg.$2))), Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldr_58_0(null, null, $partial_0_2$Backend__Haskell___123_freeVars_95_227_125_(), $HC_0_0$Prelude__List__Nil, $_0_arg.$2));
+    } else if(($_0_arg.type === 11)) {
+        return Prelude__List__nubBy_58_nubBy_39__58_0(null, $HC_0_0$Prelude__List__Nil, $partial_0_2$Backend__Haskell___123_freeVars_95_221_125_(), Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldr_58_0(null, null, $partial_0_2$Backend__Haskell___123_freeVars_95_222_125_(), $HC_0_0$Prelude__List__Nil, $_0_arg.$1));
+    } else if(($_0_arg.type === 8)) {
+        const $cg$3 = $_0_arg.$1;
+        if(($cg$3.type === 1)) {
+            const $cg$5 = $cg$3.$1;
+            const $cg$7 = $cg$5.$1;
+            let $cg$6 = null;
+            if(($cg$7.type === 1)) {
+                $cg$6 = Backend__Haskell__freeVars($cg$7.$1);
+            } else {
+                $cg$6 = $HC_0_0$Prelude__List__Nil;
+            }
+            
+            return Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Backend__Haskell___123_freeVars_95_224_125_(), Prelude__List__nubBy_58_nubBy_39__58_0(null, $HC_0_0$Prelude__List__Nil, $partial_0_2$Backend__Haskell___123_freeVars_95_221_125_(), Prelude__List___43__43_(null, Backend__Haskell__freeVars($cg$5.$2), Backend__Haskell__freeVars(new $HC_1_8$Backend__Haskell__HsDo($cg$3.$2)))), $cg$6);
+        } else {
+            return $_0_arg.$1;
+        }
+    } else if(($_0_arg.type === 7)) {
+        return $HC_0_0$Prelude__List__Nil;
+    } else if(($_0_arg.type === 4)) {
+        return Prelude__List__nubBy_58_nubBy_39__58_0(null, $HC_0_0$Prelude__List__Nil, $partial_0_2$Backend__Haskell___123_freeVars_95_221_125_(), Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldr_58_0(null, null, $partial_0_2$Backend__Haskell___123_freeVars_95_222_125_(), $HC_0_0$Prelude__List__Nil, $_0_arg.$2));
+    } else if(($_0_arg.type === 10)) {
+        return $HC_0_0$Prelude__List__Nil;
+    } else if(($_0_arg.type === 2)) {
+        return new $HC_2_1$Prelude__List___58__58_($_0_arg.$1, $HC_0_0$Prelude__List__Nil);
+    } else if(($_0_arg.type === 1)) {
+        return Prelude__List__nubBy_58_nubBy_39__58_0(null, $HC_0_0$Prelude__List__Nil, $partial_0_2$Backend__Haskell___123_freeVars_95_221_125_(), Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_freeVars_95_222_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $_0_arg.$1));
+    } else if(($_0_arg.type === 0)) {
+        return $HC_0_0$Prelude__List__Nil;
+    } else if(($_0_arg.type === 3)) {
+        return $HC_0_0$Prelude__List__Nil;
+    } else {
+        return $HC_0_0$Prelude__List__Nil;
+    }
+}
+
+// Backend.Haskell.freshEnv
+
+function Backend__Haskell__freshEnv($_0_arg){
+    return Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__Haskell___123_freshEnv_95_239_125_(), Backend__Utils__freshEnv($_0_arg, "x"));
+}
+
 // Backend.Utils.freshEnv
 
 function Backend__Utils__freshEnv($_0_arg, $_1_arg){
-    return Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_1_2$Backend__Utils___123_freshEnv_95_63_125_($_1_arg), Data__Vect__range($_0_arg));
+    return Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_1_2$Backend__Utils___123_freshEnv_95_240_125_($_1_arg), Data__Vect__range($_0_arg));
+}
+
+// Backend.Haskell.freshEnvWithTerms
+
+function Backend__Haskell__freshEnvWithTerms($_0_arg, $_1_arg){
+    return Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_1_2$Backend__Haskell___123_freshEnvWithTerms_95_241_125_($_1_arg), Backend__Haskell__freshEnv($_0_arg));
+}
+
+// Backend.Haskell.freshVars
+
+function Backend__Haskell__freshVars($_0_arg, $_1_arg, $_2_arg){
+    
+    if($_1_arg.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
+        return $partial_0_1$Backend__Haskell___123_freshVars_95_242_125_();
+    } else {
+        const $_4_in = $_1_arg.subtract((new $JSRTS.jsbn.BigInteger(("1"))));
+        return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), $partial_0_1$Backend__Haskell___123_envTerms_95_213_125_(), $partial_2_3$Backend__Haskell___123_freshVars_95_255_125_($_2_arg, $_4_in));
+    }
 }
 
 // Data.Vect.fromList
@@ -4216,48 +6093,86 @@ function Data__Vect__fromList_39_($_0_arg, $_1_arg, $_2_arg, $_3_arg){
     }
 }
 
+// TParsec.Result.fromMaybe
+
+function TParsec__Result__fromMaybe($_0_arg, $_1_arg, $_2_arg, $_4_in){
+    
+    if(($_4_in.type === 1)) {
+        return new $HC_1_2$TParsec__Result__Value($_4_in.$1);
+    } else {
+        return new $HC_1_1$TParsec__Result__SoftFail($_2_arg);
+    }
+}
+
+// Backend.generate
+
+function Backend__generate($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg){
+    let $cg$1 = null;
+    $cg$1 = $_3_arg.$1($_5_arg);
+    let $cg$2 = null;
+    $cg$2 = $_3_arg.$2($_5_arg);
+    let $cg$3 = null;
+    $cg$3 = $_3_arg.$3($_5_arg);
+    return $_4_arg($cg$1)(Prelude__List___43__43_(null, $cg$2, $cg$3));
+}
+
 // Main.generateCode
 
 function Main__generateCode($_0_arg, $_1_arg){
     
+    
     if(($_0_arg === "haskell")) {
-        
-        return Text__PrettyPrint__WL__Core__toString(0.4, 120, Backend__generateDefs(null, null, null, $partial_1_2$Main___123_generateCode_95_64_125_($_1_arg.$1), $partial_0_1$Backend__Haskell__renderDef(), $_1_arg.$2));
-    } else if(($_0_arg === "json")) {
-        
-        const $cg$5 = $_1_arg.$1;
-        if($cg$5.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
-            const $cg$7 = $_1_arg.$2;
-            let $cg$6 = null;
-            $cg$6 = $cg$7.$1;
-            return Text__PrettyPrint__WL__Core__toString(0.4, 120, Backend__Backend__JSON___64_Backend__CodegenInterdep_36_JSONDef_58_JSON_58__33_sourceCode_58_0(new $HC_1_5$Language__JSON__Data__JObject(new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair("$ref", new $HC_1_3$Language__JSON__Data__JString(("#/definitions/" + $cg$6))), $HC_0_0$Prelude__List__Nil)), Control__Monad__State__evalState(null, null, Backend__JSON__makeDefs_39_($_1_arg.$2), $HC_0_0$Prelude__List__Nil)));
-        } else {
-            const $_10_in = $_1_arg.$1.subtract((new $JSRTS.jsbn.BigInteger(("1"))));
-            return "<error : can\'t generate JSON schema for open typedef>";
-        }
-    } else if(($_0_arg === "reasonml")) {
-        
-        return Text__PrettyPrint__WL__Core__toString(0.4, 120, Backend__generateDefs(null, null, null, $partial_1_2$Main___123_generateCode_95_65_125_($_1_arg.$1), $partial_0_1$Backend__ReasonML__renderDef(), $_1_arg.$2));
+        return new $HC_1_1$Prelude__Either__Right(Text__PrettyPrint__WL__Core__toString(0.4, 120, Backend__generateDefs(null, null, null, new $HC_3_0$Backend__ASTGen_95_ictor($partial_1_2$Main___123_generateCode_95_256_125_($_1_arg.$1), $partial_1_2$Main___123_generateCode_95_257_125_($_1_arg.$1), $partial_1_2$Main___123_generateCode_95_258_125_($_1_arg.$1)), new $HC_2_0$Backend__CodegenIndep_95_ictor($partial_0_1$Backend__Haskell__renderDef(), Text__PrettyPrint__WL__Core__text("import Data.Word\nimport Data.ByteString.Lazy\nimport Data.ByteString.Builder\n\nimport Data.Void\n\ntype Serialiser a = a -> Builder\n\nrunSerialiser :: Serialiser a -> a -> ByteString\nrunSerialiser f = toLazyByteString . f\n\nnewtype Deserialiser a  = MkDeserialiser (ByteString -> Maybe (a, ByteString))\n\nrunDeserialiser :: Deserialiser a -> ByteString -> Maybe (a, ByteString)\nrunDeserialiser (MkDeserialiser f) = f\n\ninstance Functor Deserialiser where\n  fmap f da = MkDeserialiser (\\ bs -> do\n    (a, bs\') <- runDeserialiser da bs\n    Just (f a, bs\'))\n\n\ninstance Applicative Deserialiser where\n  pure x = MkDeserialiser (\\ bs -> Just (x, bs))\n  df <*> da =  MkDeserialiser (\\ bs -> do\n    (f, bs\') <- runDeserialiser df bs\n    (a, bs\'\') <- runDeserialiser da bs\'\n    Just (f a, bs\'\'))\n\n\ninstance Monad Deserialiser where\n  da >>= g = MkDeserialiser (\\ bs -> do\n    (a, bs\') <- runDeserialiser da bs\n    runDeserialiser (g a) bs\')\n\nfailDecode :: Deserialiser a\nfailDecode = MkDeserialiser (\\ bs -> Nothing)\n\ndeserialiseInt :: Deserialiser Integer\ndeserialiseInt = MkDeserialiser (\\ bs -> fmap go (uncons bs))\n  where go :: (Word8, ByteString) -> (Integer, ByteString)\n        go (b, bs\') = (toInteger b, bs\')")), $_1_arg.$2)));
     } else {
-        return "<error : unknown backend>";
+        return new $HC_1_0$Prelude__Either__Left("<error : unsupported backend>");
     }
 }
 
 // Backend.generateDefs
 
 function Backend__generateDefs($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg){
-    const $cg$2 = Text__PrettyPrint__WL__Combinators__punctuate(new $HC_1_3$Text__PrettyPrint__WL__Core__Line(false), Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $_4_arg, $_3_arg($_5_arg)));
-    if(($cg$2.type === 1)) {
-        return Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Backend___123_generateDefs_95_66_125_(), $cg$2.$1, $cg$2.$2);
+    let $cg$1 = null;
+    $cg$1 = $_4_arg.$2;
+    let $cg$2 = null;
+    $cg$2 = $_4_arg.$1;
+    let $cg$3 = null;
+    $cg$3 = $_3_arg.$2($_5_arg);
+    let $cg$4 = null;
+    $cg$4 = $_3_arg.$3($_5_arg);
+    const $cg$6 = Text__PrettyPrint__WL__Combinators__punctuate(new $HC_1_3$Text__PrettyPrint__WL__Core__Line(false), new $HC_2_1$Prelude__List___58__58_($cg$1, Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $cg$2, Prelude__List___43__43_(null, $cg$3, $cg$4))));
+    if(($cg$6.type === 1)) {
+        return Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Backend___123_generateDefs_95_259_125_(), $cg$6.$1, $cg$6.$2);
     } else {
         return $HC_0_0$Text__PrettyPrint__WL__Core__Empty;
+    }
+}
+
+// Main.generateTermSerializers
+
+function Main__generateTermSerializers($_0_arg, $_1_arg){
+    const $cg$2 = Parse__parseTNamedEither($_1_arg);
+    if(($cg$2.type === 0)) {
+        return new $HC_1_0$Prelude__Either__Left($cg$2.$1);
+    } else {
+        return Main__generateCode($_0_arg, $cg$2.$1);
+    }
+}
+
+// Main.generateType
+
+function Main__generateType($_0_arg, $_1_arg){
+    const $cg$2 = Parse__parseTNamedEither($_1_arg);
+    if(($cg$2.type === 0)) {
+        return new $HC_1_0$Prelude__Either__Left($cg$2.$1);
+    } else {
+        return Main__generateType_58_genType_58_0(null, null, $_0_arg, $cg$2.$1);
     }
 }
 
 // TParsec.Success.getTok
 
 function TParsec__Success__getTok($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg){
-    return Prelude__Functor__Prelude___64_Prelude__Functor__Functor_36_Maybe_58__33_map_58_0(null, null, $partial_1_2$TParsec__Success___123_getTok_95_67_125_($_3_arg), $_2_arg($_3_arg)($_4_arg));
+    return Prelude__Functor__Prelude___64_Prelude__Functor__Functor_36_Maybe_58__33_map_58_0(null, null, $partial_1_2$TParsec__Success___123_getTok_95_260_125_($_3_arg), $_2_arg($_3_arg)($_4_arg));
 }
 
 // Typedefs.getUsedIndices
@@ -4272,13 +6187,13 @@ function Typedefs__getUsedIndices($_0_arg, $_1_arg){
         const $cg$3 = $_1_arg.$2;
         let $cg$2 = null;
         $cg$2 = $cg$3.$2;
-        return Prelude__List__nubBy_58_nubBy_39__58_0(null, $HC_0_0$Prelude__List__Nil, $partial_1_3$Typedefs___123_getUsedIndices_95_68_125_($_0_arg), Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldr_58_0(null, null, $partial_1_3$Typedefs___123_getUsedIndices_95_69_125_($_0_arg), $HC_0_0$Prelude__List__Nil, Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $partial_1_2$Typedefs___123_getUsedIndices_95_70_125_($_1_arg.$3), Typedefs__getUsedIndices($_1_arg.$1, $cg$2))));
+        return Prelude__List__nubBy_58_nubBy_39__58_0(null, $HC_0_0$Prelude__List__Nil, $partial_1_3$Typedefs___123_getUsedIndices_95_261_125_($_0_arg), Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldr_58_0(null, null, $partial_1_3$Typedefs___123_getUsedIndices_95_262_125_($_0_arg), $HC_0_0$Prelude__List__Nil, Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $partial_1_2$Typedefs___123_getUsedIndices_95_263_125_($_1_arg.$3), Typedefs__getUsedIndices($_1_arg.$1, $cg$2))));
     } else if(($_1_arg.type === 5)) {
-        return Prelude__List__nubBy_58_nubBy_39__58_0(null, $HC_0_0$Prelude__List__Nil, $partial_1_3$Typedefs___123_getUsedIndices_95_68_125_($_0_arg), Data__Vect__foldrImpl(null, null, null, $partial_1_3$Typedefs___123_getUsedIndices_95_73_125_($_0_arg), $HC_0_0$Prelude__List__Nil, $partial_0_1$Typedefs___123_apN_95_20_125_(), $_1_arg.$2));
+        return Prelude__List__nubBy_58_nubBy_39__58_0(null, $HC_0_0$Prelude__List__Nil, $partial_1_3$Typedefs___123_getUsedIndices_95_261_125_($_0_arg), Data__Vect__foldrImpl(null, null, null, $partial_1_3$Typedefs___123_getUsedIndices_95_266_125_($_0_arg), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $_1_arg.$2));
     } else if(($_1_arg.type === 3)) {
-        return Prelude__List__nubBy_58_nubBy_39__58_0(null, $HC_0_0$Prelude__List__Nil, $partial_1_3$Typedefs___123_getUsedIndices_95_68_125_($_0_arg), Data__Vect__foldrImpl(null, null, null, $partial_1_3$Typedefs___123_getUsedIndices_95_69_125_($_0_arg), $HC_0_0$Prelude__List__Nil, $partial_0_1$Typedefs___123_apN_95_20_125_(), $_1_arg.$2));
+        return Prelude__List__nubBy_58_nubBy_39__58_0(null, $HC_0_0$Prelude__List__Nil, $partial_1_3$Typedefs___123_getUsedIndices_95_261_125_($_0_arg), Data__Vect__foldrImpl(null, null, null, $partial_1_3$Typedefs___123_getUsedIndices_95_262_125_($_0_arg), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $_1_arg.$2));
     } else if(($_1_arg.type === 2)) {
-        return Prelude__List__nubBy_58_nubBy_39__58_0(null, $HC_0_0$Prelude__List__Nil, $partial_1_3$Typedefs___123_getUsedIndices_95_68_125_($_0_arg), Data__Vect__foldrImpl(null, null, null, $partial_1_3$Typedefs___123_getUsedIndices_95_69_125_($_0_arg), $HC_0_0$Prelude__List__Nil, $partial_0_1$Typedefs___123_apN_95_20_125_(), $_1_arg.$2));
+        return Prelude__List__nubBy_58_nubBy_39__58_0(null, $HC_0_0$Prelude__List__Nil, $partial_1_3$Typedefs___123_getUsedIndices_95_261_125_($_0_arg), Data__Vect__foldrImpl(null, null, null, $partial_1_3$Typedefs___123_getUsedIndices_95_262_125_($_0_arg), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $_1_arg.$2));
     } else {
         return new $HC_2_1$Prelude__List___58__58_($_1_arg.$1, $HC_0_0$Prelude__List__Nil);
     }
@@ -4287,34 +6202,69 @@ function Typedefs__getUsedIndices($_0_arg, $_1_arg){
 // Typedefs.getUsedVars
 
 function Typedefs__getUsedVars($_0_arg, $_1_arg, $_2_arg, $_3_arg){
-    return Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_1_2$Typedefs___123_getUsedIndices_95_70_125_($_2_arg), Data__Vect__fromList(null, Typedefs__getUsedIndices($_1_arg, $_3_arg)));
+    return Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_1_2$Typedefs___123_getUsedIndices_95_263_125_($_2_arg), Data__Vect__fromList(null, Typedefs__getUsedIndices($_1_arg, $_3_arg)));
 }
 
 // TParsec.Combinators.guardM
 
 function TParsec__Combinators__guardM($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg, $_8_arg, $_9_m1, $_10_mlen, $_11_ts){
     
-    return $_5_arg.$2(null)(null)($_8_arg($_9_m1)($_10_mlen)($_11_ts))($partial_3_4$TParsec__Combinators___123_guardM_95_84_125_($_4_arg, $_5_arg, $_6_arg));
+    return $_5_arg.$2(null)(null)($_8_arg($_9_m1)($_10_mlen)($_11_ts))($partial_3_4$TParsec__Combinators___123_guardM_95_277_125_($_4_arg, $_5_arg, $_6_arg));
 }
 
 // Backend.Haskell.guardParen
 
 function Backend__Haskell__guardParen($_0_arg){
     
-    if(($_0_arg.type === 4)) {
+    if(($_0_arg.type === 6)) {
+        return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char("("), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Backend__Haskell__renderType($_0_arg), Text__PrettyPrint__WL__Core__char(")")));
+    } else if(($_0_arg.type === 5)) {
         
         if(($_0_arg.$3.type === 0)) {
             
             if($_0_arg.$1.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
-                return Backend__Haskell__renderType(new $HC_3_4$Backend__Haskell__HsParam((new $JSRTS.jsbn.BigInteger(("0"))), $_0_arg.$2, $HC_0_0$Data__Vect__Nil));
+                return Backend__Haskell__renderType(new $HC_3_5$Backend__Haskell__HsParam((new $JSRTS.jsbn.BigInteger(("0"))), $_0_arg.$2, $HC_0_0$Data__Vect__Nil));
             } else {
                 return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char("("), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Backend__Haskell__renderType($_0_arg), Text__PrettyPrint__WL__Core__char(")")));
             }
         } else {
             return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char("("), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Backend__Haskell__renderType($_0_arg), Text__PrettyPrint__WL__Core__char(")")));
         }
+    } else if(($_0_arg.type === 3)) {
+        return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char("("), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Backend__Haskell__renderType($_0_arg), Text__PrettyPrint__WL__Core__char(")")));
     } else {
         return Backend__Haskell__renderType($_0_arg);
+    }
+}
+
+// Backend.Haskell.guardParenTerm
+
+function Backend__Haskell__guardParenTerm($_0_arg){
+    
+    if(($_0_arg.type === 6)) {
+        
+        if(($_0_arg.$2.type === 0)) {
+            return Backend__Haskell__renderTerm(new $HC_2_6$Backend__Haskell__HsApp($_0_arg.$1, $HC_0_0$Prelude__List__Nil));
+        } else {
+            return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char("("), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Backend__Haskell__renderTerm($_0_arg), Text__PrettyPrint__WL__Core__char(")")));
+        }
+    } else if(($_0_arg.type === 5)) {
+        return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char("("), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Backend__Haskell__renderTerm($_0_arg), Text__PrettyPrint__WL__Core__char(")")));
+    } else if(($_0_arg.type === 11)) {
+        return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char("("), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Backend__Haskell__renderTerm($_0_arg), Text__PrettyPrint__WL__Core__char(")")));
+    } else if(($_0_arg.type === 8)) {
+        return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char("("), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Backend__Haskell__renderTerm($_0_arg), Text__PrettyPrint__WL__Core__char(")")));
+    } else if(($_0_arg.type === 4)) {
+        const $cg$3 = $_0_arg.$2;
+        if(($cg$3.type === 1)) {
+            return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char("("), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Backend__Haskell__renderTerm(new $HC_2_4$Backend__Haskell__HsInn($_0_arg.$1, new $HC_2_1$Prelude__List___58__58_($cg$3.$1, $cg$3.$2))), Text__PrettyPrint__WL__Core__char(")")));
+        } else {
+            return Backend__Haskell__renderTerm($_0_arg);
+        }
+    } else if(($_0_arg.type === 9)) {
+        return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char("("), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Backend__Haskell__renderTerm($_0_arg), Text__PrettyPrint__WL__Core__char(")")));
+    } else {
+        return Backend__Haskell__renderTerm($_0_arg);
     }
 }
 
@@ -4329,6 +6279,45 @@ function Prelude__List__head_39_($_0_arg, $_1_arg){
     }
 }
 
+// Backend.Haskell.hsCaseDef
+
+function Backend__Haskell__hsCaseDef($_0_arg, $_1_arg, $_2_arg){
+    return new $HC_2_5$Backend__Haskell__HsCase($_0_arg, Prelude__List___43__43_(null, $_1_arg, new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair($HC_0_3$Backend__Haskell__HsWildcard, $_2_arg), $HC_0_0$Prelude__List__Nil)));
+}
+
+// Backend.Haskell.hsTupled
+
+function Backend__Haskell__hsTupled($_0_arg){
+    
+    if((Prelude__Interfaces__Prelude__Nat___64_Prelude__Interfaces__Ord_36_Nat_58__33_compare_58_0(Prelude__List__length(null, $_0_arg), (new $JSRTS.jsbn.BigInteger(("63")))) < 0)) {
+        return Text__PrettyPrint__WL__Combinators__encloseSep(Text__PrettyPrint__WL__Core__char("("), Text__PrettyPrint__WL__Core__char(")"), Text__PrettyPrint__WL__Core__char(","), $_0_arg);
+    } else {
+        const $cg$3 = Prelude__List__splitAt(null, (new $JSRTS.jsbn.BigInteger(("61"))), $_0_arg);
+        return Text__PrettyPrint__WL__Combinators__encloseSep(Text__PrettyPrint__WL__Core__char("("), Text__PrettyPrint__WL__Core__char(")"), Text__PrettyPrint__WL__Core__char(","), Prelude__List___43__43_(null, $cg$3.$1, new $HC_2_1$Prelude__List___58__58_(Backend__Haskell__hsTupled($cg$3.$2), $HC_0_0$Prelude__List__Nil)));
+    }
+}
+
+// Backend.Haskell.hsTypeName
+
+function Backend__Haskell__hsTypeName($_0_arg){
+    
+    if(($_0_arg.type === 6)) {
+        return ("Arrow" + (Backend__Haskell__hsTypeName($_0_arg.$1) + Backend__Haskell__hsTypeName($_0_arg.$2)));
+    } else if(($_0_arg.type === 5)) {
+        return $_0_arg.$2;
+    } else if(($_0_arg.type === 3)) {
+        return ("Sum" + (Backend__Haskell__hsTypeName($_0_arg.$1) + Backend__Haskell__hsTypeName($_0_arg.$2)));
+    } else if(($_0_arg.type === 2)) {
+        return ("Prod" + Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_hsTypeName_95_282_125_(), "", $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $_0_arg.$1));
+    } else if(($_0_arg.type === 1)) {
+        return "Unit";
+    } else if(($_0_arg.type === 4)) {
+        return $_0_arg.$1;
+    } else {
+        return "Void";
+    }
+}
+
 // Typedefs.idVars
 
 function Typedefs__idVars($_0_arg){
@@ -4337,20 +6326,20 @@ function Typedefs__idVars($_0_arg){
         return $HC_0_0$Data__Vect__Nil;
     } else {
         const $_1_in = $_0_arg.subtract((new $JSRTS.jsbn.BigInteger(("1"))));
-        return Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Typedefs___123_idVars_95_87_125_(), Data__Vect__range($_1_in.add((new $JSRTS.jsbn.BigInteger(("1"))))));
+        return Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Typedefs___123_idVars_95_284_125_(), Data__Vect__range($_1_in.add((new $JSRTS.jsbn.BigInteger(("1"))))));
     }
 }
 
 // Backend.Utils.ifNotPresent
 
 function Backend__Utils__ifNotPresent($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg){
-    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_()), $partial_0_4$Backend__Utils___123_ifNotPresent_95_91_125_()), $partial_0_1$Backend__Utils___123_ifNotPresent_95_92_125_(), $partial_3_4$Backend__Utils___123_ifNotPresent_95_106_125_($_2_arg, $_3_arg, $_4_arg));
+    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), $partial_0_1$Backend__Haskell___123_envTerms_95_213_125_(), $partial_3_4$Backend__Utils___123_ifNotPresent_95_303_125_($_2_arg, $_3_arg, $_4_arg));
 }
 
-// Parse.ignorespaces
+// Parse.ignoreSpaces
 
-function Parse__ignorespaces($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg, $_8_arg, $_9_arg){
-    return TParsec__Combinators__Chars__withSpaces(null, null, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg, $_8_arg, TParsec__Combinators__landopt(null, null, null, null, $_4_arg, $_3_arg, null, TParsec__Combinators__roptand(null, null, null, null, $_4_arg, $_3_arg, null, Parse__comments(null, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_7_arg, $_6_arg, $_8_arg), $_9_arg), $partial_7_11$Parse___123_ignorespaces_95_107_125_($_2_arg, $_3_arg, $_4_arg, $_5_arg, $_7_arg, $_6_arg, $_8_arg)));
+function Parse__ignoreSpaces($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg, $_8_arg, $_9_arg){
+    return TParsec__Combinators__roptand(null, null, null, null, $_4_arg, $_3_arg, null, Parse__spacesOrComments(null, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_7_arg, $_6_arg, $_8_arg), TParsec__Combinators__landopt(null, null, null, null, $_4_arg, $_3_arg, null, $_9_arg, $partial_7_11$Parse___123_ignoreSpaces_95_304_125_($_2_arg, $_3_arg, $_4_arg, $_5_arg, $_7_arg, $_6_arg, $_8_arg)));
 }
 
 // Data.Vect.index
@@ -4376,13 +6365,13 @@ function Data__Vect__index($_0_arg, $_1_arg, $_2_arg, $_3_arg){
 function Data__SortedMap__insert($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg){
     
     if(($_4_arg.type === 0)) {
-        return new $HC_2_1$Data__SortedMap__M($_4_arg.$1, new $HC_2_0$Data__SortedMap__Leaf($_2_arg, $_3_arg));
+        return new $HC_3_1$Data__SortedMap__M($_4_arg.$1, (new $JSRTS.jsbn.BigInteger(("0"))), new $HC_2_0$Data__SortedMap__Leaf($_2_arg, $_3_arg));
     } else {
-        const $cg$3 = Data__SortedMap__treeInsert(null, null, $_4_arg.$1, null, $_2_arg, $_3_arg, $_4_arg.$2);
+        const $cg$3 = Data__SortedMap__treeInsert(null, null, $_4_arg.$1, null, $_2_arg, $_3_arg, $_4_arg.$3);
         if(($cg$3.type === 0)) {
-            return new $HC_2_1$Data__SortedMap__M($_4_arg.$1, $cg$3.$1);
+            return new $HC_3_1$Data__SortedMap__M($_4_arg.$1, $_4_arg.$2, $cg$3.$1);
         } else {
-            return new $HC_2_1$Data__SortedMap__M($_4_arg.$1, $cg$3.$1);
+            return new $HC_3_1$Data__SortedMap__M($_4_arg.$1, $_4_arg.$2.add((new $JSRTS.jsbn.BigInteger(("1")))), $cg$3.$1);
         }
     }
 }
@@ -4542,7 +6531,7 @@ function TParsec__Combinators__land($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg,
     let $cg$1 = null;
     const $cg$3 = $_4_arg.$1;
     $cg$1 = $cg$3.$1;
-    return $partial_8_11$TParsec__Combinators__map(null, null, null, null, $cg$1, $partial_0_1$TParsec__Combinators___123_land_95_108_125_(), null, $partial_8_11$TParsec__Combinators__andbind(null, null, null, null, $_4_arg, null, $_7_arg, $partial_1_2$TParsec__Combinators__Numbers___123_decimalDigit_95_25_125_($_8_arg)));
+    return $partial_8_11$TParsec__Combinators__map(null, null, null, null, $cg$1, $partial_0_1$TParsec__Combinators___123_land_95_305_125_(), null, $partial_8_11$TParsec__Combinators__andbind(null, null, null, null, $_4_arg, null, $_7_arg, $partial_1_2$TParsec__Combinators__Numbers___123_decimalDigit_95_31_125_($_8_arg)));
 }
 
 // TParsec.Combinators.landopt
@@ -4551,7 +6540,7 @@ function TParsec__Combinators__landopt($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_a
     let $cg$1 = null;
     const $cg$3 = $_4_arg.$1;
     $cg$1 = $cg$3.$1;
-    return $partial_8_11$TParsec__Combinators__map(null, null, null, null, $cg$1, $partial_0_1$TParsec__Combinators___123_land_95_108_125_(), null, $partial_9_12$TParsec__Combinators__andoptbind(null, null, null, null, $_4_arg, $_5_arg, null, $_7_arg, $partial_1_2$TParsec__Combinators__Numbers___123_decimalDigit_95_25_125_($_8_arg)));
+    return $partial_8_11$TParsec__Combinators__map(null, null, null, null, $cg$1, $partial_0_1$TParsec__Combinators___123_land_95_305_125_(), null, $partial_9_12$TParsec__Combinators__andoptbind(null, null, null, null, $_4_arg, $_5_arg, null, $_7_arg, $partial_1_2$TParsec__Combinators__Numbers___123_decimalDigit_95_31_125_($_8_arg)));
 }
 
 // Data.Fin.last
@@ -4606,6 +6595,18 @@ function TParsec__Combinators__Chars__lowerAlpha($_0_arg, $_1_arg, $_2_arg, $_3_
     return TParsec__Combinators__anyOf(null, $_1_arg, $_2_arg, $_3_arg, $_6_arg, $_5_arg, Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $_4_arg, $cg$1), null);
 }
 
+// Prelude.Nat.lteAddRight
+
+function Prelude__Nat__lteAddRight($_0_arg, $_1_arg){
+    
+    if($_1_arg.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
+        return $HC_0_0$Prelude__Nat__LTEZero;
+    } else {
+        const $_2_in = $_1_arg.subtract((new $JSRTS.jsbn.BigInteger(("1"))));
+        return new $HC_1_1$Prelude__Nat__LTESucc(Prelude__Nat__lteAddRight(null, $_2_in));
+    }
+}
+
 // Prelude.Nat.lteRefl
 
 function Prelude__Nat__lteRefl($_0_arg){
@@ -4645,19 +6646,19 @@ function Prelude__Nat__lteTransitive($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg
 function Backend__Haskell__makeDefs($_0_arg, $_1_arg){
     
     if(($_1_arg.type === 0)) {
-        return $partial_0_1$Backend__Utils___123_ifNotPresent_95_105_125_();
+        return $partial_0_1$Backend__Utils___123_ifNotPresent_95_302_125_();
     } else if(($_1_arg.type === 1)) {
-        return $partial_0_1$Backend__Utils___123_ifNotPresent_95_105_125_();
+        return $partial_0_1$Backend__Utils___123_ifNotPresent_95_302_125_();
     } else if(($_1_arg.type === 6)) {
-        return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_()), $partial_0_4$Backend__Utils___123_ifNotPresent_95_91_125_()), Backend__Haskell__makeDefs_39_($_1_arg.$1, $_1_arg.$2), $partial_2_3$Backend__Haskell___123_makeDefs_95_135_125_($_0_arg, $_1_arg.$3));
+        return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__makeDefs_39_($_1_arg.$1, $_1_arg.$2), $partial_2_3$Backend__Haskell___123_makeDefs_95_332_125_($_0_arg, $_1_arg.$3));
     } else if(($_1_arg.type === 5)) {
         return Backend__Haskell__makeDefs_39_($_0_arg, new $HC_2_0$Typedefs__TName(Backend__Utils__nameMu(null, null, $_1_arg.$2), new $HC_2_5$Typedefs__TMu($_1_arg.$1, $_1_arg.$2)));
     } else if(($_1_arg.type === 3)) {
-        return $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_0_1$Backend__Haskell___123_makeDefs_95_125_125_(), Prelude__Traversable__Data__Vect___64_Prelude__Traversable__Traversable_36_Vect_32_n_58__33_traverse_58_0(null, null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_makeDefs_95_127_125_(), $partial_0_3$Backend__Haskell___123_makeDefs_95_128_125_(), $partial_0_4$Backend__Haskell___123_makeDefs_95_133_125_()), $partial_1_2$Backend__Haskell__makeDefs($_0_arg), $_1_arg.$2));
+        return $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_1$Backend__Haskell___123_makeDefs_95_322_125_(), Prelude__Traversable__Data__Vect___64_Prelude__Traversable__Traversable_36_Vect_32_n_58__33_traverse_58_0(null, null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_1_2$Backend__Haskell__makeDefs($_0_arg), $_1_arg.$2));
     } else if(($_1_arg.type === 2)) {
-        return $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_0_1$Backend__Haskell___123_makeDefs_95_125_125_(), Prelude__Traversable__Data__Vect___64_Prelude__Traversable__Traversable_36_Vect_32_n_58__33_traverse_58_0(null, null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_makeDefs_95_127_125_(), $partial_0_3$Backend__Haskell___123_makeDefs_95_128_125_(), $partial_0_4$Backend__Haskell___123_makeDefs_95_133_125_()), $partial_1_2$Backend__Haskell__makeDefs($_0_arg), $_1_arg.$2));
+        return $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_1$Backend__Haskell___123_makeDefs_95_322_125_(), Prelude__Traversable__Data__Vect___64_Prelude__Traversable__Traversable_36_Vect_32_n_58__33_traverse_58_0(null, null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_1_2$Backend__Haskell__makeDefs($_0_arg), $_1_arg.$2));
     } else {
-        return $partial_0_1$Backend__Utils___123_ifNotPresent_95_105_125_();
+        return $partial_0_1$Backend__Utils___123_ifNotPresent_95_302_125_();
     }
 }
 
@@ -4666,9 +6667,9 @@ function Backend__Haskell__makeDefs($_0_arg, $_1_arg){
 function Backend__JSON__makeDefs($_0_arg){
     
     if(($_0_arg.type === 0)) {
-        return Backend__Utils__ifNotPresent(null, null, new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Backend__JSON___123_makeDefs_95_161_125_(), $partial_0_2$Backend__JSON___123_makeDefs_95_162_125_()), "emptyType", $partial_0_1$Backend__JSON___123_makeDefs_95_163_125_());
+        return Backend__Utils__ifNotPresent(null, null, new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Backend__Haskell___123_freeVars_95_221_125_(), $partial_0_2$Backend__JSON___123_makeDefs_95_359_125_()), "emptyType", $partial_0_1$Backend__JSON___123_makeDefs_95_360_125_());
     } else if(($_0_arg.type === 1)) {
-        return Backend__Utils__ifNotPresent(null, null, new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Backend__JSON___123_makeDefs_95_161_125_(), $partial_0_2$Backend__JSON___123_makeDefs_95_162_125_()), "singletonType", $partial_0_1$Backend__JSON___123_makeDefs_95_166_125_());
+        return Backend__Utils__ifNotPresent(null, null, new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Backend__Haskell___123_freeVars_95_221_125_(), $partial_0_2$Backend__JSON___123_makeDefs_95_359_125_()), "singletonType", $partial_0_1$Backend__JSON___123_makeDefs_95_363_125_());
     } else if(($_0_arg.type === 6)) {
         
         if(($_0_arg.$3.type === 0)) {
@@ -4684,9 +6685,9 @@ function Backend__JSON__makeDefs($_0_arg){
     } else if(($_0_arg.type === 5)) {
         return Backend__JSON__makeDefs_39_(new $HC_2_0$Typedefs__TName(Backend__Utils__nameMu(null, null, $_0_arg.$2), new $HC_2_5$Typedefs__TMu($_0_arg.$1, $_0_arg.$2)));
     } else if(($_0_arg.type === 3)) {
-        return $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_0_1$Backend__Haskell___123_makeDefs_95_125_125_(), Prelude__Traversable__Data__Vect___64_Prelude__Traversable__Traversable_36_Vect_32_n_58__33_traverse_58_0(null, null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_makeDefs_95_127_125_(), $partial_0_3$Backend__Haskell___123_makeDefs_95_128_125_(), $partial_0_4$Backend__Haskell___123_makeDefs_95_133_125_()), $partial_0_1$Backend__JSON__makeDefs(), $_0_arg.$2));
+        return $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_1$Backend__Haskell___123_makeDefs_95_322_125_(), Prelude__Traversable__Data__Vect___64_Prelude__Traversable__Traversable_36_Vect_32_n_58__33_traverse_58_0(null, null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_1$Backend__JSON__makeDefs(), $_0_arg.$2));
     } else {
-        return $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_0_1$Backend__Haskell___123_makeDefs_95_125_125_(), Prelude__Traversable__Data__Vect___64_Prelude__Traversable__Traversable_36_Vect_32_n_58__33_traverse_58_0(null, null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_makeDefs_95_127_125_(), $partial_0_3$Backend__Haskell___123_makeDefs_95_128_125_(), $partial_0_4$Backend__Haskell___123_makeDefs_95_133_125_()), $partial_0_1$Backend__JSON__makeDefs(), $_0_arg.$2));
+        return $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_1$Backend__Haskell___123_makeDefs_95_322_125_(), Prelude__Traversable__Data__Vect___64_Prelude__Traversable__Traversable_36_Vect_32_n_58__33_traverse_58_0(null, null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_1$Backend__JSON__makeDefs(), $_0_arg.$2));
     }
 }
 
@@ -4697,17 +6698,17 @@ function Backend__ReasonML__makeDefs($_0_arg, $_1_arg){
     if(($_1_arg.type === 0)) {
         return Backend__ReasonML__makeDefs_39_((new $JSRTS.jsbn.BigInteger(("0"))), new $HC_2_0$Typedefs__TName("void", new $HC_2_5$Typedefs__TMu((new $JSRTS.jsbn.BigInteger(("0"))), $HC_0_0$Data__Vect__Nil)));
     } else if(($_1_arg.type === 1)) {
-        return $partial_0_1$Backend__Utils___123_ifNotPresent_95_105_125_();
+        return $partial_0_1$Backend__Utils___123_ifNotPresent_95_302_125_();
     } else if(($_1_arg.type === 6)) {
-        return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_()), $partial_0_4$Backend__Utils___123_ifNotPresent_95_91_125_()), Backend__ReasonML__makeDefs_39_($_1_arg.$1, $_1_arg.$2), $partial_2_3$Backend__ReasonML___123_makeDefs_95_213_125_($_0_arg, $_1_arg.$3));
+        return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__ReasonML__makeDefs_39_($_1_arg.$1, $_1_arg.$2), $partial_2_3$Backend__ReasonML___123_makeDefs_95_410_125_($_0_arg, $_1_arg.$3));
     } else if(($_1_arg.type === 5)) {
         return Backend__ReasonML__makeDefs_39_($_0_arg, new $HC_2_0$Typedefs__TName(Backend__Utils__nameMu(null, null, $_1_arg.$2), new $HC_2_5$Typedefs__TMu($_1_arg.$1, $_1_arg.$2)));
     } else if(($_1_arg.type === 3)) {
-        return $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_0_1$Backend__Haskell___123_makeDefs_95_125_125_(), Prelude__Traversable__Data__Vect___64_Prelude__Traversable__Traversable_36_Vect_32_n_58__33_traverse_58_0(null, null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_makeDefs_95_127_125_(), $partial_0_3$Backend__Haskell___123_makeDefs_95_128_125_(), $partial_0_4$Backend__Haskell___123_makeDefs_95_133_125_()), $partial_1_2$Backend__ReasonML__makeDefs($_0_arg), $_1_arg.$2));
+        return $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_1$Backend__Haskell___123_makeDefs_95_322_125_(), Prelude__Traversable__Data__Vect___64_Prelude__Traversable__Traversable_36_Vect_32_n_58__33_traverse_58_0(null, null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_1_2$Backend__ReasonML__makeDefs($_0_arg), $_1_arg.$2));
     } else if(($_1_arg.type === 2)) {
-        return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_()), $partial_0_4$Backend__Utils___123_ifNotPresent_95_91_125_()), $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_0_1$Backend__Haskell___123_makeDefs_95_125_125_(), Prelude__Traversable__Data__Vect___64_Prelude__Traversable__Traversable_36_Vect_32_n_58__33_traverse_58_0(null, null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_makeDefs_95_127_125_(), $partial_0_3$Backend__Haskell___123_makeDefs_95_128_125_(), $partial_0_4$Backend__Haskell___123_makeDefs_95_133_125_()), $partial_1_2$Backend__ReasonML__makeDefs($_0_arg), $_1_arg.$2)), $partial_0_1$Backend__ReasonML___123_makeDefs_95_244_125_());
+        return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_1$Backend__Haskell___123_makeDefs_95_322_125_(), Prelude__Traversable__Data__Vect___64_Prelude__Traversable__Traversable_36_Vect_32_n_58__33_traverse_58_0(null, null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_1_2$Backend__ReasonML__makeDefs($_0_arg), $_1_arg.$2)), $partial_0_1$Backend__ReasonML___123_makeDefs_95_441_125_());
     } else {
-        return $partial_0_1$Backend__Utils___123_ifNotPresent_95_105_125_();
+        return $partial_0_1$Backend__Utils___123_ifNotPresent_95_302_125_();
     }
 }
 
@@ -4715,23 +6716,18 @@ function Backend__ReasonML__makeDefs($_0_arg, $_1_arg){
 
 function Backend__Haskell__makeDefs_39_($_0_arg, $_1_arg){
     
+    const $_8_in = Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__Haskell___123_makeDefs_39__95_445_125_(), Backend__Haskell__freshEnv($_0_arg));
     const $cg$3 = $_1_arg.$2;
     let $cg$2 = null;
     if(($cg$3.type === 5)) {
-        const $cg$5 = Data__Vect__filter(null, null, $partial_0_1$Backend__Haskell___123_makeDefs_39__95_248_125_(), Typedefs__getUsedVars(null, $_0_arg, Backend__Utils__freshEnv($_0_arg, "x"), $_1_arg.$2));
-        let $cg$4 = null;
-        $cg$4 = $cg$5.$1;
-        const $cg$7 = Data__Vect__filter(null, null, $partial_0_1$Backend__Haskell___123_makeDefs_39__95_250_125_(), Typedefs__getUsedVars(null, $_0_arg, Backend__Utils__freshEnv($_0_arg, "x"), $_1_arg.$2));
-        let $cg$6 = null;
-        $cg$6 = Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__Haskell___123_makeDefs_39__95_249_125_(), $cg$7.$2);
-        const $_35_in = new $HC_2_1$Data__Vect___58__58_(new $HC_1_1$Prelude__Either__Right(new $HC_3_0$Backend__Utils__MkDecl($cg$4, $_1_arg.$1, $cg$6)), Backend__Utils__freshEnv($_0_arg, "x"));
-        const $_49_in = Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_2_3$Backend__Haskell___123_makeDefs_39__95_251_125_($_0_arg, $_35_in), $cg$3.$2);
-        $cg$2 = $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_()), $partial_0_4$Backend__Utils___123_ifNotPresent_95_91_125_()), $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_0_1$Backend__Haskell___123_makeDefs_39__95_258_125_(), Prelude__Traversable__Prelude___64_Prelude__Traversable__Traversable_36_List_58__33_traverse_58_0(null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_makeDefs_95_127_125_(), $partial_0_3$Backend__Haskell___123_makeDefs_95_128_125_(), $partial_0_4$Backend__Haskell___123_makeDefs_95_133_125_()), $partial_1_2$Backend__Haskell___123_makeDefs_39__95_267_125_($_0_arg), Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__JSON___123_disjointSubSchema_95_29_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$Typedefs___123_apN_95_20_125_(), $cg$3.$2))), $partial_4_6$Backend__Haskell___123_makeDefs_39__95_273_125_($_0_arg, $_1_arg.$2, $_1_arg.$1, $_49_in));
+        const $_13_in = new $HC_2_1$Data__Vect___58__58_(new $HC_3_5$Backend__Haskell__HsParam(Prelude__List__length(null, Typedefs__getUsedIndices($_0_arg, $_1_arg.$2)), $_1_arg.$1, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__Haskell___123_freshEnv_95_238_125_(), Typedefs__getUsedVars(null, $_0_arg, $_8_in, $_1_arg.$2))), Backend__Haskell__freshEnv($_0_arg));
+        const $_15_in = Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_2_3$Backend__Haskell___123_makeDefs_39__95_447_125_($_0_arg, $_13_in), $cg$3.$2);
+        $cg$2 = $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_1$Backend__Haskell___123_makeDefs_39__95_454_125_(), Prelude__Traversable__Prelude___64_Prelude__Traversable__Traversable_36_List_58__33_traverse_58_0(null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_1_2$Backend__Haskell___123_makeDefs_39__95_463_125_($_0_arg), Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $cg$3.$2))), $partial_5_7$Backend__Haskell___123_makeDefs_39__95_466_125_($_0_arg, $_1_arg.$2, $_1_arg.$1, $_8_in, $_15_in));
     } else {
-        $cg$2 = $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_()), $partial_0_4$Backend__Utils___123_ifNotPresent_95_91_125_()), Backend__Haskell__makeDefs($_0_arg, $_1_arg.$2), $partial_3_5$Backend__Haskell___123_makeDefs_39__95_281_125_($_0_arg, $_1_arg.$2, $_1_arg.$1));
+        $cg$2 = $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__makeDefs($_0_arg, $_1_arg.$2), $partial_4_6$Backend__Haskell___123_makeDefs_39__95_471_125_($_0_arg, $_1_arg.$2, $_1_arg.$1, $_8_in));
     }
     
-    return Backend__Utils__ifNotPresent(null, null, new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Backend__JSON___123_makeDefs_95_161_125_(), $partial_0_2$Backend__JSON___123_makeDefs_95_162_125_()), $_1_arg.$1, $cg$2);
+    return Backend__Utils__ifNotPresent(null, null, new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Backend__Haskell___123_freeVars_95_221_125_(), $partial_0_2$Backend__JSON___123_makeDefs_95_359_125_()), $_1_arg.$1, $cg$2);
 }
 
 // Backend.JSON.makeDefs'
@@ -4741,13 +6737,13 @@ function Backend__JSON__makeDefs_39_($_0_arg){
     const $cg$3 = $_0_arg.$2;
     let $cg$2 = null;
     if(($cg$3.type === 5)) {
-        const $_9_in = Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_1_2$Backend__JSON___123_makeDefs_39__95_284_125_($_0_arg.$1), $cg$3.$2);
-        $cg$2 = $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_()), $partial_0_4$Backend__Utils___123_ifNotPresent_95_91_125_()), $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_0_1$Backend__Haskell___123_makeDefs_95_125_125_(), Prelude__Traversable__Data__Vect___64_Prelude__Traversable__Traversable_36_Vect_32_n_58__33_traverse_58_0(null, null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_makeDefs_95_127_125_(), $partial_0_3$Backend__Haskell___123_makeDefs_95_128_125_(), $partial_0_4$Backend__Haskell___123_makeDefs_95_133_125_()), $partial_0_1$Backend__JSON___123_makeDefs_39__95_301_125_(), $_9_in)), $partial_2_4$Backend__JSON___123_makeDefs_39__95_302_125_($_0_arg.$1, $_9_in));
+        const $_9_in = Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_1_2$Backend__JSON___123_makeDefs_39__95_474_125_($_0_arg.$1), $cg$3.$2);
+        $cg$2 = $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_1$Backend__Haskell___123_makeDefs_95_322_125_(), Prelude__Traversable__Data__Vect___64_Prelude__Traversable__Traversable_36_Vect_32_n_58__33_traverse_58_0(null, null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_1$Backend__JSON___123_makeDefs_39__95_491_125_(), $_9_in)), $partial_2_4$Backend__JSON___123_makeDefs_39__95_492_125_($_0_arg.$1, $_9_in));
     } else {
-        $cg$2 = $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_()), $partial_0_4$Backend__Utils___123_ifNotPresent_95_91_125_()), Backend__JSON__makeDefs($_0_arg.$2), $partial_2_4$Backend__JSON___123_makeDefs_39__95_307_125_($_0_arg.$1, $_0_arg.$2));
+        $cg$2 = $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__JSON__makeDefs($_0_arg.$2), $partial_2_4$Backend__JSON___123_makeDefs_39__95_497_125_($_0_arg.$1, $_0_arg.$2));
     }
     
-    return Backend__Utils__ifNotPresent(null, null, new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Backend__JSON___123_makeDefs_95_161_125_(), $partial_0_2$Backend__JSON___123_makeDefs_95_162_125_()), $_0_arg.$1, $cg$2);
+    return Backend__Utils__ifNotPresent(null, null, new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Backend__Haskell___123_freeVars_95_221_125_(), $partial_0_2$Backend__JSON___123_makeDefs_95_359_125_()), $_0_arg.$1, $cg$2);
 }
 
 // Backend.ReasonML.makeDefs'
@@ -4757,20 +6753,20 @@ function Backend__ReasonML__makeDefs_39_($_0_arg, $_1_arg){
     const $cg$3 = $_1_arg.$2;
     let $cg$2 = null;
     if(($cg$3.type === 5)) {
-        const $cg$5 = Data__Vect__filter(null, null, $partial_0_1$Backend__Haskell___123_makeDefs_39__95_248_125_(), Typedefs__getUsedVars(null, $_0_arg, Backend__Utils__freshEnv($_0_arg, "\'x"), $_1_arg.$2));
+        const $cg$5 = Data__Vect__filter(null, null, $partial_0_1$Backend__ReasonML___123_makeDefs_39__95_500_125_(), Typedefs__getUsedVars(null, $_0_arg, Backend__Utils__freshEnv($_0_arg, "\'x"), $_1_arg.$2));
         let $cg$4 = null;
         $cg$4 = $cg$5.$1;
-        const $cg$7 = Data__Vect__filter(null, null, $partial_0_1$Backend__Haskell___123_makeDefs_39__95_250_125_(), Typedefs__getUsedVars(null, $_0_arg, Backend__Utils__freshEnv($_0_arg, "\'x"), $_1_arg.$2));
+        const $cg$7 = Data__Vect__filter(null, null, $partial_0_1$Backend__ReasonML___123_makeDefs_39__95_502_125_(), Typedefs__getUsedVars(null, $_0_arg, Backend__Utils__freshEnv($_0_arg, "\'x"), $_1_arg.$2));
         let $cg$6 = null;
-        $cg$6 = Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__Haskell___123_makeDefs_39__95_249_125_(), $cg$7.$2);
+        $cg$6 = Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__ReasonML___123_makeDefs_39__95_501_125_(), $cg$7.$2);
         const $_35_in = new $HC_2_1$Data__Vect___58__58_(new $HC_1_1$Prelude__Either__Right(new $HC_3_0$Backend__Utils__MkDecl($cg$4, $_1_arg.$1, $cg$6)), Backend__Utils__freshEnv($_0_arg, "\'x"));
-        const $_49_in = Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_2_3$Backend__ReasonML___123_makeDefs_39__95_313_125_($_0_arg, $_35_in), $cg$3.$2);
-        $cg$2 = $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_()), $partial_0_4$Backend__Utils___123_ifNotPresent_95_91_125_()), $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_0_1$Backend__Haskell___123_makeDefs_39__95_258_125_(), Prelude__Traversable__Prelude___64_Prelude__Traversable__Traversable_36_List_58__33_traverse_58_0(null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_makeDefs_95_127_125_(), $partial_0_3$Backend__Haskell___123_makeDefs_95_128_125_(), $partial_0_4$Backend__Haskell___123_makeDefs_95_133_125_()), $partial_1_2$Backend__ReasonML___123_makeDefs_39__95_329_125_($_0_arg), Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__JSON___123_disjointSubSchema_95_29_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$Typedefs___123_apN_95_20_125_(), $cg$3.$2))), $partial_5_7$Backend__ReasonML___123_makeDefs_39__95_335_125_($cg$3.$1, $_0_arg, $_1_arg.$2, $_1_arg.$1, $_49_in));
+        const $_49_in = Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_2_3$Backend__ReasonML___123_makeDefs_39__95_503_125_($_0_arg, $_35_in), $cg$3.$2);
+        $cg$2 = $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_1$Backend__Haskell___123_makeDefs_39__95_454_125_(), Prelude__Traversable__Prelude___64_Prelude__Traversable__Traversable_36_List_58__33_traverse_58_0(null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_1_2$Backend__ReasonML___123_makeDefs_39__95_519_125_($_0_arg), Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $cg$3.$2))), $partial_5_7$Backend__ReasonML___123_makeDefs_39__95_525_125_($cg$3.$1, $_0_arg, $_1_arg.$2, $_1_arg.$1, $_49_in));
     } else {
-        $cg$2 = $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_()), $partial_0_4$Backend__Utils___123_ifNotPresent_95_91_125_()), Backend__ReasonML__makeDefs($_0_arg, $_1_arg.$2), $partial_3_5$Backend__ReasonML___123_makeDefs_39__95_343_125_($_0_arg, $_1_arg.$2, $_1_arg.$1));
+        $cg$2 = $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__ReasonML__makeDefs($_0_arg, $_1_arg.$2), $partial_3_5$Backend__ReasonML___123_makeDefs_39__95_533_125_($_0_arg, $_1_arg.$2, $_1_arg.$1));
     }
     
-    return Backend__Utils__ifNotPresent(null, null, new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Backend__JSON___123_makeDefs_95_161_125_(), $partial_0_2$Backend__JSON___123_makeDefs_95_162_125_()), $_1_arg.$1, $cg$2);
+    return Backend__Utils__ifNotPresent(null, null, new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Backend__Haskell___123_freeVars_95_221_125_(), $partial_0_2$Backend__JSON___123_makeDefs_95_359_125_()), $_1_arg.$1, $cg$2);
 }
 
 // Typedefs.makeName
@@ -4786,30 +6782,30 @@ function Typedefs__makeName($_0_arg){
         let $cg$4 = null;
         $cg$4 = $cg$5.$1;
         let $cg$6 = null;
-        if((Data__Vect__foldrImpl(null, null, null, $partial_0_2$Typedefs___123_apN_95_19_125_(), "", $partial_0_1$Typedefs___123_apN_95_20_125_(), Data__Vect__intersperse(null, null, ",", Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Typedefs__makeName(), $_0_arg.$3))) === "")) {
+        if((Data__Vect__foldrImpl(null, null, null, $partial_0_2$Typedefs___123_apN_95_21_125_(), "", $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), Data__Vect__intersperse(null, null, ",", Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Typedefs__makeName(), $_0_arg.$3))) === "")) {
             $cg$6 = "";
         } else {
-            $cg$6 = ("(" + (Data__Vect__foldrImpl(null, null, null, $partial_0_2$Typedefs___123_apN_95_19_125_(), "", $partial_0_1$Typedefs___123_apN_95_20_125_(), Data__Vect__intersperse(null, null, ",", Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Typedefs__makeName(), $_0_arg.$3))) + ")"));
+            $cg$6 = ("(" + (Data__Vect__foldrImpl(null, null, null, $partial_0_2$Typedefs___123_apN_95_21_125_(), "", $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), Data__Vect__intersperse(null, null, ",", Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Typedefs__makeName(), $_0_arg.$3))) + ")"));
         }
         
         return ($cg$4 + $cg$6);
     } else if(($_0_arg.type === 5)) {
-        return Data__Vect__foldrImpl(null, null, null, $partial_0_2$Typedefs___123_makeName_95_348_125_(), "", $partial_0_1$Typedefs___123_apN_95_20_125_(), $_0_arg.$2);
+        return Data__Vect__foldrImpl(null, null, null, $partial_0_2$Typedefs___123_makeName_95_538_125_(), "", $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $_0_arg.$2);
     } else if(($_0_arg.type === 3)) {
         let $cg$3 = null;
-        if((Data__Vect__foldrImpl(null, null, null, $partial_0_2$Typedefs___123_apN_95_19_125_(), "", $partial_0_1$Typedefs___123_apN_95_20_125_(), Data__Vect__intersperse(null, null, ",", Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Typedefs__makeName(), $_0_arg.$2))) === "")) {
+        if((Data__Vect__foldrImpl(null, null, null, $partial_0_2$Typedefs___123_apN_95_21_125_(), "", $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), Data__Vect__intersperse(null, null, ",", Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Typedefs__makeName(), $_0_arg.$2))) === "")) {
             $cg$3 = "";
         } else {
-            $cg$3 = ("(" + (Data__Vect__foldrImpl(null, null, null, $partial_0_2$Typedefs___123_apN_95_19_125_(), "", $partial_0_1$Typedefs___123_apN_95_20_125_(), Data__Vect__intersperse(null, null, ",", Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Typedefs__makeName(), $_0_arg.$2))) + ")"));
+            $cg$3 = ("(" + (Data__Vect__foldrImpl(null, null, null, $partial_0_2$Typedefs___123_apN_95_21_125_(), "", $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), Data__Vect__intersperse(null, null, ",", Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Typedefs__makeName(), $_0_arg.$2))) + ")"));
         }
         
         return ("prod" + $cg$3);
     } else {
         let $cg$2 = null;
-        if((Data__Vect__foldrImpl(null, null, null, $partial_0_2$Typedefs___123_apN_95_19_125_(), "", $partial_0_1$Typedefs___123_apN_95_20_125_(), Data__Vect__intersperse(null, null, ",", Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Typedefs__makeName(), $_0_arg.$2))) === "")) {
+        if((Data__Vect__foldrImpl(null, null, null, $partial_0_2$Typedefs___123_apN_95_21_125_(), "", $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), Data__Vect__intersperse(null, null, ",", Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Typedefs__makeName(), $_0_arg.$2))) === "")) {
             $cg$2 = "";
         } else {
-            $cg$2 = ("(" + (Data__Vect__foldrImpl(null, null, null, $partial_0_2$Typedefs___123_apN_95_19_125_(), "", $partial_0_1$Typedefs___123_apN_95_20_125_(), Data__Vect__intersperse(null, null, ",", Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Typedefs__makeName(), $_0_arg.$2))) + ")"));
+            $cg$2 = ("(" + (Data__Vect__foldrImpl(null, null, null, $partial_0_2$Typedefs___123_apN_95_21_125_(), "", $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), Data__Vect__intersperse(null, null, ",", Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Typedefs__makeName(), $_0_arg.$2))) + ")"));
         }
         
         return ("sum" + $cg$2);
@@ -4861,7 +6857,7 @@ function Backend__JSON__makeSubSchema($_0_arg){
     } else if(($_0_arg.type === 3)) {
         return Backend__JSON__productSubSchema(null, Backend__JSON__nary((new $JSRTS.jsbn.BigInteger(("2"))).add($_0_arg.$1), "proj"), $_0_arg.$2);
     } else {
-        return Backend__JSON__disjointSubSchema(null, Data__Vect__zipWith(null, null, null, null, $partial_0_2$Backend__JSON___123_makeSubSchema_95_358_125_(), Backend__JSON__nary((new $JSRTS.jsbn.BigInteger(("2"))).add($_0_arg.$1), "case"), $_0_arg.$2));
+        return Backend__JSON__disjointSubSchema(null, Data__Vect__zipWith(null, null, null, null, $partial_0_2$Backend__JSON___123_makeSubSchema_95_548_125_(), Backend__JSON__nary((new $JSRTS.jsbn.BigInteger(("2"))).add($_0_arg.$1), "case"), $_0_arg.$2));
     }
 }
 
@@ -4874,25 +6870,19 @@ function Backend__Haskell__makeType($_0_arg, $_1_arg, $_2_arg){
     } else if(($_2_arg.type === 1)) {
         return $HC_0_1$Backend__Haskell__HsUnit;
     } else if(($_2_arg.type === 6)) {
-        const $cg$7 = $_2_arg.$2;
-        let $cg$6 = null;
-        $cg$6 = $cg$7.$1;
-        return new $HC_3_4$Backend__Haskell__HsParam($_2_arg.$1, $cg$6, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_2_3$Backend__Haskell__makeType($_0_arg, $_1_arg), $_2_arg.$3));
+        const $cg$3 = $_2_arg.$2;
+        let $cg$2 = null;
+        $cg$2 = $cg$3.$1;
+        return new $HC_3_5$Backend__Haskell__HsParam($_2_arg.$1, $cg$2, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_2_3$Backend__Haskell__makeType($_0_arg, $_1_arg), $_2_arg.$3));
     } else if(($_2_arg.type === 5)) {
         const $_10_in = new $HC_2_5$Typedefs__TMu($_2_arg.$1, $_2_arg.$2);
-        return new $HC_3_4$Backend__Haskell__HsParam(Prelude__List__length(null, Typedefs__getUsedIndices($_0_arg, $_10_in)), Backend__Utils__nameMu(null, null, $_2_arg.$2), Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__Haskell___123_makeType_95_360_125_(), Typedefs__getUsedVars(null, $_0_arg, $_1_arg, $_10_in)));
+        return new $HC_3_5$Backend__Haskell__HsParam(Prelude__List__length(null, Typedefs__getUsedIndices($_0_arg, $_10_in)), Backend__Utils__nameMu(null, null, $_2_arg.$2), Typedefs__getUsedVars(null, $_0_arg, $_1_arg, $_10_in));
     } else if(($_2_arg.type === 3)) {
         return new $HC_1_2$Backend__Haskell__HsTuple(Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_2_3$Backend__Haskell__makeType($_0_arg, $_1_arg), $_2_arg.$2));
     } else if(($_2_arg.type === 2)) {
-        return Backend__Utils__foldr1_39_(null, null, $partial_0_2$Backend__Haskell___123_makeType_95_361_125_(), Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_2_3$Backend__Haskell__makeType($_0_arg, $_1_arg), $_2_arg.$2));
+        return Backend__Utils__foldr1_39_(null, null, $partial_0_2$Backend__Haskell___123_makeType_95_549_125_(), Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_2_3$Backend__Haskell__makeType($_0_arg, $_1_arg), $_2_arg.$2));
     } else {
-        const $cg$3 = Data__Vect__index(null, null, $_2_arg.$1, $_1_arg);
-        if(($cg$3.type === 0)) {
-            return new $HC_1_3$Backend__Haskell__HsVar($cg$3.$1);
-        } else {
-            const $cg$5 = $cg$3.$1;
-            return new $HC_3_4$Backend__Haskell__HsParam($cg$5.$1, $cg$5.$2, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__Haskell___123_hsParam_95_86_125_(), $cg$5.$3));
-        }
+        return Data__Vect__index(null, null, $_2_arg.$1, $_1_arg);
     }
 }
 
@@ -4911,45 +6901,153 @@ function Backend__ReasonML__makeType($_0_arg, $_1_arg, $_2_arg){
         return new $HC_3_3$Backend__ReasonML__RMLParam($_2_arg.$1, $cg$6, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_2_3$Backend__ReasonML__makeType($_0_arg, $_1_arg), $_2_arg.$3));
     } else if(($_2_arg.type === 5)) {
         const $_10_in = new $HC_2_5$Typedefs__TMu($_2_arg.$1, $_2_arg.$2);
-        return new $HC_3_3$Backend__ReasonML__RMLParam(Prelude__List__length(null, Typedefs__getUsedIndices($_0_arg, $_10_in)), Backend__Utils__nameMu(null, null, $_2_arg.$2), Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__ReasonML___123_makeType_95_364_125_(), Typedefs__getUsedVars(null, $_0_arg, $_1_arg, $_10_in)));
+        return new $HC_3_3$Backend__ReasonML__RMLParam(Prelude__List__length(null, Typedefs__getUsedIndices($_0_arg, $_10_in)), Backend__Utils__nameMu(null, null, $_2_arg.$2), Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__ReasonML___123_makeType_95_551_125_(), Typedefs__getUsedVars(null, $_0_arg, $_1_arg, $_10_in)));
     } else if(($_2_arg.type === 3)) {
         return new $HC_2_1$Backend__ReasonML__RMLTuple($_2_arg.$1, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_2_3$Backend__ReasonML__makeType($_0_arg, $_1_arg), $_2_arg.$2));
     } else if(($_2_arg.type === 2)) {
-        return Backend__Utils__foldr1_39_(null, null, $partial_0_2$Backend__ReasonML___123_makeType_95_365_125_(), Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_2_3$Backend__ReasonML__makeType($_0_arg, $_1_arg), $_2_arg.$2));
+        return Backend__Utils__foldr1_39_(null, null, $partial_0_2$Backend__ReasonML___123_makeType_95_552_125_(), Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_2_3$Backend__ReasonML__makeType($_0_arg, $_1_arg), $_2_arg.$2));
     } else {
         const $cg$3 = Data__Vect__index(null, null, $_2_arg.$1, $_1_arg);
         if(($cg$3.type === 0)) {
             return new $HC_1_2$Backend__ReasonML__RMLVar($cg$3.$1);
         } else {
             const $cg$5 = $cg$3.$1;
-            return new $HC_3_3$Backend__ReasonML__RMLParam($cg$5.$1, $cg$5.$2, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__ReasonML___123_makeType_95_363_125_(), $cg$5.$3));
+            return new $HC_3_3$Backend__ReasonML__RMLParam($cg$5.$1, $cg$5.$2, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__ReasonML___123_makeType_95_550_125_(), $cg$5.$3));
         }
     }
+}
+
+// Backend.ReasonML.makeType'
+
+function Backend__ReasonML__makeType_39_($_0_arg, $_1_arg, $_2_arg){
+    
+    return new $HC_3_3$Backend__ReasonML__RMLParam(Prelude__List__length(null, Typedefs__getUsedIndices($_0_arg, $_2_arg.$2)), $_2_arg.$1, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__ReasonML___123_makeType_39__95_555_125_(), Typedefs__getUsedVars(null, $_0_arg, $_1_arg, $_2_arg.$2)));
 }
 
 // TParsec.Combinators.mand
 
 function TParsec__Combinators__mand($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg, $_8_m1, $_9_mlen, $_10_ts){
     
-    return $_4_arg.$2(null)(null)($_6_arg)($partial_5_6$TParsec__Combinators___123_mand_95_368_125_($_4_arg, $_7_arg, $_8_m1, $_9_mlen, $_10_ts));
+    return $_4_arg.$2(null)(null)($_6_arg)($partial_5_6$TParsec__Combinators___123_mand_95_557_125_($_4_arg, $_7_arg, $_8_m1, $_9_mlen, $_10_ts));
 }
 
 // TParsec.Combinators.map
 
 function TParsec__Combinators__map($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg, $_8_m1, $_9_le, $_10_ts){
-    return $_4_arg(null)(null)($partial_1_2$TParsec__Combinators___123_map_95_369_125_($_5_arg))($_7_arg($_8_m1)($_9_le)($_10_ts));
+    return $_4_arg(null)(null)($partial_1_2$TParsec__Combinators___123_map_95_558_125_($_5_arg))($_7_arg($_8_m1)($_9_le)($_10_ts));
+}
+
+// Prelude.List.mapMaybe
+
+function Prelude__List__mapMaybe($_0_arg, $_1_arg, $_2_arg, $_3_arg){
+    for(;;) {
+        
+        if(($_3_arg.type === 1)) {
+            const $cg$3 = $_2_arg($_3_arg.$1);
+            if(($cg$3.type === 1)) {
+                return new $HC_2_1$Prelude__List___58__58_($cg$3.$1, Prelude__List__mapMaybe(null, null, $_2_arg, $_3_arg.$2));
+            } else {
+                $_0_arg = null;
+                $_1_arg = null;
+                $_2_arg = $_2_arg;
+                $_3_arg = $_3_arg.$2;
+            }
+        } else {
+            return $_3_arg;
+        }
+    }
+}
+
+// Backend.Utils.mapWithIndexA
+
+function Backend__Utils__mapWithIndexA($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg){
+    
+    if(($_6_arg.type === 1)) {
+        
+        let $cg$4 = null;
+        let $cg$5 = null;
+        $cg$5 = $_3_arg.$2(null)($partial_0_2$Backend__Utils___123_mapWithIndexA_95_559_125_());
+        $cg$4 = $_3_arg.$3(null)(null)($cg$5)($_5_arg($HC_0_0$Data__Fin__FZ)($_6_arg.$1));
+        return $_3_arg.$3(null)(null)($cg$4)(Backend__Utils__mapWithIndexA(null, null, null, $_3_arg, null, $partial_1_2$Backend__Utils___123_mapWithIndexA_95_560_125_($_5_arg), $_6_arg.$2));
+    } else {
+        
+        return $_3_arg.$2(null)($HC_0_0$Data__Vect__Nil);
+    }
+}
+
+// Data.SortedMap.merge1
+
+function Data__SortedMap__merge1($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg, $_8_arg){
+    
+    if(($_8_arg.type === 1)) {
+        
+        if(($_6_arg.type === 1)) {
+            return Data__SortedMap__branch5(null, null, null, null, $_4_arg, $_5_arg, $_6_arg.$1, $_6_arg.$2, $_6_arg.$3, $_7_arg, $_8_arg.$1, $_8_arg.$2, $_8_arg.$3);
+        } else {
+            return Data__SortedMap__branch6(null, null, null, null, $_4_arg, $_5_arg, $_6_arg.$1, $_6_arg.$2, $_6_arg.$3, $_6_arg.$4, $_6_arg.$5, $_7_arg, $_8_arg.$1, $_8_arg.$2, $_8_arg.$3);
+        }
+    } else {
+        
+        if(($_6_arg.type === 1)) {
+            return Data__SortedMap__branch6(null, null, null, null, $_4_arg, $_5_arg, $_6_arg.$1, $_6_arg.$2, $_6_arg.$3, $_7_arg, $_8_arg.$1, $_8_arg.$2, $_8_arg.$3, $_8_arg.$4, $_8_arg.$5);
+        } else {
+            return Data__SortedMap__branch7(null, null, null, null, $_4_arg, $_5_arg, $_6_arg.$1, $_6_arg.$2, $_6_arg.$3, $_6_arg.$4, $_6_arg.$5, $_7_arg, $_8_arg.$1, $_8_arg.$2, $_8_arg.$3, $_8_arg.$4, $_8_arg.$5);
+        }
+    }
+}
+
+// Data.SortedMap.merge2
+
+function Data__SortedMap__merge2($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg, $_8_arg){
+    
+    if(($_8_arg.type === 1)) {
+        
+        if(($_4_arg.type === 1)) {
+            return Data__SortedMap__branch5(null, null, null, null, $_4_arg.$1, $_4_arg.$2, $_4_arg.$3, $_5_arg, $_6_arg, $_7_arg, $_8_arg.$1, $_8_arg.$2, $_8_arg.$3);
+        } else {
+            return Data__SortedMap__branch6(null, null, null, null, $_4_arg.$1, $_4_arg.$2, $_4_arg.$3, $_4_arg.$4, $_4_arg.$5, $_5_arg, $_6_arg, $_7_arg, $_8_arg.$1, $_8_arg.$2, $_8_arg.$3);
+        }
+    } else {
+        
+        if(($_4_arg.type === 1)) {
+            return Data__SortedMap__branch6(null, null, null, null, $_4_arg.$1, $_4_arg.$2, $_4_arg.$3, $_5_arg, $_6_arg, $_7_arg, $_8_arg.$1, $_8_arg.$2, $_8_arg.$3, $_8_arg.$4, $_8_arg.$5);
+        } else {
+            return Data__SortedMap__branch7(null, null, null, null, $_4_arg.$1, $_4_arg.$2, $_4_arg.$3, $_4_arg.$4, $_4_arg.$5, $_5_arg, $_6_arg, $_7_arg, $_8_arg.$1, $_8_arg.$2, $_8_arg.$3, $_8_arg.$4, $_8_arg.$5);
+        }
+    }
+}
+
+// Data.SortedMap.merge3
+
+function Data__SortedMap__merge3($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg, $_8_arg){
+    
+    if(($_6_arg.type === 1)) {
+        
+        if(($_4_arg.type === 1)) {
+            return Data__SortedMap__branch5(null, null, null, null, $_4_arg.$1, $_4_arg.$2, $_4_arg.$3, $_5_arg, $_6_arg.$1, $_6_arg.$2, $_6_arg.$3, $_7_arg, $_8_arg);
+        } else {
+            return Data__SortedMap__branch6(null, null, null, null, $_4_arg.$1, $_4_arg.$2, $_4_arg.$3, $_4_arg.$4, $_4_arg.$5, $_5_arg, $_6_arg.$1, $_6_arg.$2, $_6_arg.$3, $_7_arg, $_8_arg);
+        }
+    } else {
+        
+        if(($_4_arg.type === 1)) {
+            return Data__SortedMap__branch6(null, null, null, null, $_4_arg.$1, $_4_arg.$2, $_4_arg.$3, $_5_arg, $_6_arg.$1, $_6_arg.$2, $_6_arg.$3, $_6_arg.$4, $_6_arg.$5, $_7_arg, $_8_arg);
+        } else {
+            return Data__SortedMap__branch7(null, null, null, null, $_4_arg.$1, $_4_arg.$2, $_4_arg.$3, $_4_arg.$4, $_4_arg.$5, $_5_arg, $_6_arg.$1, $_6_arg.$2, $_6_arg.$3, $_6_arg.$4, $_6_arg.$5, $_7_arg, $_8_arg);
+        }
+    }
 }
 
 // Backend.Utils.nameMu
 
 function Backend__Utils__nameMu($_0_arg, $_1_arg, $_2_arg){
-    return Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Utils___123_nameMu_95_370_125_(), "", $partial_0_1$Typedefs___123_apN_95_20_125_(), $_2_arg);
+    return Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Utils___123_nameMu_95_562_125_(), "", $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $_2_arg);
 }
 
 // Backend.JSON.nary
 
 function Backend__JSON__nary($_0_arg, $_1_arg){
-    return Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_1_2$Backend__JSON___123_nary_95_372_125_($_1_arg), Data__Vect__range($_0_arg));
+    return Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_1_2$Backend__JSON___123_nary_95_564_125_($_1_arg), Data__Vect__range($_0_arg));
 }
 
 // Data.Fin.natToFin
@@ -4981,16 +7079,10 @@ function Data__Fin__natToFin($_0_arg, $_1_arg){
     }
 }
 
-// Parse.neComments
-
-function Parse__neComments($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg){
-    return TParsec__Combinators__land(null, null, null, null, $_3_arg, null, null, TParsec__Combinators__rand(null, null, null, null, $_3_arg, null, null, TParsec__Combinators__Chars__char(null, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_6_arg, $_5_arg, ";")($_7_arg), $partial_7_11$Parse___123_neComments_95_374_125_($_3_arg, $_2_arg, $_7_arg, $_1_arg, $_4_arg, $_6_arg, $_5_arg)), $partial_7_11$Parse___123_neComments_95_375_125_($_1_arg, $_2_arg, $_3_arg, $_4_arg, $_6_arg, $_5_arg, $_7_arg));
-}
-
 // TParsec.Combinators.nelist
 
 function TParsec__Combinators__nelist($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg){
-    return Induction__Nat__fix(null, $partial_2_5$TParsec__Combinators___123_nelist_95_379_125_($_4_arg, $_3_arg), $_5_arg);
+    return Induction__Nat__fix(null, $partial_2_5$TParsec__Combinators___123_nelist_95_568_125_($_4_arg, $_3_arg), $_5_arg);
 }
 
 // Prelude.List.nonEmpty
@@ -5002,12 +7094,6 @@ function Prelude__List__nonEmpty($_0_arg, $_1_arg){
     } else {
         return $HC_0_1$Prelude__Basics__No;
     }
-}
-
-// ParserUtils.notChar
-
-function ParserUtils__notChar($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_in){
-    return $partial_7_8$ParserUtils__except(null, $_1_arg, $_2_arg, $_3_arg, $_6_arg, $_5_arg, $_4_arg($_7_in));
 }
 
 // Prelude.Nat.notLTImpliesGTE
@@ -5036,36 +7122,66 @@ function TParsec__Combinators__optand($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_ar
     let $cg$4 = null;
     const $cg$6 = $_4_arg.$1;
     $cg$4 = $cg$6.$1;
-    return $partial_7_10$TParsec__Combinators__alt(null, null, null, $_5_arg, null, $partial_8_11$TParsec__Combinators__andbind(null, null, null, null, $_4_arg, null, $partial_8_11$TParsec__Combinators__map(null, null, null, null, $cg$1, $partial_0_1$TParsec__Combinators___123_optand_95_380_125_(), null, $_7_arg), $partial_1_6$TParsec__Combinators___123_ands_95_8_125_($_8_arg)), $partial_8_11$TParsec__Combinators__map(null, null, null, null, $cg$4, $partial_0_1$TParsec__Combinators___123_optand_95_382_125_(), null, $_8_arg));
+    return $partial_7_10$TParsec__Combinators__alt(null, null, null, $_5_arg, null, $partial_8_11$TParsec__Combinators__andbind(null, null, null, null, $_4_arg, null, $partial_8_11$TParsec__Combinators__map(null, null, null, null, $cg$1, $partial_0_1$TParsec__Combinators___123_optand_95_569_125_(), null, $_7_arg), $partial_1_6$TParsec__Combinators___123_ands_95_8_125_($_8_arg)), $partial_8_11$TParsec__Combinators__map(null, null, null, null, $cg$4, $partial_0_1$TParsec__Combinators___123_optand_95_571_125_(), null, $_8_arg));
 }
 
 // TParsec.Combinators.Chars.parens
 
 function TParsec__Combinators__Chars__parens($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg, $_8_arg, $_13_in){
-    return TParsec__Combinators__land(null, null, null, null, $_4_arg, null, null, TParsec__Combinators__rand(null, null, null, null, $_4_arg, null, null, TParsec__Combinators__Chars__char(null, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg, "(")($_8_arg), $_13_in), $partial_7_11$TParsec__Combinators__Chars___123_parens_95_383_125_($_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg, $_8_arg));
+    return TParsec__Combinators__land(null, null, null, null, $_4_arg, null, null, TParsec__Combinators__rand(null, null, null, null, $_4_arg, null, null, TParsec__Combinators__Chars__char(null, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg, "(")($_8_arg), $_13_in), $partial_7_11$TParsec__Combinators__Chars___123_parens_95_572_125_($_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg, $_8_arg));
 }
 
-// TParsec.Running.parseMaybe
+// TParsec.Running.parseResult
 
-function TParsec__Running__parseMaybe($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg){
-    const $cg$2 = Prelude__Traversable__Prelude___64_Prelude__Traversable__Traversable_36_List_58__33_traverse_58_0(null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$TParsec__Running___123_parseMaybe_95_384_125_(), $partial_0_2$TParsec__Running___123_parseMaybe_95_385_125_(), $partial_0_4$TParsec__Running___123_parseMaybe_95_386_125_()), $partial_0_1$TParsec__Running___123_parseMaybe_95_388_125_(), $_3_arg(null)($_7_arg(Prelude__List__length(null, $_4_arg($_6_arg)))(Prelude__List__length(null, $_4_arg($_6_arg)))(Prelude__Nat__lteRefl(Prelude__List__length(null, $_4_arg($_6_arg))))($_5_arg($_4_arg($_6_arg)))));
-    if(($cg$2.type === 1)) {
-        return Prelude__List__head_39_(null, $cg$2.$1);
-    } else {
-        return $HC_0_0$Prelude__Maybe__Nothing;
-    }
+function TParsec__Running__parseResult($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg, $_8_arg, $_9_arg){
+    return Prelude__Functor__TParsec__Result___64_Prelude__Functor__Functor_36_Result_32_e_58__33_map_58_0(null, null, null, $partial_1_2$Prelude__List__head_39_(null), TParsec__Running__parseResults(null, null, null, null, null, $_5_arg, $_6_arg, $_7_arg, $_8_arg, $_9_arg));
+}
+
+// TParsec.Running.parseResults
+
+function TParsec__Running__parseResults($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg, $_8_arg, $_9_arg){
+    return Prelude__Functor__TParsec__Result___64_Prelude__Functor__Functor_36_Result_32_e_58__33_map_58_0(null, null, null, $partial_3_4$Prelude__List__mapMaybe(null, null, $partial_0_1$TParsec__Running___123_parseResults_95_574_125_()), Prelude__Traversable__Prelude___64_Prelude__Traversable__Traversable_36_List_58__33_traverse_58_0(null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$TParsec__Running___123_parseResults_95_575_125_(), $partial_0_2$TParsec__Running___123_parseResults_95_576_125_(), $partial_0_4$TParsec__Running___123_parseResults_95_577_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $_5_arg(null)($_9_arg(Prelude__List__length(null, $_6_arg($_8_arg)))(Prelude__List__length(null, $_6_arg($_8_arg)))(Prelude__Nat__lteRefl(Prelude__List__length(null, $_6_arg($_8_arg))))($_7_arg($_6_arg($_8_arg)))(new $HC_2_0$Builtins__MkPair(new $HC_2_0$TParsec__Types__MkPosition((new $JSRTS.jsbn.BigInteger(("0"))), (new $JSRTS.jsbn.BigInteger(("0")))), $HC_0_0$Prelude__List__Nil)))));
 }
 
 // Parse.parseTNamed
 
 function Parse__parseTNamed($_0_arg){
-    return TParsec__Running__parseMaybe(null, null, null, $partial_0_2$Parse___123_parseTNamed_95_390_125_(), $partial_0_1$Parse___123_parseTNamed_95_391_125_(), $partial_0_1$Parse___123_parseTNamed_95_392_125_(), $_0_arg, $partial_0_1$Parse__tnamedRec());
+    return Prelude__Monad__TParsec__Result___64_Prelude__Monad__Monad_36_Result_32_e_58__33__62__62__61__58_0(null, null, null, TParsec__Running__parseResult(null, null, null, null, null, $partial_0_2$Parse___123_parseTNamed_95_580_125_(), $partial_0_1$Parse___123_parseTNamed_95_581_125_(), $partial_0_1$Parse___123_parseTNamed_95_582_125_(), $_0_arg, $partial_0_1$Parse__tnamedRec()), $partial_3_4$TParsec__Result__fromMaybe(null, null, $HC_0_1$Parse__RunError));
 }
 
-// Main.parseType
+// Parse.parseTNamedEither
 
-function Main__parseType(){
-    return $partial_0_1$Parse__parseTNamed();
+function Parse__parseTNamedEither($_35_in){
+    const $cg$2 = Parse__parseTNamed($_35_in);
+    if(($cg$2.type === 0)) {
+        const $cg$8 = $cg$2.$1;
+        let $cg$7 = null;
+        if(($cg$8.type === 0)) {
+            const $cg$10 = $cg$8.$1;
+            let $cg$9 = null;
+            $cg$9 = (Prelude__Show__primNumShow(null, $partial_0_1$prim_95__95_toStrBigInt(), $HC_0_0$Prelude__Show__Open, $cg$10.$1) + (":" + Prelude__Show__primNumShow(null, $partial_0_1$prim_95__95_toStrBigInt(), $HC_0_0$Prelude__Show__Open, $cg$10.$2)));
+            $cg$7 = ("parse error: " + $cg$9);
+        } else {
+            $cg$7 = "internal error";
+        }
+        
+        return new $HC_1_0$Prelude__Either__Left($cg$7);
+    } else if(($cg$2.type === 1)) {
+        const $cg$4 = $cg$2.$1;
+        let $cg$3 = null;
+        if(($cg$4.type === 0)) {
+            const $cg$6 = $cg$4.$1;
+            let $cg$5 = null;
+            $cg$5 = (Prelude__Show__primNumShow(null, $partial_0_1$prim_95__95_toStrBigInt(), $HC_0_0$Prelude__Show__Open, $cg$6.$1) + (":" + Prelude__Show__primNumShow(null, $partial_0_1$prim_95__95_toStrBigInt(), $HC_0_0$Prelude__Show__Open, $cg$6.$2)));
+            $cg$3 = ("parse error: " + $cg$5);
+        } else {
+            $cg$3 = "internal error";
+        }
+        
+        return new $HC_1_0$Prelude__Either__Left($cg$3);
+    } else {
+        return new $HC_1_1$Prelude__Either__Right($cg$2.$1);
+    }
 }
 
 // Prelude.Show.primNumShow
@@ -5113,7 +7229,7 @@ function Prelude__Show__primNumShow($_0_arg, $_1_arg, $_2_arg, $_3_arg){
 // Backend.JSON.productSubSchema
 
 function Backend__JSON__productSubSchema($_0_arg, $_1_arg, $_2_arg){
-    return new $HC_1_5$Language__JSON__Data__JObject(new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair("type", new $HC_1_3$Language__JSON__Data__JString("object")), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair("required", new $HC_1_4$Language__JSON__Data__JArray(Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__JSON___123_disjointSubSchema_95_29_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$Typedefs___123_apN_95_20_125_(), Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__JSON___123_productSubSchema_95_395_125_(), $_1_arg)))), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair("additionalProperties", new $HC_1_1$Language__JSON__Data__JBoolean(false)), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair("properties", new $HC_1_5$Language__JSON__Data__JObject(Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__JSON___123_disjointSubSchema_95_29_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$Typedefs___123_apN_95_20_125_(), Data__Vect__zipWith(null, null, null, null, $partial_0_2$Backend__JSON___123_makeSubSchema_95_358_125_(), $_1_arg, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__JSON__makeSubSchema(), $_2_arg))))), $HC_0_0$Prelude__List__Nil)))));
+    return new $HC_1_5$Language__JSON__Data__JObject(new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair("type", new $HC_1_3$Language__JSON__Data__JString("object")), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair("required", new $HC_1_4$Language__JSON__Data__JArray(Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__JSON___123_productSubSchema_95_585_125_(), $_1_arg)))), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair("additionalProperties", new $HC_1_1$Language__JSON__Data__JBoolean(false)), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair("properties", new $HC_1_5$Language__JSON__Data__JObject(Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), Data__Vect__zipWith(null, null, null, null, $partial_0_2$Backend__JSON___123_makeSubSchema_95_548_125_(), $_1_arg, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__JSON__makeSubSchema(), $_2_arg))))), $HC_0_0$Prelude__List__Nil)))));
 }
 
 // Text.PrettyPrint.WL.Combinators.punctuate
@@ -5138,7 +7254,7 @@ function TParsec__Combinators__rand($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg,
     let $cg$1 = null;
     const $cg$3 = $_4_arg.$1;
     $cg$1 = $cg$3.$1;
-    return $partial_8_11$TParsec__Combinators__map(null, null, null, null, $cg$1, $partial_0_1$TParsec__Combinators___123_rand_95_399_125_(), null, $partial_8_11$TParsec__Combinators__andbind(null, null, null, null, $_4_arg, null, $_7_arg, $partial_1_2$TParsec__Combinators__Numbers___123_decimalDigit_95_25_125_($_8_arg)));
+    return $partial_8_11$TParsec__Combinators__map(null, null, null, null, $cg$1, $partial_0_1$TParsec__Combinators___123_rand_95_589_125_(), null, $partial_8_11$TParsec__Combinators__andbind(null, null, null, null, $_4_arg, null, $_7_arg, $partial_1_2$TParsec__Combinators__Numbers___123_decimalDigit_95_31_125_($_8_arg)));
 }
 
 // TParsec.Combinators.randbindm
@@ -5147,7 +7263,7 @@ function TParsec__Combinators__randbindm($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4
     let $cg$1 = null;
     const $cg$3 = $_4_arg.$1;
     $cg$1 = $cg$3.$1;
-    return $partial_8_11$TParsec__Combinators__map(null, null, null, null, $cg$1, $partial_0_1$TParsec__Combinators___123_randbindm_95_401_125_(), null, $partial_8_11$TParsec__Combinators__andbindm(null, null, null, null, $_4_arg, null, $_6_arg, $_7_arg));
+    return $partial_8_11$TParsec__Combinators__map(null, null, null, null, $cg$1, $partial_0_1$TParsec__Combinators___123_randbindm_95_591_125_(), null, $partial_8_11$TParsec__Combinators__andbindm(null, null, null, null, $_4_arg, null, $_6_arg, $_7_arg));
 }
 
 // Data.Vect.range
@@ -5158,8 +7274,14 @@ function Data__Vect__range($_0_arg){
         return $HC_0_0$Data__Vect__Nil;
     } else {
         const $_1_in = $_0_arg.subtract((new $JSRTS.jsbn.BigInteger(("1"))));
-        return new $HC_2_1$Data__Vect___58__58_($HC_0_0$Data__Fin__FZ, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Data__Vect___123_range_95_402_125_(), Data__Vect__range($_1_in)));
+        return new $HC_2_1$Data__Vect___58__58_($HC_0_0$Data__Fin__FZ, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Data__Vect___123_range_95_592_125_(), Data__Vect__range($_1_in)));
     }
+}
+
+// TParsec.Types.recordChar
+
+function TParsec__Types__recordChar($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg){
+    return $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_1_5$TParsec__Types___123_recordChar_95_593_125_($_3_arg), $partial_0_1$Parse___123_comment_95_26_125_(), $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_1_5$TParsec__Types___123_recordChar_95_595_125_($_3_arg), $partial_1_3$TParsec__Types___123_recordChar_95_596_125_($_3_arg), $partial_1_5$TParsec__Types___123_recordChar_95_597_125_($_3_arg)), $partial_1_5$TParsec__Types___123_recordChar_95_598_125_($_3_arg)), $partial_1_2$TParsec__Types___123_recordChar_95_599_125_($_3_arg), $partial_2_4$TParsec__Types___123_recordChar_95_600_125_($_3_arg, $_4_arg)));
 }
 
 // Backend.Haskell.renderApp
@@ -5187,7 +7309,7 @@ function Backend__Haskell__renderApp($_0_arg, $_1_arg, $_2_arg){
         $cg$2 = (($cg$4)+($_1_arg.slice(1)));
     }
     
-    return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__text($cg$2), Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Backend__Haskell___123_renderApp_95_403_125_(), $HC_0_0$Text__PrettyPrint__WL__Core__Empty, Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__JSON___123_disjointSubSchema_95_29_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$Typedefs___123_apN_95_20_125_(), $_2_arg)));
+    return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__text($cg$2), Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Backend__Haskell___123_renderApp_95_601_125_(), $HC_0_0$Text__PrettyPrint__WL__Core__Empty, Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $_2_arg)));
 }
 
 // Backend.ReasonML.renderApp
@@ -5199,10 +7321,10 @@ function Backend__ReasonML__renderApp($_0_arg, $_1_arg, $_2_arg){
         if($_0_arg.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
             $cg$1 = $HC_0_0$Text__PrettyPrint__WL__Core__Empty;
         } else {
-            $cg$1 = Text__PrettyPrint__WL__Combinators__encloseSep(Text__PrettyPrint__WL__Core__char("("), Text__PrettyPrint__WL__Core__char(")"), Text__PrettyPrint__WL__Core__char(","), Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__JSON___123_disjointSubSchema_95_29_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$Typedefs___123_apN_95_20_125_(), $_2_arg));
+            $cg$1 = Text__PrettyPrint__WL__Combinators__encloseSep(Text__PrettyPrint__WL__Core__char("("), Text__PrettyPrint__WL__Core__char(")"), Text__PrettyPrint__WL__Core__char(","), Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $_2_arg));
         }
     } else {
-        $cg$1 = Text__PrettyPrint__WL__Combinators__encloseSep(Text__PrettyPrint__WL__Core__char("("), Text__PrettyPrint__WL__Core__char(")"), Text__PrettyPrint__WL__Core__char(","), Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__JSON___123_disjointSubSchema_95_29_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$Typedefs___123_apN_95_20_125_(), $_2_arg));
+        $cg$1 = Text__PrettyPrint__WL__Combinators__encloseSep(Text__PrettyPrint__WL__Core__char("("), Text__PrettyPrint__WL__Core__char(")"), Text__PrettyPrint__WL__Core__char(","), Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $_2_arg));
     }
     
     return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__text($_1_arg), $cg$1);
@@ -5261,15 +7383,17 @@ function Backend__Haskell__renderDef($_0_arg){
         const $cg$9 = $_0_arg.$1;
         let $cg$8 = null;
         $cg$8 = $cg$9.$3;
-        const $cg$11 = Text__PrettyPrint__WL__Combinators__punctuate(Text__PrettyPrint__WL__Core__text(" |"), Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__JSON___123_disjointSubSchema_95_29_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$Typedefs___123_apN_95_20_125_(), Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_3_4$Backend__Haskell__renderDef_58_renderConstructor_58_1(null, null, null), $_0_arg.$2)));
+        const $cg$11 = Text__PrettyPrint__WL__Combinators__punctuate(Text__PrettyPrint__WL__Core__text(" |"), Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_3_4$Backend__Haskell__renderDef_58_renderConstructor_58_1(null, null, null), $_0_arg.$2)));
         let $cg$10 = null;
         if(($cg$11.type === 1)) {
-            $cg$10 = Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Backend__Haskell___123_renderApp_95_403_125_(), $cg$11.$1, $cg$11.$2);
+            $cg$10 = Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Backend__Haskell___123_renderApp_95_601_125_(), $cg$11.$1, $cg$11.$2);
         } else {
             $cg$10 = $HC_0_0$Text__PrettyPrint__WL__Core__Empty;
         }
         
-        return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__text("data"), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Backend__Haskell__renderApp(null, $cg$6, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__Haskell___123_renderDef_95_410_125_(), $cg$8)), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char("="), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), $cg$10))))));
+        return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__text("data"), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Backend__Haskell__renderApp(null, $cg$6, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__Haskell___123_renderDef_95_608_125_(), $cg$8)), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char("="), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), $cg$10))))));
+    } else if(($_0_arg.type === 2)) {
+        return Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Backend___123_generateDefs_95_259_125_(), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__text($_0_arg.$1), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__text("::"), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), Backend__Haskell__renderType($_0_arg.$2))))), Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldr_58_0(null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $partial_3_4$Backend__Haskell__renderDef_58_renderClause_58_2($_0_arg.$1, null, null), $_0_arg.$3)));
     } else {
         const $cg$3 = $_0_arg.$1;
         let $cg$2 = null;
@@ -5277,7 +7401,7 @@ function Backend__Haskell__renderDef($_0_arg){
         const $cg$5 = $_0_arg.$1;
         let $cg$4 = null;
         $cg$4 = $cg$5.$3;
-        return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__text("type"), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Backend__Haskell__renderApp(null, $cg$2, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__Haskell___123_renderDef_95_414_125_(), $cg$4)), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char("="), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), Backend__Haskell__renderType($_0_arg.$2)))))));
+        return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__text("type"), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Backend__Haskell__renderApp(null, $cg$2, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__Haskell___123_renderDef_95_614_125_(), $cg$4)), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char("="), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), Backend__Haskell__renderType($_0_arg.$2)))))));
     }
 }
 
@@ -5294,10 +7418,10 @@ function Backend__ReasonML__renderDef($_0_arg){
             if($_0_arg.$1.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
                 $cg$2 = $HC_0_0$Text__PrettyPrint__WL__Core__Empty;
             } else {
-                const $cg$7 = Text__PrettyPrint__WL__Combinators__punctuate(Text__PrettyPrint__WL__Core__text(" |"), Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__JSON___123_disjointSubSchema_95_29_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$Typedefs___123_apN_95_20_125_(), Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_3_4$Backend__ReasonML__renderDef_58_renderConstructor_58_1(null, null, null), $_0_arg.$3)));
+                const $cg$7 = Text__PrettyPrint__WL__Combinators__punctuate(Text__PrettyPrint__WL__Core__text(" |"), Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_3_4$Backend__ReasonML__renderDef_58_renderConstructor_58_1(null, null, null), $_0_arg.$3)));
                 let $cg$6 = null;
                 if(($cg$7.type === 1)) {
-                    $cg$6 = Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Backend__Haskell___123_renderApp_95_403_125_(), $cg$7.$1, $cg$7.$2);
+                    $cg$6 = Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Backend__Haskell___123_renderApp_95_601_125_(), $cg$7.$1, $cg$7.$2);
                 } else {
                     $cg$6 = $HC_0_0$Text__PrettyPrint__WL__Core__Empty;
                 }
@@ -5305,10 +7429,10 @@ function Backend__ReasonML__renderDef($_0_arg){
                 $cg$2 = new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char("="), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), $cg$6)));
             }
         } else {
-            const $cg$4 = Text__PrettyPrint__WL__Combinators__punctuate(Text__PrettyPrint__WL__Core__text(" |"), Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__JSON___123_disjointSubSchema_95_29_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$Typedefs___123_apN_95_20_125_(), Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_3_4$Backend__ReasonML__renderDef_58_renderConstructor_58_1(null, null, null), $_0_arg.$3)));
+            const $cg$4 = Text__PrettyPrint__WL__Combinators__punctuate(Text__PrettyPrint__WL__Core__text(" |"), Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_3_4$Backend__ReasonML__renderDef_58_renderConstructor_58_1(null, null, null), $_0_arg.$3)));
             let $cg$3 = null;
             if(($cg$4.type === 1)) {
-                $cg$3 = Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Backend__Haskell___123_renderApp_95_403_125_(), $cg$4.$1, $cg$4.$2);
+                $cg$3 = Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Backend__Haskell___123_renderApp_95_601_125_(), $cg$4.$1, $cg$4.$2);
             } else {
                 $cg$3 = $HC_0_0$Text__PrettyPrint__WL__Core__Empty;
             }
@@ -5320,17 +7444,88 @@ function Backend__ReasonML__renderDef($_0_arg){
     }
 }
 
+// Backend.Haskell.renderTerm
+
+function Backend__Haskell__renderTerm($_0_arg){
+    for(;;) {
+        
+        if(($_0_arg.type === 6)) {
+            
+            if(($_0_arg.$2.type === 0)) {
+                $_0_arg = $_0_arg.$1;
+            } else {
+                const $cg$7 = Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldr_58_0(null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $partial_0_1$Backend__Haskell__guardParenTerm(), $_0_arg.$2));
+                let $cg$6 = null;
+                if(($cg$7.type === 1)) {
+                    $cg$6 = Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Backend__Haskell___123_renderApp_95_601_125_(), $cg$7.$1, $cg$7.$2);
+                } else {
+                    $cg$6 = $HC_0_0$Text__PrettyPrint__WL__Core__Empty;
+                }
+                
+                return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Backend__Haskell__renderTerm($_0_arg.$1), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), $cg$6));
+            }
+        } else if(($_0_arg.type === 5)) {
+            return new $HC_1_7$Text__PrettyPrint__WL__Core__Column($partial_2_3$Backend__Haskell___123_renderTerm_95_633_125_($_0_arg.$1, $_0_arg.$2));
+        } else if(($_0_arg.type === 11)) {
+            return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__text("mconcat"), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), Text__PrettyPrint__WL__Combinators__encloseSep(Text__PrettyPrint__WL__Core__char("["), Text__PrettyPrint__WL__Core__char("]"), Text__PrettyPrint__WL__Core__char(","), Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $partial_0_1$Backend__Haskell__guardParenTerm(), $_0_arg.$1))));
+        } else if(($_0_arg.type === 8)) {
+            return new $HC_1_7$Text__PrettyPrint__WL__Core__Column($partial_1_2$Backend__Haskell___123_renderTerm_95_641_125_($_0_arg.$1));
+        } else if(($_0_arg.type === 7)) {
+            return Text__PrettyPrint__WL__Core__text($_0_arg.$1);
+        } else if(($_0_arg.type === 4)) {
+            
+            if(($_0_arg.$2.type === 0)) {
+                return Text__PrettyPrint__WL__Core__text($_0_arg.$1);
+            } else {
+                const $cg$4 = Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldr_58_0(null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $partial_0_1$Backend__Haskell__guardParenTerm(), $_0_arg.$2));
+                let $cg$3 = null;
+                if(($cg$4.type === 1)) {
+                    $cg$3 = Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Backend__Haskell___123_renderApp_95_601_125_(), $cg$4.$1, $cg$4.$2);
+                } else {
+                    $cg$3 = $HC_0_0$Text__PrettyPrint__WL__Core__Empty;
+                }
+                
+                return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__text($_0_arg.$1), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), $cg$3));
+            }
+        } else if(($_0_arg.type === 10)) {
+            return Text__PrettyPrint__WL__Core__text(Prelude__Show__primNumShow(null, $partial_0_1$prim_95__95_toStrBigInt(), $HC_0_0$Prelude__Show__Open, $_0_arg.$1));
+        } else if(($_0_arg.type === 2)) {
+            return Text__PrettyPrint__WL__Core__text($_0_arg.$1);
+        } else if(($_0_arg.type === 1)) {
+            return Backend__Haskell__hsTupled(Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__Haskell__guardParenTerm(), $_0_arg.$1)));
+        } else if(($_0_arg.type === 0)) {
+            return Text__PrettyPrint__WL__Core__text("()");
+        } else if(($_0_arg.type === 3)) {
+            return Text__PrettyPrint__WL__Core__text("_");
+        } else {
+            return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__text("fromIntegral"), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), Text__PrettyPrint__WL__Core__text(Prelude__Show__primNumShow(null, $partial_0_1$prim_95__95_toStrInt(), $HC_0_0$Prelude__Show__Open, $_0_arg.$1))));
+        }
+    }
+}
+
 // Backend.Haskell.renderType
 
 function Backend__Haskell__renderType($_0_arg){
     
-    if(($_0_arg.type === 4)) {
+    if(($_0_arg.type === 6)) {
+        const $cg$7 = $_0_arg.$1;
+        let $cg$6 = null;
+        if(($cg$7.type === 5)) {
+            $cg$6 = Backend__Haskell__renderType($_0_arg.$1);
+        } else {
+            $cg$6 = Backend__Haskell__guardParen($_0_arg.$1);
+        }
+        
+        return Backend__Haskell__renderType_58_renderArrow_58_6(null, null, $cg$6, $_0_arg.$2);
+    } else if(($_0_arg.type === 5)) {
         return Backend__Haskell__renderApp(null, $_0_arg.$2, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__Haskell__guardParen(), $_0_arg.$3));
+    } else if(($_0_arg.type === 3)) {
+        return Backend__Haskell__renderApp(null, "Either", new $HC_2_1$Data__Vect___58__58_(Backend__Haskell__guardParen($_0_arg.$1), new $HC_2_1$Data__Vect___58__58_(Backend__Haskell__guardParen($_0_arg.$2), $HC_0_0$Data__Vect__Nil)));
     } else if(($_0_arg.type === 2)) {
-        return Text__PrettyPrint__WL__Combinators__encloseSep(Text__PrettyPrint__WL__Core__char("("), Text__PrettyPrint__WL__Core__char(")"), Text__PrettyPrint__WL__Core__char(","), Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__JSON___123_disjointSubSchema_95_29_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$Typedefs___123_apN_95_20_125_(), Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__Haskell__renderType(), $_0_arg.$1)));
+        return Backend__Haskell__hsTupled(Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__Haskell__renderType(), $_0_arg.$1)));
     } else if(($_0_arg.type === 1)) {
         return Text__PrettyPrint__WL__Core__text("()");
-    } else if(($_0_arg.type === 3)) {
+    } else if(($_0_arg.type === 4)) {
         let $cg$2 = null;
         if((((($_0_arg.$1 == "")) ? 1|0 : 0|0) === 0)) {
             $cg$2 = true;
@@ -5388,7 +7583,7 @@ function Backend__ReasonML__renderType($_0_arg){
         
         return Backend__ReasonML__renderApp($_0_arg.$1, $cg$3, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__ReasonML__renderType(), $_0_arg.$3));
     } else if(($_0_arg.type === 1)) {
-        return Text__PrettyPrint__WL__Combinators__encloseSep(Text__PrettyPrint__WL__Core__char("("), Text__PrettyPrint__WL__Core__char(")"), Text__PrettyPrint__WL__Core__char(","), Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__JSON___123_disjointSubSchema_95_29_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$Typedefs___123_apN_95_20_125_(), Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__ReasonML__renderType(), $_0_arg.$2)));
+        return Text__PrettyPrint__WL__Combinators__encloseSep(Text__PrettyPrint__WL__Core__char("("), Text__PrettyPrint__WL__Core__char(")"), Text__PrettyPrint__WL__Core__char(","), Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__ReasonML__renderType(), $_0_arg.$2)));
     } else if(($_0_arg.type === 0)) {
         return Text__PrettyPrint__WL__Core__text("unit");
     } else {
@@ -5429,7 +7624,13 @@ function TParsec__Combinators__roptand($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_a
     let $cg$1 = null;
     const $cg$3 = $_4_arg.$1;
     $cg$1 = $cg$3.$1;
-    return $partial_8_11$TParsec__Combinators__map(null, null, null, null, $cg$1, $partial_0_1$TParsec__Combinators___123_rand_95_399_125_(), null, TParsec__Combinators__optand(null, null, null, null, $_4_arg, $_5_arg, null, $_7_arg, $_8_arg));
+    return $partial_8_11$TParsec__Combinators__map(null, null, null, null, $cg$1, $partial_0_1$TParsec__Combinators___123_rand_95_589_125_(), null, TParsec__Combinators__optand(null, null, null, null, $_4_arg, $_5_arg, null, $_7_arg, $_8_arg));
+}
+
+// Backend.Haskell.runTermGen
+
+function Backend__Haskell__runTermGen($_0_arg, $_1_arg, $_2_arg, $_3_arg){
+    return Control__Monad__State__evalState(null, null, $_3_arg, new $HC_2_0$Builtins__MkPair(new $HC_1_0$Data__SortedMap__Empty(new $HC_3_0$Prelude__Interfaces__Ord_95_ictor(new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Backend__Haskell___123_freeVars_95_221_125_(), $partial_0_2$Backend__JSON___123_makeDefs_95_359_125_()), $partial_0_2$Backend__Haskell___123_runTermGen_95_654_125_(), $partial_0_2$Backend__Haskell___123_runTermGen_95_655_125_())), $_2_arg));
 }
 
 // Data.Fin.shift
@@ -5455,7 +7656,7 @@ function Typedefs__shiftVars($_0_arg, $_1_arg){
     } else if(($_1_arg.type === 6)) {
         return new $HC_3_6$Typedefs__TApp($_1_arg.$1, $_1_arg.$2, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_1_2$Typedefs__shiftVars(null), $_1_arg.$3));
     } else if(($_1_arg.type === 5)) {
-        return new $HC_2_5$Typedefs__TMu($_1_arg.$1, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Typedefs___123_shiftVars_95_427_125_(), $_1_arg.$2));
+        return new $HC_2_5$Typedefs__TMu($_1_arg.$1, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Typedefs___123_shiftVars_95_656_125_(), $_1_arg.$2));
     } else if(($_1_arg.type === 3)) {
         return new $HC_2_3$Typedefs__TProd($_1_arg.$1, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_1_2$Typedefs__shiftVars(null), $_1_arg.$2));
     } else if(($_1_arg.type === 2)) {
@@ -5538,7 +7739,70 @@ function Language__JSON__Data__showString($_0_arg){
         $cg$2 = new $HC_2_1$Prelude__List___58__58_($_0_arg[0], _95_Prelude__Strings__unpack_95_with_95_36(null, $cg$5));
     }
     
-    return ("\"" + (Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldr_58_0(null, null, $partial_0_2$Language__JSON__Data___123_showString_95_428_125_(), "", $cg$2) + "\""));
+    return ("\"" + (Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldr_58_0(null, null, $partial_0_2$Language__JSON__Data___123_showString_95_657_125_(), "", $cg$2) + "\""));
+}
+
+// Backend.Haskell.simplify
+
+function Backend__Haskell__simplify($_0_arg){
+    for(;;) {
+        
+        if(($_0_arg.type === 6)) {
+            return new $HC_2_6$Backend__Haskell__HsApp(Backend__Haskell__simplify($_0_arg.$1), Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $partial_0_1$Backend__Haskell__simplify(), $_0_arg.$2));
+        } else if(($_0_arg.type === 5)) {
+            return new $HC_2_5$Backend__Haskell__HsCase(Backend__Haskell__simplify($_0_arg.$1), Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $partial_0_1$Backend__Haskell___123_simplify_95_658_125_(), $_0_arg.$2));
+        } else if(($_0_arg.type === 11)) {
+            const $_9_in = Prelude__List__filter(null, $partial_0_1$Backend__Haskell___123_simplify_95_659_125_(), Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $partial_0_1$Backend__Haskell__simplify(), $_0_arg.$1));
+            
+            if(($_9_in.type === 1)) {
+                
+                if(($_9_in.$2.type === 0)) {
+                    return $_9_in.$1;
+                } else {
+                    return new $HC_1_11$Backend__Haskell__HsConcat($_9_in);
+                }
+            } else if(($_9_in.type === 0)) {
+                return new $HC_1_7$Backend__Haskell__HsFun("mempty");
+            } else {
+                return new $HC_1_11$Backend__Haskell__HsConcat($_9_in);
+            }
+        } else if(($_0_arg.type === 8)) {
+            const $_15_in = Backend__Haskell__simplify_58_simpDo_58_0(null, $_0_arg.$1);
+            
+            if(($_15_in.type === 1)) {
+                const $cg$4 = $_15_in.$1;
+                
+                if(($cg$4.$1.type === 0)) {
+                    
+                    if(($_15_in.$2.type === 0)) {
+                        $_0_arg = $cg$4.$2;
+                    } else {
+                        return new $HC_1_8$Backend__Haskell__HsDo($_15_in);
+                    }
+                } else {
+                    return new $HC_1_8$Backend__Haskell__HsDo($_15_in);
+                }
+            } else {
+                return new $HC_1_8$Backend__Haskell__HsDo($_15_in);
+            }
+        } else if(($_0_arg.type === 7)) {
+            return $_0_arg;
+        } else if(($_0_arg.type === 4)) {
+            return new $HC_2_4$Backend__Haskell__HsInn($_0_arg.$1, Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $partial_0_1$Backend__Haskell__simplify(), $_0_arg.$2));
+        } else if(($_0_arg.type === 10)) {
+            return $_0_arg;
+        } else if(($_0_arg.type === 2)) {
+            return $_0_arg;
+        } else if(($_0_arg.type === 1)) {
+            return new $HC_1_1$Backend__Haskell__HsTupC(Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__Haskell__simplify(), $_0_arg.$1));
+        } else if(($_0_arg.type === 0)) {
+            return $_0_arg;
+        } else if(($_0_arg.type === 3)) {
+            return $_0_arg;
+        } else {
+            return $_0_arg;
+        }
+    }
 }
 
 // TParsec.Combinators.Chars.space
@@ -5585,6 +7849,35 @@ function Text__PrettyPrint__WL__Core__spaces($_0_arg){
         return "";
     } else {
         return Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldr_58_0(null, null, $partial_0_2$prim_95__95_strCons(), "", Prelude__List__replicate(null, (new $JSRTS.jsbn.BigInteger(''+($_0_arg))), " "));
+    }
+}
+
+// Parse.spacesOrComments
+
+function Parse__spacesOrComments($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg){
+    let $cg$1 = null;
+    const $cg$3 = $_3_arg.$1;
+    $cg$1 = $cg$3.$1;
+    let $cg$4 = null;
+    const $cg$6 = $_3_arg.$1;
+    $cg$4 = $cg$6.$1;
+    return $partial_8_11$TParsec__Combinators__map(null, null, null, null, $cg$1, $partial_0_1$Parse___123_comment_95_26_125_(), null, TParsec__Combinators__nelist(null, null, null, $_2_arg, $_3_arg, $_7_arg)($partial_7_10$TParsec__Combinators__alt(null, null, null, $_2_arg, null, Parse__comment(null, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_6_arg, $_5_arg, $_7_arg), $partial_8_11$TParsec__Combinators__map(null, null, null, null, $cg$4, $partial_0_1$Parse___123_comment_95_26_125_(), null, TParsec__Combinators__nelist(null, null, null, $_2_arg, $_3_arg, $_7_arg)(TParsec__Combinators__Chars__space(null, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_6_arg, $_5_arg, null))))));
+}
+
+// Prelude.List.splitAt
+
+function Prelude__List__splitAt($_0_arg, $_1_arg, $_2_arg){
+    
+    if($_1_arg.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
+        return new $HC_2_0$Builtins__MkPair($HC_0_0$Prelude__List__Nil, $_2_arg);
+    } else {
+        
+        if(($_2_arg.type === 1)) {
+            const $cg$4 = Prelude__List__splitAt(null, $_1_arg.subtract((new $JSRTS.jsbn.BigInteger(("1")))), $_2_arg.$2);
+            return new $HC_2_0$Builtins__MkPair(new $HC_2_1$Prelude__List___58__58_($_2_arg.$1, $cg$4.$1), $cg$4.$2);
+        } else {
+            return new $HC_2_0$Builtins__MkPair($HC_0_0$Prelude__List__Nil, $HC_0_0$Prelude__List__Nil);
+        }
     }
 }
 
@@ -5635,7 +7928,7 @@ function TParsec__Combinators__Chars__string($_0_arg, $_1_arg, $_2_arg, $_3_arg,
             $cg$8 = new $HC_2_1$Prelude__List___58__58_($_7_arg.slice(1)[0], _95_Prelude__Strings__unpack_95_with_95_36(null, $cg$11));
         }
         
-        return $partial_8_11$TParsec__Combinators__map(null, null, null, null, $cg$4, $partial_1_2$TParsec__Combinators__Numbers___123_decimalDigit_95_25_125_($_7_arg), null, TParsec__Combinators__ands(null, null, null, $_3_arg, null, new $HC_2_0$Data__NEList__MkNEList(TParsec__Combinators__Chars__char(null, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg[0])($_9_arg), Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $partial_7_8$TParsec__Combinators__Chars___123_string_95_430_125_($_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_9_arg), $cg$8))));
+        return $partial_8_11$TParsec__Combinators__map(null, null, null, null, $cg$4, $partial_1_2$TParsec__Combinators__Numbers___123_decimalDigit_95_31_125_($_7_arg), null, TParsec__Combinators__ands(null, null, null, $_3_arg, null, new $HC_2_0$Data__NEList__MkNEList(TParsec__Combinators__Chars__char(null, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg[0])($_9_arg), Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $partial_7_8$TParsec__Combinators__Chars___123_string_95_663_125_($_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_9_arg), $cg$8))));
     }
 }
 
@@ -5661,10 +7954,76 @@ function Language__JSON__Data__stringify($_0_arg){
     }
 }
 
+// Backend.Haskell.substHS
+
+function Backend__Haskell__substHS($_0_arg, $_1_arg, $_2_arg){
+    
+    if(($_2_arg.type === 6)) {
+        return new $HC_2_6$Backend__Haskell__HsApp(Backend__Haskell__substHS($_0_arg, $_1_arg, $_2_arg.$1), Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $partial_2_3$Backend__Haskell__substHS($_0_arg, $_1_arg), $_2_arg.$2));
+    } else if(($_2_arg.type === 5)) {
+        return new $HC_2_5$Backend__Haskell__HsCase(Backend__Haskell__substHS($_0_arg, $_1_arg, $_2_arg.$1), Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $partial_4_5$Backend__Haskell__substHS_58_captureAvoid_58_5($_0_arg, $_1_arg, null, null), $_2_arg.$2));
+    } else if(($_2_arg.type === 11)) {
+        return new $HC_1_11$Backend__Haskell__HsConcat(Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $partial_2_3$Backend__Haskell__substHS($_0_arg, $_1_arg), $_2_arg.$1));
+    } else if(($_2_arg.type === 8)) {
+        return new $HC_1_8$Backend__Haskell__HsDo(Backend__Haskell__substHS_58_captureAvoid_58_8($_0_arg, $_1_arg, null, $_2_arg.$1));
+    } else if(($_2_arg.type === 7)) {
+        return $_2_arg;
+    } else if(($_2_arg.type === 4)) {
+        return new $HC_2_4$Backend__Haskell__HsInn($_2_arg.$1, Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $partial_2_3$Backend__Haskell__substHS($_0_arg, $_1_arg), $_2_arg.$2));
+    } else if(($_2_arg.type === 10)) {
+        return $_2_arg;
+    } else if(($_2_arg.type === 2)) {
+        
+        if((((($_1_arg == $_2_arg.$1)) ? 1|0 : 0|0) === 0)) {
+            return $_2_arg;
+        } else {
+            return $_0_arg;
+        }
+    } else if(($_2_arg.type === 1)) {
+        return new $HC_1_1$Backend__Haskell__HsTupC(Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_2_3$Backend__Haskell__substHS($_0_arg, $_1_arg), $_2_arg.$1));
+    } else if(($_2_arg.type === 0)) {
+        return $_2_arg;
+    } else if(($_2_arg.type === 3)) {
+        return $_2_arg;
+    } else {
+        return $_2_arg;
+    }
+}
+
 // Parse.tdef
 
 function Parse__tdef($_0_arg){
-    return Induction__Nat__fix(null, $partial_0_2$Parse___123_tdef_95_3441_125_(), $_0_arg);
+    return Induction__Nat__fix(null, $partial_0_2$Parse___123_tdef_95_1100_125_(), $_0_arg);
+}
+
+// Parse.tdefMu
+
+function Parse__tdefMu($_0_arg, $_1_arg){
+    return $partial_8_11$TParsec__Combinators__map(null, null, null, null, $partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_1$Parse___123_tdefMu_95_1107_125_(), null, TParsec__Combinators__Chars__parens(null, null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdefMu_95_1166_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), $_0_arg, $partial_2_6$Parse___123_tdefMu_95_2163_125_($_0_arg, $_1_arg)));
+}
+
+// Parse.tdefName
+
+function Parse__tdefName($_0_arg, $_1_arg){
+    return $partial_9_12$TParsec__Combinators__guardM(null, null, null, null, new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdefName_95_2209_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$Parse___123_tdefName_95_2270_125_(), null, TParsec__Combinators__Chars__parens(null, null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdefName_95_2329_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), $_0_arg, $partial_2_6$Parse___123_tdefName_95_2955_125_($_0_arg, $_1_arg)));
+}
+
+// Parse.tdefNary
+
+function Parse__tdefNary($_0_arg, $_1_arg, $_2_arg, $_3_arg){
+    return $partial_8_11$TParsec__Combinators__map(null, null, null, null, $partial_0_4$Parse___123_tdef_95_679_125_(), $partial_1_2$Parse___123_tdefNary_95_2960_125_($_3_arg), null, TParsec__Combinators__Chars__parens(null, null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdefNary_95_3019_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), $_0_arg, $partial_3_7$Parse___123_tdefNary_95_3774_125_($_0_arg, $_2_arg, $_1_arg)));
+}
+
+// Parse.tdefRef
+
+function Parse__tdefRef($_0_arg){
+    return $partial_9_12$TParsec__Combinators__guardM(null, null, null, null, new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdefRef_95_3820_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$Parse___123_tdefRef_95_3880_125_(), null, $partial_8_11$TParsec__Combinators__mand(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), null, Control__Monad__Trans__TParsec__Types___64_Control__Monad__Trans__MonadTrans_36_TParsecT_32_e_32_a_58__33_lift_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Backend__Haskell___123_envTerms_95_213_125_()), TParsec__Combinators__Chars__alphas(null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdefRef_95_3998_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), $_0_arg)));
+}
+
+// Parse.tdefVar
+
+function Parse__tdefVar($_0_arg){
+    return $partial_8_11$TParsec__Combinators__map(null, null, null, null, $partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_1$Parse___123_tdefVar_95_4066_125_(), null, TParsec__Combinators__Chars__parens(null, null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdefVar_95_4125_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), $_0_arg, $partial_1_5$Parse___123_tdefVar_95_4725_125_($_0_arg)));
 }
 
 // Text.PrettyPrint.WL.Core.text
@@ -5681,13 +8040,13 @@ function Text__PrettyPrint__WL__Core__text($_0_arg){
 // Parse.tnamed
 
 function Parse__tnamed($_0_arg){
-    return Parse__ignorespaces(null, null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), $_0_arg, TParsec__Combinators__randbindm(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), null, TParsec__Combinators__Chars__parens(null, null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), $_0_arg, $partial_1_5$Parse___123_tnamed_95_4350_125_($_0_arg)), $partial_0_1$Parse___123_tnamed_95_4399_125_()));
+    return Parse__ignoreSpaces(null, null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tnamed_95_4784_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), $_0_arg, TParsec__Combinators__randbindm(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), null, TParsec__Combinators__Chars__parens(null, null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tnamed_95_4951_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), $_0_arg, $partial_1_5$Parse___123_tnamed_95_5718_125_($_0_arg)), $partial_0_1$Parse___123_tnamed_95_5767_125_()));
 }
 
 // Parse.tnamedRec
 
 function Parse__tnamedRec($_0_arg){
-    return Induction__Nat__fix(null, $partial_0_2$Parse___123_tnamedRec_95_4510_125_(), $_0_arg);
+    return Induction__Nat__fix(null, $partial_0_2$Parse___123_tnamedRec_95_5878_125_(), $_0_arg);
 }
 
 // Prelude.Maybe.toMaybe
@@ -5704,7 +8063,7 @@ function Prelude__Maybe__toMaybe($_0_arg, $_1_arg, $_2_arg){
 // Text.PrettyPrint.WL.Core.toString
 
 function Text__PrettyPrint__WL__Core__toString($_0_arg, $_1_arg, $_2_arg){
-    return Text__PrettyPrint__WL__Core__showPrettyDoc_58_showPrettyDocS_58_0(null, Text__PrettyPrint__WL__Core__render_58_best_58_0($_0_arg, $_1_arg, null, $_1_arg, 0, 0, $_2_arg, $partial_0_1$Text__PrettyPrint__WL__Core___123_toString_95_4511_125_()), "");
+    return Text__PrettyPrint__WL__Core__showPrettyDoc_58_showPrettyDocS_58_0(null, Text__PrettyPrint__WL__Core__render_58_best_58_0($_0_arg, $_1_arg, null, $_1_arg, 0, 0, $_2_arg, $partial_0_1$Text__PrettyPrint__WL__Core___123_toString_95_5879_125_()), "");
 }
 
 // Parse.toVMax
@@ -5723,6 +8082,134 @@ function Parse__toVMax($_0_arg, $_1_arg, $_2_arg){
         }
     } else {
         return new $HC_2_0$Builtins__MkDPair($cg$3.$1, new $HC_1_0$Parse__VMEnd($cg$3.$2));
+    }
+}
+
+// Data.SortedMap.treeDelete
+
+function Data__SortedMap__treeDelete($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg){
+    
+    if(($_5_arg.type === 1)) {
+        
+        if($_3_arg.subtract((new $JSRTS.jsbn.BigInteger(("1")))).equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
+            
+            
+            if($_2_arg.$3($_4_arg)($_5_arg.$2)) {
+                const $cg$33 = Data__SortedMap__treeDelete(null, null, $_2_arg, (new $JSRTS.jsbn.BigInteger(("0"))), $_4_arg, $_5_arg.$1);
+                if(($cg$33.type === 0)) {
+                    return new $HC_1_0$Prelude__Either__Left(new $HC_3_1$Data__SortedMap__Branch2($cg$33.$1, $_5_arg.$2, $_5_arg.$3));
+                } else {
+                    return new $HC_1_1$Prelude__Either__Right($_5_arg.$3);
+                }
+            } else {
+                const $cg$31 = Data__SortedMap__treeDelete(null, null, $_2_arg, (new $JSRTS.jsbn.BigInteger(("0"))), $_4_arg, $_5_arg.$3);
+                if(($cg$31.type === 0)) {
+                    return new $HC_1_0$Prelude__Either__Left(new $HC_3_1$Data__SortedMap__Branch2($_5_arg.$1, $_5_arg.$2, $cg$31.$1));
+                } else {
+                    return new $HC_1_1$Prelude__Either__Right($_5_arg.$1);
+                }
+            }
+        } else {
+            const $_16_in = $_3_arg.subtract((new $JSRTS.jsbn.BigInteger(("1")))).subtract((new $JSRTS.jsbn.BigInteger(("1"))));
+            
+            
+            if($_2_arg.$3($_4_arg)($_5_arg.$2)) {
+                const $cg$41 = Data__SortedMap__treeDelete(null, null, $_2_arg, $_16_in.add((new $JSRTS.jsbn.BigInteger(("1")))), $_4_arg, $_5_arg.$1);
+                if(($cg$41.type === 0)) {
+                    return new $HC_1_0$Prelude__Either__Left(new $HC_3_1$Data__SortedMap__Branch2($cg$41.$1, $_5_arg.$2, $_5_arg.$3));
+                } else {
+                    const $cg$43 = $_5_arg.$3;
+                    if(($cg$43.type === 1)) {
+                        return new $HC_1_1$Prelude__Either__Right(new $HC_5_2$Data__SortedMap__Branch3($cg$41.$1, $_5_arg.$2, $cg$43.$1, $cg$43.$2, $cg$43.$3));
+                    } else {
+                        return new $HC_1_0$Prelude__Either__Left(Data__SortedMap__branch4(null, null, null, null, $cg$41.$1, $_5_arg.$2, $cg$43.$1, $cg$43.$2, $cg$43.$3, $cg$43.$4, $cg$43.$5));
+                    }
+                }
+            } else {
+                const $cg$37 = Data__SortedMap__treeDelete(null, null, $_2_arg, $_16_in.add((new $JSRTS.jsbn.BigInteger(("1")))), $_4_arg, $_5_arg.$3);
+                if(($cg$37.type === 0)) {
+                    return new $HC_1_0$Prelude__Either__Left(new $HC_3_1$Data__SortedMap__Branch2($_5_arg.$1, $_5_arg.$2, $cg$37.$1));
+                } else {
+                    const $cg$39 = $_5_arg.$1;
+                    if(($cg$39.type === 1)) {
+                        return new $HC_1_1$Prelude__Either__Right(new $HC_5_2$Data__SortedMap__Branch3($cg$39.$1, $cg$39.$2, $cg$39.$3, $_5_arg.$2, $cg$37.$1));
+                    } else {
+                        return new $HC_1_0$Prelude__Either__Left(Data__SortedMap__branch4(null, null, null, null, $cg$39.$1, $cg$39.$2, $cg$39.$3, $cg$39.$4, $cg$39.$5, $_5_arg.$2, $cg$37.$1));
+                    }
+                }
+            }
+        }
+    } else if(($_5_arg.type === 2)) {
+        
+        if($_3_arg.subtract((new $JSRTS.jsbn.BigInteger(("1")))).equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
+            
+            
+            if($_2_arg.$3($_4_arg)($_5_arg.$2)) {
+                const $cg$16 = Data__SortedMap__treeDelete(null, null, $_2_arg, (new $JSRTS.jsbn.BigInteger(("0"))), $_4_arg, $_5_arg.$1);
+                if(($cg$16.type === 0)) {
+                    return new $HC_1_0$Prelude__Either__Left(new $HC_5_2$Data__SortedMap__Branch3($cg$16.$1, $_5_arg.$2, $_5_arg.$3, $_5_arg.$4, $_5_arg.$5));
+                } else {
+                    return new $HC_1_0$Prelude__Either__Left(new $HC_3_1$Data__SortedMap__Branch2($_5_arg.$3, $_5_arg.$4, $_5_arg.$5));
+                }
+            } else {
+                
+                
+                if($_2_arg.$3($_4_arg)($_5_arg.$4)) {
+                    const $cg$14 = Data__SortedMap__treeDelete(null, null, $_2_arg, (new $JSRTS.jsbn.BigInteger(("0"))), $_4_arg, $_5_arg.$3);
+                    if(($cg$14.type === 0)) {
+                        return new $HC_1_0$Prelude__Either__Left(new $HC_5_2$Data__SortedMap__Branch3($_5_arg.$1, $_5_arg.$2, $cg$14.$1, $_5_arg.$4, $_5_arg.$5));
+                    } else {
+                        return new $HC_1_0$Prelude__Either__Left(new $HC_3_1$Data__SortedMap__Branch2($_5_arg.$1, $_5_arg.$2, $_5_arg.$5));
+                    }
+                } else {
+                    const $cg$12 = Data__SortedMap__treeDelete(null, null, $_2_arg, (new $JSRTS.jsbn.BigInteger(("0"))), $_4_arg, $_5_arg.$5);
+                    if(($cg$12.type === 0)) {
+                        return new $HC_1_0$Prelude__Either__Left(new $HC_5_2$Data__SortedMap__Branch3($_5_arg.$1, $_5_arg.$2, $_5_arg.$3, $_5_arg.$4, $cg$12.$1));
+                    } else {
+                        return new $HC_1_0$Prelude__Either__Left(new $HC_3_1$Data__SortedMap__Branch2($_5_arg.$1, $_5_arg.$2, $_5_arg.$3));
+                    }
+                }
+            }
+        } else {
+            const $_57_in = $_3_arg.subtract((new $JSRTS.jsbn.BigInteger(("1")))).subtract((new $JSRTS.jsbn.BigInteger(("1"))));
+            
+            
+            if($_2_arg.$3($_4_arg)($_5_arg.$2)) {
+                const $cg$26 = Data__SortedMap__treeDelete(null, null, $_2_arg, $_57_in.add((new $JSRTS.jsbn.BigInteger(("1")))), $_4_arg, $_5_arg.$1);
+                if(($cg$26.type === 0)) {
+                    return new $HC_1_0$Prelude__Either__Left(new $HC_5_2$Data__SortedMap__Branch3($cg$26.$1, $_5_arg.$2, $_5_arg.$3, $_5_arg.$4, $_5_arg.$5));
+                } else {
+                    return new $HC_1_0$Prelude__Either__Left(Data__SortedMap__merge1(null, null, null, null, $cg$26.$1, $_5_arg.$2, $_5_arg.$3, $_5_arg.$4, $_5_arg.$5));
+                }
+            } else {
+                
+                
+                if($_2_arg.$3($_4_arg)($_5_arg.$4)) {
+                    const $cg$24 = Data__SortedMap__treeDelete(null, null, $_2_arg, $_57_in.add((new $JSRTS.jsbn.BigInteger(("1")))), $_4_arg, $_5_arg.$3);
+                    if(($cg$24.type === 0)) {
+                        return new $HC_1_0$Prelude__Either__Left(new $HC_5_2$Data__SortedMap__Branch3($_5_arg.$1, $_5_arg.$2, $cg$24.$1, $_5_arg.$4, $_5_arg.$5));
+                    } else {
+                        return new $HC_1_0$Prelude__Either__Left(Data__SortedMap__merge2(null, null, null, null, $_5_arg.$1, $_5_arg.$2, $cg$24.$1, $_5_arg.$4, $_5_arg.$5));
+                    }
+                } else {
+                    const $cg$22 = Data__SortedMap__treeDelete(null, null, $_2_arg, $_57_in.add((new $JSRTS.jsbn.BigInteger(("1")))), $_4_arg, $_5_arg.$5);
+                    if(($cg$22.type === 0)) {
+                        return new $HC_1_0$Prelude__Either__Left(new $HC_5_2$Data__SortedMap__Branch3($_5_arg.$1, $_5_arg.$2, $_5_arg.$3, $_5_arg.$4, $cg$22.$1));
+                    } else {
+                        return new $HC_1_0$Prelude__Either__Left(Data__SortedMap__merge3(null, null, null, null, $_5_arg.$1, $_5_arg.$2, $_5_arg.$3, $_5_arg.$4, $cg$22.$1));
+                    }
+                }
+            }
+        }
+    } else {
+        
+        const $cg$4 = $_2_arg.$1;
+        
+        if($cg$4.$1($_4_arg)($_5_arg.$1)) {
+            return new $HC_1_1$Prelude__Either__Right($HC_0_0$MkUnit);
+        } else {
+            return new $HC_1_0$Prelude__Either__Left(new $HC_2_0$Data__SortedMap__Leaf($_5_arg.$1, $_5_arg.$2));
+        }
     }
 }
 
@@ -5878,6 +8365,22 @@ function Data__SortedMap__treeLookup($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg
     }
 }
 
+// TParsec.Types.update
+
+function TParsec__Types__update($_0_arg, $_1_arg){
+    
+    if((((($_0_arg === "\n")) ? 1|0 : 0|0) === 0)) {
+        
+        let $cg$3 = null;
+        $cg$3 = $_1_arg.$2;
+        return new $HC_2_0$TParsec__Types__MkPosition($_1_arg.$1, $cg$3.add((new $JSRTS.jsbn.BigInteger(("1")))));
+    } else {
+        let $cg$4 = null;
+        $cg$4 = $_1_arg.$1;
+        return new $HC_2_0$TParsec__Types__MkPosition($cg$4.add((new $JSRTS.jsbn.BigInteger(("1")))), (new $JSRTS.jsbn.BigInteger(("0"))));
+    }
+}
+
 // TParsec.Combinators.Chars.upperAlpha
 
 function TParsec__Combinators__Chars__upperAlpha($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg){
@@ -5905,6 +8408,64 @@ function TParsec__Combinators__Chars__upperAlpha($_0_arg, $_1_arg, $_2_arg, $_3_
     }
     
     return TParsec__Combinators__anyOf(null, $_1_arg, $_2_arg, $_3_arg, $_6_arg, $_5_arg, Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $_4_arg, $cg$1), null);
+}
+
+// Typedefs.vectEq
+
+function Typedefs__vectEq($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg){
+    for(;;) {
+        
+        if(($_5_arg.type === 1)) {
+            
+            if(($_4_arg.type === 1)) {
+                
+                if($_2_arg.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
+                    return false;
+                } else {
+                    const $_10_in = $_2_arg.subtract((new $JSRTS.jsbn.BigInteger(("1"))));
+                    
+                    if($_1_arg.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
+                        return false;
+                    } else {
+                        const $_11_in = $_1_arg.subtract((new $JSRTS.jsbn.BigInteger(("1"))));
+                        
+                        
+                        if($_3_arg.$1($_4_arg.$1)($_5_arg.$1)) {
+                            $_0_arg = null;
+                            $_1_arg = $_11_in;
+                            $_2_arg = $_10_in;
+                            $_3_arg = $_3_arg;
+                            $_4_arg = $_4_arg.$2;
+                            $_5_arg = $_5_arg.$2;
+                        } else {
+                            return false;
+                        }
+                    }
+                }
+            } else {
+                return false;
+            }
+        } else if(($_5_arg.type === 0)) {
+            
+            if(($_4_arg.type === 0)) {
+                
+                if($_2_arg.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
+                    
+                    if($_1_arg.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                } else {
+                    return false;
+                }
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
 }
 
 // Data.Fin.weakenN
@@ -5968,12 +8529,6 @@ function Typedefs__weakenTDefs($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg){
     } else {
         return $_2_arg;
     }
-}
-
-// TParsec.Combinators.Chars.withSpaces
-
-function TParsec__Combinators__Chars__withSpaces($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg, $_8_arg, $_9_arg){
-    return TParsec__Combinators__roptand(null, null, null, null, $_4_arg, $_3_arg, null, TParsec__Combinators__nelist(null, null, null, $_3_arg, $_4_arg, $_8_arg)(TParsec__Combinators__Chars__space(null, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg, null)), TParsec__Combinators__landopt(null, null, null, null, $_4_arg, $_3_arg, null, $_9_arg, $partial_7_11$TParsec__Combinators__Chars___123_withSpaces_95_4512_125_($_3_arg, $_4_arg, $_8_arg, $_2_arg, $_5_arg, $_6_arg, $_7_arg)));
 }
 
 // Prelude.List.zipWith
@@ -6167,15 +8722,33 @@ function TParsec__Combinators___123_anyTok_95_14_125_($_0_lift, $_1_lift, $_2_li
     return $_0_lift.$3(null)($cg$2)($_3_lift);
 }
 
-// Typedefs.{ap_15}
+// TParsec.Combinators.{anyTokenBut_15}
 
-function Typedefs___123_ap_95_15_125_($_0_lift, $_1_lift, $_2_lift){
+function TParsec__Combinators___123_anyTokenBut_95_15_125_($_0_lift){
+    return $_0_lift;
+}
+
+// TParsec.Combinators.{anyTokenBut_16}
+
+function TParsec__Combinators___123_anyTokenBut_95_16_125_($_0_lift, $_1_lift, $_2_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$2($_1_lift)($_2_lift);
+    return Prelude__Maybe__toMaybe(null, $cg$1, new $JSRTS.Lazy((function(){
+        return (function(){
+            return TParsec__Combinators___123_anyTokenBut_95_15_125_($_2_lift);
+        })();
+    })));
+}
+
+// Typedefs.{ap_17}
+
+function Typedefs___123_ap_95_17_125_($_0_lift, $_1_lift, $_2_lift){
     return Typedefs__ap($_0_lift, null, $_2_lift, $_1_lift);
 }
 
-// Typedefs.{ap_16}
+// Typedefs.{ap_18}
 
-function Typedefs___123_ap_95_16_125_($_0_lift, $_1_lift, $_2_lift){
+function Typedefs___123_ap_95_18_125_($_0_lift, $_1_lift, $_2_lift){
     
     const $cg$3 = Data__Fin__integerToFin((new $JSRTS.jsbn.BigInteger(("0"))), $_0_lift.add((new $JSRTS.jsbn.BigInteger(("1")))));
     let $cg$2 = null;
@@ -6183,27 +8756,46 @@ function Typedefs___123_ap_95_16_125_($_0_lift, $_1_lift, $_2_lift){
     return new $HC_2_0$Builtins__MkPair($_2_lift.$1, Typedefs__ap($_0_lift.add((new $JSRTS.jsbn.BigInteger(("1")))), null, $_2_lift.$2, new $HC_2_1$Data__Vect___58__58_(new $HC_1_4$Typedefs__TVar($cg$2), Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_1_2$Typedefs__shiftVars(null), $_1_lift))));
 }
 
-// Typedefs.{apN_19}
+// Typedefs.{apN_21}
 
-function Typedefs___123_apN_95_19_125_($_0_lift, $_1_lift){
+function Typedefs___123_apN_95_21_125_($_0_lift, $_1_lift){
     return ($_0_lift + $_1_lift);
 }
 
-// Typedefs.{apN_20}
+// Prelude.Bits.{b16ToHexString_25}
 
-function Typedefs___123_apN_95_20_125_($_0_lift){
-    return $_0_lift;
-}
-
-// Prelude.Bits.{b16ToHexString_23}
-
-function Prelude__Bits___123_b16ToHexString_95_23_125_($_0_lift, $_1_lift){
+function Prelude__Bits___123_b16ToHexString_95_25_125_($_0_lift, $_1_lift){
     return (Prelude__Bits__b8ToHexString($_0_lift) + $_1_lift);
 }
 
-// Data.NEList.{consopt_24}
+// Parse.{comment_26}
 
-function Data__NEList___123_consopt_95_24_125_($_0_lift){
+function Parse___123_comment_95_26_125_($_0_lift){
+    return $HC_0_0$MkUnit;
+}
+
+// Parse.{comment_27}
+
+function Parse___123_comment_95_27_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_6_lift, $_7_lift, $_8_lift, $_9_lift, $_10_lift, $_11_lift){
+    return TParsec__Combinators__roptand(null, null, null, null, $_0_lift, $_1_lift, null, TParsec__Combinators__nelist(null, null, null, $_1_lift, $_0_lift, $_2_lift)(TParsec__Combinators__Chars__anyCharBut(null, $_3_lift, $_1_lift, $_0_lift, $_4_lift, $_5_lift, $_6_lift, "\n")($_2_lift)), TParsec__Combinators__Chars__char(null, $_3_lift, $_1_lift, $_0_lift, $_4_lift, $_5_lift, $_6_lift, "\n")($_2_lift))($_10_lift)(Prelude__Nat__lteTransitive(null, null, null, $_11_lift, null));
+}
+
+// TParsec.Types.{commitT_28}
+
+function TParsec__Types___123_commitT_95_28_125_($_0_lift){
+    
+    if(($_0_lift.type === 0)) {
+        return $_0_lift;
+    } else if(($_0_lift.type === 1)) {
+        return new $HC_1_0$TParsec__Result__HardFail($_0_lift.$1);
+    } else {
+        return $_0_lift;
+    }
+}
+
+// Data.NEList.{consopt_30}
+
+function Data__NEList___123_consopt_95_30_125_($_0_lift){
     let $cg$1 = null;
     $cg$1 = $_0_lift.$1;
     let $cg$2 = null;
@@ -6211,86 +8803,295 @@ function Data__NEList___123_consopt_95_24_125_($_0_lift){
     return new $HC_2_1$Prelude__List___58__58_($cg$1, $cg$2);
 }
 
-// TParsec.Combinators.Numbers.{decimalDigit_25}
+// TParsec.Combinators.Numbers.{decimalDigit_31}
 
-function TParsec__Combinators__Numbers___123_decimalDigit_95_25_125_($_0_lift, $_1_lift){
+function TParsec__Combinators__Numbers___123_decimalDigit_95_31_125_($_0_lift, $_1_lift){
     return $_0_lift;
 }
 
-// TParsec.Combinators.Numbers.{decimalDigit_26}
+// TParsec.Combinators.Numbers.{decimalDigit_32}
 
-function TParsec__Combinators__Numbers___123_decimalDigit_95_26_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_6_lift){
+function TParsec__Combinators__Numbers___123_decimalDigit_95_32_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_6_lift){
     
     let $cg$2 = null;
     const $cg$4 = $_0_lift.$1;
     $cg$2 = $cg$4.$1;
-    return $partial_8_11$TParsec__Combinators__map(null, null, null, null, $cg$2, $partial_1_2$TParsec__Combinators__Numbers___123_decimalDigit_95_25_125_($_6_lift.$1), null, TParsec__Combinators__exact(null, $_1_lift, $_2_lift, $_0_lift, $_3_lift, $_4_lift, $_5_lift($_6_lift.$2), null));
+    return $partial_8_11$TParsec__Combinators__map(null, null, null, null, $cg$2, $partial_1_2$TParsec__Combinators__Numbers___123_decimalDigit_95_31_125_($_6_lift.$1), null, TParsec__Combinators__exact(null, $_1_lift, $_2_lift, $_0_lift, $_3_lift, $_4_lift, $_5_lift($_6_lift.$2), null));
 }
 
-// TParsec.Combinators.Numbers.{decimalNat_27}
+// TParsec.Combinators.Numbers.{decimalNat_33}
 
-function TParsec__Combinators__Numbers___123_decimalNat_95_27_125_($_0_lift, $_1_lift){
+function TParsec__Combinators__Numbers___123_decimalNat_95_33_125_($_0_lift, $_1_lift){
     return (new $JSRTS.jsbn.BigInteger(("10"))).multiply($_0_lift).add($_1_lift);
 }
 
-// TParsec.Combinators.Numbers.{decimalNat_28}
+// TParsec.Combinators.Numbers.{decimalNat_34}
 
-function TParsec__Combinators__Numbers___123_decimalNat_95_28_125_($_0_lift){
+function TParsec__Combinators__Numbers___123_decimalNat_95_34_125_($_0_lift){
     let $cg$1 = null;
     $cg$1 = $_0_lift.$1;
     let $cg$2 = null;
     $cg$2 = $_0_lift.$2;
-    return Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$TParsec__Combinators__Numbers___123_decimalNat_95_27_125_(), (new $JSRTS.jsbn.BigInteger(("0"))), new $HC_2_1$Prelude__List___58__58_($cg$1, $cg$2));
+    return Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$TParsec__Combinators__Numbers___123_decimalNat_95_33_125_(), (new $JSRTS.jsbn.BigInteger(("0"))), new $HC_2_1$Prelude__List___58__58_($cg$1, $cg$2));
 }
 
-// Backend.JSON.{disjointSubSchema_29}
+// Backend.Haskell.{decode_35}
 
-function Backend__JSON___123_disjointSubSchema_95_29_125_($_0_lift, $_1_lift){
+function Backend__Haskell___123_decode_95_35_125_($_0_lift){
+    return new $HC_2_0$Builtins__MkPair(new $HC_1_7$Backend__Haskell__HsFun("failDecode"), $_0_lift);
+}
+
+// Backend.Haskell.{decode_36}
+
+function Backend__Haskell___123_decode_95_36_125_($_0_lift){
+    return new $HC_2_0$Builtins__MkPair(new $HC_2_6$Backend__Haskell__HsApp(new $HC_1_7$Backend__Haskell__HsFun("return"), new $HC_2_1$Prelude__List___58__58_($HC_0_0$Backend__Haskell__HsUnitTT, $HC_0_0$Prelude__List__Nil)), $_0_lift);
+}
+
+// Backend.Haskell.{decode_37}
+
+function Backend__Haskell___123_decode_95_37_125_($_0_lift){
+    let $cg$1 = null;
+    if(((((Backend__Haskell__hsTypeName($_0_lift) == "")) ? 1|0 : 0|0) === 0)) {
+        $cg$1 = true;
+    } else {
+        $cg$1 = false;
+    }
+    
+    const $cg$3 = Decidable__Equality__Decidable__Equality___64_Decidable__Equality__DecEq_36_Bool_58__33_decEq_58_0($cg$1, true);
+    let $cg$2 = null;
+    if(($cg$3.type === 1)) {
+        $cg$2 = "";
+    } else {
+        let $cg$4 = null;
+        if(Prelude__Chars__isLower(Backend__Haskell__hsTypeName($_0_lift)[0])) {
+            $cg$4 = String.fromCharCode((((Backend__Haskell__hsTypeName($_0_lift)[0]).charCodeAt(0)|0) - 32));
+        } else {
+            $cg$4 = Backend__Haskell__hsTypeName($_0_lift)[0];
+        }
+        
+        $cg$2 = (($cg$4)+(Backend__Haskell__hsTypeName($_0_lift).slice(1)));
+    }
+    
+    return ("decode" + $cg$2);
+}
+
+// Backend.Haskell.{decode_38}
+
+function Backend__Haskell___123_decode_95_38_125_($_0_lift){
+    let $cg$1 = null;
+    if(((((Backend__Haskell__hsTypeName($_0_lift) == "")) ? 1|0 : 0|0) === 0)) {
+        $cg$1 = true;
+    } else {
+        $cg$1 = false;
+    }
+    
+    const $cg$3 = Decidable__Equality__Decidable__Equality___64_Decidable__Equality__DecEq_36_Bool_58__33_decEq_58_0($cg$1, true);
+    let $cg$2 = null;
+    if(($cg$3.type === 1)) {
+        $cg$2 = "";
+    } else {
+        let $cg$4 = null;
+        if(Prelude__Chars__isLower(Backend__Haskell__hsTypeName($_0_lift)[0])) {
+            $cg$4 = String.fromCharCode((((Backend__Haskell__hsTypeName($_0_lift)[0]).charCodeAt(0)|0) - 32));
+        } else {
+            $cg$4 = Backend__Haskell__hsTypeName($_0_lift)[0];
+        }
+        
+        $cg$2 = (($cg$4)+(Backend__Haskell__hsTypeName($_0_lift).slice(1)));
+    }
+    
+    return ("decode" + $cg$2);
+}
+
+// Backend.Haskell.{decode_39}
+
+function Backend__Haskell___123_decode_95_39_125_($_0_lift, $_1_lift, $_2_lift){
+    return $_2_lift;
+}
+
+// Backend.Haskell.{decode_42}
+
+function Backend__Haskell___123_decode_95_42_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    return $_3_lift($_2_lift);
+}
+
+// Backend.Haskell.{decode_48}
+
+function Backend__Haskell___123_decode_95_48_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    return $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $_2_lift, $_3_lift);
+}
+
+// Backend.Haskell.{decode_49}
+
+function Backend__Haskell___123_decode_95_49_125_($_0_lift, $_1_lift, $_2_lift){
+    return new $HC_2_0$Builtins__MkPair($_1_lift, $_2_lift);
+}
+
+// Backend.Haskell.{decode_54}
+
+function Backend__Haskell___123_decode_95_54_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    return $partial_7_8$Prelude__Applicative__Control__Monad__State___64_Prelude__Applicative__Applicative_36_StateT_32_stateType_32_f_58__33__60__42__62__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), $_2_lift, $_3_lift);
+}
+
+// Backend.Haskell.{decode_56}
+
+function Backend__Haskell___123_decode_95_56_125_($_0_lift, $_1_lift, $_2_lift){
+    return new $HC_2_0$Builtins__MkPair(new $HC_1_1$Prelude__Maybe__Just(Data__Vect__index(null, null, $_0_lift, $_1_lift)), $_2_lift);
+}
+
+// Backend.Haskell.{decode_57}
+
+function Backend__Haskell___123_decode_95_57_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    return $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_2_3$Backend__Haskell___123_decode_95_56_125_($_2_lift, $_0_lift), Backend__Haskell__decode($_1_lift, $_3_lift));
+}
+
+// Backend.Haskell.{decode_58}
+
+function Backend__Haskell___123_decode_95_58_125_($_0_lift, $_1_lift){
     return new $HC_2_1$Prelude__List___58__58_($_0_lift, $_1_lift);
 }
 
-// Parse.{emptyComments_33}
+// Backend.Haskell.{decode_60}
 
-function Parse___123_emptyComments_95_33_125_($_0_lift){
-    return $HC_0_0$MkUnit;
+function Backend__Haskell___123_decode_95_60_125_($_0_lift, $_1_lift, $_2_lift){
+    return new $HC_2_0$Builtins__MkPair(new $HC_1_8$Backend__Haskell__HsDo(Prelude__List___43__43_(null, Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $_1_lift), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair($HC_0_0$Prelude__Maybe__Nothing, new $HC_2_6$Backend__Haskell__HsApp(new $HC_1_7$Backend__Haskell__HsFun("return"), new $HC_2_1$Prelude__List___58__58_(new $HC_1_1$Backend__Haskell__HsTupC($_0_lift), $HC_0_0$Prelude__List__Nil))), $HC_0_0$Prelude__List__Nil))), $_2_lift);
 }
 
-// Text.PrettyPrint.WL.Combinators.{encloseSep_34}
+// Backend.Haskell.{decode_61}
 
-function Text__PrettyPrint__WL__Combinators___123_encloseSep_95_34_125_($_0_lift, $_1_lift){
+function Backend__Haskell___123_decode_95_61_125_($_0_lift, $_1_lift, $_2_lift){
+    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Utils__mapWithIndexA(null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), null, $partial_2_4$Backend__Haskell___123_decode_95_57_125_($_2_lift, $_0_lift), $_1_lift), $partial_1_3$Backend__Haskell___123_decode_95_60_125_($_2_lift));
+}
+
+// Backend.Haskell.{decode_80}
+
+function Backend__Haskell___123_decode_95_80_125_($_0_lift, $_1_lift, $_2_lift){
+    
+    return new $HC_2_0$Builtins__MkPair(new $HC_1_8$Backend__Haskell__HsDo(new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair(new $HC_1_1$Prelude__Maybe__Just($_1_lift.$1), new $HC_2_6$Backend__Haskell__HsApp(new $HC_1_7$Backend__Haskell__HsFun("deserialiseInt"), $HC_0_0$Prelude__List__Nil)), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair($HC_0_0$Prelude__Maybe__Nothing, Backend__Haskell__hsCaseDef($_1_lift.$1, Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $_0_lift), new $HC_1_7$Backend__Haskell__HsFun("failDecode"))), $HC_0_0$Prelude__List__Nil))), $_2_lift);
+}
+
+// Backend.Haskell.{decode_81}
+
+function Backend__Haskell___123_decode_95_81_125_($_0_lift){
+    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__freshVars(null, (new $JSRTS.jsbn.BigInteger(("1"))), "i"), $partial_1_3$Backend__Haskell___123_decode_95_80_125_($_0_lift));
+}
+
+// Backend.Haskell.{decode_86}
+
+function Backend__Haskell___123_decode_95_86_125_($_0_lift, $_1_lift, $_2_lift){
+    return new $HC_2_0$Builtins__MkPair(Data__Vect__index(null, null, $_0_lift, $_1_lift), $_2_lift);
+}
+
+// Backend.Haskell.{decodeDef_87}
+
+function Backend__Haskell___123_decodeDef_95_87_125_($_0_lift){
+    
+    return $_0_lift.$1;
+}
+
+// Backend.Haskell.{decodeDef_90}
+
+function Backend__Haskell___123_decodeDef_95_90_125_($_0_lift){
+    
+    return $_0_lift.$2;
+}
+
+// Backend.Haskell.{decodeDef_91}
+
+function Backend__Haskell___123_decodeDef_95_91_125_($_0_lift, $_1_lift){
+    return new $HC_2_6$Backend__Haskell__HsArrow($_0_lift, $_1_lift);
+}
+
+// Backend.Haskell.{decodeDef_93}
+
+function Backend__Haskell___123_decodeDef_95_93_125_($_0_lift){
+    return new $HC_3_5$Backend__Haskell__HsParam((new $JSRTS.jsbn.BigInteger(("1"))), "Deserialiser", new $HC_2_1$Data__Vect___58__58_($_0_lift, $HC_0_0$Data__Vect__Nil));
+}
+
+// Backend.Haskell.{dependencies_94}
+
+function Backend__Haskell___123_dependencies_95_94_125_($_0_lift, $_1_lift, $_2_lift){
+    
+    const $cg$3 = Prelude__Nat__cmp($_2_lift.$1, $_0_lift);
+    let $cg$2 = null;
+    if(($cg$3.type === 1)) {
+        const $cg$9 = $_2_lift.$2;
+        let $cg$8 = null;
+        $cg$8 = $cg$9.$2;
+        $cg$2 = Prelude__Interfaces__Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0($_0_lift, $cg$8, $_1_lift);
+    } else if(($cg$3.type === 2)) {
+        const $cg$7 = $_2_lift.$2;
+        let $cg$6 = null;
+        $cg$6 = $cg$7.$2;
+        $cg$2 = Prelude__Interfaces__Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0($_0_lift.add($cg$3.$1.add((new $JSRTS.jsbn.BigInteger(("1"))))), $cg$6, Typedefs__weakenTDef(null, $_1_lift, $_0_lift.add($cg$3.$1.add((new $JSRTS.jsbn.BigInteger(("1"))))), Prelude__Nat__lteAddRight(null, $_0_lift)));
+    } else {
+        const $cg$5 = $_2_lift.$2;
+        let $cg$4 = null;
+        $cg$4 = $cg$5.$2;
+        $cg$2 = Prelude__Interfaces__Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0($_2_lift.$1.add($cg$3.$1.add((new $JSRTS.jsbn.BigInteger(("1"))))), $_1_lift, Typedefs__weakenTDef(null, $cg$4, $_2_lift.$1.add($cg$3.$1.add((new $JSRTS.jsbn.BigInteger(("1"))))), Prelude__Nat__lteAddRight(null, $_2_lift.$1)));
+    }
+    
+    return (!(!(!$cg$2)));
+}
+
+// Backend.Haskell.{dependencies_95}
+
+function Backend__Haskell___123_dependencies_95_95_125_($_0_lift, $_1_lift){
+    
+    
+    const $cg$4 = $_1_lift.$2;
+    const $cg$6 = $_0_lift.$2;
+    
+    if((((($cg$6.$1 == $cg$4.$1)) ? 1|0 : 0|0) === 0)) {
+        return false;
+    } else {
+        const $cg$9 = Prelude__Nat__cmp($_0_lift.$1, $_1_lift.$1);
+        if(($cg$9.type === 1)) {
+            return Prelude__Interfaces__Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0($_1_lift.$1, $cg$6.$2, $cg$4.$2);
+        } else if(($cg$9.type === 2)) {
+            return Prelude__Interfaces__Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0($_1_lift.$1.add($cg$9.$1.add((new $JSRTS.jsbn.BigInteger(("1"))))), $cg$6.$2, Typedefs__weakenTDef(null, $cg$4.$2, $_1_lift.$1.add($cg$9.$1.add((new $JSRTS.jsbn.BigInteger(("1"))))), Prelude__Nat__lteAddRight(null, $_1_lift.$1)));
+        } else {
+            return Prelude__Interfaces__Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0($_0_lift.$1.add($cg$9.$1.add((new $JSRTS.jsbn.BigInteger(("1"))))), $cg$4.$2, Typedefs__weakenTDef(null, $cg$6.$2, $_0_lift.$1.add($cg$9.$1.add((new $JSRTS.jsbn.BigInteger(("1"))))), Prelude__Nat__lteAddRight(null, $_0_lift.$1)));
+        }
+    }
+}
+
+// Text.PrettyPrint.WL.Combinators.{encloseSep_100}
+
+function Text__PrettyPrint__WL__Combinators___123_encloseSep_95_100_125_($_0_lift, $_1_lift){
     return Text__PrettyPrint__WL__Core__flatten($_0_lift($_1_lift));
 }
 
-// Text.PrettyPrint.WL.Combinators.{encloseSep_36}
+// Text.PrettyPrint.WL.Combinators.{encloseSep_102}
 
-function Text__PrettyPrint__WL__Combinators___123_encloseSep_95_36_125_($_0_lift, $_1_lift){
+function Text__PrettyPrint__WL__Combinators___123_encloseSep_95_102_125_($_0_lift, $_1_lift){
     return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat($_0_lift, new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(new $HC_1_3$Text__PrettyPrint__WL__Core__Line(true), $_1_lift));
 }
 
-// Text.PrettyPrint.WL.Combinators.{encloseSep_37}
+// Text.PrettyPrint.WL.Combinators.{encloseSep_103}
 
-function Text__PrettyPrint__WL__Combinators___123_encloseSep_95_37_125_($_0_lift, $_1_lift){
+function Text__PrettyPrint__WL__Combinators___123_encloseSep_95_103_125_($_0_lift, $_1_lift){
     return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat($_0_lift, $_1_lift);
 }
 
-// Text.PrettyPrint.WL.Combinators.{encloseSep_42}
+// Text.PrettyPrint.WL.Combinators.{encloseSep_108}
 
-function Text__PrettyPrint__WL__Combinators___123_encloseSep_95_42_125_($_0_lift, $_1_lift, $_2_lift){
-    const $cg$2 = Prelude__List__zipWith(null, null, null, $partial_0_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_37_125_(), new $HC_2_1$Prelude__List___58__58_($_0_lift, Prelude__List__replicate(null, Prelude__List__length(null, $_1_lift), $_2_lift)), $_1_lift);
+function Text__PrettyPrint__WL__Combinators___123_encloseSep_95_108_125_($_0_lift, $_1_lift, $_2_lift){
+    const $cg$2 = Prelude__List__zipWith(null, null, null, $partial_0_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_103_125_(), new $HC_2_1$Prelude__List___58__58_($_0_lift, Prelude__List__replicate(null, Prelude__List__length(null, $_1_lift), $_2_lift)), $_1_lift);
     if(($cg$2.type === 1)) {
-        return Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_36_125_(), $cg$2.$1, $cg$2.$2);
+        return Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_102_125_(), $cg$2.$1, $cg$2.$2);
     } else {
         return $HC_0_0$Text__PrettyPrint__WL__Core__Empty;
     }
 }
 
-// Text.PrettyPrint.WL.Combinators.{encloseSep_43}
+// Text.PrettyPrint.WL.Combinators.{encloseSep_109}
 
-function Text__PrettyPrint__WL__Combinators___123_encloseSep_95_43_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift){
-    const $cg$2 = Prelude__List__zipWith(null, null, null, $partial_0_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_37_125_(), new $HC_2_1$Prelude__List___58__58_($_1_lift, Prelude__List__replicate(null, Prelude__List__length(null, $_2_lift), $_3_lift)), $_2_lift);
+function Text__PrettyPrint__WL__Combinators___123_encloseSep_95_109_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift){
+    const $cg$2 = Prelude__List__zipWith(null, null, null, $partial_0_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_103_125_(), new $HC_2_1$Prelude__List___58__58_($_1_lift, Prelude__List__replicate(null, Prelude__List__length(null, $_2_lift), $_3_lift)), $_2_lift);
     let $cg$1 = null;
     if(($cg$2.type === 1)) {
-        $cg$1 = Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_36_125_(), $cg$2.$1, $cg$2.$2);
+        $cg$1 = Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_102_125_(), $cg$2.$1, $cg$2.$2);
     } else {
         $cg$1 = $HC_0_0$Text__PrettyPrint__WL__Core__Empty;
     }
@@ -6299,7 +9100,7 @@ function Text__PrettyPrint__WL__Combinators___123_encloseSep_95_43_125_($_0_lift
     if(($cg$1.type === 4)) {
         $cg$3 = new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__flatten($cg$1.$1), Text__PrettyPrint__WL__Core__flatten($cg$1.$2));
     } else if(($cg$1.type === 7)) {
-        $cg$3 = new $HC_1_7$Text__PrettyPrint__WL__Core__Column($partial_1_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_34_125_($cg$1.$1));
+        $cg$3 = new $HC_1_7$Text__PrettyPrint__WL__Core__Column($partial_1_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_100_125_($cg$1.$1));
     } else if(($cg$1.type === 3)) {
         
         if($cg$1.$1) {
@@ -6310,13 +9111,13 @@ function Text__PrettyPrint__WL__Combinators___123_encloseSep_95_43_125_($_0_lift
     } else if(($cg$1.type === 5)) {
         $cg$3 = new $HC_2_5$Text__PrettyPrint__WL__Core__Nest($cg$1.$1, Text__PrettyPrint__WL__Core__flatten($cg$1.$2));
     } else if(($cg$1.type === 8)) {
-        $cg$3 = new $HC_1_8$Text__PrettyPrint__WL__Core__Nesting($partial_1_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_34_125_($cg$1.$1));
+        $cg$3 = new $HC_1_8$Text__PrettyPrint__WL__Core__Nesting($partial_1_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_100_125_($cg$1.$1));
     } else if(($cg$1.type === 6)) {
         $cg$3 = Text__PrettyPrint__WL__Core__flatten($cg$1.$1);
     } else {
-        const $cg$5 = Prelude__List__zipWith(null, null, null, $partial_0_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_37_125_(), new $HC_2_1$Prelude__List___58__58_($_1_lift, Prelude__List__replicate(null, Prelude__List__length(null, $_2_lift), $_3_lift)), $_2_lift);
+        const $cg$5 = Prelude__List__zipWith(null, null, null, $partial_0_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_103_125_(), new $HC_2_1$Prelude__List___58__58_($_1_lift, Prelude__List__replicate(null, Prelude__List__length(null, $_2_lift), $_3_lift)), $_2_lift);
         if(($cg$5.type === 1)) {
-            $cg$3 = Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_36_125_(), $cg$5.$1, $cg$5.$2);
+            $cg$3 = Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_102_125_(), $cg$5.$1, $cg$5.$2);
         } else {
             $cg$3 = $HC_0_0$Text__PrettyPrint__WL__Core__Empty;
         }
@@ -6324,35 +9125,35 @@ function Text__PrettyPrint__WL__Combinators___123_encloseSep_95_43_125_($_0_lift
     
     return new $HC_2_5$Text__PrettyPrint__WL__Core__Nest(($_0_lift - $_5_lift), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(new $HC_2_6$Text__PrettyPrint__WL__Core__Union($cg$3, new $JSRTS.Lazy((function(){
         return (function(){
-            return Text__PrettyPrint__WL__Combinators___123_encloseSep_95_42_125_($_1_lift, $_2_lift, $_3_lift);
+            return Text__PrettyPrint__WL__Combinators___123_encloseSep_95_108_125_($_1_lift, $_2_lift, $_3_lift);
         })();
     }))), $_4_lift));
 }
 
-// Text.PrettyPrint.WL.Combinators.{encloseSep_44}
+// Text.PrettyPrint.WL.Combinators.{encloseSep_110}
 
-function Text__PrettyPrint__WL__Combinators___123_encloseSep_95_44_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
-    return new $HC_1_8$Text__PrettyPrint__WL__Core__Nesting($partial_5_6$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_43_125_($_4_lift, $_0_lift, $_1_lift, $_2_lift, $_3_lift));
+function Text__PrettyPrint__WL__Combinators___123_encloseSep_95_110_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
+    return new $HC_1_8$Text__PrettyPrint__WL__Core__Nesting($partial_5_6$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_109_125_($_4_lift, $_0_lift, $_1_lift, $_2_lift, $_3_lift));
 }
 
-// Text.PrettyPrint.WL.Combinators.{encloseSep_53}
+// Text.PrettyPrint.WL.Combinators.{encloseSep_119}
 
-function Text__PrettyPrint__WL__Combinators___123_encloseSep_95_53_125_($_0_lift, $_1_lift, $_2_lift){
-    const $cg$2 = Prelude__List__zipWith(null, null, null, $partial_0_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_37_125_(), new $HC_2_1$Prelude__List___58__58_($_0_lift, Prelude__List__replicate(null, Prelude__List__length(null, $_1_lift), $_2_lift)), $_1_lift);
+function Text__PrettyPrint__WL__Combinators___123_encloseSep_95_119_125_($_0_lift, $_1_lift, $_2_lift){
+    const $cg$2 = Prelude__List__zipWith(null, null, null, $partial_0_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_103_125_(), new $HC_2_1$Prelude__List___58__58_($_0_lift, Prelude__List__replicate(null, Prelude__List__length(null, $_1_lift), $_2_lift)), $_1_lift);
     if(($cg$2.type === 1)) {
-        return Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_36_125_(), $cg$2.$1, $cg$2.$2);
+        return Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_102_125_(), $cg$2.$1, $cg$2.$2);
     } else {
         return $HC_0_0$Text__PrettyPrint__WL__Core__Empty;
     }
 }
 
-// Text.PrettyPrint.WL.Combinators.{encloseSep_54}
+// Text.PrettyPrint.WL.Combinators.{encloseSep_120}
 
-function Text__PrettyPrint__WL__Combinators___123_encloseSep_95_54_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift){
-    const $cg$2 = Prelude__List__zipWith(null, null, null, $partial_0_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_37_125_(), new $HC_2_1$Prelude__List___58__58_($_1_lift, Prelude__List__replicate(null, Prelude__List__length(null, $_2_lift), $_3_lift)), $_2_lift);
+function Text__PrettyPrint__WL__Combinators___123_encloseSep_95_120_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift){
+    const $cg$2 = Prelude__List__zipWith(null, null, null, $partial_0_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_103_125_(), new $HC_2_1$Prelude__List___58__58_($_1_lift, Prelude__List__replicate(null, Prelude__List__length(null, $_2_lift), $_3_lift)), $_2_lift);
     let $cg$1 = null;
     if(($cg$2.type === 1)) {
-        $cg$1 = Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_36_125_(), $cg$2.$1, $cg$2.$2);
+        $cg$1 = Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_102_125_(), $cg$2.$1, $cg$2.$2);
     } else {
         $cg$1 = $HC_0_0$Text__PrettyPrint__WL__Core__Empty;
     }
@@ -6361,7 +9162,7 @@ function Text__PrettyPrint__WL__Combinators___123_encloseSep_95_54_125_($_0_lift
     if(($cg$1.type === 4)) {
         $cg$3 = new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__flatten($cg$1.$1), Text__PrettyPrint__WL__Core__flatten($cg$1.$2));
     } else if(($cg$1.type === 7)) {
-        $cg$3 = new $HC_1_7$Text__PrettyPrint__WL__Core__Column($partial_1_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_34_125_($cg$1.$1));
+        $cg$3 = new $HC_1_7$Text__PrettyPrint__WL__Core__Column($partial_1_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_100_125_($cg$1.$1));
     } else if(($cg$1.type === 3)) {
         
         if($cg$1.$1) {
@@ -6372,13 +9173,13 @@ function Text__PrettyPrint__WL__Combinators___123_encloseSep_95_54_125_($_0_lift
     } else if(($cg$1.type === 5)) {
         $cg$3 = new $HC_2_5$Text__PrettyPrint__WL__Core__Nest($cg$1.$1, Text__PrettyPrint__WL__Core__flatten($cg$1.$2));
     } else if(($cg$1.type === 8)) {
-        $cg$3 = new $HC_1_8$Text__PrettyPrint__WL__Core__Nesting($partial_1_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_34_125_($cg$1.$1));
+        $cg$3 = new $HC_1_8$Text__PrettyPrint__WL__Core__Nesting($partial_1_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_100_125_($cg$1.$1));
     } else if(($cg$1.type === 6)) {
         $cg$3 = Text__PrettyPrint__WL__Core__flatten($cg$1.$1);
     } else {
-        const $cg$5 = Prelude__List__zipWith(null, null, null, $partial_0_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_37_125_(), new $HC_2_1$Prelude__List___58__58_($_1_lift, Prelude__List__replicate(null, Prelude__List__length(null, $_2_lift), $_3_lift)), $_2_lift);
+        const $cg$5 = Prelude__List__zipWith(null, null, null, $partial_0_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_103_125_(), new $HC_2_1$Prelude__List___58__58_($_1_lift, Prelude__List__replicate(null, Prelude__List__length(null, $_2_lift), $_3_lift)), $_2_lift);
         if(($cg$5.type === 1)) {
-            $cg$3 = Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_36_125_(), $cg$5.$1, $cg$5.$2);
+            $cg$3 = Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_102_125_(), $cg$5.$1, $cg$5.$2);
         } else {
             $cg$3 = $HC_0_0$Text__PrettyPrint__WL__Core__Empty;
         }
@@ -6386,74 +9187,360 @@ function Text__PrettyPrint__WL__Combinators___123_encloseSep_95_54_125_($_0_lift
     
     return new $HC_2_5$Text__PrettyPrint__WL__Core__Nest(($_0_lift - $_5_lift), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(new $HC_2_6$Text__PrettyPrint__WL__Core__Union($cg$3, new $JSRTS.Lazy((function(){
         return (function(){
-            return Text__PrettyPrint__WL__Combinators___123_encloseSep_95_53_125_($_1_lift, $_2_lift, $_3_lift);
+            return Text__PrettyPrint__WL__Combinators___123_encloseSep_95_119_125_($_1_lift, $_2_lift, $_3_lift);
         })();
     }))), $_4_lift));
 }
 
-// Text.PrettyPrint.WL.Combinators.{encloseSep_55}
+// Text.PrettyPrint.WL.Combinators.{encloseSep_121}
 
-function Text__PrettyPrint__WL__Combinators___123_encloseSep_95_55_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
-    return new $HC_1_8$Text__PrettyPrint__WL__Core__Nesting($partial_5_6$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_54_125_($_4_lift, $_0_lift, $_1_lift, $_2_lift, $_3_lift));
+function Text__PrettyPrint__WL__Combinators___123_encloseSep_95_121_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
+    return new $HC_1_8$Text__PrettyPrint__WL__Core__Nesting($partial_5_6$Text__PrettyPrint__WL__Combinators___123_encloseSep_95_120_125_($_4_lift, $_0_lift, $_1_lift, $_2_lift, $_3_lift));
 }
 
-// TParsec.Combinators.{exact_57}
+// Backend.Haskell.{encode_122}
 
-function TParsec__Combinators___123_exact_95_57_125_($_0_lift, $_1_lift, $_2_lift){
+function Backend__Haskell___123_encode_95_122_125_($_0_lift, $_1_lift){
+    return new $HC_2_0$Builtins__MkPair(new $HC_2_6$Backend__Haskell__HsApp(new $HC_1_7$Backend__Haskell__HsFun("absurd"), new $HC_2_1$Prelude__List___58__58_($_0_lift, $HC_0_0$Prelude__List__Nil)), $_1_lift);
+}
+
+// Backend.Haskell.{encode_123}
+
+function Backend__Haskell___123_encode_95_123_125_($_0_lift){
+    return new $HC_2_0$Builtins__MkPair(new $HC_1_7$Backend__Haskell__HsFun("mempty"), $_0_lift);
+}
+
+// Backend.Haskell.{encode_128}
+
+function Backend__Haskell___123_encode_95_128_125_($_0_lift){
+    let $cg$1 = null;
+    if(((((Backend__Haskell__hsTypeName($_0_lift) == "")) ? 1|0 : 0|0) === 0)) {
+        $cg$1 = true;
+    } else {
+        $cg$1 = false;
+    }
+    
+    const $cg$3 = Decidable__Equality__Decidable__Equality___64_Decidable__Equality__DecEq_36_Bool_58__33_decEq_58_0($cg$1, true);
+    let $cg$2 = null;
+    if(($cg$3.type === 1)) {
+        $cg$2 = "";
+    } else {
+        let $cg$4 = null;
+        if(Prelude__Chars__isLower(Backend__Haskell__hsTypeName($_0_lift)[0])) {
+            $cg$4 = String.fromCharCode((((Backend__Haskell__hsTypeName($_0_lift)[0]).charCodeAt(0)|0) - 32));
+        } else {
+            $cg$4 = Backend__Haskell__hsTypeName($_0_lift)[0];
+        }
+        
+        $cg$2 = (($cg$4)+(Backend__Haskell__hsTypeName($_0_lift).slice(1)));
+    }
+    
+    return ("encode" + $cg$2);
+}
+
+// Backend.Haskell.{encode_129}
+
+function Backend__Haskell___123_encode_95_129_125_($_0_lift, $_1_lift, $_2_lift){
+    return new $HC_2_0$Builtins__MkPair(new $HC_2_6$Backend__Haskell__HsApp($_1_lift, new $HC_2_1$Prelude__List___58__58_($_0_lift, $HC_0_0$Prelude__List__Nil)), $_2_lift);
+}
+
+// Backend.Haskell.{encode_134}
+
+function Backend__Haskell___123_encode_95_134_125_($_0_lift){
+    let $cg$1 = null;
+    if(((((Backend__Haskell__hsTypeName($_0_lift) == "")) ? 1|0 : 0|0) === 0)) {
+        $cg$1 = true;
+    } else {
+        $cg$1 = false;
+    }
+    
+    const $cg$3 = Decidable__Equality__Decidable__Equality___64_Decidable__Equality__DecEq_36_Bool_58__33_decEq_58_0($cg$1, true);
+    let $cg$2 = null;
+    if(($cg$3.type === 1)) {
+        $cg$2 = "";
+    } else {
+        let $cg$4 = null;
+        if(Prelude__Chars__isLower(Backend__Haskell__hsTypeName($_0_lift)[0])) {
+            $cg$4 = String.fromCharCode((((Backend__Haskell__hsTypeName($_0_lift)[0]).charCodeAt(0)|0) - 32));
+        } else {
+            $cg$4 = Backend__Haskell__hsTypeName($_0_lift)[0];
+        }
+        
+        $cg$2 = (($cg$4)+(Backend__Haskell__hsTypeName($_0_lift).slice(1)));
+    }
+    
+    return ("encode" + $cg$2);
+}
+
+// Backend.Haskell.{encode_152}
+
+function Backend__Haskell___123_encode_95_152_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    return Backend__Haskell__encode($_0_lift, Data__Vect__index(null, null, $_2_lift, $_1_lift), $_3_lift);
+}
+
+// Backend.Haskell.{encode_155}
+
+function Backend__Haskell___123_encode_95_155_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    return new $HC_2_0$Builtins__MkPair(new $HC_2_5$Backend__Haskell__HsCase($_0_lift, new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair(new $HC_1_1$Backend__Haskell__HsTupC($_1_lift), new $HC_1_11$Backend__Haskell__HsConcat(Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $_2_lift))), $HC_0_0$Prelude__List__Nil)), $_3_lift);
+}
+
+// Backend.Haskell.{encode_156}
+
+function Backend__Haskell___123_encode_95_156_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Utils__mapWithIndexA(null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), null, $partial_2_4$Backend__Haskell___123_encode_95_152_125_($_0_lift, $_1_lift), $_3_lift), $partial_2_4$Backend__Haskell___123_encode_95_155_125_($_2_lift, $_3_lift));
+}
+
+// Backend.Haskell.{encode_161}
+
+function Backend__Haskell___123_encode_95_161_125_($_0_lift){
+    
+    const $cg$3 = $_0_lift.$2;
+    return new $HC_2_0$Builtins__MkPair($_0_lift.$1, new $HC_1_11$Backend__Haskell__HsConcat(new $HC_2_1$Prelude__List___58__58_(new $HC_2_6$Backend__Haskell__HsApp(new $HC_1_7$Backend__Haskell__HsFun("word8"), new $HC_2_1$Prelude__List___58__58_(new $HC_1_9$Backend__Haskell__HsWord8($cg$3.$1), $HC_0_0$Prelude__List__Nil)), new $HC_2_1$Prelude__List___58__58_($cg$3.$2, $HC_0_0$Prelude__List__Nil))));
+}
+
+// Backend.Haskell.{encode_162}
+
+function Backend__Haskell___123_encode_95_162_125_($_0_lift, $_1_lift, $_2_lift){
+    return new $HC_2_0$Builtins__MkPair(new $HC_2_5$Backend__Haskell__HsCase($_0_lift, Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $partial_0_1$Backend__Haskell___123_encode_95_161_125_(), $_1_lift)), $_2_lift);
+}
+
+// Backend.Haskell.{encode_167}
+
+function Backend__Haskell___123_encode_95_167_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    return new $HC_2_0$Builtins__MkPair(new $HC_2_6$Backend__Haskell__HsApp(Data__Vect__index(null, null, $_0_lift, $_2_lift), new $HC_2_1$Prelude__List___58__58_($_1_lift, $HC_0_0$Prelude__List__Nil)), $_3_lift);
+}
+
+// Backend.Haskell.{encodeDef_174}
+
+function Backend__Haskell___123_encodeDef_95_174_125_($_0_lift){
+    return new $HC_3_5$Backend__Haskell__HsParam((new $JSRTS.jsbn.BigInteger(("1"))), "Serialiser", new $HC_2_1$Data__Vect___58__58_($_0_lift, $HC_0_0$Data__Vect__Nil));
+}
+
+// Backend.Haskell.{encoderDecoderTerm_189}
+
+function Backend__Haskell___123_encoderDecoderTerm_95_189_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    let $cg$1 = null;
+    $cg$1 = $_1_lift.$1;
+    return new $HC_2_0$Builtins__MkPair(new $HC_2_6$Backend__Haskell__HsApp(new $HC_1_7$Backend__Haskell__HsFun($_0_lift(new $HC_3_5$Backend__Haskell__HsParam((new $JSRTS.jsbn.BigInteger(("0"))), $cg$1, $HC_0_0$Data__Vect__Nil))), Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $_2_lift)), $_3_lift);
+}
+
+// Backend.Haskell.{encoderDecoderTerm_196}
+
+function Backend__Haskell___123_encoderDecoderTerm_95_196_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
+    return new $HC_2_0$Builtins__MkPair(new $HC_2_6$Backend__Haskell__HsApp(new $HC_1_7$Backend__Haskell__HsFun($_0_lift(Backend__Haskell__makeType($_1_lift, Backend__Haskell__freshEnv($_1_lift), $_2_lift))), Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), Typedefs__getUsedVars(null, $_1_lift, $_3_lift, $_2_lift))), $_4_lift);
+}
+
+// Backend.Haskell.{envTerms_213}
+
+function Backend__Haskell___123_envTerms_95_213_125_($_0_lift){
+    return new $HC_2_0$Builtins__MkPair($_0_lift, $_0_lift);
+}
+
+// Backend.Haskell.{envTerms_214}
+
+function Backend__Haskell___123_envTerms_95_214_125_($_0_lift){
+    
+    return $_0_lift.$2;
+}
+
+// Backend.Haskell.{envTerms_215}
+
+function Backend__Haskell___123_envTerms_95_215_125_($_0_lift, $_1_lift){
+    
+    return new $HC_2_0$Builtins__MkPair(Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__Haskell___123_envTerms_95_214_125_(), $_0_lift.$2), $_1_lift);
+}
+
+// TParsec.Combinators.{exact_217}
+
+function TParsec__Combinators___123_exact_95_217_125_($_0_lift, $_1_lift, $_2_lift){
     let $cg$1 = null;
     $cg$1 = $_0_lift.$1($_1_lift)($_2_lift);
     return Prelude__Maybe__toMaybe(null, $cg$1, new $JSRTS.Lazy((function(){
         return (function(){
-            return Typedefs___123_apN_95_20_125_($_2_lift);
+            return TParsec__Combinators___123_anyTokenBut_95_15_125_($_2_lift);
         })();
     })));
 }
 
-// ParserUtils.{except_59}
+// Data.Vect.{foldrImpl_220}
 
-function ParserUtils___123_except_95_59_125_($_0_lift, $_1_lift, $_2_lift){
-    let $cg$1 = null;
-    $cg$1 = $_0_lift.$2($_1_lift)($_2_lift);
-    return Prelude__Maybe__toMaybe(null, $cg$1, new $JSRTS.Lazy((function(){
-        return (function(){
-            return Typedefs___123_apN_95_20_125_($_2_lift);
-        })();
-    })));
-}
-
-// Data.Vect.{foldrImpl_62}
-
-function Data__Vect___123_foldrImpl_95_62_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+function Data__Vect___123_foldrImpl_95_220_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
     return $_0_lift($_1_lift($_2_lift)($_3_lift));
 }
 
-// Backend.Utils.{freshEnv_63}
+// Backend.Haskell.{freeVars_221}
 
-function Backend__Utils___123_freshEnv_95_63_125_($_0_lift, $_1_lift){
+function Backend__Haskell___123_freeVars_95_221_125_($_0_lift, $_1_lift){
+    return ($_0_lift == $_1_lift);
+}
+
+// Backend.Haskell.{freeVars_222}
+
+function Backend__Haskell___123_freeVars_95_222_125_($_0_lift, $_1_lift){
+    return Prelude__List___43__43_(null, Backend__Haskell__freeVars($_0_lift), $_1_lift);
+}
+
+// Backend.Haskell.{freeVars_224}
+
+function Backend__Haskell___123_freeVars_95_224_125_($_0_lift, $_1_lift){
+    return Prelude__List__deleteBy(null, $partial_0_2$Backend__Haskell___123_freeVars_95_221_125_(), $_1_lift, $_0_lift);
+}
+
+// Backend.Haskell.{freeVars_226}
+
+function Backend__Haskell___123_freeVars_95_226_125_($_0_lift, $_1_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$2;
+    return Prelude__List___43__43_(null, Backend__Haskell__freeVars($cg$1), $_1_lift);
+}
+
+// Backend.Haskell.{freeVars_227}
+
+function Backend__Haskell___123_freeVars_95_227_125_($_0_lift, $_1_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return Prelude__List___43__43_(null, Backend__Haskell__freeVars($cg$1), $_1_lift);
+}
+
+// Backend.Haskell.{freshEnv_238}
+
+function Backend__Haskell___123_freshEnv_95_238_125_($_0_lift){
+    return new $HC_1_4$Backend__Haskell__HsVar($_0_lift);
+}
+
+// Backend.Haskell.{freshEnv_239}
+
+function Backend__Haskell___123_freshEnv_95_239_125_($_0_lift){
+    
+    if(($_0_lift.type === 0)) {
+        return new $HC_1_4$Backend__Haskell__HsVar($_0_lift.$1);
+    } else {
+        const $cg$3 = $_0_lift.$1;
+        return new $HC_3_5$Backend__Haskell__HsParam($cg$3.$1, $cg$3.$2, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__Haskell___123_freshEnv_95_238_125_(), $cg$3.$3));
+    }
+}
+
+// Backend.Utils.{freshEnv_240}
+
+function Backend__Utils___123_freshEnv_95_240_125_($_0_lift, $_1_lift){
     return new $HC_1_0$Prelude__Either__Left(($_0_lift + Prelude__Show__primNumShow(null, $partial_0_1$prim_95__95_toStrBigInt(), $HC_0_0$Prelude__Show__Open, Data__Fin__finToInteger(null, $_1_lift))));
 }
 
-// Main.{generateCode_64}
+// Backend.Haskell.{freshEnvWithTerms_241}
 
-function Main___123_generateCode_95_64_125_($_0_lift, $_1_lift){
+function Backend__Haskell___123_freshEnvWithTerms_95_241_125_($_0_lift, $_1_lift){
+    let $cg$1 = null;
+    if(((((Backend__Haskell__hsTypeName($_1_lift) == "")) ? 1|0 : 0|0) === 0)) {
+        $cg$1 = true;
+    } else {
+        $cg$1 = false;
+    }
+    
+    const $cg$3 = Decidable__Equality__Decidable__Equality___64_Decidable__Equality__DecEq_36_Bool_58__33_decEq_58_0($cg$1, true);
+    let $cg$2 = null;
+    if(($cg$3.type === 1)) {
+        $cg$2 = "";
+    } else {
+        let $cg$4 = null;
+        if(Prelude__Chars__isLower(Backend__Haskell__hsTypeName($_1_lift)[0])) {
+            $cg$4 = String.fromCharCode((((Backend__Haskell__hsTypeName($_1_lift)[0]).charCodeAt(0)|0) - 32));
+        } else {
+            $cg$4 = Backend__Haskell__hsTypeName($_1_lift)[0];
+        }
+        
+        $cg$2 = (($cg$4)+(Backend__Haskell__hsTypeName($_1_lift).slice(1)));
+    }
+    
+    return new $HC_2_0$Builtins__MkPair($_1_lift, new $HC_1_2$Backend__Haskell__HsTermVar(($_0_lift + $cg$2)));
+}
+
+// Backend.Haskell.{freshVars_242}
+
+function Backend__Haskell___123_freshVars_95_242_125_($_0_lift){
+    return new $HC_2_0$Builtins__MkPair($HC_0_0$Data__Vect__Nil, $_0_lift);
+}
+
+// Backend.Haskell.{freshVars_252}
+
+function Backend__Haskell___123_freshVars_95_252_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift){
+    return new $HC_2_0$Builtins__MkPair($HC_0_0$MkUnit, new $HC_2_0$Builtins__MkPair(Data__SortedMap__insert(null, null, $_0_lift, $_1_lift.add($_2_lift.add((new $JSRTS.jsbn.BigInteger(("1"))))), Data__SortedMap__delete(null, null, $_0_lift, $_3_lift)), $_4_lift));
+}
+
+// Backend.Haskell.{freshVars_253}
+
+function Backend__Haskell___123_freshVars_95_253_125_($_0_lift, $_1_lift, $_2_lift){
+    let $cg$1 = null;
+    if($_1_lift.add(Data__Fin__finToNat(null, $_2_lift)).equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
+        $cg$1 = "";
+    } else {
+        const $_204_in = $_1_lift.add(Data__Fin__finToNat(null, $_2_lift)).subtract((new $JSRTS.jsbn.BigInteger(("1"))));
+        $cg$1 = Prelude__Show__primNumShow(null, $partial_0_1$prim_95__95_toStrBigInt(), $HC_0_0$Prelude__Show__Open, $_204_in);
+    }
+    
+    return new $HC_1_2$Backend__Haskell__HsTermVar(($_0_lift + $cg$1));
+}
+
+// Backend.Haskell.{freshVars_254}
+
+function Backend__Haskell___123_freshVars_95_254_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
+    return new $HC_2_0$Builtins__MkPair(Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_2_3$Backend__Haskell___123_freshVars_95_253_125_($_0_lift, $_1_lift), Data__Vect__range($_2_lift.add((new $JSRTS.jsbn.BigInteger(("1")))))), $_4_lift);
+}
+
+// Backend.Haskell.{freshVars_255}
+
+function Backend__Haskell___123_freshVars_95_255_125_($_0_lift, $_1_lift, $_2_lift){
+    
+    const $cg$3 = $_2_lift.$1;
+    let $cg$2 = null;
+    if(($cg$3.type === 0)) {
+        $cg$2 = $HC_0_0$Prelude__Maybe__Nothing;
+    } else {
+        $cg$2 = Data__SortedMap__treeLookup(null, null, $cg$3.$1, null, $_0_lift, $cg$3.$3);
+    }
+    
+    let $_72_in = null;
+    if(($cg$2.type === 1)) {
+        $_72_in = $cg$2.$1;
+    } else {
+        $_72_in = (new $JSRTS.jsbn.BigInteger(("0")));
+    }
+    
+    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), $partial_5_6$Backend__Haskell___123_freshVars_95_252_125_($_0_lift, $_72_in, $_1_lift, $_2_lift.$1, $_2_lift.$2), $partial_3_5$Backend__Haskell___123_freshVars_95_254_125_($_0_lift, $_72_in, $_1_lift));
+}
+
+// Main.{generateCode_256}
+
+function Main___123_generateCode_95_256_125_($_0_lift, $_1_lift){
+    
+    
+    if(($_1_lift.$1 === "")) {
+        return Backend__Haskell__makeType($_0_lift, Backend__Haskell__freshEnv($_0_lift), $_1_lift.$2);
+    } else {
+        return new $HC_3_5$Backend__Haskell__HsParam(Prelude__List__length(null, Typedefs__getUsedIndices($_0_lift, $_1_lift.$2)), $_1_lift.$1, Typedefs__getUsedVars(null, $_0_lift, Backend__Haskell__freshEnv($_0_lift), $_1_lift.$2));
+    }
+}
+
+// Main.{generateCode_257}
+
+function Main___123_generateCode_95_257_125_($_0_lift, $_1_lift){
     return Prelude__List__reverseOnto(null, $HC_0_0$Prelude__List__Nil, Control__Monad__State__evalState(null, null, Backend__Haskell__makeDefs_39_($_0_lift, $_1_lift), $HC_0_0$Prelude__List__Nil));
 }
 
-// Main.{generateCode_65}
+// Main.{generateCode_258}
 
-function Main___123_generateCode_95_65_125_($_0_lift, $_1_lift){
-    return Prelude__List__reverseOnto(null, $HC_0_0$Prelude__List__Nil, Control__Monad__State__evalState(null, null, Backend__ReasonML__makeDefs_39_($_0_lift, $_1_lift), $HC_0_0$Prelude__List__Nil));
+function Main___123_generateCode_95_258_125_($_0_lift, $_1_lift){
+    return Backend__Backend__Haskell___64_Backend__ASTGen_36_Haskell_58_HsType_58_n_58__33_generateTermDefs_58_0($_0_lift, $_1_lift);
 }
 
-// Backend.{generateDefs_66}
+// Backend.{generateDefs_259}
 
-function Backend___123_generateDefs_95_66_125_($_0_lift, $_1_lift){
+function Backend___123_generateDefs_95_259_125_($_0_lift, $_1_lift){
     return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat($_0_lift, new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(new $HC_1_3$Text__PrettyPrint__WL__Core__Line(false), $_1_lift));
 }
 
-// TParsec.Success.{getTok_67}
+// TParsec.Success.{getTok_260}
 
-function TParsec__Success___123_getTok_95_67_125_($_0_lift, $_1_lift){
+function TParsec__Success___123_getTok_95_260_125_($_0_lift, $_1_lift){
     
     if($_0_lift.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
         return null;
@@ -6464,27 +9551,27 @@ function TParsec__Success___123_getTok_95_67_125_($_0_lift, $_1_lift){
     }
 }
 
-// Typedefs.{getUsedIndices_68}
+// Typedefs.{getUsedIndices_261}
 
-function Typedefs___123_getUsedIndices_95_68_125_($_0_lift, $_1_lift, $_2_lift){
+function Typedefs___123_getUsedIndices_95_261_125_($_0_lift, $_1_lift, $_2_lift){
     return Prelude__Interfaces__Data__Fin___64_Prelude__Interfaces__Eq_36_Fin_32_n_58__33__61__61__58_0($_0_lift, $_1_lift, $_2_lift);
 }
 
-// Typedefs.{getUsedIndices_69}
+// Typedefs.{getUsedIndices_262}
 
-function Typedefs___123_getUsedIndices_95_69_125_($_0_lift, $_1_lift, $_2_lift){
+function Typedefs___123_getUsedIndices_95_262_125_($_0_lift, $_1_lift, $_2_lift){
     return Prelude__List___43__43_(null, Typedefs__getUsedIndices($_0_lift, $_1_lift), $_2_lift);
 }
 
-// Typedefs.{getUsedIndices_70}
+// Typedefs.{getUsedIndices_263}
 
-function Typedefs___123_getUsedIndices_95_70_125_($_0_lift, $_1_lift){
+function Typedefs___123_getUsedIndices_95_263_125_($_0_lift, $_1_lift){
     return Data__Vect__index(null, null, $_1_lift, $_0_lift);
 }
 
-// Typedefs.{getUsedIndices_72}
+// Typedefs.{getUsedIndices_265}
 
-function Typedefs___123_getUsedIndices_95_72_125_($_0_lift, $_1_lift){
+function Typedefs___123_getUsedIndices_95_265_125_($_0_lift, $_1_lift){
     let $cg$1 = null;
     if(($_0_lift.type === 1)) {
         $cg$1 = new $HC_2_1$Prelude__List___58__58_($_0_lift.$1, $HC_0_0$Prelude__List__Nil);
@@ -6495,17 +9582,17 @@ function Typedefs___123_getUsedIndices_95_72_125_($_0_lift, $_1_lift){
     return Prelude__List___43__43_(null, $cg$1, $_1_lift);
 }
 
-// Typedefs.{getUsedIndices_73}
+// Typedefs.{getUsedIndices_266}
 
-function Typedefs___123_getUsedIndices_95_73_125_($_0_lift, $_1_lift, $_2_lift){
+function Typedefs___123_getUsedIndices_95_266_125_($_0_lift, $_1_lift, $_2_lift){
     let $cg$1 = null;
     $cg$1 = $_1_lift.$2;
-    return Prelude__List___43__43_(null, Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldr_58_0(null, null, $partial_0_2$Typedefs___123_getUsedIndices_95_72_125_(), $HC_0_0$Prelude__List__Nil, Typedefs__getUsedIndices($_0_lift.add((new $JSRTS.jsbn.BigInteger(("1")))), $cg$1)), $_2_lift);
+    return Prelude__List___43__43_(null, Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldr_58_0(null, null, $partial_0_2$Typedefs___123_getUsedIndices_95_265_125_(), $HC_0_0$Prelude__List__Nil, Typedefs__getUsedIndices($_0_lift.add((new $JSRTS.jsbn.BigInteger(("1")))), $cg$1)), $_2_lift);
 }
 
-// TParsec.Combinators.{guardM_82}
+// TParsec.Combinators.{guardM_275}
 
-function TParsec__Combinators___123_guardM_95_82_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+function TParsec__Combinators___123_guardM_95_275_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
     
     let $cg$2 = null;
     const $cg$4 = $_1_lift.$1;
@@ -6513,141 +9600,99 @@ function TParsec__Combinators___123_guardM_95_82_125_($_0_lift, $_1_lift, $_2_li
     return $_0_lift.$3(null)($cg$2)($_3_lift);
 }
 
-// TParsec.Combinators.{guardM_83}
+// TParsec.Combinators.{guardM_276}
 
-function TParsec__Combinators___123_guardM_95_83_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+function TParsec__Combinators___123_guardM_95_276_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
     return new $HC_4_0$TParsec__Success__MkSuccess($_3_lift, $_0_lift, $_1_lift, $_2_lift);
 }
 
-// TParsec.Combinators.{guardM_84}
+// TParsec.Combinators.{guardM_277}
 
-function TParsec__Combinators___123_guardM_95_84_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+function TParsec__Combinators___123_guardM_95_277_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
     let $cg$1 = null;
     $cg$1 = $_0_lift.$2(null);
     let $cg$2 = null;
-    $cg$2 = Prelude__Functor__Prelude___64_Prelude__Functor__Functor_36_Maybe_58__33_map_58_0(null, null, $partial_3_4$TParsec__Combinators___123_guardM_95_83_125_($_3_lift.$2, $_3_lift.$3, $_3_lift.$4), $_2_lift($_3_lift.$1));
-    return Prelude__Foldable__Prelude__Maybe___64_Prelude__Foldable__Foldable_36_Maybe_58__33_foldr_58_0(null, null, $partial_2_4$TParsec__Combinators___123_guardM_95_82_125_($_0_lift, $_1_lift), $cg$1, $cg$2);
+    $cg$2 = Prelude__Functor__Prelude___64_Prelude__Functor__Functor_36_Maybe_58__33_map_58_0(null, null, $partial_3_4$TParsec__Combinators___123_guardM_95_276_125_($_3_lift.$2, $_3_lift.$3, $_3_lift.$4), $_2_lift($_3_lift.$1));
+    return Prelude__Foldable__Prelude__Maybe___64_Prelude__Foldable__Foldable_36_Maybe_58__33_foldr_58_0(null, null, $partial_2_4$TParsec__Combinators___123_guardM_95_275_125_($_0_lift, $_1_lift), $cg$1, $cg$2);
 }
 
-// Backend.Haskell.{hsParam_86}
+// Backend.Haskell.{hsTypeName_282}
 
-function Backend__Haskell___123_hsParam_95_86_125_($_0_lift){
-    return new $HC_1_3$Backend__Haskell__HsVar($_0_lift);
+function Backend__Haskell___123_hsTypeName_95_282_125_($_0_lift, $_1_lift){
+    return (Backend__Haskell__hsTypeName($_0_lift) + $_1_lift);
 }
 
-// Typedefs.{idVars_87}
+// Typedefs.{idVars_284}
 
-function Typedefs___123_idVars_95_87_125_($_0_lift){
+function Typedefs___123_idVars_95_284_125_($_0_lift){
     return new $HC_1_4$Typedefs__TVar($_0_lift);
 }
 
-// Backend.Utils.{ifNotPresent_88}
+// Backend.Utils.{ifNotPresent_301}
 
-function Backend__Utils___123_ifNotPresent_95_88_125_($_0_lift, $_1_lift, $_2_lift){
-    return $_2_lift;
-}
-
-// Backend.Utils.{ifNotPresent_91}
-
-function Backend__Utils___123_ifNotPresent_95_91_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
-    return $_3_lift($_2_lift);
-}
-
-// Backend.Utils.{ifNotPresent_92}
-
-function Backend__Utils___123_ifNotPresent_95_92_125_($_0_lift){
-    return new $HC_2_0$Builtins__MkPair($_0_lift, $_0_lift);
-}
-
-// Backend.Utils.{ifNotPresent_104}
-
-function Backend__Utils___123_ifNotPresent_95_104_125_($_0_lift, $_1_lift, $_2_lift){
+function Backend__Utils___123_ifNotPresent_95_301_125_($_0_lift, $_1_lift, $_2_lift){
     return new $HC_2_0$Builtins__MkPair($HC_0_0$MkUnit, new $HC_2_1$Prelude__List___58__58_($_0_lift, $_1_lift));
 }
 
-// Backend.Utils.{ifNotPresent_105}
+// Backend.Utils.{ifNotPresent_302}
 
-function Backend__Utils___123_ifNotPresent_95_105_125_($_0_lift){
+function Backend__Utils___123_ifNotPresent_95_302_125_($_0_lift){
     return new $HC_2_0$Builtins__MkPair($HC_0_0$Prelude__List__Nil, $_0_lift);
 }
 
-// Backend.Utils.{ifNotPresent_106}
+// Backend.Utils.{ifNotPresent_303}
 
-function Backend__Utils___123_ifNotPresent_95_106_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+function Backend__Utils___123_ifNotPresent_95_303_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
     let $cg$1 = null;
     $cg$1 = $_0_lift.$1;
     
     if(Prelude__List__elemBy(null, $cg$1, $_1_lift, $_3_lift)) {
-        return $partial_0_1$Backend__Utils___123_ifNotPresent_95_105_125_();
+        return $partial_0_1$Backend__Utils___123_ifNotPresent_95_302_125_();
     } else {
-        return $partial_7_8$Prelude__Applicative__Control__Monad__State___64_Prelude__Applicative__Applicative_36_StateT_32_stateType_32_f_58__33__60__42__62__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_()), $partial_0_4$Backend__Utils___123_ifNotPresent_95_91_125_()), $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_()), $partial_0_4$Backend__Utils___123_ifNotPresent_95_91_125_()), $partial_0_1$Backend__Utils___123_ifNotPresent_95_92_125_(), $partial_1_3$Backend__Utils___123_ifNotPresent_95_104_125_($_1_lift))), $_2_lift);
+        return $partial_7_8$Prelude__Applicative__Control__Monad__State___64_Prelude__Applicative__Applicative_36_StateT_32_stateType_32_f_58__33__60__42__62__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), $partial_0_1$Backend__Haskell___123_envTerms_95_213_125_(), $partial_1_3$Backend__Utils___123_ifNotPresent_95_301_125_($_1_lift))), $_2_lift);
     }
 }
 
-// Parse.{ignorespaces_107}
+// Parse.{ignoreSpaces_304}
 
-function Parse___123_ignorespaces_95_107_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_6_lift, $_7_lift, $_8_lift, $_9_lift, $_10_lift){
-    return Parse__comments(null, $_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_6_lift)($_9_lift)(Prelude__Nat__lteTransitive(null, null, null, $_10_lift, null));
+function Parse___123_ignoreSpaces_95_304_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_6_lift, $_7_lift, $_8_lift, $_9_lift, $_10_lift){
+    return Parse__spacesOrComments(null, $_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_6_lift)($_9_lift)(Prelude__Nat__lteTransitive(null, null, null, $_10_lift, null));
 }
 
-// TParsec.Combinators.{land_108}
+// TParsec.Combinators.{land_305}
 
-function TParsec__Combinators___123_land_95_108_125_($_0_lift){
+function TParsec__Combinators___123_land_95_305_125_($_0_lift){
     
     return $_0_lift.$1;
 }
 
-// Backend.Haskell.{makeDefs_123}
+// Backend.Haskell.{makeDefs_320}
 
-function Backend__Haskell___123_makeDefs_95_123_125_($_0_lift, $_1_lift){
+function Backend__Haskell___123_makeDefs_95_320_125_($_0_lift, $_1_lift){
     return Prelude__List___43__43_(null, $_0_lift, $_1_lift);
 }
 
-// Backend.Haskell.{makeDefs_125}
+// Backend.Haskell.{makeDefs_322}
 
-function Backend__Haskell___123_makeDefs_95_125_125_($_0_lift){
-    return Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_makeDefs_95_123_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$Typedefs___123_apN_95_20_125_(), $_0_lift);
+function Backend__Haskell___123_makeDefs_95_322_125_($_0_lift){
+    return Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_makeDefs_95_320_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $_0_lift);
 }
 
-// Backend.Haskell.{makeDefs_127}
+// Backend.Haskell.{makeDefs_331}
 
-function Backend__Haskell___123_makeDefs_95_127_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
-    return $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $_2_lift, $_3_lift);
-}
-
-// Backend.Haskell.{makeDefs_128}
-
-function Backend__Haskell___123_makeDefs_95_128_125_($_0_lift, $_1_lift, $_2_lift){
-    return new $HC_2_0$Builtins__MkPair($_1_lift, $_2_lift);
-}
-
-// Backend.Haskell.{makeDefs_133}
-
-function Backend__Haskell___123_makeDefs_95_133_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
-    return $partial_7_8$Prelude__Applicative__Control__Monad__State___64_Prelude__Applicative__Applicative_36_StateT_32_stateType_32_f_58__33__60__42__62__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_()), $partial_0_4$Backend__Utils___123_ifNotPresent_95_91_125_()), $_2_lift, $_3_lift);
-}
-
-// Backend.Haskell.{makeDefs_134}
-
-function Backend__Haskell___123_makeDefs_95_134_125_($_0_lift, $_1_lift, $_2_lift){
+function Backend__Haskell___123_makeDefs_95_331_125_($_0_lift, $_1_lift, $_2_lift){
     return new $HC_2_0$Builtins__MkPair(Prelude__List___43__43_(null, $_0_lift, $_1_lift), $_2_lift);
 }
 
-// Backend.Haskell.{makeDefs_135}
+// Backend.Haskell.{makeDefs_332}
 
-function Backend__Haskell___123_makeDefs_95_135_125_($_0_lift, $_1_lift, $_2_lift){
-    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_()), $partial_0_4$Backend__Utils___123_ifNotPresent_95_91_125_()), $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_0_1$Backend__Haskell___123_makeDefs_95_125_125_(), Prelude__Traversable__Data__Vect___64_Prelude__Traversable__Traversable_36_Vect_32_n_58__33_traverse_58_0(null, null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_makeDefs_95_127_125_(), $partial_0_3$Backend__Haskell___123_makeDefs_95_128_125_(), $partial_0_4$Backend__Haskell___123_makeDefs_95_133_125_()), $partial_1_2$Backend__Haskell__makeDefs($_0_lift), $_1_lift)), $partial_1_3$Backend__Haskell___123_makeDefs_95_134_125_($_2_lift));
+function Backend__Haskell___123_makeDefs_95_332_125_($_0_lift, $_1_lift, $_2_lift){
+    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_1$Backend__Haskell___123_makeDefs_95_322_125_(), Prelude__Traversable__Data__Vect___64_Prelude__Traversable__Traversable_36_Vect_32_n_58__33_traverse_58_0(null, null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_1_2$Backend__Haskell__makeDefs($_0_lift), $_1_lift)), $partial_1_3$Backend__Haskell___123_makeDefs_95_331_125_($_2_lift));
 }
 
-// Backend.JSON.{makeDefs_161}
+// Backend.JSON.{makeDefs_359}
 
-function Backend__JSON___123_makeDefs_95_161_125_($_0_lift, $_1_lift){
-    return ($_0_lift == $_1_lift);
-}
-
-// Backend.JSON.{makeDefs_162}
-
-function Backend__JSON___123_makeDefs_95_162_125_($_0_lift, $_1_lift){
+function Backend__JSON___123_makeDefs_95_359_125_($_0_lift, $_1_lift){
     
     if((((($_0_lift == $_1_lift)) ? 1|0 : 0|0) === 0)) {
         return true;
@@ -6656,295 +9701,306 @@ function Backend__JSON___123_makeDefs_95_162_125_($_0_lift, $_1_lift){
     }
 }
 
-// Backend.JSON.{makeDefs_163}
+// Backend.JSON.{makeDefs_360}
 
-function Backend__JSON___123_makeDefs_95_163_125_($_0_lift){
+function Backend__JSON___123_makeDefs_95_360_125_($_0_lift){
     return new $HC_2_0$Builtins__MkPair(new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair("emptyType", Backend__JSON__makeDefs_58_emptyType_58_0()), $HC_0_0$Prelude__List__Nil), $_0_lift);
 }
 
-// Backend.JSON.{makeDefs_166}
+// Backend.JSON.{makeDefs_363}
 
-function Backend__JSON___123_makeDefs_95_166_125_($_0_lift){
+function Backend__JSON___123_makeDefs_95_363_125_($_0_lift){
     return new $HC_2_0$Builtins__MkPair(new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair("singletonType", Backend__JSON__makeDefs_58_singletonType_58_1()), $HC_0_0$Prelude__List__Nil), $_0_lift);
 }
 
-// Backend.ReasonML.{makeDefs_213}
+// Backend.ReasonML.{makeDefs_410}
 
-function Backend__ReasonML___123_makeDefs_95_213_125_($_0_lift, $_1_lift, $_2_lift){
-    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_()), $partial_0_4$Backend__Utils___123_ifNotPresent_95_91_125_()), $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_0_1$Backend__Haskell___123_makeDefs_95_125_125_(), Prelude__Traversable__Data__Vect___64_Prelude__Traversable__Traversable_36_Vect_32_n_58__33_traverse_58_0(null, null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_makeDefs_95_127_125_(), $partial_0_3$Backend__Haskell___123_makeDefs_95_128_125_(), $partial_0_4$Backend__Haskell___123_makeDefs_95_133_125_()), $partial_1_2$Backend__ReasonML__makeDefs($_0_lift), $_1_lift)), $partial_1_3$Backend__Haskell___123_makeDefs_95_134_125_($_2_lift));
+function Backend__ReasonML___123_makeDefs_95_410_125_($_0_lift, $_1_lift, $_2_lift){
+    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_1$Backend__Haskell___123_makeDefs_95_322_125_(), Prelude__Traversable__Data__Vect___64_Prelude__Traversable__Traversable_36_Vect_32_n_58__33_traverse_58_0(null, null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_1_2$Backend__ReasonML__makeDefs($_0_lift), $_1_lift)), $partial_1_3$Backend__Haskell___123_makeDefs_95_331_125_($_2_lift));
 }
 
-// Backend.ReasonML.{makeDefs_243}
+// Backend.ReasonML.{makeDefs_440}
 
-function Backend__ReasonML___123_makeDefs_95_243_125_($_0_lift, $_1_lift){
+function Backend__ReasonML___123_makeDefs_95_440_125_($_0_lift, $_1_lift){
     return Prelude__List___43__43_(null, $_1_lift, $_0_lift);
 }
 
-// Backend.ReasonML.{makeDefs_244}
+// Backend.ReasonML.{makeDefs_441}
 
-function Backend__ReasonML___123_makeDefs_95_244_125_($_0_lift){
-    return $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_1_2$Backend__ReasonML___123_makeDefs_95_243_125_($_0_lift), Backend__ReasonML__makeDefs_39_((new $JSRTS.jsbn.BigInteger(("2"))), Backend__ReasonML__makeDefs_58_eitherDef_58_3(null, null, null)));
+function Backend__ReasonML___123_makeDefs_95_441_125_($_0_lift){
+    return $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_1_2$Backend__ReasonML___123_makeDefs_95_440_125_($_0_lift), Backend__ReasonML__makeDefs_39_((new $JSRTS.jsbn.BigInteger(("2"))), Backend__ReasonML__makeDefs_58_eitherDef_58_3(null, null, null)));
 }
 
-// Backend.Haskell.{makeDefs'_248}
+// Backend.Haskell.{makeDefs'_445}
 
-function Backend__Haskell___123_makeDefs_39__95_248_125_($_0_lift){
-    return (!(!($_0_lift.type === 0)));
-}
-
-// Backend.Haskell.{makeDefs'_249}
-
-function Backend__Haskell___123_makeDefs_39__95_249_125_($_0_lift){
+function Backend__Haskell___123_makeDefs_39__95_445_125_($_0_lift){
     
-    if(($_0_lift.type === 0)) {
+    if(($_0_lift.type === 4)) {
         return $_0_lift.$1;
     } else {
         return "";
     }
 }
 
-// Backend.Haskell.{makeDefs'_250}
+// Backend.Haskell.{makeDefs'_447}
 
-function Backend__Haskell___123_makeDefs_39__95_250_125_($_0_lift){
-    return (!(!($_0_lift.type === 0)));
-}
-
-// Backend.Haskell.{makeDefs'_251}
-
-function Backend__Haskell___123_makeDefs_39__95_251_125_($_0_lift, $_1_lift, $_2_lift){
+function Backend__Haskell___123_makeDefs_39__95_447_125_($_0_lift, $_1_lift, $_2_lift){
     
     return new $HC_2_0$Builtins__MkPair($_2_lift.$1, Backend__Haskell__makeType($_0_lift.add((new $JSRTS.jsbn.BigInteger(("1")))), $_1_lift, $_2_lift.$2));
 }
 
-// Backend.Haskell.{makeDefs'_258}
+// Backend.Haskell.{makeDefs'_454}
 
-function Backend__Haskell___123_makeDefs_39__95_258_125_($_0_lift){
-    return Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldr_58_0(null, null, $partial_0_2$Backend__Haskell___123_makeDefs_95_123_125_(), $HC_0_0$Prelude__List__Nil, $_0_lift);
+function Backend__Haskell___123_makeDefs_39__95_454_125_($_0_lift){
+    return Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldr_58_0(null, null, $partial_0_2$Backend__Haskell___123_makeDefs_95_320_125_(), $HC_0_0$Prelude__List__Nil, $_0_lift);
 }
 
-// Backend.Haskell.{makeDefs'_267}
+// Backend.Haskell.{makeDefs'_463}
 
-function Backend__Haskell___123_makeDefs_39__95_267_125_($_0_lift, $_1_lift){
+function Backend__Haskell___123_makeDefs_39__95_463_125_($_0_lift, $_1_lift){
     
     return Backend__Haskell__makeDefs($_0_lift.add((new $JSRTS.jsbn.BigInteger(("1")))), $_1_lift.$2);
 }
 
-// Backend.Haskell.{makeDefs'_270}
+// Backend.Haskell.{makeDefs'_466}
 
-function Backend__Haskell___123_makeDefs_39__95_270_125_($_0_lift){
-    return (!(!($_0_lift.type === 0)));
+function Backend__Haskell___123_makeDefs_39__95_466_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_6_lift){
+    return new $HC_2_0$Builtins__MkPair(new $HC_2_1$Prelude__List___58__58_(new $HC_2_1$Backend__Haskell__ADT(new $HC_3_0$Backend__Utils__MkDecl(Prelude__List__length(null, Typedefs__getUsedIndices($_0_lift, $_1_lift)), $_2_lift, Typedefs__getUsedVars(null, $_0_lift, $_3_lift, $_1_lift)), $_4_lift), $_5_lift), $_6_lift);
 }
 
-// Backend.Haskell.{makeDefs'_271}
+// Backend.Haskell.{makeDefs'_471}
 
-function Backend__Haskell___123_makeDefs_39__95_271_125_($_0_lift){
-    
-    if(($_0_lift.type === 0)) {
-        return $_0_lift.$1;
-    } else {
-        return "";
-    }
+function Backend__Haskell___123_makeDefs_39__95_471_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift){
+    return new $HC_2_0$Builtins__MkPair(new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Backend__Haskell__Synonym(new $HC_3_0$Backend__Utils__MkDecl(Prelude__List__length(null, Typedefs__getUsedIndices($_0_lift, $_1_lift)), $_2_lift, Typedefs__getUsedVars(null, $_0_lift, $_3_lift, $_1_lift)), Backend__Haskell__makeType($_0_lift, Backend__Haskell__freshEnv($_0_lift), $_1_lift)), $_4_lift), $_5_lift);
 }
 
-// Backend.Haskell.{makeDefs'_272}
+// Backend.JSON.{makeDefs'_474}
 
-function Backend__Haskell___123_makeDefs_39__95_272_125_($_0_lift){
-    return (!(!($_0_lift.type === 0)));
-}
-
-// Backend.Haskell.{makeDefs'_273}
-
-function Backend__Haskell___123_makeDefs_39__95_273_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift){
-    const $cg$2 = Data__Vect__filter(null, null, $partial_0_1$Backend__Haskell___123_makeDefs_39__95_270_125_(), Typedefs__getUsedVars(null, $_0_lift, Backend__Utils__freshEnv($_0_lift, "x"), $_1_lift));
-    let $cg$1 = null;
-    $cg$1 = $cg$2.$1;
-    const $cg$4 = Data__Vect__filter(null, null, $partial_0_1$Backend__Haskell___123_makeDefs_39__95_272_125_(), Typedefs__getUsedVars(null, $_0_lift, Backend__Utils__freshEnv($_0_lift, "x"), $_1_lift));
-    let $cg$3 = null;
-    $cg$3 = Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__Haskell___123_makeDefs_39__95_271_125_(), $cg$4.$2);
-    return new $HC_2_0$Builtins__MkPair(new $HC_2_1$Prelude__List___58__58_(new $HC_2_1$Backend__Haskell__ADT(new $HC_3_0$Backend__Utils__MkDecl($cg$1, $_2_lift, $cg$3), $_3_lift), $_4_lift), $_5_lift);
-}
-
-// Backend.Haskell.{makeDefs'_278}
-
-function Backend__Haskell___123_makeDefs_39__95_278_125_($_0_lift){
-    return (!(!($_0_lift.type === 0)));
-}
-
-// Backend.Haskell.{makeDefs'_279}
-
-function Backend__Haskell___123_makeDefs_39__95_279_125_($_0_lift){
-    
-    if(($_0_lift.type === 0)) {
-        return $_0_lift.$1;
-    } else {
-        return "";
-    }
-}
-
-// Backend.Haskell.{makeDefs'_280}
-
-function Backend__Haskell___123_makeDefs_39__95_280_125_($_0_lift){
-    return (!(!($_0_lift.type === 0)));
-}
-
-// Backend.Haskell.{makeDefs'_281}
-
-function Backend__Haskell___123_makeDefs_39__95_281_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
-    const $cg$2 = Data__Vect__filter(null, null, $partial_0_1$Backend__Haskell___123_makeDefs_39__95_278_125_(), Typedefs__getUsedVars(null, $_0_lift, Backend__Utils__freshEnv($_0_lift, "x"), $_1_lift));
-    let $cg$1 = null;
-    $cg$1 = $cg$2.$1;
-    const $cg$4 = Data__Vect__filter(null, null, $partial_0_1$Backend__Haskell___123_makeDefs_39__95_280_125_(), Typedefs__getUsedVars(null, $_0_lift, Backend__Utils__freshEnv($_0_lift, "x"), $_1_lift));
-    let $cg$3 = null;
-    $cg$3 = Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__Haskell___123_makeDefs_39__95_279_125_(), $cg$4.$2);
-    return new $HC_2_0$Builtins__MkPair(new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Backend__Haskell__Synonym(new $HC_3_0$Backend__Utils__MkDecl($cg$1, $_2_lift, $cg$3), Backend__Haskell__makeType($_0_lift, Backend__Utils__freshEnv($_0_lift, "x"), $_1_lift)), $_3_lift), $_4_lift);
-}
-
-// Backend.JSON.{makeDefs'_284}
-
-function Backend__JSON___123_makeDefs_39__95_284_125_($_0_lift, $_1_lift){
+function Backend__JSON___123_makeDefs_39__95_474_125_($_0_lift, $_1_lift){
     
     return new $HC_2_0$Builtins__MkPair($_1_lift.$1, Backend__Utils__flattenMus_58_flattenMu_58_0((new $JSRTS.jsbn.BigInteger(("0"))), null, new $HC_2_1$Data__Vect___58__58_($_0_lift, $HC_0_0$Data__Vect__Nil), $_1_lift.$2));
 }
 
-// Backend.JSON.{makeDefs'_301}
+// Backend.JSON.{makeDefs'_491}
 
-function Backend__JSON___123_makeDefs_39__95_301_125_($_0_lift){
+function Backend__JSON___123_makeDefs_39__95_491_125_($_0_lift){
     let $cg$1 = null;
     $cg$1 = $_0_lift.$2;
     return Backend__JSON__makeDefs($cg$1);
 }
 
-// Backend.JSON.{makeDefs'_302}
+// Backend.JSON.{makeDefs'_492}
 
-function Backend__JSON___123_makeDefs_39__95_302_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+function Backend__JSON___123_makeDefs_39__95_492_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
     return new $HC_2_0$Builtins__MkPair(new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair($_0_lift, Backend__JSON__disjointSubSchema(null, $_1_lift)), $_2_lift), $_3_lift);
 }
 
-// Backend.JSON.{makeDefs'_307}
+// Backend.JSON.{makeDefs'_497}
 
-function Backend__JSON___123_makeDefs_39__95_307_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+function Backend__JSON___123_makeDefs_39__95_497_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
     return new $HC_2_0$Builtins__MkPair(new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair($_0_lift, Backend__JSON__makeSubSchema($_1_lift)), $_2_lift), $_3_lift);
 }
 
-// Backend.ReasonML.{makeDefs'_313}
+// Backend.ReasonML.{makeDefs'_500}
 
-function Backend__ReasonML___123_makeDefs_39__95_313_125_($_0_lift, $_1_lift, $_2_lift){
+function Backend__ReasonML___123_makeDefs_39__95_500_125_($_0_lift){
+    return (!(!($_0_lift.type === 0)));
+}
+
+// Backend.ReasonML.{makeDefs'_501}
+
+function Backend__ReasonML___123_makeDefs_39__95_501_125_($_0_lift){
+    
+    if(($_0_lift.type === 0)) {
+        return $_0_lift.$1;
+    } else {
+        return "";
+    }
+}
+
+// Backend.ReasonML.{makeDefs'_502}
+
+function Backend__ReasonML___123_makeDefs_39__95_502_125_($_0_lift){
+    return (!(!($_0_lift.type === 0)));
+}
+
+// Backend.ReasonML.{makeDefs'_503}
+
+function Backend__ReasonML___123_makeDefs_39__95_503_125_($_0_lift, $_1_lift, $_2_lift){
     
     return new $HC_2_0$Builtins__MkPair($_2_lift.$1, Backend__ReasonML__makeType($_0_lift.add((new $JSRTS.jsbn.BigInteger(("1")))), $_1_lift, $_2_lift.$2));
 }
 
-// Backend.ReasonML.{makeDefs'_329}
+// Backend.ReasonML.{makeDefs'_519}
 
-function Backend__ReasonML___123_makeDefs_39__95_329_125_($_0_lift, $_1_lift){
+function Backend__ReasonML___123_makeDefs_39__95_519_125_($_0_lift, $_1_lift){
     
     return Backend__ReasonML__makeDefs($_0_lift.add((new $JSRTS.jsbn.BigInteger(("1")))), $_1_lift.$2);
 }
 
-// Backend.ReasonML.{makeDefs'_335}
+// Backend.ReasonML.{makeDefs'_522}
 
-function Backend__ReasonML___123_makeDefs_39__95_335_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_6_lift){
-    const $cg$2 = Data__Vect__filter(null, null, $partial_0_1$Backend__Haskell___123_makeDefs_39__95_270_125_(), Typedefs__getUsedVars(null, $_1_lift, Backend__Utils__freshEnv($_1_lift, "\'x"), $_2_lift));
+function Backend__ReasonML___123_makeDefs_39__95_522_125_($_0_lift){
+    return (!(!($_0_lift.type === 0)));
+}
+
+// Backend.ReasonML.{makeDefs'_523}
+
+function Backend__ReasonML___123_makeDefs_39__95_523_125_($_0_lift){
+    
+    if(($_0_lift.type === 0)) {
+        return $_0_lift.$1;
+    } else {
+        return "";
+    }
+}
+
+// Backend.ReasonML.{makeDefs'_524}
+
+function Backend__ReasonML___123_makeDefs_39__95_524_125_($_0_lift){
+    return (!(!($_0_lift.type === 0)));
+}
+
+// Backend.ReasonML.{makeDefs'_525}
+
+function Backend__ReasonML___123_makeDefs_39__95_525_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_6_lift){
+    const $cg$2 = Data__Vect__filter(null, null, $partial_0_1$Backend__ReasonML___123_makeDefs_39__95_522_125_(), Typedefs__getUsedVars(null, $_1_lift, Backend__Utils__freshEnv($_1_lift, "\'x"), $_2_lift));
     let $cg$1 = null;
     $cg$1 = $cg$2.$1;
-    const $cg$4 = Data__Vect__filter(null, null, $partial_0_1$Backend__Haskell___123_makeDefs_39__95_272_125_(), Typedefs__getUsedVars(null, $_1_lift, Backend__Utils__freshEnv($_1_lift, "\'x"), $_2_lift));
+    const $cg$4 = Data__Vect__filter(null, null, $partial_0_1$Backend__ReasonML___123_makeDefs_39__95_524_125_(), Typedefs__getUsedVars(null, $_1_lift, Backend__Utils__freshEnv($_1_lift, "\'x"), $_2_lift));
     let $cg$3 = null;
-    $cg$3 = Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__Haskell___123_makeDefs_39__95_271_125_(), $cg$4.$2);
+    $cg$3 = Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__ReasonML___123_makeDefs_39__95_523_125_(), $cg$4.$2);
     return new $HC_2_0$Builtins__MkPair(new $HC_2_1$Prelude__List___58__58_(new $HC_3_1$Backend__ReasonML__Variant($_0_lift, new $HC_3_0$Backend__Utils__MkDecl($cg$1, $_3_lift, $cg$3), $_4_lift), $_5_lift), $_6_lift);
 }
 
-// Backend.ReasonML.{makeDefs'_343}
+// Backend.ReasonML.{makeDefs'_530}
 
-function Backend__ReasonML___123_makeDefs_39__95_343_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
-    const $cg$2 = Data__Vect__filter(null, null, $partial_0_1$Backend__Haskell___123_makeDefs_39__95_278_125_(), Typedefs__getUsedVars(null, $_0_lift, Backend__Utils__freshEnv($_0_lift, "\'x"), $_1_lift));
+function Backend__ReasonML___123_makeDefs_39__95_530_125_($_0_lift){
+    return (!(!($_0_lift.type === 0)));
+}
+
+// Backend.ReasonML.{makeDefs'_531}
+
+function Backend__ReasonML___123_makeDefs_39__95_531_125_($_0_lift){
+    
+    if(($_0_lift.type === 0)) {
+        return $_0_lift.$1;
+    } else {
+        return "";
+    }
+}
+
+// Backend.ReasonML.{makeDefs'_532}
+
+function Backend__ReasonML___123_makeDefs_39__95_532_125_($_0_lift){
+    return (!(!($_0_lift.type === 0)));
+}
+
+// Backend.ReasonML.{makeDefs'_533}
+
+function Backend__ReasonML___123_makeDefs_39__95_533_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
+    const $cg$2 = Data__Vect__filter(null, null, $partial_0_1$Backend__ReasonML___123_makeDefs_39__95_530_125_(), Typedefs__getUsedVars(null, $_0_lift, Backend__Utils__freshEnv($_0_lift, "\'x"), $_1_lift));
     let $cg$1 = null;
     $cg$1 = $cg$2.$1;
-    const $cg$4 = Data__Vect__filter(null, null, $partial_0_1$Backend__Haskell___123_makeDefs_39__95_280_125_(), Typedefs__getUsedVars(null, $_0_lift, Backend__Utils__freshEnv($_0_lift, "\'x"), $_1_lift));
+    const $cg$4 = Data__Vect__filter(null, null, $partial_0_1$Backend__ReasonML___123_makeDefs_39__95_532_125_(), Typedefs__getUsedVars(null, $_0_lift, Backend__Utils__freshEnv($_0_lift, "\'x"), $_1_lift));
     let $cg$3 = null;
-    $cg$3 = Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__Haskell___123_makeDefs_39__95_279_125_(), $cg$4.$2);
+    $cg$3 = Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__ReasonML___123_makeDefs_39__95_531_125_(), $cg$4.$2);
     return new $HC_2_0$Builtins__MkPair(new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Backend__ReasonML__Alias(new $HC_3_0$Backend__Utils__MkDecl($cg$1, $_2_lift, $cg$3), Backend__ReasonML__makeType($_0_lift, Backend__Utils__freshEnv($_0_lift, "\'x"), $_1_lift)), $_3_lift), $_4_lift);
 }
 
-// Typedefs.{makeName_348}
+// Typedefs.{makeName_538}
 
-function Typedefs___123_makeName_95_348_125_($_0_lift, $_1_lift){
+function Typedefs___123_makeName_95_538_125_($_0_lift, $_1_lift){
     let $cg$1 = null;
     $cg$1 = $_0_lift.$1;
     return ($cg$1 + $_1_lift);
 }
 
-// Backend.JSON.{makeSubSchema_358}
+// Backend.JSON.{makeSubSchema_548}
 
-function Backend__JSON___123_makeSubSchema_95_358_125_($_0_lift, $_1_lift){
+function Backend__JSON___123_makeSubSchema_95_548_125_($_0_lift, $_1_lift){
     return new $HC_2_0$Builtins__MkPair($_0_lift, $_1_lift);
 }
 
-// Backend.Haskell.{makeType_360}
+// Backend.Haskell.{makeType_549}
 
-function Backend__Haskell___123_makeType_95_360_125_($_0_lift){
-    
-    if(($_0_lift.type === 0)) {
-        return new $HC_1_3$Backend__Haskell__HsVar($_0_lift.$1);
-    } else {
-        const $cg$3 = $_0_lift.$1;
-        return new $HC_3_4$Backend__Haskell__HsParam($cg$3.$1, $cg$3.$2, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__Haskell___123_hsParam_95_86_125_(), $cg$3.$3));
-    }
+function Backend__Haskell___123_makeType_95_549_125_($_0_lift, $_1_lift){
+    return new $HC_2_3$Backend__Haskell__HsSum($_0_lift, $_1_lift);
 }
 
-// Backend.Haskell.{makeType_361}
+// Backend.ReasonML.{makeType_550}
 
-function Backend__Haskell___123_makeType_95_361_125_($_0_lift, $_1_lift){
-    return new $HC_3_4$Backend__Haskell__HsParam((new $JSRTS.jsbn.BigInteger(("2"))), "Either", new $HC_2_1$Data__Vect___58__58_($_0_lift, new $HC_2_1$Data__Vect___58__58_($_1_lift, $HC_0_0$Data__Vect__Nil)));
-}
-
-// Backend.ReasonML.{makeType_363}
-
-function Backend__ReasonML___123_makeType_95_363_125_($_0_lift){
+function Backend__ReasonML___123_makeType_95_550_125_($_0_lift){
     return new $HC_1_2$Backend__ReasonML__RMLVar($_0_lift);
 }
 
-// Backend.ReasonML.{makeType_364}
+// Backend.ReasonML.{makeType_551}
 
-function Backend__ReasonML___123_makeType_95_364_125_($_0_lift){
+function Backend__ReasonML___123_makeType_95_551_125_($_0_lift){
     
     if(($_0_lift.type === 0)) {
         return new $HC_1_2$Backend__ReasonML__RMLVar($_0_lift.$1);
     } else {
         const $cg$3 = $_0_lift.$1;
-        return new $HC_3_3$Backend__ReasonML__RMLParam($cg$3.$1, $cg$3.$2, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__ReasonML___123_makeType_95_363_125_(), $cg$3.$3));
+        return new $HC_3_3$Backend__ReasonML__RMLParam($cg$3.$1, $cg$3.$2, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__ReasonML___123_makeType_95_550_125_(), $cg$3.$3));
     }
 }
 
-// Backend.ReasonML.{makeType_365}
+// Backend.ReasonML.{makeType_552}
 
-function Backend__ReasonML___123_makeType_95_365_125_($_0_lift, $_1_lift){
+function Backend__ReasonML___123_makeType_95_552_125_($_0_lift, $_1_lift){
     return new $HC_3_3$Backend__ReasonML__RMLParam((new $JSRTS.jsbn.BigInteger(("2"))), "Either", new $HC_2_1$Data__Vect___58__58_($_0_lift, new $HC_2_1$Data__Vect___58__58_($_1_lift, $HC_0_0$Data__Vect__Nil)));
 }
 
-// TParsec.Combinators.{mand_367}
+// Backend.ReasonML.{makeType'_555}
 
-function TParsec__Combinators___123_mand_95_367_125_($_0_lift, $_1_lift){
+function Backend__ReasonML___123_makeType_39__95_555_125_($_0_lift){
+    
+    if(($_0_lift.type === 0)) {
+        return new $HC_1_2$Backend__ReasonML__RMLVar($_0_lift.$1);
+    } else {
+        const $cg$3 = $_0_lift.$1;
+        return new $HC_3_3$Backend__ReasonML__RMLParam($cg$3.$1, $cg$3.$2, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Backend__ReasonML___123_makeType_95_550_125_(), $cg$3.$3));
+    }
+}
+
+// TParsec.Combinators.{mand_556}
+
+function TParsec__Combinators___123_mand_95_556_125_($_0_lift, $_1_lift){
     
     return new $HC_4_0$TParsec__Success__MkSuccess(new $HC_2_0$Builtins__MkPair($_0_lift, $_1_lift.$1), $_1_lift.$2, $_1_lift.$3, $_1_lift.$4);
 }
 
-// TParsec.Combinators.{mand_368}
+// TParsec.Combinators.{mand_557}
 
-function TParsec__Combinators___123_mand_95_368_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift){
+function TParsec__Combinators___123_mand_95_557_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift){
     
     const $cg$3 = $_0_lift.$1;
-    return $cg$3.$1(null)(null)($partial_1_2$TParsec__Combinators___123_mand_95_367_125_($_5_lift))($_1_lift($_2_lift)($_3_lift)($_4_lift));
+    return $cg$3.$1(null)(null)($partial_1_2$TParsec__Combinators___123_mand_95_556_125_($_5_lift))($_1_lift($_2_lift)($_3_lift)($_4_lift));
 }
 
-// TParsec.Combinators.{map_369}
+// TParsec.Combinators.{map_558}
 
-function TParsec__Combinators___123_map_95_369_125_($_0_lift, $_1_lift){
+function TParsec__Combinators___123_map_95_558_125_($_0_lift, $_1_lift){
     
     return new $HC_4_0$TParsec__Success__MkSuccess($_0_lift($_1_lift.$1), $_1_lift.$2, $_1_lift.$3, $_1_lift.$4);
 }
 
-// Backend.Utils.{nameMu_370}
+// Backend.Utils.{mapWithIndexA_559}
 
-function Backend__Utils___123_nameMu_95_370_125_($_0_lift, $_1_lift){
+function Backend__Utils___123_mapWithIndexA_95_559_125_($_0_lift, $_1_lift){
+    return new $HC_2_1$Data__Vect___58__58_($_0_lift, $_1_lift);
+}
+
+// Backend.Utils.{mapWithIndexA_560}
+
+function Backend__Utils___123_mapWithIndexA_95_560_125_($_0_lift, $_1_lift){
+    return $_0_lift(new $HC_1_1$Data__Fin__FS($_1_lift));
+}
+
+// Backend.Utils.{nameMu_562}
+
+function Backend__Utils___123_nameMu_95_562_125_($_0_lift, $_1_lift){
     let $cg$1 = null;
     $cg$1 = $_0_lift.$1;
     let $cg$2 = null;
@@ -6980,125 +10036,112 @@ function Backend__Utils___123_nameMu_95_370_125_($_0_lift, $_1_lift){
     return ($cg$3 + $_1_lift);
 }
 
-// Backend.JSON.{nary_372}
+// Backend.JSON.{nary_564}
 
-function Backend__JSON___123_nary_95_372_125_($_0_lift, $_1_lift){
+function Backend__JSON___123_nary_95_564_125_($_0_lift, $_1_lift){
     return ($_0_lift + Prelude__Show__primNumShow(null, $partial_0_1$prim_95__95_toStrBigInt(), $HC_0_0$Prelude__Show__Open, Data__Fin__finToNat(null, $_1_lift)));
 }
 
-// Parse.{neComments_374}
+// TParsec.Combinators.{nelist_565}
 
-function Parse___123_neComments_95_374_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_6_lift, $_7_lift, $_8_lift, $_9_lift, $_10_lift){
-    let $cg$1 = null;
-    const $cg$3 = $_0_lift.$1;
-    $cg$1 = $cg$3.$1;
-    return $partial_10_11$TParsec__Combinators__map(null, null, null, null, $cg$1, $partial_0_1$Parse___123_emptyComments_95_33_125_(), null, TParsec__Combinators__nelist(null, null, null, $_1_lift, $_0_lift, $_2_lift)(ParserUtils__notChar(null, $_3_lift, $_1_lift, $_0_lift, $_4_lift, $_5_lift, $_6_lift, "\n")($_2_lift)), $_9_lift, Prelude__Nat__lteTransitive(null, null, null, $_10_lift, null));
-}
-
-// Parse.{neComments_375}
-
-function Parse___123_neComments_95_375_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_6_lift, $_7_lift, $_8_lift, $_9_lift, $_10_lift){
-    return TParsec__Combinators__Chars__char(null, $_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, "\n")($_6_lift)($_9_lift)(Prelude__Nat__lteTransitive(null, null, null, $_10_lift, null));
-}
-
-// TParsec.Combinators.{nelist_376}
-
-function TParsec__Combinators___123_nelist_95_376_125_($_0_lift){
+function TParsec__Combinators___123_nelist_95_565_125_($_0_lift){
     
     return Data__NEList__consopt(null, $_0_lift.$1, $_0_lift.$2);
 }
 
-// TParsec.Combinators.{nelist_377}
+// TParsec.Combinators.{nelist_566}
 
-function TParsec__Combinators___123_nelist_95_377_125_($_0_lift, $_1_lift, $_2_lift){
+function TParsec__Combinators___123_nelist_95_566_125_($_0_lift, $_1_lift, $_2_lift){
     return $_0_lift($_1_lift)(Prelude__Nat__lteTransitive(null, null, null, $_2_lift, null));
 }
 
-// TParsec.Combinators.{nelist_378}
+// TParsec.Combinators.{nelist_567}
 
-function TParsec__Combinators___123_nelist_95_378_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
-    return $_0_lift($_3_lift)($_4_lift)($partial_1_3$TParsec__Combinators___123_nelist_95_377_125_($_1_lift));
+function TParsec__Combinators___123_nelist_95_567_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
+    return $_0_lift($_3_lift)($_4_lift)($partial_1_3$TParsec__Combinators___123_nelist_95_566_125_($_1_lift));
 }
 
-// TParsec.Combinators.{nelist_379}
+// TParsec.Combinators.{nelist_568}
 
-function TParsec__Combinators___123_nelist_95_379_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
+function TParsec__Combinators___123_nelist_95_568_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
     let $cg$1 = null;
     const $cg$3 = $_0_lift.$1;
     $cg$1 = $cg$3.$1;
-    return $partial_8_11$TParsec__Combinators__map(null, null, null, null, $cg$1, $partial_0_1$TParsec__Combinators___123_nelist_95_376_125_(), null, $partial_9_12$TParsec__Combinators__andoptbind(null, null, null, null, $_0_lift, $_1_lift, null, $_4_lift, $partial_2_5$TParsec__Combinators___123_nelist_95_378_125_($_3_lift, $_4_lift)));
+    return $partial_8_11$TParsec__Combinators__map(null, null, null, null, $cg$1, $partial_0_1$TParsec__Combinators___123_nelist_95_565_125_(), null, $partial_9_12$TParsec__Combinators__andoptbind(null, null, null, null, $_0_lift, $_1_lift, null, $_4_lift, $partial_2_5$TParsec__Combinators___123_nelist_95_567_125_($_3_lift, $_4_lift)));
 }
 
-// TParsec.Combinators.{optand_380}
+// TParsec.Combinators.{optand_569}
 
-function TParsec__Combinators___123_optand_95_380_125_($_0_lift){
+function TParsec__Combinators___123_optand_95_569_125_($_0_lift){
     return new $HC_1_1$Prelude__Maybe__Just($_0_lift);
 }
 
-// TParsec.Combinators.{optand_382}
+// TParsec.Combinators.{optand_571}
 
-function TParsec__Combinators___123_optand_95_382_125_($_0_lift){
+function TParsec__Combinators___123_optand_95_571_125_($_0_lift){
     return new $HC_2_0$Builtins__MkPair($HC_0_0$Prelude__Maybe__Nothing, $_0_lift);
 }
 
-// TParsec.Combinators.Chars.{parens_383}
+// TParsec.Combinators.Chars.{parens_572}
 
-function TParsec__Combinators__Chars___123_parens_95_383_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_6_lift, $_7_lift, $_8_lift, $_9_lift, $_10_lift){
+function TParsec__Combinators__Chars___123_parens_95_572_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_6_lift, $_7_lift, $_8_lift, $_9_lift, $_10_lift){
     return TParsec__Combinators__Chars__char(null, $_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, ")")($_6_lift)($_9_lift)(Prelude__Nat__lteTransitive(null, null, null, $_10_lift, null));
 }
 
-// TParsec.Running.{parseMaybe_384}
+// TParsec.Running.{parseResults_573}
 
-function TParsec__Running___123_parseMaybe_95_384_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
-    return Prelude__Functor__Prelude___64_Prelude__Functor__Functor_36_Maybe_58__33_map_58_0(null, null, $_2_lift, $_3_lift);
-}
-
-// TParsec.Running.{parseMaybe_385}
-
-function TParsec__Running___123_parseMaybe_95_385_125_($_0_lift, $_1_lift){
-    return new $HC_1_1$Prelude__Maybe__Just($_1_lift);
-}
-
-// TParsec.Running.{parseMaybe_386}
-
-function TParsec__Running___123_parseMaybe_95_386_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
-    return Prelude__Applicative__Prelude___64_Prelude__Applicative__Applicative_36_Maybe_58__33__60__42__62__58_0(null, null, $_2_lift, $_3_lift);
-}
-
-// TParsec.Running.{parseMaybe_387}
-
-function TParsec__Running___123_parseMaybe_95_387_125_($_0_lift){
+function TParsec__Running___123_parseResults_95_573_125_($_0_lift){
     
-    return $_0_lift.$1;
+    const $cg$3 = $_0_lift.$1;
+    return $cg$3.$1;
 }
 
-// TParsec.Running.{parseMaybe_388}
+// TParsec.Running.{parseResults_574}
 
-function TParsec__Running___123_parseMaybe_95_388_125_($_0_lift){
+function TParsec__Running___123_parseResults_95_574_125_($_0_lift){
     let $cg$1 = null;
-    $cg$1 = $_0_lift.$2;
+    const $cg$3 = $_0_lift.$1;
+    $cg$1 = $cg$3.$2;
     return Prelude__Maybe__toMaybe(null, Prelude__Interfaces__Prelude__Nat___64_Prelude__Interfaces__Eq_36_Nat_58__33__61__61__58_0($cg$1, (new $JSRTS.jsbn.BigInteger(("0")))), new $JSRTS.Lazy((function(){
         return (function(){
-            return TParsec__Running___123_parseMaybe_95_387_125_($_0_lift);
+            return TParsec__Running___123_parseResults_95_573_125_($_0_lift);
         })();
     })));
 }
 
-// Parse.{parseTNamed_389}
+// TParsec.Running.{parseResults_575}
 
-function Parse___123_parseTNamed_95_389_125_($_0_lift, $_1_lift){
-    return TParsec__Running__Parse___64_TParsec__Running__MonadRun_36_StateT_32_PState_32_Identity_58__33_runMonad_58_0(null, $_1_lift);
+function TParsec__Running___123_parseResults_95_575_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    return Prelude__Functor__TParsec__Result___64_Prelude__Functor__Functor_36_Result_32_e_58__33_map_58_0(null, null, null, $_2_lift, $_3_lift);
 }
 
-// Parse.{parseTNamed_390}
+// TParsec.Running.{parseResults_576}
 
-function Parse___123_parseTNamed_95_390_125_($_0_lift, $_1_lift){
-    return TParsec__Running__TParsec__Running___64_TParsec__Running__MonadRun_36_TParsecT_32_e_32_a_32_m_58__33_runMonad_58_0(null, null, null, null, $partial_0_2$Parse___123_parseTNamed_95_389_125_(), $_1_lift);
+function TParsec__Running___123_parseResults_95_576_125_($_0_lift, $_1_lift){
+    return new $HC_1_2$TParsec__Result__Value($_1_lift);
 }
 
-// Parse.{parseTNamed_391}
+// TParsec.Running.{parseResults_577}
 
-function Parse___123_parseTNamed_95_391_125_($_0_lift){
+function TParsec__Running___123_parseResults_95_577_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    return Prelude__Applicative__TParsec__Result___64_Prelude__Applicative__Applicative_36_Result_32_e_58__33__60__42__62__58_0(null, null, null, $_2_lift, $_3_lift);
+}
+
+// Parse.{parseTNamed_579}
+
+function Parse___123_parseTNamed_95_579_125_($_0_lift, $_1_lift){
+    return new $HC_2_1$Prelude__List___58__58_($_1_lift, $HC_0_0$Prelude__List__Nil);
+}
+
+// Parse.{parseTNamed_580}
+
+function Parse___123_parseTNamed_95_580_125_($_0_lift, $_1_lift){
+    return TParsec__Running__TParsec__Running___64_TParsec__Running__MonadRun_36_StateT_32_s_32_m_58__33_runMonad_58_0(null, null, null, $partial_0_2$Parse___123_parseTNamed_95_579_125_(), TParsec__Running__Parse___64_TParsec__Running__Pointed_36_PState_58__33_point_58_0(), $_1_lift);
+}
+
+// Parse.{parseTNamed_581}
+
+function Parse___123_parseTNamed_95_581_125_($_0_lift){
     let $cg$1 = null;
     if((((($_0_lift == "")) ? 1|0 : 0|0) === 0)) {
         $cg$1 = true;
@@ -7129,47 +10172,103 @@ function Parse___123_parseTNamed_95_391_125_($_0_lift){
     }
 }
 
-// Parse.{parseTNamed_392}
+// Parse.{parseTNamed_582}
 
-function Parse___123_parseTNamed_95_392_125_($_0_lift){
+function Parse___123_parseTNamed_95_582_125_($_0_lift){
     return Data__Inspect__MkSizedList(null, $_0_lift);
 }
 
-// Backend.JSON.{productSubSchema_395}
+// Backend.JSON.{productSubSchema_585}
 
-function Backend__JSON___123_productSubSchema_95_395_125_($_0_lift){
+function Backend__JSON___123_productSubSchema_95_585_125_($_0_lift){
     return new $HC_1_3$Language__JSON__Data__JString($_0_lift);
 }
 
-// TParsec.Combinators.{rand_399}
+// TParsec.Combinators.{rand_589}
 
-function TParsec__Combinators___123_rand_95_399_125_($_0_lift){
+function TParsec__Combinators___123_rand_95_589_125_($_0_lift){
     
     return $_0_lift.$2;
 }
 
-// TParsec.Combinators.{randbindm_401}
+// TParsec.Combinators.{randbindm_591}
 
-function TParsec__Combinators___123_randbindm_95_401_125_($_0_lift){
+function TParsec__Combinators___123_randbindm_95_591_125_($_0_lift){
     
     return $_0_lift.$2;
 }
 
-// Data.Vect.{range_402}
+// Data.Vect.{range_592}
 
-function Data__Vect___123_range_95_402_125_($_0_lift){
+function Data__Vect___123_range_95_592_125_($_0_lift){
     return new $HC_1_1$Data__Fin__FS($_0_lift);
 }
 
-// Backend.Haskell.{renderApp_403}
+// TParsec.Types.{recordChar_593}
 
-function Backend__Haskell___123_renderApp_95_403_125_($_0_lift, $_1_lift){
+function TParsec__Types___123_recordChar_95_593_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
+    let $cg$1 = null;
+    const $cg$3 = $_0_lift.$1;
+    $cg$1 = $cg$3.$1;
+    return Prelude__Functor__TParsec__Result___64_Prelude__Functor__Functor_36_ResultT_32_e_32_m_58__33_map_58_0(null, null, null, null, $cg$1, $_3_lift, $_4_lift);
+}
+
+// TParsec.Types.{recordChar_595}
+
+function TParsec__Types___123_recordChar_95_595_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
+    let $cg$1 = null;
+    const $cg$3 = $_0_lift.$1;
+    $cg$1 = $cg$3.$1;
+    return Prelude__Functor__TParsec__Result___64_Prelude__Functor__Functor_36_ResultT_32_e_32_m_58__33_map_58_0(null, null, null, null, $cg$1, $_3_lift, $_4_lift);
+}
+
+// TParsec.Types.{recordChar_596}
+
+function TParsec__Types___123_recordChar_95_596_125_($_0_lift, $_1_lift, $_2_lift){
+    
+    const $cg$3 = $_0_lift.$1;
+    return $cg$3.$2(null)(new $HC_1_2$TParsec__Result__Value($_2_lift));
+}
+
+// TParsec.Types.{recordChar_597}
+
+function TParsec__Types___123_recordChar_95_597_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
+    return Prelude__Applicative__TParsec__Result___64_Prelude__Applicative__Applicative_36_ResultT_32_e_32_m_58__33__60__42__62__58_0(null, null, null, null, $_0_lift, $_3_lift, $_4_lift);
+}
+
+// TParsec.Types.{recordChar_598}
+
+function TParsec__Types___123_recordChar_95_598_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
+    return Prelude__Monad__TParsec__Result___64_Prelude__Monad__Monad_36_ResultT_32_e_32_m_58__33__62__62__61__58_0(null, null, null, null, $_0_lift, $_3_lift, $_4_lift);
+}
+
+// TParsec.Types.{recordChar_599}
+
+function TParsec__Types___123_recordChar_95_599_125_($_0_lift, $_1_lift){
+    
+    const $cg$3 = $_0_lift.$1;
+    return $cg$3.$2(null)(new $HC_1_2$TParsec__Result__Value(new $HC_2_0$Builtins__MkPair($_1_lift, $_1_lift)));
+}
+
+// TParsec.Types.{recordChar_600}
+
+function TParsec__Types___123_recordChar_95_600_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    
+    const $cg$3 = $_0_lift.$1;
+    let $cg$4 = null;
+    $cg$4 = new $HC_2_0$Builtins__MkPair(TParsec__Types__update($_1_lift, $_2_lift.$1), $_2_lift.$2);
+    return $cg$3.$2(null)(new $HC_1_2$TParsec__Result__Value(new $HC_2_0$Builtins__MkPair($HC_0_0$MkUnit, $cg$4)));
+}
+
+// Backend.Haskell.{renderApp_601}
+
+function Backend__Haskell___123_renderApp_95_601_125_($_0_lift, $_1_lift){
     return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat($_0_lift, new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), $_1_lift));
 }
 
-// Backend.Haskell.{renderDef_410}
+// Backend.Haskell.{renderDef_608}
 
-function Backend__Haskell___123_renderDef_95_410_125_($_0_lift){
+function Backend__Haskell___123_renderDef_95_608_125_($_0_lift){
     let $cg$1 = null;
     if((((($_0_lift == "")) ? 1|0 : 0|0) === 0)) {
         $cg$1 = true;
@@ -7195,9 +10294,9 @@ function Backend__Haskell___123_renderDef_95_410_125_($_0_lift){
     return Text__PrettyPrint__WL__Core__text($cg$2);
 }
 
-// Backend.Haskell.{renderDef_414}
+// Backend.Haskell.{renderDef_614}
 
-function Backend__Haskell___123_renderDef_95_414_125_($_0_lift){
+function Backend__Haskell___123_renderDef_95_614_125_($_0_lift){
     let $cg$1 = null;
     if((((($_0_lift == "")) ? 1|0 : 0|0) === 0)) {
         $cg$1 = true;
@@ -7223,82 +10322,246 @@ function Backend__Haskell___123_renderDef_95_414_125_($_0_lift){
     return Text__PrettyPrint__WL__Core__text($cg$2);
 }
 
-// Typedefs.{shiftVars_427}
+// Backend.Haskell.{renderTerm_623}
 
-function Typedefs___123_shiftVars_95_427_125_($_0_lift){
+function Backend__Haskell___123_renderTerm_95_623_125_($_0_lift, $_1_lift, $_2_lift){
+    return new $HC_2_5$Text__PrettyPrint__WL__Core__Nest(($_0_lift - $_2_lift), Backend__Haskell__renderTerm($_1_lift));
+}
+
+// Backend.Haskell.{renderTerm_624}
+
+function Backend__Haskell___123_renderTerm_95_624_125_($_0_lift, $_1_lift){
+    return new $HC_1_8$Text__PrettyPrint__WL__Core__Nesting($partial_2_3$Backend__Haskell___123_renderTerm_95_623_125_($_1_lift, $_0_lift));
+}
+
+// Backend.Haskell.{renderTerm_627}
+
+function Backend__Haskell___123_renderTerm_95_627_125_($_0_lift, $_1_lift, $_2_lift){
+    let $cg$1 = null;
+    $cg$1 = new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Backend__Haskell__renderTerm($_1_lift.$1), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__text("->"), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), Backend__Haskell__renderTerm($_1_lift.$2)))));
+    return new $HC_2_5$Text__PrettyPrint__WL__Core__Nest(($_0_lift - $_2_lift), new $HC_2_5$Text__PrettyPrint__WL__Core__Nest(2, $cg$1));
+}
+
+// Backend.Haskell.{renderTerm_628}
+
+function Backend__Haskell___123_renderTerm_95_628_125_($_0_lift, $_1_lift){
+    return new $HC_1_8$Text__PrettyPrint__WL__Core__Nesting($partial_2_3$Backend__Haskell___123_renderTerm_95_627_125_($_1_lift, $_0_lift));
+}
+
+// Backend.Haskell.{renderTerm_629}
+
+function Backend__Haskell___123_renderTerm_95_629_125_($_0_lift){
+    return new $HC_1_7$Text__PrettyPrint__WL__Core__Column($partial_1_2$Backend__Haskell___123_renderTerm_95_628_125_($_0_lift));
+}
+
+// Backend.Haskell.{renderTerm_630}
+
+function Backend__Haskell___123_renderTerm_95_630_125_($_0_lift, $_1_lift, $_2_lift){
+    const $cg$2 = Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldr_58_0(null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $partial_0_1$Backend__Haskell___123_renderTerm_95_629_125_(), $_1_lift));
+    let $cg$1 = null;
+    if(($cg$2.type === 1)) {
+        $cg$1 = Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Backend___123_generateDefs_95_259_125_(), $cg$2.$1, $cg$2.$2);
+    } else {
+        $cg$1 = $HC_0_0$Text__PrettyPrint__WL__Core__Empty;
+    }
+    
+    return new $HC_2_5$Text__PrettyPrint__WL__Core__Nest(($_0_lift - $_2_lift), new $HC_2_5$Text__PrettyPrint__WL__Core__Nest(2, new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__text(Text__PrettyPrint__WL__Core__spaces(2)), $cg$1)));
+}
+
+// Backend.Haskell.{renderTerm_631}
+
+function Backend__Haskell___123_renderTerm_95_631_125_($_0_lift, $_1_lift){
+    return new $HC_1_8$Text__PrettyPrint__WL__Core__Nesting($partial_2_3$Backend__Haskell___123_renderTerm_95_630_125_($_1_lift, $_0_lift));
+}
+
+// Backend.Haskell.{renderTerm_632}
+
+function Backend__Haskell___123_renderTerm_95_632_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    return new $HC_2_5$Text__PrettyPrint__WL__Core__Nest(($_0_lift - $_3_lift), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__text("case"), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(new $HC_1_7$Text__PrettyPrint__WL__Core__Column($partial_1_2$Backend__Haskell___123_renderTerm_95_624_125_($_1_lift)), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__text("of"), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(new $HC_1_3$Text__PrettyPrint__WL__Core__Line(true), new $HC_1_7$Text__PrettyPrint__WL__Core__Column($partial_1_2$Backend__Haskell___123_renderTerm_95_631_125_($_2_lift)))))))));
+}
+
+// Backend.Haskell.{renderTerm_633}
+
+function Backend__Haskell___123_renderTerm_95_633_125_($_0_lift, $_1_lift, $_2_lift){
+    return new $HC_1_8$Text__PrettyPrint__WL__Core__Nesting($partial_3_4$Backend__Haskell___123_renderTerm_95_632_125_($_2_lift, $_0_lift, $_1_lift));
+}
+
+// Backend.Haskell.{renderTerm_635}
+
+function Backend__Haskell___123_renderTerm_95_635_125_($_0_lift, $_1_lift, $_2_lift){
+    let $cg$1 = null;
+    const $cg$3 = $_1_lift.$1;
+    if(($cg$3.type === 1)) {
+        $cg$1 = new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Backend__Haskell__renderTerm($cg$3.$1), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__text("<-"), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), Backend__Haskell__renderTerm($_1_lift.$2)))));
+    } else {
+        $cg$1 = Backend__Haskell__renderTerm($_1_lift.$2);
+    }
+    
+    return new $HC_2_5$Text__PrettyPrint__WL__Core__Nest(($_0_lift - $_2_lift), new $HC_2_5$Text__PrettyPrint__WL__Core__Nest(2, $cg$1));
+}
+
+// Backend.Haskell.{renderTerm_636}
+
+function Backend__Haskell___123_renderTerm_95_636_125_($_0_lift, $_1_lift){
+    return new $HC_1_8$Text__PrettyPrint__WL__Core__Nesting($partial_2_3$Backend__Haskell___123_renderTerm_95_635_125_($_1_lift, $_0_lift));
+}
+
+// Backend.Haskell.{renderTerm_637}
+
+function Backend__Haskell___123_renderTerm_95_637_125_($_0_lift){
+    return new $HC_1_7$Text__PrettyPrint__WL__Core__Column($partial_1_2$Backend__Haskell___123_renderTerm_95_636_125_($_0_lift));
+}
+
+// Backend.Haskell.{renderTerm_638}
+
+function Backend__Haskell___123_renderTerm_95_638_125_($_0_lift, $_1_lift, $_2_lift){
+    const $cg$2 = Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $partial_0_1$Backend__Haskell___123_renderTerm_95_637_125_(), $_1_lift);
+    let $cg$1 = null;
+    if(($cg$2.type === 1)) {
+        $cg$1 = Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Backend___123_generateDefs_95_259_125_(), $cg$2.$1, $cg$2.$2);
+    } else {
+        $cg$1 = $HC_0_0$Text__PrettyPrint__WL__Core__Empty;
+    }
+    
+    return new $HC_2_5$Text__PrettyPrint__WL__Core__Nest(($_0_lift - $_2_lift), new $HC_2_5$Text__PrettyPrint__WL__Core__Nest(2, new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__text(Text__PrettyPrint__WL__Core__spaces(2)), $cg$1)));
+}
+
+// Backend.Haskell.{renderTerm_639}
+
+function Backend__Haskell___123_renderTerm_95_639_125_($_0_lift, $_1_lift){
+    return new $HC_1_8$Text__PrettyPrint__WL__Core__Nesting($partial_2_3$Backend__Haskell___123_renderTerm_95_638_125_($_1_lift, $_0_lift));
+}
+
+// Backend.Haskell.{renderTerm_640}
+
+function Backend__Haskell___123_renderTerm_95_640_125_($_0_lift, $_1_lift, $_2_lift){
+    return new $HC_2_5$Text__PrettyPrint__WL__Core__Nest(($_0_lift - $_2_lift), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__text("do"), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(new $HC_1_3$Text__PrettyPrint__WL__Core__Line(true), new $HC_1_7$Text__PrettyPrint__WL__Core__Column($partial_1_2$Backend__Haskell___123_renderTerm_95_639_125_($_1_lift)))));
+}
+
+// Backend.Haskell.{renderTerm_641}
+
+function Backend__Haskell___123_renderTerm_95_641_125_($_0_lift, $_1_lift){
+    return new $HC_1_8$Text__PrettyPrint__WL__Core__Nesting($partial_2_3$Backend__Haskell___123_renderTerm_95_640_125_($_1_lift, $_0_lift));
+}
+
+// Backend.Haskell.{runTermGen_654}
+
+function Backend__Haskell___123_runTermGen_95_654_125_($_0_lift, $_1_lift){
+    return Prelude__Interfaces__Prelude__Interfaces___64_Prelude__Interfaces__Ord_36_String_58__33_compare_58_0($_0_lift, $_1_lift);
+}
+
+// Backend.Haskell.{runTermGen_655}
+
+function Backend__Haskell___123_runTermGen_95_655_125_($_0_lift, $_1_lift){
+    
+    if((Prelude__Interfaces__Prelude__Interfaces___64_Prelude__Interfaces__Ord_36_String_58__33_compare_58_0($_0_lift, $_1_lift) < 0)) {
+        return true;
+    } else {
+        return ($_0_lift == $_1_lift);
+    }
+}
+
+// Typedefs.{shiftVars_656}
+
+function Typedefs___123_shiftVars_95_656_125_($_0_lift){
     
     return new $HC_2_0$Builtins__MkPair($_0_lift.$1, Typedefs__shiftVars(null, $_0_lift.$2));
 }
 
-// Language.JSON.Data.{showString_428}
+// Language.JSON.Data.{showString_657}
 
-function Language__JSON__Data___123_showString_95_428_125_($_0_lift, $_1_lift){
+function Language__JSON__Data___123_showString_95_657_125_($_0_lift, $_1_lift){
     return (Language__JSON__Data__showChar($_0_lift) + $_1_lift);
 }
 
-// TParsec.Combinators.Chars.{string_430}
+// Backend.Haskell.{simplify_658}
 
-function TParsec__Combinators__Chars___123_string_95_430_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_6_lift, $_7_lift){
+function Backend__Haskell___123_simplify_95_658_125_($_0_lift){
+    
+    return new $HC_2_0$Builtins__MkPair($_0_lift.$1, Backend__Haskell__simplify($_0_lift.$2));
+}
+
+// Backend.Haskell.{simplify_659}
+
+function Backend__Haskell___123_simplify_95_659_125_($_0_lift){
+    
+    if(($_0_lift.type === 7)) {
+        
+        if(($_0_lift.$1 === "mempty")) {
+            return false;
+        } else {
+            return true;
+        }
+    } else {
+        return true;
+    }
+}
+
+// TParsec.Combinators.Chars.{string_663}
+
+function TParsec__Combinators__Chars___123_string_95_663_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_6_lift, $_7_lift){
     return TParsec__Combinators__Chars__char(null, $_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_7_lift)($_6_lift);
 }
 
-// Parse.{tdef_431}
+// Parse.{tdef_676}
 
-function Parse___123_tdef_95_431_125_($_0_lift, $_1_lift, $_2_lift){
-    return new $HC_2_0$Builtins__MkPair(new $HC_1_2$TParsec__Result__Value(new $HC_2_0$Builtins__MkPair($HC_0_0$MkUnit, $_1_lift)), $_2_lift);
+function Parse___123_tdef_95_676_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), $_2_lift, $_3_lift);
 }
 
-// Parse.{tdef_434}
+// Parse.{tdef_679}
 
-function Parse___123_tdef_95_434_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
-    return Prelude__Functor__TParsec__Types___64_Prelude__Functor__Functor_36_TParsecT_32_e_32_a_32_m_58__33_map_58_0(null, null, null, null, null, $partial_0_4$Backend__Haskell___123_makeDefs_95_127_125_(), $_2_lift, $_3_lift);
+function Parse___123_tdef_95_679_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    return Prelude__Functor__TParsec__Types___64_Prelude__Functor__Functor_36_TParsecT_32_e_32_a_32_m_58__33_map_58_0(null, null, null, null, null, $partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $_2_lift, $_3_lift);
 }
 
-// Parse.{tdef_447}
+// Parse.{tdef_693}
 
-function Parse___123_tdef_95_447_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
-    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_()), $partial_0_4$Backend__Utils___123_ifNotPresent_95_91_125_()), $_2_lift, $_3_lift);
+function Parse___123_tdef_95_693_125_($_0_lift, $_1_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33_pure_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $_1_lift);
 }
 
-// Parse.{tdef_448}
+// Parse.{tdef_707}
 
-function Parse___123_tdef_95_448_125_($_0_lift, $_1_lift){
-    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33_pure_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_makeDefs_95_127_125_(), $partial_0_3$Backend__Haskell___123_makeDefs_95_128_125_(), $partial_0_4$Backend__Haskell___123_makeDefs_95_133_125_()), $partial_0_4$Parse___123_tdef_95_447_125_()), $_1_lift);
+function Parse___123_tdef_95_707_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    return Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0(null, null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $_2_lift, $_3_lift);
 }
 
-// Parse.{tdef_462}
+// Parse.{tdef_721}
 
-function Parse___123_tdef_95_462_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
-    return Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0(null, null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_makeDefs_95_127_125_(), $partial_0_3$Backend__Haskell___123_makeDefs_95_128_125_(), $partial_0_4$Backend__Haskell___123_makeDefs_95_133_125_()), $partial_0_4$Parse___123_tdef_95_447_125_()), $_2_lift, $_3_lift);
+function Parse___123_tdef_95_721_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
 }
 
-// Parse.{tdef_477}
+// Parse.{tdef_722}
 
-function Parse___123_tdef_95_477_125_($_0_lift){
-    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_makeDefs_95_127_125_(), $partial_0_3$Backend__Haskell___123_makeDefs_95_128_125_(), $partial_0_4$Backend__Haskell___123_makeDefs_95_133_125_()), $partial_0_4$Parse___123_tdef_95_447_125_()), $partial_0_1$Parse___123_emptyComments_95_33_125_());
+function Parse___123_tdef_95_722_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdef_95_721_125_());
 }
 
-// Parse.{tdef_491}
+// Parse.{tdef_736}
 
-function Parse___123_tdef_95_491_125_($_0_lift, $_1_lift, $_2_lift){
-    return $partial_8_9$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33__60__124__62__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_makeDefs_95_127_125_(), $partial_0_3$Backend__Haskell___123_makeDefs_95_128_125_(), $partial_0_4$Backend__Haskell___123_makeDefs_95_133_125_()), $partial_0_4$Parse___123_tdef_95_447_125_()), null, $_1_lift, $_2_lift);
+function Parse___123_tdef_95_736_125_($_0_lift, $_1_lift, $_2_lift){
+    return $partial_8_9$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33__60__124__62__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), null, $_1_lift, $_2_lift);
 }
 
-// Parse.{tdef_536}
+// Parse.{tdef_781}
 
-function Parse___123_tdef_95_536_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
-    return Prelude__Monad__TParsec__Types___64_Prelude__Monad__Monad_36_TParsecT_32_e_32_a_32_m_58__33__62__62__61__58_0(null, null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_makeDefs_95_127_125_(), $partial_0_3$Backend__Haskell___123_makeDefs_95_128_125_(), $partial_0_4$Backend__Haskell___123_makeDefs_95_133_125_()), $partial_0_4$Parse___123_tdef_95_447_125_()), $_2_lift, $_3_lift);
+function Parse___123_tdef_95_781_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    return Prelude__Monad__TParsec__Types___64_Prelude__Monad__Monad_36_TParsecT_32_e_32_a_32_m_58__33__62__62__61__58_0(null, null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $_2_lift, $_3_lift);
 }
 
-// Parse.{tdef_538}
+// Parse.{tdef_783}
 
-function Parse___123_tdef_95_538_125_($_0_lift, $_1_lift){
+function Parse___123_tdef_95_783_125_($_0_lift, $_1_lift){
     return ($_0_lift === $_1_lift);
 }
 
-// Parse.{tdef_539}
+// Parse.{tdef_784}
 
-function Parse___123_tdef_95_539_125_($_0_lift, $_1_lift){
+function Parse___123_tdef_95_784_125_($_0_lift, $_1_lift){
     
     if((((($_0_lift === $_1_lift)) ? 1|0 : 0|0) === 0)) {
         return true;
@@ -7307,22 +10570,568 @@ function Parse___123_tdef_95_539_125_($_0_lift, $_1_lift){
     }
 }
 
-// Parse.{tdef_540}
+// Parse.{tdef_785}
 
-function Parse___123_tdef_95_540_125_($_0_lift, $_1_lift){
+function Parse___123_tdef_95_785_125_($_0_lift, $_1_lift){
     return Data__Inspect__Data__Inspect___64_Data__Inspect__Inspect_36_SizedList_32_a_58_a_58__33_inspect_58_0_58_go_58_0(null, null, null, null, $_0_lift, $_1_lift, null);
 }
 
-// Parse.{tdef_706}
+// Parse.{tdef_830}
 
-function Parse___123_tdef_95_706_125_($_0_lift){
+function Parse___123_tdef_95_830_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tdef_831}
+
+function Parse___123_tdef_95_831_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdef_95_830_125_());
+}
+
+// Parse.{tdef_849}
+
+function Parse___123_tdef_95_849_125_($_0_lift){
+    return new $HC_2_0$Builtins__MkDPair((new $JSRTS.jsbn.BigInteger(("0"))), $HC_0_0$Typedefs__T0);
+}
+
+// Parse.{tdef_907}
+
+function Parse___123_tdef_95_907_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tdef_908}
+
+function Parse___123_tdef_95_908_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdef_95_907_125_());
+}
+
+// Parse.{tdef_975}
+
+function Parse___123_tdef_95_975_125_($_0_lift){
+    return new $HC_2_0$Builtins__MkDPair((new $JSRTS.jsbn.BigInteger(("0"))), $HC_0_1$Typedefs__T1);
+}
+
+// Parse.{tdef_1033}
+
+function Parse___123_tdef_95_1033_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tdef_1034}
+
+function Parse___123_tdef_95_1034_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdef_95_1033_125_());
+}
+
+// Parse.{tdef_1098}
+
+function Parse___123_tdef_95_1098_125_($_0_lift, $_1_lift, $_2_lift){
+    return new $HC_2_3$Typedefs__TProd($_0_lift, $_2_lift);
+}
+
+// Parse.{tdef_1099}
+
+function Parse___123_tdef_95_1099_125_($_0_lift, $_1_lift, $_2_lift){
+    return new $HC_2_2$Typedefs__TSum($_0_lift, $_2_lift);
+}
+
+// Parse.{tdef_1100}
+
+function Parse___123_tdef_95_1100_125_($_0_lift, $_1_lift){
+    return Parse__ignoreSpaces(null, null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdef_95_722_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), $_0_lift, TParsec__Combinators__alts(null, null, null, new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdef_95_831_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), null, new $HC_2_1$Prelude__List___58__58_(Parse__tdefRef($_0_lift), new $HC_2_1$Prelude__List___58__58_(Parse__tdefName($_0_lift, $_1_lift), new $HC_2_1$Prelude__List___58__58_($partial_8_11$TParsec__Combinators__map(null, null, null, null, $partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_1$Parse___123_tdef_95_849_125_(), null, TParsec__Combinators__Chars__char(null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdef_95_908_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), "0")($_0_lift)), new $HC_2_1$Prelude__List___58__58_($partial_8_11$TParsec__Combinators__map(null, null, null, null, $partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_1$Parse___123_tdef_95_975_125_(), null, TParsec__Combinators__Chars__char(null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdef_95_1034_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), "1")($_0_lift)), new $HC_2_1$Prelude__List___58__58_(Parse__tdefNary($_0_lift, $_1_lift, "*", $partial_0_3$Parse___123_tdef_95_1098_125_()), new $HC_2_1$Prelude__List___58__58_(Parse__tdefNary($_0_lift, $_1_lift, "+", $partial_0_3$Parse___123_tdef_95_1099_125_()), new $HC_2_1$Prelude__List___58__58_(Parse__tdefVar($_0_lift), new $HC_2_1$Prelude__List___58__58_(Parse__tdefMu($_0_lift, $_1_lift), $HC_0_0$Prelude__List__Nil))))))))));
+}
+
+// Parse.{tdefMu_1104}
+
+function Parse___123_tdefMu_95_1104_125_($_0_lift){
+    
+    const $cg$3 = $_0_lift.$2;
+    return new $HC_2_0$Builtins__MkDPair($cg$3.$1, new $HC_2_0$Builtins__MkPair($_0_lift.$1, $cg$3.$2));
+}
+
+// Parse.{tdefMu_1105}
+
+function Parse___123_tdefMu_95_1105_125_($_0_lift){
+    
+    const $cg$3 = $_0_lift.$2;
+    const $cg$5 = $cg$3.$2;
+    return new $HC_2_0$Builtins__MkPair($cg$5.$1, Typedefs__weakenTDef(null, $cg$5.$2, (new $JSRTS.jsbn.BigInteger(("1"))), Prelude__Nat__lteSuccRight(null, null, $cg$3.$1)));
+}
+
+// Parse.{tdefMu_1106}
+
+function Parse___123_tdefMu_95_1106_125_($_0_lift, $_1_lift){
+    
+    const $cg$3 = $_1_lift.$2;
+    const $cg$5 = $cg$3.$2;
+    return new $HC_2_0$Builtins__MkPair($cg$5.$1, Typedefs__weakenTDef(null, $cg$5.$2, $_0_lift.add((new $JSRTS.jsbn.BigInteger(("1")))), $cg$3.$1));
+}
+
+// Parse.{tdefMu_1107}
+
+function Parse___123_tdefMu_95_1107_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = new $HC_2_1$Data__Vect___58__58_($_0_lift.$1, Data__Vect__fromList(null, $_0_lift.$2));
+    const $_15_in = Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Parse___123_tdefMu_95_1104_125_(), $cg$1);
+    const $cg$3 = Parse__toVMax(null, null, $_15_in);
+    
+    if($cg$3.$1.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
+        let $cg$5 = null;
+        $cg$5 = $_0_lift.$2;
+        return new $HC_2_0$Builtins__MkDPair((new $JSRTS.jsbn.BigInteger(("0"))), new $HC_2_5$Typedefs__TMu(Prelude__List__length(null, $cg$5).add((new $JSRTS.jsbn.BigInteger(("1")))), Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Parse___123_tdefMu_95_1105_125_(), Parse__fromVMax_58_go_58_0(null, (new $JSRTS.jsbn.BigInteger(("0"))), null, null, null, null, Prelude__Nat__lteRefl((new $JSRTS.jsbn.BigInteger(("0")))), $cg$3.$2))));
+    } else {
+        const $_34_in = $cg$3.$1.subtract((new $JSRTS.jsbn.BigInteger(("1"))));
+        let $cg$6 = null;
+        $cg$6 = $_0_lift.$2;
+        return new $HC_2_0$Builtins__MkDPair($_34_in, new $HC_2_5$Typedefs__TMu(Prelude__List__length(null, $cg$6).add((new $JSRTS.jsbn.BigInteger(("1")))), Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_1_2$Parse___123_tdefMu_95_1106_125_($_34_in), Parse__fromVMax_58_go_58_0(null, $_34_in.add((new $JSRTS.jsbn.BigInteger(("1")))), null, null, null, null, Prelude__Nat__lteRefl($_34_in.add((new $JSRTS.jsbn.BigInteger(("1"))))), $cg$3.$2))));
+    }
+}
+
+// Parse.{tdefMu_1165}
+
+function Parse___123_tdefMu_95_1165_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tdefMu_1166}
+
+function Parse___123_tdefMu_95_1166_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdefMu_95_1165_125_());
+}
+
+// Parse.{tdefMu_1332}
+
+function Parse___123_tdefMu_95_1332_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tdefMu_1333}
+
+function Parse___123_tdefMu_95_1333_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdefMu_95_1332_125_());
+}
+
+// Parse.{tdefMu_1454}
+
+function Parse___123_tdefMu_95_1454_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tdefMu_1455}
+
+function Parse___123_tdefMu_95_1455_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdefMu_95_1454_125_());
+}
+
+// Parse.{tdefMu_1565}
+
+function Parse___123_tdefMu_95_1565_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tdefMu_1566}
+
+function Parse___123_tdefMu_95_1566_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdefMu_95_1565_125_());
+}
+
+// Parse.{tdefMu_1683}
+
+function Parse___123_tdefMu_95_1683_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tdefMu_1684}
+
+function Parse___123_tdefMu_95_1684_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdefMu_95_1683_125_());
+}
+
+// Parse.{tdefMu_1805}
+
+function Parse___123_tdefMu_95_1805_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tdefMu_1806}
+
+function Parse___123_tdefMu_95_1806_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdefMu_95_1805_125_());
+}
+
+// Parse.{tdefMu_1972}
+
+function Parse___123_tdefMu_95_1972_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tdefMu_1973}
+
+function Parse___123_tdefMu_95_1973_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdefMu_95_1972_125_());
+}
+
+// Parse.{tdefMu_2094}
+
+function Parse___123_tdefMu_95_2094_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tdefMu_2095}
+
+function Parse___123_tdefMu_95_2095_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdefMu_95_2094_125_());
+}
+
+// Parse.{tdefMu_2160}
+
+function Parse___123_tdefMu_95_2160_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_6_lift, $_7_lift){
+    return $_0_lift($_1_lift)($_2_lift)($_6_lift)(Prelude__Nat__lteTransitive(null, null, null, $_7_lift, null));
+}
+
+// Parse.{tdefMu_2161}
+
+function Parse___123_tdefMu_95_2161_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_6_lift){
+    return $partial_10_11$TParsec__Combinators__andbind(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), null, Parse__ignoreSpaces(null, null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdefMu_95_1973_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), $_0_lift, TParsec__Combinators__Chars__alphas(null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdefMu_95_2095_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), $_0_lift)), $partial_3_8$Parse___123_tdefMu_95_2160_125_($_1_lift, $_0_lift, $_2_lift), $_5_lift, Prelude__Nat__lteTransitive(null, null, null, $_6_lift, null));
+}
+
+// Parse.{tdefMu_2162}
+
+function Parse___123_tdefMu_95_2162_125_($_0_lift, $_1_lift, $_2_lift){
+    return $partial_8_11$TParsec__Types__commit(null, null, null, null, null, $partial_0_4$Backend__Haskell___123_decode_95_48_125_(), null, TParsec__Combinators__nelist(null, null, null, new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdefMu_95_1566_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $_1_lift)(Parse__ignoreSpaces(null, null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdefMu_95_1684_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), $_1_lift, TParsec__Combinators__Chars__parens(null, null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdefMu_95_1806_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), $_1_lift, $partial_3_7$Parse___123_tdefMu_95_2161_125_($_1_lift, $_0_lift, $_2_lift)))));
+}
+
+// Parse.{tdefMu_2163}
+
+function Parse___123_tdefMu_95_2163_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift){
+    return TParsec__Combinators__rand(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), null, null, Parse__ignoreSpaces(null, null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdefMu_95_1333_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), $_0_lift, TParsec__Combinators__Chars__string(null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdefMu_95_1455_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), "mu", null, $_0_lift)), $partial_1_3$Parse___123_tdefMu_95_2162_125_($_1_lift))($_4_lift)(Prelude__Nat__lteTransitive(null, null, null, $_5_lift, null));
+}
+
+// Parse.{tdefName_2208}
+
+function Parse___123_tdefName_95_2208_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tdefName_2209}
+
+function Parse___123_tdefName_95_2209_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdefName_95_2208_125_());
+}
+
+// Parse.{tdefName_2269}
+
+function Parse___123_tdefName_95_2269_125_($_0_lift, $_1_lift){
+    
+    const $cg$3 = $_1_lift.$2;
+    return Typedefs__weakenTDef(null, $cg$3.$2, $_0_lift, $cg$3.$1);
+}
+
+// Parse.{tdefName_2270}
+
+function Parse___123_tdefName_95_2270_125_($_0_lift){
+    
+    const $cg$3 = $_0_lift.$2;
+    let $cg$2 = null;
+    $cg$2 = new $HC_2_1$Data__Vect___58__58_($cg$3.$1, Data__Vect__fromList(null, $cg$3.$2));
+    const $cg$5 = Parse__toVMax(null, null, $cg$2);
+    const $cg$7 = $_0_lift.$1;
+    let $cg$6 = null;
+    $cg$6 = $cg$7.$1;
+    const $cg$9 = $_0_lift.$2;
+    let $cg$8 = null;
+    $cg$8 = $cg$9.$2;
+    const $cg$11 = Decidable__Equality__Decidable__Equality___64_Decidable__Equality__DecEq_36_Nat_58__33_decEq_58_0($cg$6, Prelude__List__length(null, $cg$8).add((new $JSRTS.jsbn.BigInteger(("1")))));
+    if(($cg$11.type === 1)) {
+        return $HC_0_0$Prelude__Maybe__Nothing;
+    } else {
+        const $cg$13 = $_0_lift.$1;
+        let $cg$12 = null;
+        $cg$12 = $cg$13.$1;
+        const $cg$15 = $_0_lift.$1;
+        let $cg$14 = null;
+        $cg$14 = $cg$15.$2;
+        return new $HC_1_1$Prelude__Maybe__Just(new $HC_2_0$Builtins__MkDPair($cg$5.$1, new $HC_3_6$Typedefs__TApp($cg$12, $cg$14, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_1_2$Parse___123_tdefName_95_2269_125_($cg$5.$1), Parse__fromVMax_58_go_58_0(null, $cg$5.$1, null, null, null, null, Prelude__Nat__lteRefl($cg$5.$1), $cg$5.$2)))));
+    }
+}
+
+// Parse.{tdefName_2328}
+
+function Parse___123_tdefName_95_2328_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tdefName_2329}
+
+function Parse___123_tdefName_95_2329_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdefName_95_2328_125_());
+}
+
+// Parse.{tdefName_2482}
+
+function Parse___123_tdefName_95_2482_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tdefName_2483}
+
+function Parse___123_tdefName_95_2483_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdefName_95_2482_125_());
+}
+
+// Parse.{tdefName_2543}
+
+function Parse___123_tdefName_95_2543_125_($_0_lift, $_1_lift){
+    
+    return new $HC_2_0$Builtins__MkDPair($_1_lift.$1, new $HC_2_0$Typedefs__TName($_0_lift, $_1_lift.$2));
+}
+
+// Parse.{tdefName_2544}
+
+function Parse___123_tdefName_95_2544_125_($_0_lift){
     
     const $cg$3 = $_0_lift.$1;
     let $cg$2 = null;
     if(($cg$3.type === 0)) {
         $cg$2 = $HC_0_0$Prelude__Maybe__Nothing;
     } else {
-        $cg$2 = Data__SortedMap__treeLookup(null, null, $cg$3.$1, null, $_0_lift.$2, $cg$3.$2);
+        $cg$2 = Data__SortedMap__treeLookup(null, null, $cg$3.$1, null, $_0_lift.$2, $cg$3.$3);
+    }
+    
+    return Prelude__Functor__Prelude___64_Prelude__Functor__Functor_36_Maybe_58__33_map_58_0(null, null, $partial_1_2$Parse___123_tdefName_95_2543_125_($_0_lift.$2), $cg$2);
+}
+
+// Parse.{tdefName_2661}
+
+function Parse___123_tdefName_95_2661_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tdefName_2662}
+
+function Parse___123_tdefName_95_2662_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdefName_95_2661_125_());
+}
+
+// Parse.{tdefName_2771}
+
+function Parse___123_tdefName_95_2771_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tdefName_2772}
+
+function Parse___123_tdefName_95_2772_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdefName_95_2771_125_());
+}
+
+// Parse.{tdefName_2889}
+
+function Parse___123_tdefName_95_2889_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tdefName_2890}
+
+function Parse___123_tdefName_95_2890_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdefName_95_2889_125_());
+}
+
+// Parse.{tdefName_2954}
+
+function Parse___123_tdefName_95_2954_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    return TParsec__Combinators__nelist(null, null, null, new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdefName_95_2772_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $_2_lift)(Parse__ignoreSpaces(null, null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdefName_95_2890_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), $_2_lift, $_0_lift($_2_lift)($_3_lift)));
+}
+
+// Parse.{tdefName_2955}
+
+function Parse___123_tdefName_95_2955_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift){
+    return $partial_10_11$TParsec__Combinators__andbind(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), null, $partial_9_12$TParsec__Combinators__guardM(null, null, null, null, new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdefName_95_2483_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$Parse___123_tdefName_95_2544_125_(), null, $partial_8_11$TParsec__Combinators__mand(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), null, Control__Monad__Trans__TParsec__Types___64_Control__Monad__Trans__MonadTrans_36_TParsecT_32_e_32_a_58__33_lift_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Backend__Haskell___123_envTerms_95_213_125_()), TParsec__Combinators__Chars__alphas(null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdefName_95_2662_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), $_0_lift))), $partial_1_4$Parse___123_tdefName_95_2954_125_($_1_lift), $_4_lift, Prelude__Nat__lteTransitive(null, null, null, $_5_lift, null));
+}
+
+// Parse.{tdefNary_2959}
+
+function Parse___123_tdefNary_95_2959_125_($_0_lift, $_1_lift){
+    
+    const $cg$3 = $_1_lift.$2;
+    return Typedefs__weakenTDef(null, $cg$3.$2, $_0_lift, $cg$3.$1);
+}
+
+// Parse.{tdefNary_2960}
+
+function Parse___123_tdefNary_95_2960_125_($_0_lift, $_1_lift){
+    
+    const $cg$3 = $_1_lift.$2;
+    let $cg$2 = null;
+    $cg$2 = new $HC_2_1$Data__Vect___58__58_($cg$3.$1, Data__Vect__fromList(null, $cg$3.$2));
+    const $cg$5 = Parse__toVMax(null, null, new $HC_2_1$Data__Vect___58__58_($_1_lift.$1, $cg$2));
+    const $cg$7 = $_1_lift.$2;
+    let $cg$6 = null;
+    $cg$6 = $cg$7.$2;
+    return new $HC_2_0$Builtins__MkDPair($cg$5.$1, $_0_lift(Prelude__List__length(null, $cg$6))($cg$5.$1)(Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_1_2$Parse___123_tdefNary_95_2959_125_($cg$5.$1), Parse__fromVMax_58_go_58_0(null, $cg$5.$1, null, null, null, null, Prelude__Nat__lteRefl($cg$5.$1), $cg$5.$2))));
+}
+
+// Parse.{tdefNary_3018}
+
+function Parse___123_tdefNary_95_3018_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tdefNary_3019}
+
+function Parse___123_tdefNary_95_3019_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdefNary_95_3018_125_());
+}
+
+// Parse.{tdefNary_3185}
+
+function Parse___123_tdefNary_95_3185_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tdefNary_3186}
+
+function Parse___123_tdefNary_95_3186_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdefNary_95_3185_125_());
+}
+
+// Parse.{tdefNary_3307}
+
+function Parse___123_tdefNary_95_3307_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tdefNary_3308}
+
+function Parse___123_tdefNary_95_3308_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdefNary_95_3307_125_());
+}
+
+// Parse.{tdefNary_3476}
+
+function Parse___123_tdefNary_95_3476_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tdefNary_3477}
+
+function Parse___123_tdefNary_95_3477_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdefNary_95_3476_125_());
+}
+
+// Parse.{tdefNary_3589}
+
+function Parse___123_tdefNary_95_3589_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tdefNary_3590}
+
+function Parse___123_tdefNary_95_3590_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdefNary_95_3589_125_());
+}
+
+// Parse.{tdefNary_3707}
+
+function Parse___123_tdefNary_95_3707_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tdefNary_3708}
+
+function Parse___123_tdefNary_95_3708_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdefNary_95_3707_125_());
+}
+
+// Parse.{tdefNary_3772}
+
+function Parse___123_tdefNary_95_3772_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_6_lift, $_7_lift){
+    return $partial_10_11$TParsec__Types__commit(null, null, null, null, null, $partial_0_4$Backend__Haskell___123_decode_95_48_125_(), null, TParsec__Combinators__nelist(null, null, null, new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdefNary_95_3590_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $_0_lift)(Parse__ignoreSpaces(null, null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdefNary_95_3708_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), $_0_lift, $_1_lift($_0_lift)($_2_lift))), $_6_lift, Prelude__Nat__lteTransitive(null, null, null, $_7_lift, null));
+}
+
+// Parse.{tdefNary_3773}
+
+function Parse___123_tdefNary_95_3773_125_($_0_lift, $_1_lift, $_2_lift){
+    return $partial_8_11$TParsec__Types__commit(null, null, null, null, null, $partial_0_4$Backend__Haskell___123_decode_95_48_125_(), null, $partial_8_11$TParsec__Combinators__andbind(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), null, Parse__ignoreSpaces(null, null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdefNary_95_3477_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), $_1_lift, $partial_8_11$TParsec__Types__commit(null, null, null, null, null, $partial_0_4$Backend__Haskell___123_decode_95_48_125_(), null, $_0_lift($_1_lift)($_2_lift))), $partial_3_8$Parse___123_tdefNary_95_3772_125_($_1_lift, $_0_lift, $_2_lift)));
+}
+
+// Parse.{tdefNary_3774}
+
+function Parse___123_tdefNary_95_3774_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_6_lift){
+    return TParsec__Combinators__rand(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), null, null, Parse__ignoreSpaces(null, null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdefNary_95_3186_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), $_0_lift, TParsec__Combinators__Chars__char(null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdefNary_95_3308_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), $_1_lift)($_0_lift)), $partial_1_3$Parse___123_tdefNary_95_3773_125_($_2_lift))($_5_lift)(Prelude__Nat__lteTransitive(null, null, null, $_6_lift, null));
+}
+
+// Parse.{tdefRef_3819}
+
+function Parse___123_tdefRef_95_3819_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tdefRef_3820}
+
+function Parse___123_tdefRef_95_3820_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdefRef_95_3819_125_());
+}
+
+// Parse.{tdefRef_3880}
+
+function Parse___123_tdefRef_95_3880_125_($_0_lift){
+    
+    const $cg$3 = $_0_lift.$1;
+    let $cg$2 = null;
+    if(($cg$3.type === 0)) {
+        $cg$2 = $HC_0_0$Prelude__Maybe__Nothing;
+    } else {
+        $cg$2 = Data__SortedMap__treeLookup(null, null, $cg$3.$1, null, $_0_lift.$2, $cg$3.$3);
     }
     
     
@@ -7347,229 +11156,241 @@ function Parse___123_tdef_95_706_125_($_0_lift){
     }
 }
 
-// Parse.{tdef_982}
+// Parse.{tdefRef_3997}
 
-function Parse___123_tdef_95_982_125_($_0_lift, $_1_lift){
-    
-    const $cg$3 = $_1_lift.$2;
-    return Typedefs__weakenTDef(null, $cg$3.$2, $_0_lift, $cg$3.$1);
+function Parse___123_tdefRef_95_3997_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
 }
 
-// Parse.{tdef_983}
+// Parse.{tdefRef_3998}
 
-function Parse___123_tdef_95_983_125_($_0_lift){
-    
-    const $cg$3 = $_0_lift.$2;
-    let $cg$2 = null;
-    $cg$2 = new $HC_2_1$Data__Vect___58__58_($cg$3.$1, Data__Vect__fromList(null, $cg$3.$2));
-    const $cg$5 = Parse__toVMax(null, null, $cg$2);
-    const $cg$7 = $_0_lift.$1;
-    let $cg$6 = null;
-    $cg$6 = $cg$7.$1;
-    const $cg$9 = $_0_lift.$2;
-    let $cg$8 = null;
-    $cg$8 = $cg$9.$2;
-    const $cg$11 = Decidable__Equality__Decidable__Equality___64_Decidable__Equality__DecEq_36_Nat_58__33_decEq_58_0($cg$6, Prelude__List__length(null, $cg$8).add((new $JSRTS.jsbn.BigInteger(("1")))));
-    if(($cg$11.type === 1)) {
-        return $HC_0_0$Prelude__Maybe__Nothing;
-    } else {
-        const $cg$13 = $_0_lift.$1;
-        let $cg$12 = null;
-        $cg$12 = $cg$13.$1;
-        const $cg$15 = $_0_lift.$1;
-        let $cg$14 = null;
-        $cg$14 = $cg$15.$2;
-        return new $HC_1_1$Prelude__Maybe__Just(new $HC_2_0$Builtins__MkDPair($cg$5.$1, new $HC_3_6$Typedefs__TApp($cg$12, $cg$14, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_1_2$Parse___123_tdef_95_982_125_($cg$5.$1), Parse__fromVMax_58_go_58_0(null, $cg$5.$1, null, null, null, null, Prelude__Nat__lteRefl($cg$5.$1), $cg$5.$2)))));
-    }
+function Parse___123_tdefRef_95_3998_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdefRef_95_3997_125_());
 }
 
-// Parse.{tdef_1244}
+// Parse.{tdefVar_4066}
 
-function Parse___123_tdef_95_1244_125_($_0_lift, $_1_lift){
-    
-    return new $HC_2_0$Builtins__MkDPair($_1_lift.$1, new $HC_2_0$Typedefs__TName($_0_lift, $_1_lift.$2));
-}
-
-// Parse.{tdef_1245}
-
-function Parse___123_tdef_95_1245_125_($_0_lift){
-    
-    const $cg$3 = $_0_lift.$1;
-    let $cg$2 = null;
-    if(($cg$3.type === 0)) {
-        $cg$2 = $HC_0_0$Prelude__Maybe__Nothing;
-    } else {
-        $cg$2 = Data__SortedMap__treeLookup(null, null, $cg$3.$1, null, $_0_lift.$2, $cg$3.$2);
-    }
-    
-    return Prelude__Functor__Prelude___64_Prelude__Functor__Functor_36_Maybe_58__33_map_58_0(null, null, $partial_1_2$Parse___123_tdef_95_1244_125_($_0_lift.$2), $cg$2);
-}
-
-// Parse.{tdef_1631}
-
-function Parse___123_tdef_95_1631_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
-    return TParsec__Combinators__nelist(null, null, null, new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $_2_lift)(Parse__ignorespaces(null, null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), $_2_lift, $_0_lift($_2_lift)($_3_lift)));
-}
-
-// Parse.{tdef_1632}
-
-function Parse___123_tdef_95_1632_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift){
-    return $partial_10_11$TParsec__Combinators__andbind(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), null, $partial_9_12$TParsec__Combinators__guardM(null, null, null, null, new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Parse___123_tdef_95_1245_125_(), null, $partial_8_11$TParsec__Combinators__mand(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), null, Control__Monad__Trans__TParsec__Types___64_Control__Monad__Trans__MonadTrans_36_TParsecT_32_e_32_a_58__33_lift_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_makeDefs_95_127_125_(), $partial_0_3$Backend__Haskell___123_makeDefs_95_128_125_(), $partial_0_4$Backend__Haskell___123_makeDefs_95_133_125_()), $partial_0_4$Parse___123_tdef_95_447_125_()), $partial_0_1$Backend__Utils___123_ifNotPresent_95_92_125_()), TParsec__Combinators__Chars__alphas(null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), $_0_lift))), $partial_1_4$Parse___123_tdef_95_1631_125_($_1_lift), $_4_lift, Prelude__Nat__lteTransitive(null, null, null, $_5_lift, null));
-}
-
-// Parse.{tdef_1636}
-
-function Parse___123_tdef_95_1636_125_($_0_lift){
-    return new $HC_2_0$Builtins__MkDPair((new $JSRTS.jsbn.BigInteger(("0"))), $HC_0_0$Typedefs__T0);
-}
-
-// Parse.{tdef_1750}
-
-function Parse___123_tdef_95_1750_125_($_0_lift){
-    return new $HC_2_0$Builtins__MkDPair((new $JSRTS.jsbn.BigInteger(("0"))), $HC_0_1$Typedefs__T1);
-}
-
-// Parse.{tdef_1861}
-
-function Parse___123_tdef_95_1861_125_($_0_lift, $_1_lift, $_2_lift){
-    return new $HC_2_3$Typedefs__TProd($_0_lift, $_2_lift);
-}
-
-// Parse.{tdef_1862}
-
-function Parse___123_tdef_95_1862_125_($_0_lift, $_1_lift, $_2_lift){
-    return new $HC_2_2$Typedefs__TSum($_0_lift, $_2_lift);
-}
-
-// Parse.{tdef_1866}
-
-function Parse___123_tdef_95_1866_125_($_0_lift){
+function Parse___123_tdefVar_95_4066_125_($_0_lift){
     return new $HC_2_0$Builtins__MkDPair($_0_lift.add((new $JSRTS.jsbn.BigInteger(("1")))), new $HC_1_4$Typedefs__TVar(Data__Fin__last($_0_lift)));
 }
 
-// Parse.{tdef_2462}
+// Parse.{tdefVar_4124}
 
-function Parse___123_tdef_95_2462_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
-    return Parse__ignorespaces(null, null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), $_0_lift, TParsec__Combinators__Numbers__decimalNat(null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), $_0_lift))($_3_lift)(Prelude__Nat__lteTransitive(null, null, null, $_4_lift, null));
-}
-
-// Parse.{tdef_2463}
-
-function Parse___123_tdef_95_2463_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
-    return TParsec__Combinators__rand(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), null, null, Parse__ignorespaces(null, null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), $_0_lift, TParsec__Combinators__Chars__string(null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), "var", null, $_0_lift)), $partial_1_5$Parse___123_tdef_95_2462_125_($_0_lift))($_3_lift)(Prelude__Nat__lteTransitive(null, null, null, $_4_lift, null));
-}
-
-// Parse.{tdef_2467}
-
-function Parse___123_tdef_95_2467_125_($_0_lift){
-    
-    const $cg$3 = $_0_lift.$2;
-    return new $HC_2_0$Builtins__MkDPair($cg$3.$1, new $HC_2_0$Builtins__MkPair($_0_lift.$1, $cg$3.$2));
-}
-
-// Parse.{tdef_2468}
-
-function Parse___123_tdef_95_2468_125_($_0_lift){
-    
-    const $cg$3 = $_0_lift.$2;
-    const $cg$5 = $cg$3.$2;
-    return new $HC_2_0$Builtins__MkPair($cg$5.$1, Typedefs__weakenTDef(null, $cg$5.$2, (new $JSRTS.jsbn.BigInteger(("1"))), Prelude__Nat__lteSuccRight(null, null, $cg$3.$1)));
-}
-
-// Parse.{tdef_2469}
-
-function Parse___123_tdef_95_2469_125_($_0_lift, $_1_lift){
-    
-    const $cg$3 = $_1_lift.$2;
-    const $cg$5 = $cg$3.$2;
-    return new $HC_2_0$Builtins__MkPair($cg$5.$1, Typedefs__weakenTDef(null, $cg$5.$2, $_0_lift.add((new $JSRTS.jsbn.BigInteger(("1")))), $cg$3.$1));
-}
-
-// Parse.{tdef_2470}
-
-function Parse___123_tdef_95_2470_125_($_0_lift){
+function Parse___123_tdefVar_95_4124_125_($_0_lift){
     let $cg$1 = null;
-    $cg$1 = new $HC_2_1$Data__Vect___58__58_($_0_lift.$1, Data__Vect__fromList(null, $_0_lift.$2));
-    const $_11647_in = Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Parse___123_tdef_95_2467_125_(), $cg$1);
-    const $cg$3 = Parse__toVMax(null, null, $_11647_in);
-    
-    if($cg$3.$1.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
-        let $cg$5 = null;
-        $cg$5 = $_0_lift.$2;
-        return new $HC_2_0$Builtins__MkDPair((new $JSRTS.jsbn.BigInteger(("0"))), new $HC_2_5$Typedefs__TMu(Prelude__List__length(null, $cg$5).add((new $JSRTS.jsbn.BigInteger(("1")))), Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_0_1$Parse___123_tdef_95_2468_125_(), Parse__fromVMax_58_go_58_0(null, (new $JSRTS.jsbn.BigInteger(("0"))), null, null, null, null, Prelude__Nat__lteRefl((new $JSRTS.jsbn.BigInteger(("0")))), $cg$3.$2))));
-    } else {
-        const $_11666_in = $cg$3.$1.subtract((new $JSRTS.jsbn.BigInteger(("1"))));
-        let $cg$6 = null;
-        $cg$6 = $_0_lift.$2;
-        return new $HC_2_0$Builtins__MkDPair($_11666_in, new $HC_2_5$Typedefs__TMu(Prelude__List__length(null, $cg$6).add((new $JSRTS.jsbn.BigInteger(("1")))), Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_1_2$Parse___123_tdef_95_2469_125_($_11666_in), Parse__fromVMax_58_go_58_0(null, $_11666_in.add((new $JSRTS.jsbn.BigInteger(("1")))), null, null, null, null, Prelude__Nat__lteRefl($_11666_in.add((new $JSRTS.jsbn.BigInteger(("1"))))), $cg$3.$2))));
-    }
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
 }
 
-// Parse.{tdef_3437}
+// Parse.{tdefVar_4125}
 
-function Parse___123_tdef_95_3437_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_6_lift, $_7_lift){
-    return $_0_lift($_1_lift)($_2_lift)($_6_lift)(Prelude__Nat__lteTransitive(null, null, null, $_7_lift, null));
+function Parse___123_tdefVar_95_4125_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdefVar_95_4124_125_());
 }
 
-// Parse.{tdef_3438}
+// Parse.{tdefVar_4291}
 
-function Parse___123_tdef_95_3438_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_6_lift){
-    return $partial_10_11$TParsec__Combinators__andbind(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), null, Parse__ignorespaces(null, null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), $_0_lift, TParsec__Combinators__Chars__alphas(null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), $_0_lift)), $partial_3_8$Parse___123_tdef_95_3437_125_($_1_lift, $_0_lift, $_2_lift), $_5_lift, Prelude__Nat__lteTransitive(null, null, null, $_6_lift, null));
+function Parse___123_tdefVar_95_4291_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
 }
 
-// Parse.{tdef_3439}
+// Parse.{tdefVar_4292}
 
-function Parse___123_tdef_95_3439_125_($_0_lift, $_1_lift, $_2_lift){
-    return TParsec__Combinators__nelist(null, null, null, new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $_1_lift)(Parse__ignorespaces(null, null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), $_1_lift, TParsec__Combinators__Chars__parens(null, null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), $_1_lift, $partial_3_7$Parse___123_tdef_95_3438_125_($_1_lift, $_0_lift, $_2_lift))));
+function Parse___123_tdefVar_95_4292_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdefVar_95_4291_125_());
 }
 
-// Parse.{tdef_3440}
+// Parse.{tdefVar_4413}
 
-function Parse___123_tdef_95_3440_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift){
-    return TParsec__Combinators__rand(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), null, null, Parse__ignorespaces(null, null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), $_0_lift, TParsec__Combinators__Chars__string(null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), "mu", null, $_0_lift)), $partial_1_3$Parse___123_tdef_95_3439_125_($_1_lift))($_4_lift)(Prelude__Nat__lteTransitive(null, null, null, $_5_lift, null));
+function Parse___123_tdefVar_95_4413_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
 }
 
-// Parse.{tdef_3441}
+// Parse.{tdefVar_4414}
 
-function Parse___123_tdef_95_3441_125_($_0_lift, $_1_lift){
-    return Parse__ignorespaces(null, null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), $_0_lift, TParsec__Combinators__alts(null, null, null, new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), null, new $HC_2_1$Prelude__List___58__58_($partial_9_12$TParsec__Combinators__guardM(null, null, null, null, new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Parse___123_tdef_95_706_125_(), null, $partial_8_11$TParsec__Combinators__mand(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), null, Control__Monad__Trans__TParsec__Types___64_Control__Monad__Trans__MonadTrans_36_TParsecT_32_e_32_a_58__33_lift_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_makeDefs_95_127_125_(), $partial_0_3$Backend__Haskell___123_makeDefs_95_128_125_(), $partial_0_4$Backend__Haskell___123_makeDefs_95_133_125_()), $partial_0_4$Parse___123_tdef_95_447_125_()), $partial_0_1$Backend__Utils___123_ifNotPresent_95_92_125_()), TParsec__Combinators__Chars__alphas(null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), $_0_lift))), new $HC_2_1$Prelude__List___58__58_($partial_9_12$TParsec__Combinators__guardM(null, null, null, null, new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Parse___123_tdef_95_983_125_(), null, TParsec__Combinators__Chars__parens(null, null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), $_0_lift, $partial_2_6$Parse___123_tdef_95_1632_125_($_0_lift, $_1_lift))), new $HC_2_1$Prelude__List___58__58_($partial_8_11$TParsec__Combinators__map(null, null, null, null, $partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_1$Parse___123_tdef_95_1636_125_(), null, TParsec__Combinators__Chars__string(null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), "0", null, $_0_lift)), new $HC_2_1$Prelude__List___58__58_($partial_8_11$TParsec__Combinators__map(null, null, null, null, $partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_1$Parse___123_tdef_95_1750_125_(), null, TParsec__Combinators__Chars__string(null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), "1", null, $_0_lift)), new $HC_2_1$Prelude__List___58__58_(Parse__tdef_58_nary_58_0(null, $_0_lift, $_1_lift, "*", $partial_0_3$Parse___123_tdef_95_1861_125_()), new $HC_2_1$Prelude__List___58__58_(Parse__tdef_58_nary_58_0(null, $_0_lift, $_1_lift, "+", $partial_0_3$Parse___123_tdef_95_1862_125_()), new $HC_2_1$Prelude__List___58__58_($partial_8_11$TParsec__Combinators__map(null, null, null, null, $partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_1$Parse___123_tdef_95_1866_125_(), null, TParsec__Combinators__Chars__parens(null, null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), $_0_lift, $partial_1_5$Parse___123_tdef_95_2463_125_($_0_lift))), new $HC_2_1$Prelude__List___58__58_($partial_8_11$TParsec__Combinators__map(null, null, null, null, $partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_1$Parse___123_tdef_95_2470_125_(), null, TParsec__Combinators__Chars__parens(null, null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), $_0_lift, $partial_2_6$Parse___123_tdef_95_3440_125_($_0_lift, $_1_lift))), $HC_0_0$Prelude__List__Nil))))))))));
+function Parse___123_tdefVar_95_4414_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdefVar_95_4413_125_());
 }
 
-// Parse.{tnamed_4348}
+// Parse.{tdefVar_4535}
 
-function Parse___123_tnamed_95_4348_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift){
-    return Parse__ignorespaces(null, null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), $_0_lift, Parse__tdef($_0_lift))($_4_lift)(Prelude__Nat__lteTransitive(null, null, null, $_5_lift, null));
+function Parse___123_tdefVar_95_4535_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
 }
 
-// Parse.{tnamed_4349}
+// Parse.{tdefVar_4536}
 
-function Parse___123_tnamed_95_4349_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
-    return $partial_10_11$TParsec__Combinators__andbind(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), null, Parse__ignorespaces(null, null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), $_0_lift, TParsec__Combinators__Chars__alphas(null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), $_0_lift)), $partial_1_6$Parse___123_tnamed_95_4348_125_($_0_lift), $_3_lift, Prelude__Nat__lteTransitive(null, null, null, $_4_lift, null));
+function Parse___123_tdefVar_95_4536_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdefVar_95_4535_125_());
 }
 
-// Parse.{tnamed_4350}
+// Parse.{tdefVar_4659}
 
-function Parse___123_tnamed_95_4350_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
-    return TParsec__Combinators__rand(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), null, null, Parse__ignorespaces(null, null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), $_0_lift, TParsec__Combinators__Chars__string(null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), "name", null, $_0_lift)), $partial_1_5$Parse___123_tnamed_95_4349_125_($_0_lift))($_3_lift)(Prelude__Nat__lteTransitive(null, null, null, $_4_lift, null));
+function Parse___123_tdefVar_95_4659_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
 }
 
-// Parse.{tnamed_4385}
+// Parse.{tdefVar_4660}
 
-function Parse___123_tnamed_95_4385_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
+function Parse___123_tdefVar_95_4660_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tdefVar_95_4659_125_());
+}
+
+// Parse.{tdefVar_4724}
+
+function Parse___123_tdefVar_95_4724_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
+    return Parse__ignoreSpaces(null, null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdefVar_95_4536_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), $_0_lift, $partial_8_11$TParsec__Types__commit(null, null, null, null, null, $partial_0_4$Backend__Haskell___123_decode_95_48_125_(), null, TParsec__Combinators__Numbers__decimalNat(null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdefVar_95_4660_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), $_0_lift)))($_3_lift)(Prelude__Nat__lteTransitive(null, null, null, $_4_lift, null));
+}
+
+// Parse.{tdefVar_4725}
+
+function Parse___123_tdefVar_95_4725_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
+    return TParsec__Combinators__rand(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), null, null, Parse__ignoreSpaces(null, null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdefVar_95_4292_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), $_0_lift, TParsec__Combinators__Chars__string(null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tdefVar_95_4414_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), "var", null, $_0_lift)), $partial_1_5$Parse___123_tdefVar_95_4724_125_($_0_lift))($_3_lift)(Prelude__Nat__lteTransitive(null, null, null, $_4_lift, null));
+}
+
+// Parse.{tnamed_4783}
+
+function Parse___123_tnamed_95_4783_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tnamed_4784}
+
+function Parse___123_tnamed_95_4784_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tnamed_95_4783_125_());
+}
+
+// Parse.{tnamed_4950}
+
+function Parse___123_tnamed_95_4950_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tnamed_4951}
+
+function Parse___123_tnamed_95_4951_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tnamed_95_4950_125_());
+}
+
+// Parse.{tnamed_5117}
+
+function Parse___123_tnamed_95_5117_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tnamed_5118}
+
+function Parse___123_tnamed_95_5118_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tnamed_95_5117_125_());
+}
+
+// Parse.{tnamed_5239}
+
+function Parse___123_tnamed_95_5239_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tnamed_5240}
+
+function Parse___123_tnamed_95_5240_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tnamed_95_5239_125_());
+}
+
+// Parse.{tnamed_5406}
+
+function Parse___123_tnamed_95_5406_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tnamed_5407}
+
+function Parse___123_tnamed_95_5407_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tnamed_95_5406_125_());
+}
+
+// Parse.{tnamed_5528}
+
+function Parse___123_tnamed_95_5528_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tnamed_5529}
+
+function Parse___123_tnamed_95_5529_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tnamed_95_5528_125_());
+}
+
+// Parse.{tnamed_5651}
+
+function Parse___123_tnamed_95_5651_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
+}
+
+// Parse.{tnamed_5652}
+
+function Parse___123_tnamed_95_5652_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tnamed_95_5651_125_());
+}
+
+// Parse.{tnamed_5716}
+
+function Parse___123_tnamed_95_5716_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift){
+    return Parse__ignoreSpaces(null, null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tnamed_95_5652_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), $_0_lift, Parse__tdef($_0_lift))($_4_lift)(Prelude__Nat__lteTransitive(null, null, null, $_5_lift, null));
+}
+
+// Parse.{tnamed_5717}
+
+function Parse___123_tnamed_95_5717_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
+    return $partial_10_11$TParsec__Combinators__andbind(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), null, Parse__ignoreSpaces(null, null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tnamed_95_5407_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), $_0_lift, TParsec__Combinators__Chars__alphas(null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tnamed_95_5529_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), $_0_lift)), $partial_1_6$Parse___123_tnamed_95_5716_125_($_0_lift), $_3_lift, Prelude__Nat__lteTransitive(null, null, null, $_4_lift, null));
+}
+
+// Parse.{tnamed_5718}
+
+function Parse___123_tnamed_95_5718_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
+    return TParsec__Combinators__rand(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), null, null, Parse__ignoreSpaces(null, null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tnamed_95_5118_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), $_0_lift, TParsec__Combinators__Chars__string(null, $partial_4_5$TParsec__Types__recordChar(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_())), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tnamed_95_5240_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_783_125_(), $partial_0_2$Parse___123_tdef_95_784_125_()), $partial_0_2$Parse___123_tdef_95_785_125_(), "name", null, $_0_lift)), $partial_1_5$Parse___123_tnamed_95_5717_125_($_0_lift))($_3_lift)(Prelude__Nat__lteTransitive(null, null, null, $_4_lift, null));
+}
+
+// Parse.{tnamed_5753}
+
+function Parse___123_tnamed_95_5753_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
     return new $HC_2_0$Builtins__MkPair($HC_0_0$MkUnit, Data__SortedMap__insert(null, null, $_0_lift, new $HC_2_0$Builtins__MkDPair($_1_lift, $_2_lift), $_3_lift));
 }
 
-// Parse.{tnamed_4399}
+// Parse.{tnamed_5767}
 
-function Parse___123_tnamed_95_4399_125_($_0_lift){
+function Parse___123_tnamed_95_5767_125_($_0_lift){
     
     const $cg$3 = $_0_lift.$2;
-    return Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0(null, null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_makeDefs_95_127_125_(), $partial_0_3$Backend__Haskell___123_makeDefs_95_128_125_(), $partial_0_4$Backend__Haskell___123_makeDefs_95_133_125_()), $partial_0_4$Parse___123_tdef_95_447_125_()), Prelude__Functor__TParsec__Types___64_Prelude__Functor__Functor_36_TParsecT_32_e_32_a_32_m_58__33_map_58_0(null, null, null, null, null, $partial_0_4$Backend__Haskell___123_makeDefs_95_127_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), Control__Monad__Trans__TParsec__Types___64_Control__Monad__Trans__MonadTrans_36_TParsecT_32_e_32_a_58__33_lift_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_makeDefs_95_127_125_(), $partial_0_3$Backend__Haskell___123_makeDefs_95_128_125_(), $partial_0_4$Backend__Haskell___123_makeDefs_95_133_125_()), $partial_0_4$Parse___123_tdef_95_447_125_()), $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Utils___123_ifNotPresent_95_88_125_()), $partial_0_4$Backend__Utils___123_ifNotPresent_95_91_125_()), $partial_0_1$Backend__Utils___123_ifNotPresent_95_92_125_(), $partial_3_5$Parse___123_tnamed_95_4385_125_($_0_lift.$1, $cg$3.$1, $cg$3.$2)))), $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33_pure_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_makeDefs_95_127_125_(), $partial_0_3$Backend__Haskell___123_makeDefs_95_128_125_(), $partial_0_4$Backend__Haskell___123_makeDefs_95_133_125_()), $partial_0_4$Parse___123_tdef_95_447_125_()), new $HC_2_0$Builtins__MkDPair($cg$3.$1, new $HC_2_0$Typedefs__TName($_0_lift.$1, $cg$3.$2))));
+    return Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0(null, null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), Prelude__Functor__TParsec__Types___64_Prelude__Functor__Functor_36_TParsecT_32_e_32_a_32_m_58__33_map_58_0(null, null, null, null, null, $partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), Control__Monad__Trans__TParsec__Types___64_Control__Monad__Trans__MonadTrans_36_TParsecT_32_e_32_a_58__33_lift_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), $partial_0_1$Backend__Haskell___123_envTerms_95_213_125_(), $partial_3_5$Parse___123_tnamed_95_5753_125_($_0_lift.$1, $cg$3.$1, $cg$3.$2)))), $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33_pure_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), new $HC_2_0$Builtins__MkDPair($cg$3.$1, new $HC_2_0$Typedefs__TName($_0_lift.$1, $cg$3.$2))));
 }
 
-// Parse.{tnamedRec_4403}
+// Parse.{tnamedRec_5771}
 
-function Parse___123_tnamedRec_95_4403_125_($_0_lift){
+function Parse___123_tnamedRec_95_5771_125_($_0_lift){
     
     const $cg$3 = $_0_lift.$2;
     if(($cg$3.type === 1)) {
@@ -7579,27 +11400,43 @@ function Parse___123_tnamedRec_95_4403_125_($_0_lift){
     }
 }
 
-// Parse.{tnamedRec_4510}
+// Parse.{tnamedRec_5861}
 
-function Parse___123_tnamedRec_95_4510_125_($_0_lift, $_1_lift){
-    return $partial_8_11$TParsec__Combinators__map(null, null, null, null, $partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_1$Parse___123_tnamedRec_95_4403_125_(), null, $partial_9_12$TParsec__Combinators__andoptbind(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), null, Parse__tnamed($_0_lift), $partial_1_2$TParsec__Combinators__Numbers___123_decimalDigit_95_25_125_($_1_lift)));
+function Parse___123_tnamedRec_95_5861_125_($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_0$Parse__ParseError($cg$1);
 }
 
-// Text.PrettyPrint.WL.Core.{toString_4511}
+// Parse.{tnamedRec_5862}
 
-function Text__PrettyPrint__WL__Core___123_toString_95_4511_125_($_0_lift){
+function Parse___123_tnamedRec_95_5862_125_($_0_lift){
+    return $partial_6_7$Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33_empty_58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), $partial_0_4$Parse___123_tdef_95_676_125_()), $partial_0_1$Parse___123_tnamedRec_95_5861_125_());
+}
+
+// Parse.{tnamedRec_5878}
+
+function Parse___123_tnamedRec_95_5878_125_($_0_lift, $_1_lift){
+    return $partial_8_11$TParsec__Combinators__map(null, null, null, null, $partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_1$Parse___123_tnamedRec_95_5771_125_(), null, $partial_9_12$TParsec__Combinators__andoptbind(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_4$Parse___123_tdef_95_781_125_()), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_679_125_(), $partial_0_2$Parse___123_tdef_95_693_125_(), $partial_0_4$Parse___123_tdef_95_707_125_()), $partial_0_1$Parse___123_tnamedRec_95_5862_125_(), $partial_0_3$Parse___123_tdef_95_736_125_()), null, Parse__tnamed($_0_lift), $partial_1_2$TParsec__Combinators__Numbers___123_decimalDigit_95_31_125_($_1_lift)));
+}
+
+// Text.PrettyPrint.WL.Core.{toString_5879}
+
+function Text__PrettyPrint__WL__Core___123_toString_95_5879_125_($_0_lift){
     return $HC_0_0$Text__PrettyPrint__WL__Core__PrettyDoc__Empty;
 }
 
-// TParsec.Combinators.Chars.{withSpaces_4512}
+// Backend.{Backend.Haskell.@Backend.ASTGen$Haskell:HsType:n:!generateTermDefs:0_lam_6113}
 
-function TParsec__Combinators__Chars___123_withSpaces_95_4512_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_6_lift, $_7_lift, $_8_lift, $_9_lift, $_10_lift){
-    return TParsec__Combinators__nelist(null, null, null, $_0_lift, $_1_lift, $_2_lift)(TParsec__Combinators__Chars__space(null, $_3_lift, $_0_lift, $_1_lift, $_4_lift, $_5_lift, $_6_lift, null))($_9_lift)(Prelude__Nat__lteTransitive(null, null, null, $_10_lift, null));
+function Backend___123_Backend__Haskell___64_Backend__ASTGen_36_Haskell_58_HsType_58_n_58__33_generateTermDefs_58_0_95_lam_95_6113_125_($_0_lift, $_1_lift){
+    let $cg$1 = null;
+    $cg$1 = new $HC_2_1$Prelude__List___58__58_(Backend__Haskell__encodeDef($_0_lift.$1, $_0_lift.$2), new $HC_2_1$Prelude__List___58__58_(Backend__Haskell__decodeDef($_0_lift.$1, $_0_lift.$2), $HC_0_0$Prelude__List__Nil));
+    return Prelude__List___43__43_(null, $cg$1, $_1_lift);
 }
 
-// Prelude.Applicative.{TParsec.Types.@Prelude.Applicative.Alternative$TParsecT e a m:!<|>:0_lam_5272}
+// Prelude.Applicative.{TParsec.Types.@Prelude.Applicative.Alternative$TParsecT e a m:!<|>:0_lam_6114}
 
-function Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33__60__124__62__58_0_95_lam_95_5272_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+function Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33__60__124__62__58_0_95_lam_95_6114_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift){
     
     if(($_3_lift.type === 1)) {
         return $_0_lift($_1_lift);
@@ -7610,89 +11447,117 @@ function Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Al
     }
 }
 
-// Prelude.Applicative.{TParsec.Result.@Prelude.Applicative.Applicative$ResultT e m:!<*>:0_lam_5273}
+// Prelude.Applicative.{TParsec.Result.@Prelude.Applicative.Applicative$ResultT e m:!<*>:0_lam_6115}
 
-function Prelude__Applicative___123_TParsec__Result___64_Prelude__Applicative__Applicative_36_ResultT_32_e_32_m_58__33__60__42__62__58_0_95_lam_95_5273_125_($_0_lift, $_1_lift, $_2_lift){
+function Prelude__Applicative___123_TParsec__Result___64_Prelude__Applicative__Applicative_36_ResultT_32_e_32_m_58__33__60__42__62__58_0_95_lam_95_6115_125_($_0_lift, $_1_lift, $_2_lift){
     
     const $cg$3 = $_0_lift.$1;
     return $cg$3.$2(null)(Prelude__Applicative__TParsec__Result___64_Prelude__Applicative__Applicative_36_Result_32_e_58__33__60__42__62__58_0(null, null, null, $_1_lift, $_2_lift));
 }
 
-// Prelude.Applicative.{TParsec.Result.@Prelude.Applicative.Applicative$ResultT e m:!<*>:0_lam_5274}
+// Prelude.Applicative.{TParsec.Result.@Prelude.Applicative.Applicative$ResultT e m:!<*>:0_lam_6116}
 
-function Prelude__Applicative___123_TParsec__Result___64_Prelude__Applicative__Applicative_36_ResultT_32_e_32_m_58__33__60__42__62__58_0_95_lam_95_5274_125_($_0_lift, $_1_lift, $_2_lift){
+function Prelude__Applicative___123_TParsec__Result___64_Prelude__Applicative__Applicative_36_ResultT_32_e_32_m_58__33__60__42__62__58_0_95_lam_95_6116_125_($_0_lift, $_1_lift, $_2_lift){
     
-    return $_0_lift.$2(null)(null)($_1_lift)($partial_2_3$Prelude__Applicative___123_TParsec__Result___64_Prelude__Applicative__Applicative_36_ResultT_32_e_32_m_58__33__60__42__62__58_0_95_lam_95_5273_125_($_0_lift, $_2_lift));
+    return $_0_lift.$2(null)(null)($_1_lift)($partial_2_3$Prelude__Applicative___123_TParsec__Result___64_Prelude__Applicative__Applicative_36_ResultT_32_e_32_m_58__33__60__42__62__58_0_95_lam_95_6115_125_($_0_lift, $_2_lift));
 }
 
-// Prelude.Applicative.{Control.Monad.State.@Prelude.Applicative.Applicative$StateT stateType f:!<*>:0_lam_5275}
+// Prelude.Applicative.{Control.Monad.State.@Prelude.Applicative.Applicative$StateT stateType f:!<*>:0_lam_6117}
 
-function Prelude__Applicative___123_Control__Monad__State___64_Prelude__Applicative__Applicative_36_StateT_32_stateType_32_f_58__33__60__42__62__58_0_95_lam_95_5275_125_($_0_lift, $_1_lift, $_2_lift){
+function Prelude__Applicative___123_Control__Monad__State___64_Prelude__Applicative__Applicative_36_StateT_32_stateType_32_f_58__33__60__42__62__58_0_95_lam_95_6117_125_($_0_lift, $_1_lift, $_2_lift){
     
     
     const $cg$4 = $_0_lift.$1;
     return $cg$4.$2(null)(new $HC_2_0$Builtins__MkPair($_1_lift($_2_lift.$1), $_2_lift.$2));
 }
 
-// Prelude.Applicative.{Control.Monad.State.@Prelude.Applicative.Applicative$StateT stateType f:!<*>:0_lam_5276}
+// Prelude.Applicative.{Control.Monad.State.@Prelude.Applicative.Applicative$StateT stateType f:!<*>:0_lam_6118}
 
-function Prelude__Applicative___123_Control__Monad__State___64_Prelude__Applicative__Applicative_36_StateT_32_stateType_32_f_58__33__60__42__62__58_0_95_lam_95_5276_125_($_0_lift, $_1_lift, $_2_lift){
+function Prelude__Applicative___123_Control__Monad__State___64_Prelude__Applicative__Applicative_36_StateT_32_stateType_32_f_58__33__60__42__62__58_0_95_lam_95_6118_125_($_0_lift, $_1_lift, $_2_lift){
     
     
-    return $_0_lift.$2(null)(null)($_1_lift($_2_lift.$2))($partial_2_3$Prelude__Applicative___123_Control__Monad__State___64_Prelude__Applicative__Applicative_36_StateT_32_stateType_32_f_58__33__60__42__62__58_0_95_lam_95_5275_125_($_0_lift, $_2_lift.$1));
+    return $_0_lift.$2(null)(null)($_1_lift($_2_lift.$2))($partial_2_3$Prelude__Applicative___123_Control__Monad__State___64_Prelude__Applicative__Applicative_36_StateT_32_stateType_32_f_58__33__60__42__62__58_0_95_lam_95_6117_125_($_0_lift, $_2_lift.$1));
 }
 
-// Prelude.Applicative.{TParsec.Types.@Prelude.Applicative.Applicative$TParsecT e a m:!<*>:0_lam_5277}
+// Prelude.Applicative.{TParsec.Types.@Prelude.Applicative.Applicative$TParsecT e a m:!<*>:0_lam_6119}
 
-function Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_5277_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
+function Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_6119_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
     let $cg$1 = null;
     const $cg$3 = $_0_lift.$1;
     $cg$1 = $cg$3.$1;
     return Prelude__Functor__TParsec__Result___64_Prelude__Functor__Functor_36_ResultT_32_e_32_m_58__33_map_58_0(null, null, null, null, $cg$1, $_3_lift, $_4_lift);
 }
 
-// Prelude.Applicative.{TParsec.Types.@Prelude.Applicative.Applicative$TParsecT e a m:!<*>:0_lam_5278}
+// Prelude.Applicative.{TParsec.Types.@Prelude.Applicative.Applicative$TParsecT e a m:!<*>:0_lam_6120}
 
-function Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_5278_125_($_0_lift, $_1_lift, $_2_lift){
+function Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_6120_125_($_0_lift, $_1_lift, $_2_lift){
     
     const $cg$3 = $_0_lift.$1;
     return $cg$3.$2(null)(new $HC_1_2$TParsec__Result__Value($_2_lift));
 }
 
-// Prelude.Applicative.{TParsec.Types.@Prelude.Applicative.Applicative$TParsecT e a m:!<*>:0_lam_5279}
+// Prelude.Interfaces.{Typedefs.@Prelude.Interfaces.Eq$TDef n:!==:0_lam_6123}
 
-function Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_5279_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
-    return Prelude__Applicative__TParsec__Result___64_Prelude__Applicative__Applicative_36_ResultT_32_e_32_m_58__33__60__42__62__58_0(null, null, null, null, $_0_lift, $_3_lift, $_4_lift);
+function Prelude__Interfaces___123_Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0_95_lam_95_6123_125_($_0_lift, $_1_lift, $_2_lift){
+    return Prelude__Interfaces__Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0($_0_lift, $_1_lift, $_2_lift);
 }
 
-// Prelude.Applicative.{TParsec.Types.@Prelude.Applicative.Applicative$TParsecT e a m:!<*>:0_lam_5280}
+// Prelude.Interfaces.{Typedefs.@Prelude.Interfaces.Eq$TDef n:!==:0_lam_6124}
 
-function Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_5280_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
-    return Prelude__Monad__TParsec__Result___64_Prelude__Monad__Monad_36_ResultT_32_e_32_m_58__33__62__62__61__58_0(null, null, null, null, $_0_lift, $_3_lift, $_4_lift);
+function Prelude__Interfaces___123_Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0_95_lam_95_6124_125_($_0_lift, $_1_lift, $_2_lift){
+    return (!(!(!Prelude__Interfaces__Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0($_0_lift, $_1_lift, $_2_lift))));
 }
 
-// Prelude.Functor.{TParsec.Result.@Prelude.Functor.Functor$ResultT e m:!map:0_lam_5281}
+// Prelude.Interfaces.{Typedefs.@Prelude.Interfaces.Eq$TDef n:!==:0_lam_6125}
 
-function Prelude__Functor___123_TParsec__Result___64_Prelude__Functor__Functor_36_ResultT_32_e_32_m_58__33_map_58_0_95_lam_95_5281_125_($_0_lift, $_1_lift){
+function Prelude__Interfaces___123_Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0_95_lam_95_6125_125_($_0_lift, $_1_lift, $_2_lift){
+    
+    
+    
+    if((((($_1_lift.$1 == $_2_lift.$1)) ? 1|0 : 0|0) === 0)) {
+        return false;
+    } else {
+        return Prelude__Interfaces__Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0($_0_lift.add((new $JSRTS.jsbn.BigInteger(("1")))), $_1_lift.$2, $_2_lift.$2);
+    }
+}
+
+// Prelude.Interfaces.{Typedefs.@Prelude.Interfaces.Eq$TDef n:!==:0_lam_6126}
+
+function Prelude__Interfaces___123_Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0_95_lam_95_6126_125_($_0_lift, $_1_lift, $_2_lift){
+    
+    
+    let $cg$3 = null;
+    if((((($_1_lift.$1 == $_2_lift.$1)) ? 1|0 : 0|0) === 0)) {
+        $cg$3 = false;
+    } else {
+        $cg$3 = Prelude__Interfaces__Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0($_0_lift.add((new $JSRTS.jsbn.BigInteger(("1")))), $_1_lift.$2, $_2_lift.$2);
+    }
+    
+    return (!(!(!$cg$3)));
+}
+
+// Prelude.Functor.{TParsec.Result.@Prelude.Functor.Functor$ResultT e m:!map:0_lam_6131}
+
+function Prelude__Functor___123_TParsec__Result___64_Prelude__Functor__Functor_36_ResultT_32_e_32_m_58__33_map_58_0_95_lam_95_6131_125_($_0_lift, $_1_lift){
     return Prelude__Functor__TParsec__Result___64_Prelude__Functor__Functor_36_Result_32_e_58__33_map_58_0(null, null, null, $_0_lift, $_1_lift);
 }
 
-// Prelude.Functor.{Control.Monad.State.@Prelude.Functor.Functor$StateT stateType f:!map:0_lam_5282}
+// Prelude.Functor.{Control.Monad.State.@Prelude.Functor.Functor$StateT stateType f:!map:0_lam_6132}
 
-function Prelude__Functor___123_Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0_95_lam_95_5282_125_($_0_lift, $_1_lift){
+function Prelude__Functor___123_Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0_95_lam_95_6132_125_($_0_lift, $_1_lift){
     
     return new $HC_2_0$Builtins__MkPair($_0_lift($_1_lift.$1), $_1_lift.$2);
 }
 
-// Prelude.Functor.{TParsec.Types.@Prelude.Functor.Functor$TParsecT e a m:!map:0_lam_5283}
+// Prelude.Functor.{TParsec.Types.@Prelude.Functor.Functor$TParsecT e a m:!map:0_lam_6133}
 
-function Prelude__Functor___123_TParsec__Types___64_Prelude__Functor__Functor_36_TParsecT_32_e_32_a_32_m_58__33_map_58_0_95_lam_95_5283_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
+function Prelude__Functor___123_TParsec__Types___64_Prelude__Functor__Functor_36_TParsecT_32_e_32_a_32_m_58__33_map_58_0_95_lam_95_6133_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
     return Prelude__Functor__TParsec__Result___64_Prelude__Functor__Functor_36_ResultT_32_e_32_m_58__33_map_58_0(null, null, null, null, $_0_lift, $_3_lift, $_4_lift);
 }
 
-// Prelude.Monad.{TParsec.Result.@Prelude.Monad.Monad$ResultT e m:!>>=:0_lam_5284}
+// Prelude.Monad.{TParsec.Result.@Prelude.Monad.Monad$ResultT e m:!>>=:0_lam_6134}
 
-function Prelude__Monad___123_TParsec__Result___64_Prelude__Monad__Monad_36_ResultT_32_e_32_m_58__33__62__62__61__58_0_95_lam_95_5284_125_($_0_lift, $_1_lift, $_2_lift){
+function Prelude__Monad___123_TParsec__Result___64_Prelude__Monad__Monad_36_ResultT_32_e_32_m_58__33__62__62__61__58_0_95_lam_95_6134_125_($_0_lift, $_1_lift, $_2_lift){
     
     if(($_2_lift.type === 0)) {
         
@@ -7707,94 +11572,57 @@ function Prelude__Monad___123_TParsec__Result___64_Prelude__Monad__Monad_36_Resu
     }
 }
 
-// Prelude.Monad.{Control.Monad.State.@Prelude.Monad.Monad$StateT stateType m:!>>=:0_lam_5285}
+// Prelude.Monad.{Control.Monad.State.@Prelude.Monad.Monad$StateT stateType m:!>>=:0_lam_6135}
 
-function Prelude__Monad___123_Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0_95_lam_95_5285_125_($_0_lift, $_1_lift){
+function Prelude__Monad___123_Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0_95_lam_95_6135_125_($_0_lift, $_1_lift){
     
     return $_0_lift($_1_lift.$1)($_1_lift.$2);
 }
 
-// TParsec.Running.{TParsec.Running.@TParsec.Running.MonadRun$ResultT e m:!runMonad:0_lam_5290}
+// Control.Monad.Trans.{TParsec.Result.@Control.Monad.Trans.MonadTrans$ResultT e:!lift:0_lam_6141}
 
-function TParsec__Running___123_TParsec__Running___64_TParsec__Running__MonadRun_36_ResultT_32_e_32_m_58__33_runMonad_58_0_95_lam_95_5290_125_($_0_lift, $_1_lift){
-    let $cg$1 = null;
-    if(($_0_lift.type === 0)) {
-        $cg$1 = $HC_0_0$Prelude__List__Nil;
-    } else if(($_0_lift.type === 1)) {
-        $cg$1 = $HC_0_0$Prelude__List__Nil;
-    } else {
-        $cg$1 = new $HC_2_1$Prelude__List___58__58_($_0_lift.$1, $HC_0_0$Prelude__List__Nil);
-    }
-    
-    return Prelude__List___43__43_(null, $cg$1, $_1_lift);
-}
-
-// TParsec.Running.{Parse.@TParsec.Running.MonadRun$StateT PState Identity:!runMonad:0_lam_5293}
-
-function TParsec__Running___123_Parse___64_TParsec__Running__MonadRun_36_StateT_32_PState_32_Identity_58__33_runMonad_58_0_95_lam_95_5293_125_($_0_lift, $_1_lift){
-    return Prelude__Interfaces__Prelude__Interfaces___64_Prelude__Interfaces__Ord_36_String_58__33_compare_58_0($_0_lift, $_1_lift);
-}
-
-// TParsec.Running.{Parse.@TParsec.Running.MonadRun$StateT PState Identity:!runMonad:0_lam_5294}
-
-function TParsec__Running___123_Parse___64_TParsec__Running__MonadRun_36_StateT_32_PState_32_Identity_58__33_runMonad_58_0_95_lam_95_5294_125_($_0_lift, $_1_lift){
-    
-    if((Prelude__Interfaces__Prelude__Interfaces___64_Prelude__Interfaces__Ord_36_String_58__33_compare_58_0($_0_lift, $_1_lift) < 0)) {
-        return true;
-    } else {
-        return ($_0_lift == $_1_lift);
-    }
-}
-
-// TParsec.Running.{TParsec.Running.@TParsec.Running.MonadRun$TParsecT e a m:!runMonad:0_lam_5295}
-
-function TParsec__Running___123_TParsec__Running___64_TParsec__Running__MonadRun_36_TParsecT_32_e_32_a_32_m_58__33_runMonad_58_0_95_lam_95_5295_125_($_0_lift){
-    
-    return $_0_lift.$1;
-}
-
-// Control.Monad.Trans.{TParsec.Result.@Control.Monad.Trans.MonadTrans$ResultT e:!lift:0_lam_5296}
-
-function Control__Monad__Trans___123_TParsec__Result___64_Control__Monad__Trans__MonadTrans_36_ResultT_32_e_58__33_lift_58_0_95_lam_95_5296_125_($_0_lift){
+function Control__Monad__Trans___123_TParsec__Result___64_Control__Monad__Trans__MonadTrans_36_ResultT_32_e_58__33_lift_58_0_95_lam_95_6141_125_($_0_lift){
     return new $HC_1_2$TParsec__Result__Value($_0_lift);
 }
 
-// Control.Monad.Trans.{Control.Monad.State.@Control.Monad.Trans.MonadTrans$StateT stateType:!lift:0_lam_5297}
+// Control.Monad.Trans.{Control.Monad.State.@Control.Monad.Trans.MonadTrans$StateT stateType:!lift:0_lam_6142}
 
-function Control__Monad__Trans___123_Control__Monad__State___64_Control__Monad__Trans__MonadTrans_36_StateT_32_stateType_58__33_lift_58_0_95_lam_95_5297_125_($_0_lift, $_1_lift, $_2_lift){
+function Control__Monad__Trans___123_Control__Monad__State___64_Control__Monad__Trans__MonadTrans_36_StateT_32_stateType_58__33_lift_58_0_95_lam_95_6142_125_($_0_lift, $_1_lift, $_2_lift){
     
     const $cg$3 = $_0_lift.$1;
     return $cg$3.$2(null)(new $HC_2_0$Builtins__MkPair($_2_lift, $_1_lift));
 }
 
-// Control.Monad.Trans.{TParsec.Types.@Control.Monad.Trans.MonadTrans$TParsecT e a:!lift:0_lam_5298}
+// Control.Monad.Trans.{TParsec.Types.@Control.Monad.Trans.MonadTrans$TParsecT e a:!lift:0_lam_6143}
 
-function Control__Monad__Trans___123_TParsec__Types___64_Control__Monad__Trans__MonadTrans_36_TParsecT_32_e_32_a_58__33_lift_58_0_95_lam_95_5298_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
+function Control__Monad__Trans___123_TParsec__Types___64_Control__Monad__Trans__MonadTrans_36_TParsecT_32_e_32_a_58__33_lift_58_0_95_lam_95_6143_125_($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
     let $cg$1 = null;
     const $cg$3 = $_0_lift.$1;
     $cg$1 = $cg$3.$1;
     return Prelude__Functor__TParsec__Result___64_Prelude__Functor__Functor_36_ResultT_32_e_32_m_58__33_map_58_0(null, null, null, null, $cg$1, $_3_lift, $_4_lift);
 }
 
-// Control.Monad.Trans.{TParsec.Types.@Control.Monad.Trans.MonadTrans$TParsecT e a:!lift:0_lam_5299}
+// Control.Monad.Trans.{TParsec.Types.@Control.Monad.Trans.MonadTrans$TParsecT e a:!lift:0_lam_6144}
 
-function Control__Monad__Trans___123_TParsec__Types___64_Control__Monad__Trans__MonadTrans_36_TParsecT_32_e_32_a_58__33_lift_58_0_95_lam_95_5299_125_($_0_lift, $_1_lift, $_2_lift){
+function Control__Monad__Trans___123_TParsec__Types___64_Control__Monad__Trans__MonadTrans_36_TParsecT_32_e_32_a_58__33_lift_58_0_95_lam_95_6144_125_($_0_lift, $_1_lift, $_2_lift){
     
     const $cg$3 = $_0_lift.$1;
     return $cg$3.$2(null)(new $HC_1_2$TParsec__Result__Value($_2_lift));
 }
 
-// Prelude.Traversable.{Data.Vect.@Prelude.Traversable.Traversable$Vect n:!traverse:0_lam_5303}
+// Backend.Backend.Haskell.Haskell, HsType, n implementation of Backend.ASTGen, method generateTermDefs
 
-function Prelude__Traversable___123_Data__Vect___64_Prelude__Traversable__Traversable_36_Vect_32_n_58__33_traverse_58_0_95_lam_95_5303_125_($_0_lift, $_1_lift){
-    return new $HC_2_1$Data__Vect___58__58_($_0_lift, $_1_lift);
+function Backend__Backend__Haskell___64_Backend__ASTGen_36_Haskell_58_HsType_58_n_58__33_generateTermDefs_58_0($_0_arg, $_1_arg){
+    let $cg$1 = null;
+    $cg$1 = $_1_arg.$2;
+    return Prelude__List___43__43_(null, Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldr_58_0(null, null, $partial_0_2$Backend___123_Backend__Haskell___64_Backend__ASTGen_36_Haskell_58_HsType_58_n_58__33_generateTermDefs_58_0_95_lam_95_6113_125_(), $HC_0_0$Prelude__List__Nil, Backend__Haskell__dependencies($_0_arg, null, $cg$1)), new $HC_2_1$Prelude__List___58__58_(Backend__Haskell__encodeDef($_0_arg, $_1_arg), new $HC_2_1$Prelude__List___58__58_(Backend__Haskell__decodeDef($_0_arg, $_1_arg), $HC_0_0$Prelude__List__Nil)));
 }
 
 // Prelude.Applicative.TParsec.Types.TParsecT e a m implementation of Prelude.Applicative.Alternative, method <|>
 
 function Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33__60__124__62__58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg, $_8_pos){
     
-    return $_4_arg.$2(null)(null)($_6_arg($_8_pos))($partial_3_4$Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33__60__124__62__58_0_95_lam_95_5272_125_($_7_arg, $_8_pos, $_4_arg));
+    return $_4_arg.$2(null)(null)($_6_arg($_8_pos))($partial_3_4$Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Alternative_36_TParsecT_32_e_32_a_32_m_58__33__60__124__62__58_0_95_lam_95_6114_125_($_7_arg, $_8_pos, $_4_arg));
 }
 
 // Prelude.Applicative.TParsec.Types.TParsecT e a m implementation of Prelude.Applicative.Alternative, method empty
@@ -7803,22 +11631,6 @@ function Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Alterna
     
     const $cg$3 = $_4_arg.$1;
     return $cg$3.$2(null)(new $HC_1_1$TParsec__Result__SoftFail($_5_arg($_22_in)));
-}
-
-// Prelude.Applicative.Prelude.Maybe implementation of Prelude.Applicative.Applicative, method <*>
-
-function Prelude__Applicative__Prelude___64_Prelude__Applicative__Applicative_36_Maybe_58__33__60__42__62__58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg){
-    
-    if(($_3_arg.type === 1)) {
-        
-        if(($_2_arg.type === 1)) {
-            return new $HC_1_1$Prelude__Maybe__Just($_2_arg.$1($_3_arg.$1));
-        } else {
-            return $HC_0_0$Prelude__Maybe__Nothing;
-        }
-    } else {
-        return $HC_0_0$Prelude__Maybe__Nothing;
-    }
 }
 
 // Prelude.Applicative.TParsec.Result.Result e implementation of Prelude.Applicative.Applicative, method <*>
@@ -7846,20 +11658,20 @@ function Prelude__Applicative__TParsec__Result___64_Prelude__Applicative__Applic
 
 function Prelude__Applicative__TParsec__Result___64_Prelude__Applicative__Applicative_36_ResultT_32_e_32_m_58__33__60__42__62__58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg){
     
-    return $_4_arg.$2(null)(null)($_5_arg)($partial_2_3$Prelude__Applicative___123_TParsec__Result___64_Prelude__Applicative__Applicative_36_ResultT_32_e_32_m_58__33__60__42__62__58_0_95_lam_95_5274_125_($_4_arg, $_6_arg));
+    return $_4_arg.$2(null)(null)($_5_arg)($partial_2_3$Prelude__Applicative___123_TParsec__Result___64_Prelude__Applicative__Applicative_36_ResultT_32_e_32_m_58__33__60__42__62__58_0_95_lam_95_6116_125_($_4_arg, $_6_arg));
 }
 
 // Prelude.Applicative.Control.Monad.State.StateT stateType f implementation of Prelude.Applicative.Applicative, method <*>
 
 function Prelude__Applicative__Control__Monad__State___64_Prelude__Applicative__Applicative_36_StateT_32_stateType_32_f_58__33__60__42__62__58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_st){
     
-    return $_4_arg.$2(null)(null)($_5_arg($_7_st))($partial_2_3$Prelude__Applicative___123_Control__Monad__State___64_Prelude__Applicative__Applicative_36_StateT_32_stateType_32_f_58__33__60__42__62__58_0_95_lam_95_5276_125_($_4_arg, $_6_arg));
+    return $_4_arg.$2(null)(null)($_5_arg($_7_st))($partial_2_3$Prelude__Applicative___123_Control__Monad__State___64_Prelude__Applicative__Applicative_36_StateT_32_stateType_32_f_58__33__60__42__62__58_0_95_lam_95_6118_125_($_4_arg, $_6_arg));
 }
 
 // Prelude.Applicative.TParsec.Types.TParsecT e a m implementation of Prelude.Applicative.Applicative, method <*>
 
 function Prelude__Applicative__TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg){
-    return $partial_7_8$Prelude__Applicative__Control__Monad__State___64_Prelude__Applicative__Applicative_36_StateT_32_stateType_32_f_58__33__60__42__62__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_1_5$Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_5277_125_($_5_arg), $partial_1_3$Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_5278_125_($_5_arg), $partial_1_5$Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_5279_125_($_5_arg)), $partial_1_5$Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_5280_125_($_5_arg)), $_6_arg, $_7_arg);
+    return $partial_7_8$Prelude__Applicative__Control__Monad__State___64_Prelude__Applicative__Applicative_36_StateT_32_stateType_32_f_58__33__60__42__62__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_1_5$Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_6119_125_($_5_arg), $partial_1_3$Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_6120_125_($_5_arg), $partial_1_5$TParsec__Types___123_recordChar_95_597_125_($_5_arg)), $partial_1_5$TParsec__Types___123_recordChar_95_598_125_($_5_arg)), $_6_arg, $_7_arg);
 }
 
 // Prelude.Applicative.TParsec.Types.TParsecT e a m implementation of Prelude.Applicative.Applicative, method pure
@@ -8021,6 +11833,81 @@ function Prelude__Interfaces__Prelude__Nat___64_Prelude__Interfaces__Eq_36_Nat_5
     }
 }
 
+// Prelude.Interfaces.Typedefs.TDef n implementation of Prelude.Interfaces.Eq, method ==
+
+function Prelude__Interfaces__Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0($_0_arg, $_1_arg, $_2_arg){
+    
+    if(($_2_arg.type === 0)) {
+        return (!(!($_1_arg.type === 0)));
+    } else if(($_2_arg.type === 1)) {
+        return (!(!($_1_arg.type === 1)));
+    } else if(($_2_arg.type === 6)) {
+        
+        if(($_1_arg.type === 6)) {
+            const $cg$9 = $_2_arg.$2;
+            const $cg$11 = $_1_arg.$2;
+            let $cg$12 = null;
+            if((((($cg$11.$1 == $cg$9.$1)) ? 1|0 : 0|0) === 0)) {
+                $cg$12 = false;
+            } else {
+                const $cg$14 = Prelude__Nat__cmp($_1_arg.$1, $_2_arg.$1);
+                if(($cg$14.type === 1)) {
+                    $cg$12 = Prelude__Interfaces__Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0($_2_arg.$1, $cg$11.$2, $cg$9.$2);
+                } else if(($cg$14.type === 2)) {
+                    $cg$12 = Prelude__Interfaces__Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0($_2_arg.$1.add($cg$14.$1.add((new $JSRTS.jsbn.BigInteger(("1"))))), $cg$11.$2, Typedefs__weakenTDef(null, $cg$9.$2, $_2_arg.$1.add($cg$14.$1.add((new $JSRTS.jsbn.BigInteger(("1"))))), Prelude__Nat__lteAddRight(null, $_2_arg.$1)));
+                } else {
+                    $cg$12 = Prelude__Interfaces__Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0($_1_arg.$1.add($cg$14.$1.add((new $JSRTS.jsbn.BigInteger(("1"))))), $cg$9.$2, Typedefs__weakenTDef(null, $cg$11.$2, $_1_arg.$1.add($cg$14.$1.add((new $JSRTS.jsbn.BigInteger(("1"))))), Prelude__Nat__lteAddRight(null, $_1_arg.$1)));
+                }
+            }
+            
+            
+            if($cg$12) {
+                return Typedefs__vectEq(null, $_2_arg.$1, $_1_arg.$1, new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_1_3$Prelude__Interfaces___123_Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0_95_lam_95_6123_125_($_0_arg), $partial_1_3$Prelude__Interfaces___123_Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0_95_lam_95_6124_125_($_0_arg)), $_1_arg.$3, $_2_arg.$3);
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    } else if(($_2_arg.type === 5)) {
+        
+        if(($_1_arg.type === 5)) {
+            return Typedefs__vectEq(null, $_2_arg.$1, $_1_arg.$1, new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_1_3$Prelude__Interfaces___123_Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0_95_lam_95_6125_125_($_0_arg), $partial_1_3$Prelude__Interfaces___123_Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0_95_lam_95_6126_125_($_0_arg)), $_1_arg.$2, $_2_arg.$2);
+        } else {
+            return false;
+        }
+    } else if(($_2_arg.type === 3)) {
+        
+        if(($_1_arg.type === 3)) {
+            return Typedefs__vectEq(null, (new $JSRTS.jsbn.BigInteger(("2"))).add($_2_arg.$1), (new $JSRTS.jsbn.BigInteger(("2"))).add($_1_arg.$1), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_1_3$Prelude__Interfaces___123_Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0_95_lam_95_6123_125_($_0_arg), $partial_1_3$Prelude__Interfaces___123_Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0_95_lam_95_6124_125_($_0_arg)), $_1_arg.$2, $_2_arg.$2);
+        } else {
+            return false;
+        }
+    } else if(($_2_arg.type === 2)) {
+        
+        if(($_1_arg.type === 2)) {
+            return Typedefs__vectEq(null, (new $JSRTS.jsbn.BigInteger(("2"))).add($_2_arg.$1), (new $JSRTS.jsbn.BigInteger(("2"))).add($_1_arg.$1), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_1_3$Prelude__Interfaces___123_Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0_95_lam_95_6123_125_($_0_arg), $partial_1_3$Prelude__Interfaces___123_Typedefs___64_Prelude__Interfaces__Eq_36_TDef_32_n_58__33__61__61__58_0_95_lam_95_6124_125_($_0_arg)), $_1_arg.$2, $_2_arg.$2);
+        } else {
+            return false;
+        }
+    } else if(($_2_arg.type === 4)) {
+        
+        if(($_1_arg.type === 4)) {
+            
+            if($_0_arg.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
+                return false;
+            } else {
+                const $_147_in = $_0_arg.subtract((new $JSRTS.jsbn.BigInteger(("1"))));
+                return Prelude__Interfaces__Data__Fin___64_Prelude__Interfaces__Eq_36_Fin_32_n_58__33__61__61__58_0($_147_in.add((new $JSRTS.jsbn.BigInteger(("1")))), $_1_arg.$1, $_2_arg.$1);
+            }
+        } else {
+            return false;
+        }
+    } else {
+        return false;
+    }
+}
+
 // Prelude.Foldable.Prelude.List.List implementation of Prelude.Foldable.Foldable, method foldl
 
 function Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg){
@@ -8100,19 +11987,19 @@ function Prelude__Functor__TParsec__Result___64_Prelude__Functor__Functor_36_Res
 // Prelude.Functor.TParsec.Result.ResultT e m implementation of Prelude.Functor.Functor, method map
 
 function Prelude__Functor__TParsec__Result___64_Prelude__Functor__Functor_36_ResultT_32_e_32_m_58__33_map_58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg){
-    return $_4_arg(null)(null)($partial_1_2$Prelude__Functor___123_TParsec__Result___64_Prelude__Functor__Functor_36_ResultT_32_e_32_m_58__33_map_58_0_95_lam_95_5281_125_($_5_arg))($_6_arg);
+    return $_4_arg(null)(null)($partial_1_2$Prelude__Functor___123_TParsec__Result___64_Prelude__Functor__Functor_36_ResultT_32_e_32_m_58__33_map_58_0_95_lam_95_6131_125_($_5_arg))($_6_arg);
 }
 
 // Prelude.Functor.Control.Monad.State.StateT stateType f implementation of Prelude.Functor.Functor, method map
 
 function Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_st){
-    return $_4_arg(null)(null)($partial_1_2$Prelude__Functor___123_Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0_95_lam_95_5282_125_($_5_arg))($_6_arg($_7_st));
+    return $_4_arg(null)(null)($partial_1_2$Prelude__Functor___123_Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0_95_lam_95_6132_125_($_5_arg))($_6_arg($_7_st));
 }
 
 // Prelude.Functor.TParsec.Types.TParsecT e a m implementation of Prelude.Functor.Functor, method map
 
 function Prelude__Functor__TParsec__Types___64_Prelude__Functor__Functor_36_TParsecT_32_e_32_a_32_m_58__33_map_58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg){
-    return $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_1_5$Prelude__Functor___123_TParsec__Types___64_Prelude__Functor__Functor_36_TParsecT_32_e_32_a_32_m_58__33_map_58_0_95_lam_95_5283_125_($_5_arg), $_6_arg, $_7_arg);
+    return $partial_7_8$Prelude__Functor__Control__Monad__State___64_Prelude__Functor__Functor_36_StateT_32_stateType_32_f_58__33_map_58_0(null, null, null, null, $partial_1_5$Prelude__Functor___123_TParsec__Types___64_Prelude__Functor__Functor_36_TParsecT_32_e_32_a_32_m_58__33_map_58_0_95_lam_95_6133_125_($_5_arg), $_6_arg, $_7_arg);
 }
 
 // Prelude.Functor.Data.Vect.Vect n implementation of Prelude.Functor.Functor, method map
@@ -8126,42 +12013,43 @@ function Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_
     }
 }
 
+// Prelude.Monad.TParsec.Result.Result e implementation of Prelude.Monad.Monad, method >>=
+
+function Prelude__Monad__TParsec__Result___64_Prelude__Monad__Monad_36_Result_32_e_58__33__62__62__61__58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg){
+    
+    if(($_3_arg.type === 0)) {
+        return $_3_arg;
+    } else if(($_3_arg.type === 1)) {
+        return $_3_arg;
+    } else {
+        return $_4_arg($_3_arg.$1);
+    }
+}
+
 // Prelude.Monad.TParsec.Result.ResultT e m implementation of Prelude.Monad.Monad, method >>=
 
 function Prelude__Monad__TParsec__Result___64_Prelude__Monad__Monad_36_ResultT_32_e_32_m_58__33__62__62__61__58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg){
     
-    return $_4_arg.$2(null)(null)($_5_arg)($partial_2_3$Prelude__Monad___123_TParsec__Result___64_Prelude__Monad__Monad_36_ResultT_32_e_32_m_58__33__62__62__61__58_0_95_lam_95_5284_125_($_4_arg, $_6_arg));
+    return $_4_arg.$2(null)(null)($_5_arg)($partial_2_3$Prelude__Monad___123_TParsec__Result___64_Prelude__Monad__Monad_36_ResultT_32_e_32_m_58__33__62__62__61__58_0_95_lam_95_6134_125_($_4_arg, $_6_arg));
 }
 
 // Prelude.Monad.Control.Monad.State.StateT stateType m implementation of Prelude.Monad.Monad, method >>=
 
 function Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_st){
     
-    return $_4_arg.$2(null)(null)($_5_arg($_7_st))($partial_1_2$Prelude__Monad___123_Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0_95_lam_95_5285_125_($_6_arg));
+    return $_4_arg.$2(null)(null)($_5_arg($_7_st))($partial_1_2$Prelude__Monad___123_Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0_95_lam_95_6135_125_($_6_arg));
 }
 
 // Prelude.Monad.TParsec.Types.TParsecT e a m implementation of Prelude.Monad.Monad, method >>=
 
 function Prelude__Monad__TParsec__Types___64_Prelude__Monad__Monad_36_TParsecT_32_e_32_a_32_m_58__33__62__62__61__58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg){
-    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_1_5$Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_5277_125_($_5_arg), $partial_1_3$Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_5278_125_($_5_arg), $partial_1_5$Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_5279_125_($_5_arg)), $partial_1_5$Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_5280_125_($_5_arg)), $_6_arg, $_7_arg);
+    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_1_5$Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_6119_125_($_5_arg), $partial_1_3$Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_6120_125_($_5_arg), $partial_1_5$TParsec__Types___123_recordChar_95_597_125_($_5_arg)), $partial_1_5$TParsec__Types___123_recordChar_95_598_125_($_5_arg)), $_6_arg, $_7_arg);
 }
 
-// TParsec.Running.TParsec.Running.ResultT e m implementation of TParsec.Running.MonadRun, method runMonad
+// TParsec.Running.TParsec.Running.StateT s m implementation of TParsec.Running.MonadRun, method runMonad
 
-function TParsec__Running__TParsec__Running___64_TParsec__Running__MonadRun_36_ResultT_32_e_32_m_58__33_runMonad_58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg){
-    return Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldr_58_0(null, null, $partial_0_2$TParsec__Running___123_TParsec__Running___64_TParsec__Running__MonadRun_36_ResultT_32_e_32_m_58__33_runMonad_58_0_95_lam_95_5290_125_(), $HC_0_0$Prelude__List__Nil, $_3_arg(null)($_4_arg));
-}
-
-// TParsec.Running.Parse.StateT PState Identity implementation of TParsec.Running.MonadRun, method runMonad
-
-function TParsec__Running__Parse___64_TParsec__Running__MonadRun_36_StateT_32_PState_32_Identity_58__33_runMonad_58_0($_0_arg, $_1_arg){
-    return new $HC_2_1$Prelude__List___58__58_(Control__Monad__State__evalState(null, null, $_1_arg, new $HC_1_0$Data__SortedMap__Empty(new $HC_3_0$Prelude__Interfaces__Ord_95_ictor(new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Backend__JSON___123_makeDefs_95_161_125_(), $partial_0_2$Backend__JSON___123_makeDefs_95_162_125_()), $partial_0_2$TParsec__Running___123_Parse___64_TParsec__Running__MonadRun_36_StateT_32_PState_32_Identity_58__33_runMonad_58_0_95_lam_95_5293_125_(), $partial_0_2$TParsec__Running___123_Parse___64_TParsec__Running__MonadRun_36_StateT_32_PState_32_Identity_58__33_runMonad_58_0_95_lam_95_5294_125_()))), $HC_0_0$Prelude__List__Nil);
-}
-
-// TParsec.Running.TParsec.Running.TParsecT e a m implementation of TParsec.Running.MonadRun, method runMonad
-
-function TParsec__Running__TParsec__Running___64_TParsec__Running__MonadRun_36_TParsecT_32_e_32_a_32_m_58__33_runMonad_58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg){
-    return Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $partial_0_1$TParsec__Running___123_TParsec__Running___64_TParsec__Running__MonadRun_36_TParsecT_32_e_32_a_32_m_58__33_runMonad_58_0_95_lam_95_5295_125_(), TParsec__Running__TParsec__Running___64_TParsec__Running__MonadRun_36_ResultT_32_e_32_m_58__33_runMonad_58_0(null, null, null, $_4_arg, $_5_arg(new $HC_2_0$Builtins__MkPair($HC_0_0$TParsec__Types__MkPosition, $HC_0_0$Prelude__List__Nil))));
+function TParsec__Running__TParsec__Running___64_TParsec__Running__MonadRun_36_StateT_32_s_32_m_58__33_runMonad_58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg){
+    return Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $partial_0_1$Backend__Haskell___123_decodeDef_95_87_125_(), $_3_arg(null)($_5_arg($_4_arg)));
 }
 
 // Control.Monad.Trans.TParsec.Result.ResultT e implementation of Control.Monad.Trans.MonadTrans, method lift
@@ -8169,20 +12057,20 @@ function TParsec__Running__TParsec__Running___64_TParsec__Running__MonadRun_36_T
 function Control__Monad__Trans__TParsec__Result___64_Control__Monad__Trans__MonadTrans_36_ResultT_32_e_58__33_lift_58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_18_in){
     
     const $cg$3 = $_3_arg.$1;
-    return $cg$3.$1(null)(null)($partial_0_1$Control__Monad__Trans___123_TParsec__Result___64_Control__Monad__Trans__MonadTrans_36_ResultT_32_e_58__33_lift_58_0_95_lam_95_5296_125_())($_18_in);
+    return $cg$3.$1(null)(null)($partial_0_1$Control__Monad__Trans___123_TParsec__Result___64_Control__Monad__Trans__MonadTrans_36_ResultT_32_e_58__33_lift_58_0_95_lam_95_6141_125_())($_18_in);
 }
 
 // Control.Monad.Trans.Control.Monad.State.StateT stateType implementation of Control.Monad.Trans.MonadTrans, method lift
 
 function Control__Monad__Trans__Control__Monad__State___64_Control__Monad__Trans__MonadTrans_36_StateT_32_stateType_58__33_lift_58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_st){
     
-    return $_3_arg.$2(null)(null)($_4_arg)($partial_2_3$Control__Monad__Trans___123_Control__Monad__State___64_Control__Monad__Trans__MonadTrans_36_StateT_32_stateType_58__33_lift_58_0_95_lam_95_5297_125_($_3_arg, $_5_st));
+    return $_3_arg.$2(null)(null)($_4_arg)($partial_2_3$Control__Monad__Trans___123_Control__Monad__State___64_Control__Monad__Trans__MonadTrans_36_StateT_32_stateType_58__33_lift_58_0_95_lam_95_6142_125_($_3_arg, $_5_st));
 }
 
 // Control.Monad.Trans.TParsec.Types.TParsecT e a implementation of Control.Monad.Trans.MonadTrans, method lift
 
 function Control__Monad__Trans__TParsec__Types___64_Control__Monad__Trans__MonadTrans_36_TParsecT_32_e_32_a_58__33_lift_58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_61_in){
-    return $partial_5_6$Control__Monad__Trans__Control__Monad__State___64_Control__Monad__Trans__MonadTrans_36_StateT_32_stateType_58__33_lift_58_0(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_1_5$Control__Monad__Trans___123_TParsec__Types___64_Control__Monad__Trans__MonadTrans_36_TParsecT_32_e_32_a_58__33_lift_58_0_95_lam_95_5298_125_($_4_arg), $partial_1_3$Control__Monad__Trans___123_TParsec__Types___64_Control__Monad__Trans__MonadTrans_36_TParsecT_32_e_32_a_58__33_lift_58_0_95_lam_95_5299_125_($_4_arg), $partial_1_5$Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_5279_125_($_4_arg)), $partial_1_5$Prelude__Applicative___123_TParsec__Types___64_Prelude__Applicative__Applicative_36_TParsecT_32_e_32_a_32_m_58__33__60__42__62__58_0_95_lam_95_5280_125_($_4_arg)), Control__Monad__Trans__TParsec__Result___64_Control__Monad__Trans__MonadTrans_36_ResultT_32_e_58__33_lift_58_0(null, null, null, $_4_arg, $_61_in));
+    return $partial_5_6$Control__Monad__Trans__Control__Monad__State___64_Control__Monad__Trans__MonadTrans_36_StateT_32_stateType_58__33_lift_58_0(null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_1_5$Control__Monad__Trans___123_TParsec__Types___64_Control__Monad__Trans__MonadTrans_36_TParsecT_32_e_32_a_58__33_lift_58_0_95_lam_95_6143_125_($_4_arg), $partial_1_3$Control__Monad__Trans___123_TParsec__Types___64_Control__Monad__Trans__MonadTrans_36_TParsecT_32_e_32_a_58__33_lift_58_0_95_lam_95_6144_125_($_4_arg), $partial_1_5$TParsec__Types___123_recordChar_95_597_125_($_4_arg)), $partial_1_5$TParsec__Types___123_recordChar_95_598_125_($_4_arg)), Control__Monad__Trans__TParsec__Result___64_Control__Monad__Trans__MonadTrans_36_ResultT_32_e_58__33_lift_58_0(null, null, null, $_4_arg, $_61_in));
 }
 
 // Prelude.Interfaces.Prelude.Interfaces.Char implementation of Prelude.Interfaces.Ord, method compare
@@ -8233,6 +12121,33 @@ function Prelude__Interfaces__Prelude__Interfaces___64_Prelude__Interfaces__Ord_
     }
 }
 
+// Prelude.Interfaces.Prelude.Nat.Nat implementation of Prelude.Interfaces.Ord, method compare
+
+function Prelude__Interfaces__Prelude__Nat___64_Prelude__Interfaces__Ord_36_Nat_58__33_compare_58_0($_0_arg, $_1_arg){
+    for(;;) {
+        
+        if($_1_arg.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
+            
+            if($_0_arg.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
+                return 0;
+            } else {
+                const $_2_in = $_0_arg.subtract((new $JSRTS.jsbn.BigInteger(("1"))));
+                return 1;
+            }
+        } else {
+            const $_3_in = $_1_arg.subtract((new $JSRTS.jsbn.BigInteger(("1"))));
+            
+            if($_0_arg.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
+                return -1;
+            } else {
+                const $_4_in = $_0_arg.subtract((new $JSRTS.jsbn.BigInteger(("1"))));
+                $_0_arg = $_4_in;
+                $_1_arg = $_3_in;
+            }
+        }
+    }
+}
+
 // Prelude.Interfaces.Prelude.Interfaces.String implementation of Prelude.Interfaces.Ord, method compare
 
 function Prelude__Interfaces__Prelude__Interfaces___64_Prelude__Interfaces__Ord_36_String_58__33_compare_58_0($_0_arg, $_1_arg){
@@ -8249,6 +12164,12 @@ function Prelude__Interfaces__Prelude__Interfaces___64_Prelude__Interfaces__Ord_
     }
 }
 
+// TParsec.Running.Parse.PState implementation of TParsec.Running.Pointed, method point
+
+function TParsec__Running__Parse___64_TParsec__Running__Pointed_36_PState_58__33_point_58_0(){
+    return new $HC_1_0$Data__SortedMap__Empty(new $HC_3_0$Prelude__Interfaces__Ord_95_ictor(new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Backend__Haskell___123_freeVars_95_221_125_(), $partial_0_2$Backend__JSON___123_makeDefs_95_359_125_()), $partial_0_2$Backend__Haskell___123_runTermGen_95_654_125_(), $partial_0_2$Backend__Haskell___123_runTermGen_95_655_125_()));
+}
+
 // Prelude.Traversable.Prelude.List implementation of Prelude.Traversable.Traversable, method traverse
 
 function Prelude__Traversable__Prelude___64_Prelude__Traversable__Traversable_36_List_58__33_traverse_58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg){
@@ -8257,7 +12178,7 @@ function Prelude__Traversable__Prelude___64_Prelude__Traversable__Traversable_36
         
         let $cg$4 = null;
         let $cg$5 = null;
-        $cg$5 = $_3_arg.$2(null)($partial_0_2$Backend__JSON___123_disjointSubSchema_95_29_125_());
+        $cg$5 = $_3_arg.$2(null)($partial_0_2$Backend__Haskell___123_decode_95_58_125_());
         $cg$4 = $_3_arg.$3(null)(null)($cg$5)($_4_arg($_5_arg.$1));
         return $_3_arg.$3(null)(null)($cg$4)(Prelude__Traversable__Prelude___64_Prelude__Traversable__Traversable_36_List_58__33_traverse_58_0(null, null, null, $_3_arg, $_4_arg, $_5_arg.$2));
     } else {
@@ -8274,7 +12195,7 @@ function Prelude__Traversable__Data__Vect___64_Prelude__Traversable__Traversable
         
         let $cg$4 = null;
         let $cg$5 = null;
-        $cg$5 = $_4_arg.$2(null)($partial_0_2$Prelude__Traversable___123_Data__Vect___64_Prelude__Traversable__Traversable_36_Vect_32_n_58__33_traverse_58_0_95_lam_95_5303_125_());
+        $cg$5 = $_4_arg.$2(null)($partial_0_2$Backend__Utils___123_mapWithIndexA_95_559_125_());
         $cg$4 = $_4_arg.$3(null)(null)($cg$5)($_5_arg($_6_arg.$1));
         return $_4_arg.$3(null)(null)($cg$4)(Prelude__Traversable__Data__Vect___64_Prelude__Traversable__Traversable_36_Vect_32_n_58__33_traverse_58_0(null, null, null, null, $_4_arg, $_5_arg, $_6_arg.$2));
     } else {
@@ -8283,81 +12204,325 @@ function Prelude__Traversable__Data__Vect___64_Prelude__Traversable__Traversable
     }
 }
 
-// {Induction.Nat.fixBox:go:0_lam_4513}
+// {Backend.Haskell.decodeDef:genCase:0_lam_5899}
 
-function $_4513_Induction__Nat__fixBox_58_go_58_0_95_lam($_0_lift){
+function $_5899_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam($_0_lift, $_1_lift, $_2_lift){
+    
+    return new $HC_2_0$Builtins__MkPair(new $HC_1_8$Backend__Haskell__HsDo(new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair(new $HC_1_1$Prelude__Maybe__Just($_1_lift.$1), new $HC_2_6$Backend__Haskell__HsApp(new $HC_1_7$Backend__Haskell__HsFun("deserialiseInt"), $HC_0_0$Prelude__List__Nil)), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair($HC_0_0$Prelude__Maybe__Nothing, Backend__Haskell__simplify(Backend__Haskell__hsCaseDef($_1_lift.$1, Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $_0_lift), new $HC_1_7$Backend__Haskell__HsFun("failDecode")))), $HC_0_0$Prelude__List__Nil))), $_2_lift);
+}
+
+// {Backend.Haskell.decodeDef:genCase:0_lam_5900}
+
+function $_5900_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam($_0_lift){
+    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__freshVars(null, (new $JSRTS.jsbn.BigInteger(("1"))), "i"), $partial_1_3$$_5899_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam($_0_lift));
+}
+
+// {Backend.Haskell.decodeDef:genCase:0_lam_5919}
+
+function $_5919_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam($_0_lift, $_1_lift, $_2_lift){
+    
+    return new $HC_2_0$Builtins__MkPair(new $HC_1_8$Backend__Haskell__HsDo(new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair(new $HC_1_1$Prelude__Maybe__Just($_1_lift.$1), new $HC_2_6$Backend__Haskell__HsApp(new $HC_1_7$Backend__Haskell__HsFun("deserialiseInt"), $HC_0_0$Prelude__List__Nil)), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair($HC_0_0$Prelude__Maybe__Nothing, Backend__Haskell__simplify(Backend__Haskell__hsCaseDef($_1_lift.$1, Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $_0_lift), new $HC_1_7$Backend__Haskell__HsFun("failDecode")))), $HC_0_0$Prelude__List__Nil))), $_2_lift);
+}
+
+// {Backend.Haskell.decodeDef:genCase:0_lam_5920}
+
+function $_5920_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam($_0_lift){
+    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__freshVars(null, (new $JSRTS.jsbn.BigInteger(("1"))), "i"), $partial_1_3$$_5919_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam($_0_lift));
+}
+
+// {Backend.Haskell.decodeDef:genCase:0_lam_5939}
+
+function $_5939_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam($_0_lift, $_1_lift, $_2_lift){
+    
+    return new $HC_2_0$Builtins__MkPair(new $HC_1_8$Backend__Haskell__HsDo(new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair(new $HC_1_1$Prelude__Maybe__Just($_1_lift.$1), new $HC_2_6$Backend__Haskell__HsApp(new $HC_1_7$Backend__Haskell__HsFun("deserialiseInt"), $HC_0_0$Prelude__List__Nil)), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair($HC_0_0$Prelude__Maybe__Nothing, Backend__Haskell__simplify(Backend__Haskell__hsCaseDef($_1_lift.$1, Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $_0_lift), new $HC_1_7$Backend__Haskell__HsFun("failDecode")))), $HC_0_0$Prelude__List__Nil))), $_2_lift);
+}
+
+// {Backend.Haskell.decodeDef:genCase:0_lam_5940}
+
+function $_5940_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam($_0_lift){
+    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__freshVars(null, (new $JSRTS.jsbn.BigInteger(("1"))), "i"), $partial_1_3$$_5939_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam($_0_lift));
+}
+
+// {Backend.Haskell.decodeDef:genCase:0_lam_5959}
+
+function $_5959_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam($_0_lift, $_1_lift, $_2_lift){
+    
+    return new $HC_2_0$Builtins__MkPair(new $HC_1_8$Backend__Haskell__HsDo(new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair(new $HC_1_1$Prelude__Maybe__Just($_1_lift.$1), new $HC_2_6$Backend__Haskell__HsApp(new $HC_1_7$Backend__Haskell__HsFun("deserialiseInt"), $HC_0_0$Prelude__List__Nil)), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair($HC_0_0$Prelude__Maybe__Nothing, Backend__Haskell__simplify(Backend__Haskell__hsCaseDef($_1_lift.$1, Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $_0_lift), new $HC_1_7$Backend__Haskell__HsFun("failDecode")))), $HC_0_0$Prelude__List__Nil))), $_2_lift);
+}
+
+// {Backend.Haskell.decodeDef:genCase:0_lam_5960}
+
+function $_5960_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam($_0_lift){
+    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__freshVars(null, (new $JSRTS.jsbn.BigInteger(("1"))), "i"), $partial_1_3$$_5959_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam($_0_lift));
+}
+
+// {Backend.Haskell.decodeDef:genCases:0_lam_5961}
+
+function $_5961_Backend__Haskell__decodeDef_58_genCases_58_0_95_lam($_0_lift, $_1_lift, $_2_lift){
+    return new $HC_2_0$Builtins__MkPair(new $HC_2_0$Builtins__MkPair(new $HC_1_10$Backend__Haskell__HsInt(Data__Fin__finToInteger(null, $_0_lift)), new $HC_2_6$Backend__Haskell__HsApp(new $HC_1_7$Backend__Haskell__HsFun("return"), new $HC_2_1$Prelude__List___58__58_(new $HC_2_4$Backend__Haskell__HsInn($_1_lift, $HC_0_0$Prelude__List__Nil), $HC_0_0$Prelude__List__Nil))), $_2_lift);
+}
+
+// {Backend.Haskell.decodeDef:genCases:0_lam_5966}
+
+function $_5966_Backend__Haskell__decodeDef_58_genCases_58_0_95_lam($_0_lift){
+    
+    return new $HC_2_0$Builtins__MkPair(new $HC_1_1$Prelude__Maybe__Just($_0_lift.$1), $_0_lift.$2);
+}
+
+// {Backend.Haskell.decodeDef:genCases:0_lam_5967}
+
+function $_5967_Backend__Haskell__decodeDef_58_genCases_58_0_95_lam($_0_lift){
+    
+    return $_0_lift.$1;
+}
+
+// {Backend.Haskell.decodeDef:genCases:0_lam_5968}
+
+function $_5968_Backend__Haskell__decodeDef_58_genCases_58_0_95_lam($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    return new $HC_2_0$Builtins__MkPair(new $HC_2_0$Builtins__MkPair(new $HC_1_10$Backend__Haskell__HsInt(Data__Fin__finToInteger(null, $_0_lift)), new $HC_1_8$Backend__Haskell__HsDo(Prelude__List___43__43_(null, Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $partial_0_1$$_5966_Backend__Haskell__decodeDef_58_genCases_58_0_95_lam(), $_2_lift), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair($HC_0_0$Prelude__Maybe__Nothing, new $HC_2_6$Backend__Haskell__HsApp(new $HC_1_7$Backend__Haskell__HsFun("return"), new $HC_2_1$Prelude__List___58__58_(new $HC_2_4$Backend__Haskell__HsInn($_1_lift, Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $partial_0_1$$_5967_Backend__Haskell__decodeDef_58_genCases_58_0_95_lam(), $_2_lift)), $HC_0_0$Prelude__List__Nil))), $HC_0_0$Prelude__List__Nil)))), $_3_lift);
+}
+
+// {Backend.Haskell.decodeDef:genConstructor:0_lam_5989}
+
+function $_5989_Backend__Haskell__decodeDef_58_genConstructor_58_0_95_lam($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    return new $HC_2_0$Builtins__MkPair(new $HC_2_0$Builtins__MkPair(Data__Vect__index(null, null, $_0_lift, $_1_lift), $_2_lift), $_3_lift);
+}
+
+// {Backend.Haskell.decodeDef:genConstructor:0_lam_5990}
+
+function $_5990_Backend__Haskell__decodeDef_58_genConstructor_58_0_95_lam($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__decode($_0_lift, $_3_lift), $partial_2_4$$_5989_Backend__Haskell__decodeDef_58_genConstructor_58_0_95_lam($_2_lift, $_1_lift));
+}
+
+// {Backend.Haskell.decodeDef:genConstructor:0_lam_5993}
+
+function $_5993_Backend__Haskell__decodeDef_58_genConstructor_58_0_95_lam($_0_lift, $_1_lift){
+    return new $HC_2_0$Builtins__MkPair(Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $_0_lift), $_1_lift);
+}
+
+// {Backend.Haskell.decodeDef:genConstructor:0_lam_5994}
+
+function $_5994_Backend__Haskell__decodeDef_58_genConstructor_58_0_95_lam($_0_lift, $_1_lift, $_2_lift){
+    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Utils__mapWithIndexA(null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), null, $partial_2_4$$_5990_Backend__Haskell__decodeDef_58_genConstructor_58_0_95_lam($_0_lift, $_2_lift), $_1_lift), $partial_0_2$$_5993_Backend__Haskell__decodeDef_58_genConstructor_58_0_95_lam());
+}
+
+// {Backend.Haskell.decodeDef:genConstructor:0_lam_6003}
+
+function $_6003_Backend__Haskell__decodeDef_58_genConstructor_58_0_95_lam($_0_lift, $_1_lift, $_2_lift){
+    return new $HC_2_0$Builtins__MkPair(new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair($_0_lift, $_1_lift), $HC_0_0$Prelude__List__Nil), $_2_lift);
+}
+
+// {Backend.Haskell.decodeDef:genConstructor:0_lam_6004}
+
+function $_6004_Backend__Haskell__decodeDef_58_genConstructor_58_0_95_lam($_0_lift, $_1_lift, $_2_lift){
+    
+    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__decode($_0_lift, $_1_lift), $partial_1_3$$_6003_Backend__Haskell__decodeDef_58_genConstructor_58_0_95_lam($_2_lift.$1));
+}
+
+// {Backend.Haskell.dependencies:go:0_lam_6005}
+
+function $_6005_Backend__Haskell__dependencies_58_go_58_0_95_lam($_0_lift, $_1_lift, $_2_lift){
+    return Prelude__List___43__43_(null, Backend__Haskell__dependencies_58_go_58_0($_0_lift, null, null, null, null, $_1_lift), $_2_lift);
+}
+
+// {Backend.Haskell.dependencies:go:0_lam_6007}
+
+function $_6007_Backend__Haskell__dependencies_58_go_58_0_95_lam($_0_lift, $_1_lift, $_2_lift){
+    return Prelude__List___43__43_(null, Backend__Haskell__dependencies_58_go_58_0_58_fixup_58_6(null, null, null, null, null, null, null, null, null, $_0_lift, $_1_lift), $_2_lift);
+}
+
+// {Backend.Haskell.dependencies:goMu:0_lam_6013}
+
+function $_6013_Backend__Haskell__dependencies_58_goMu_58_0_95_lam($_0_lift, $_1_lift, $_2_lift){
+    let $cg$1 = null;
+    $cg$1 = $_1_lift.$2;
+    return Prelude__List___43__43_(null, Backend__Haskell__dependencies_58_go_58_0($_0_lift.add((new $JSRTS.jsbn.BigInteger(("1")))), null, null, null, null, $cg$1), $_2_lift);
+}
+
+// {Backend.Haskell.encodeDef:genClause:0_lam_6015}
+
+function $_6015_Backend__Haskell__encodeDef_58_genClause_58_0_95_lam($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    return new $HC_2_0$Builtins__MkPair(new $HC_2_0$Builtins__MkPair(Prelude__List___43__43_(null, $_0_lift, new $HC_2_1$Prelude__List___58__58_(new $HC_2_4$Backend__Haskell__HsInn($_1_lift, $HC_0_0$Prelude__List__Nil), $HC_0_0$Prelude__List__Nil)), new $HC_2_6$Backend__Haskell__HsApp(new $HC_1_7$Backend__Haskell__HsFun("word8"), new $HC_2_1$Prelude__List___58__58_(new $HC_1_9$Backend__Haskell__HsWord8(((Data__Fin__finToInteger(null, $_2_lift)).intValue()|0)), $HC_0_0$Prelude__List__Nil))), $_3_lift);
+}
+
+// {Backend.Haskell.encodeDef:genClause:0_lam_6020}
+
+function $_6020_Backend__Haskell__encodeDef_58_genClause_58_0_95_lam($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    
+    return new $HC_2_0$Builtins__MkPair(new $HC_2_0$Builtins__MkPair(Prelude__List___43__43_(null, $_0_lift, new $HC_2_1$Prelude__List___58__58_($_2_lift.$1, $HC_0_0$Prelude__List__Nil)), Backend__Haskell__simplify(new $HC_1_11$Backend__Haskell__HsConcat(new $HC_2_1$Prelude__List___58__58_(new $HC_2_6$Backend__Haskell__HsApp(new $HC_1_7$Backend__Haskell__HsFun("word8"), new $HC_2_1$Prelude__List___58__58_(new $HC_1_9$Backend__Haskell__HsWord8(((Data__Fin__finToInteger(null, $_1_lift)).intValue()|0)), $HC_0_0$Prelude__List__Nil)), $_2_lift.$2)))), $_3_lift);
+}
+
+// {Backend.Haskell.encodeDef:genClauses:0_lam_6035}
+
+function $_6035_Backend__Haskell__encodeDef_58_genClauses_58_0_95_lam($_0_lift, $_1_lift, $_2_lift){
+    
+    return new $HC_2_0$Builtins__MkPair(new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair(Prelude__List___43__43_(null, $_0_lift, new $HC_2_1$Prelude__List___58__58_($_1_lift.$1, $HC_0_0$Prelude__List__Nil)), Backend__Haskell__simplify(new $HC_1_11$Backend__Haskell__HsConcat($_1_lift.$2))), $HC_0_0$Prelude__List__Nil), $_2_lift);
+}
+
+// {Backend.Haskell.encodeDef:genConstructor:0_lam_6087}
+
+function $_6087_Backend__Haskell__encodeDef_58_genConstructor_58_0_95_lam($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    return new $HC_2_0$Builtins__MkPair(new $HC_2_0$Builtins__MkPair(new $HC_2_4$Backend__Haskell__HsInn($_0_lift, Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $_1_lift)), Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $_2_lift)), $_3_lift);
+}
+
+// {Backend.Haskell.encodeDef:genConstructor:0_lam_6088}
+
+function $_6088_Backend__Haskell__encodeDef_58_genConstructor_58_0_95_lam($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Utils__mapWithIndexA(null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), null, $partial_2_4$Backend__Haskell___123_encode_95_152_125_($_0_lift, $_1_lift), $_3_lift), $partial_2_4$$_6087_Backend__Haskell__encodeDef_58_genConstructor_58_0_95_lam($_2_lift, $_3_lift));
+}
+
+// {Backend.Haskell.encodeDef:genConstructor:0_lam_6097}
+
+function $_6097_Backend__Haskell__encodeDef_58_genConstructor_58_0_95_lam($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    return new $HC_2_0$Builtins__MkPair(new $HC_2_0$Builtins__MkPair(new $HC_2_4$Backend__Haskell__HsInn($_0_lift, new $HC_2_1$Prelude__List___58__58_($_1_lift, $HC_0_0$Prelude__List__Nil)), new $HC_2_1$Prelude__List___58__58_($_2_lift, $HC_0_0$Prelude__List__Nil)), $_3_lift);
+}
+
+// {Backend.Haskell.encodeDef:genConstructor:0_lam_6098}
+
+function $_6098_Backend__Haskell__encodeDef_58_genConstructor_58_0_95_lam($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    
+    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__encode($_0_lift, $_1_lift, $_3_lift.$1), $partial_2_4$$_6097_Backend__Haskell__encodeDef_58_genConstructor_58_0_95_lam($_2_lift, $_3_lift.$1));
+}
+
+// {Induction.Nat.fixBox:go:0_lam_6099}
+
+function $_6099_Induction__Nat__fixBox_58_go_58_0_95_lam($_0_lift){
     return null;
 }
 
-// {Induction.Nat.fixBox:go:0_lam_4514}
+// {Induction.Nat.fixBox:go:0_lam_6100}
 
-function $_4514_Induction__Nat__fixBox_58_go_58_0_95_lam($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+function $_6100_Induction__Nat__fixBox_58_go_58_0_95_lam($_0_lift, $_1_lift, $_2_lift, $_3_lift){
     return Induction__Nat__fixBox_58_go_58_0(null, $_0_lift, null, $_1_lift, $_2_lift)(Prelude__Nat__lteTransitive(null, null, null, $_3_lift, null));
 }
 
-// {Induction.Nat.fixBox:go:0_lam_4515}
+// {Induction.Nat.fixBox:go:0_lam_6101}
 
-function $_4515_Induction__Nat__fixBox_58_go_58_0_95_lam($_0_lift, $_1_lift, $_2_lift, $_3_lift){
-    return $_0_lift($_1_lift)($partial_2_4$$_4514_Induction__Nat__fixBox_58_go_58_0_95_lam($_0_lift, $_2_lift));
+function $_6101_Induction__Nat__fixBox_58_go_58_0_95_lam($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    return $_0_lift($_1_lift)($partial_2_4$$_6100_Induction__Nat__fixBox_58_go_58_0_95_lam($_0_lift, $_2_lift));
 }
 
-// {Backend.Utils.flattenMus:flattenMu:0_lam_4516}
+// {Backend.Utils.flattenMus:flattenMu:0_lam_6102}
 
-function $_4516_Backend__Utils__flattenMus_58_flattenMu_58_0_95_lam($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+function $_6102_Backend__Utils__flattenMus_58_flattenMu_58_0_95_lam($_0_lift, $_1_lift, $_2_lift, $_3_lift){
     
     return new $HC_2_0$Builtins__MkPair($_3_lift.$1, Backend__Utils__flattenMus_58_flattenMu_58_0($_0_lift.add((new $JSRTS.jsbn.BigInteger(("1")))), null, new $HC_2_1$Data__Vect___58__58_(Backend__Utils__nameMu(null, null, $_1_lift), $_2_lift), $_3_lift.$2));
 }
 
-// {Text.PrettyPrint.WL.Core.render:best:0_lam_4517}
+// {Main.generateType:genType:0_lam_6103}
 
-function $_4517_Text__PrettyPrint__WL__Core__render_58_best_58_0_95_lam($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_6_lift){
+function $_6103_Main__generateType_58_genType_58_0_95_lam($_0_lift){
+    let $cg$1 = null;
+    $cg$1 = $_0_lift.$1;
+    return new $HC_1_5$Language__JSON__Data__JObject(new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair("$ref", new $HC_1_3$Language__JSON__Data__JString(("#/definitions/" + $cg$1))), $HC_0_0$Prelude__List__Nil));
+}
+
+// {Main.generateType:genType:0_lam_6104}
+
+function $_6104_Main__generateType_58_genType_58_0_95_lam($_0_lift){
+    return Control__Monad__State__evalState(null, null, Backend__JSON__makeDefs_39_($_0_lift), $HC_0_0$Prelude__List__Nil);
+}
+
+// {Main.generateType:genType:0_lam_6105}
+
+function $_6105_Main__generateType_58_genType_58_0_95_lam($_0_lift){
+    return $HC_0_0$Prelude__List__Nil;
+}
+
+// {Main.generateType:genType:0_lam_6106}
+
+function $_6106_Main__generateType_58_genType_58_0_95_lam($_0_lift, $_1_lift){
+    return Backend__Backend__JSON___64_Backend__CodegenInterdep_36_JSONDef_58_JSON_58__33_sourceCode_58_0($_0_lift, $_1_lift);
+}
+
+// {Main.generateType:genType:0_lam_6107}
+
+function $_6107_Main__generateType_58_genType_58_0_95_lam($_0_lift, $_1_lift){
+    return Backend__ReasonML__makeType_39_($_0_lift, Backend__Utils__freshEnv($_0_lift, "\'x"), $_1_lift);
+}
+
+// {Main.generateType:genType:0_lam_6108}
+
+function $_6108_Main__generateType_58_genType_58_0_95_lam($_0_lift, $_1_lift){
+    return Prelude__List__reverseOnto(null, $HC_0_0$Prelude__List__Nil, Control__Monad__State__evalState(null, null, Backend__ReasonML__makeDefs_39_($_0_lift, $_1_lift), $HC_0_0$Prelude__List__Nil));
+}
+
+// {Text.PrettyPrint.WL.Core.render:best:0_lam_6110}
+
+function $_6110_Text__PrettyPrint__WL__Core__render_58_best_58_0_95_lam($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_6_lift){
     return Text__PrettyPrint__WL__Core__render_58_best_58_0($_0_lift, $_1_lift, null, $_2_lift, $_6_lift, $_3_lift, $_4_lift, $_5_lift);
 }
 
-// {Text.PrettyPrint.WL.Core.render:best:0_lam_4518}
+// {Text.PrettyPrint.WL.Core.render:best:0_lam_6111}
 
-function $_4518_Text__PrettyPrint__WL__Core__render_58_best_58_0_95_lam($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_6_lift){
+function $_6111_Text__PrettyPrint__WL__Core__render_58_best_58_0_95_lam($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_6_lift){
     return Text__PrettyPrint__WL__Core__render_58_best_58_0($_0_lift, $_1_lift, null, $_2_lift, $_3_lift, $_4_lift, $JSRTS.force($_5_lift), $_6_lift);
 }
 
-// {Parse.tdef:nary:0_lam_4522}
+// {Backend.Haskell.simplify:simpDo:0_lam_6112}
 
-function $_4522_Parse__tdef_58_nary_58_0_95_lam($_0_lift, $_1_lift){
+function $_6112_Backend__Haskell__simplify_58_simpDo_58_0_95_lam($_0_lift, $_1_lift, $_2_lift){
     
-    const $cg$3 = $_1_lift.$2;
-    return Typedefs__weakenTDef(null, $cg$3.$2, $_0_lift, $cg$3.$1);
+    return new $HC_2_0$Builtins__MkPair($_2_lift.$1, Backend__Haskell__substHS($_0_lift, $_1_lift, $_2_lift.$2));
 }
 
-// {Parse.tdef:nary:0_lam_4523}
+// {Backend.Haskell.decode:f:2_lam_6161}
 
-function $_4523_Parse__tdef_58_nary_58_0_95_lam($_0_lift, $_1_lift){
+function $_6161_Backend__Haskell__decode_58_f_58_2_95_lam($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift){
     
-    const $cg$3 = $_1_lift.$2;
-    let $cg$2 = null;
-    $cg$2 = new $HC_2_1$Data__Vect___58__58_($cg$3.$1, Data__Vect__fromList(null, $cg$3.$2));
-    const $cg$5 = Parse__toVMax(null, null, new $HC_2_1$Data__Vect___58__58_($_1_lift.$1, $cg$2));
-    const $cg$7 = $_1_lift.$2;
-    let $cg$6 = null;
-    $cg$6 = $cg$7.$2;
-    return new $HC_2_0$Builtins__MkDPair($cg$5.$1, $_0_lift(Prelude__List__length(null, $cg$6))($cg$5.$1)(Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_1_2$$_4522_Parse__tdef_58_nary_58_0_95_lam($cg$5.$1), Parse__fromVMax_58_go_58_0(null, $cg$5.$1, null, null, null, null, Prelude__Nat__lteRefl($cg$5.$1), $cg$5.$2))));
+    return new $HC_2_0$Builtins__MkPair(new $HC_2_0$Builtins__MkPair(new $HC_1_10$Backend__Haskell__HsInt(Data__Fin__finToInteger(null, $_0_lift)), new $HC_1_8$Backend__Haskell__HsDo(new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair(new $HC_1_1$Prelude__Maybe__Just($_3_lift.$1), $_1_lift), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair($HC_0_0$Prelude__Maybe__Nothing, new $HC_2_6$Backend__Haskell__HsApp(new $HC_1_7$Backend__Haskell__HsFun("return"), new $HC_2_1$Prelude__List___58__58_(Backend__Haskell__decode_58_injection_58_2((new $JSRTS.jsbn.BigInteger(("2"))).add($_2_lift), null, null, null, $_0_lift, $_3_lift.$1), $HC_0_0$Prelude__List__Nil))), $HC_0_0$Prelude__List__Nil)))), $_4_lift);
 }
 
-// {Parse.tdef:nary:0_lam_5269}
+// {Backend.Haskell.decode:f:2_lam_6162}
 
-function $_5269_Parse__tdef_58_nary_58_0_95_lam($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_6_lift, $_7_lift){
-    return TParsec__Combinators__nelist(null, null, null, new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $_0_lift)(Parse__ignorespaces(null, null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), $_0_lift, $_1_lift($_0_lift)($_2_lift)))($_6_lift)(Prelude__Nat__lteTransitive(null, null, null, $_7_lift, null));
+function $_6162_Backend__Haskell__decode_58_f_58_2_95_lam($_0_lift, $_1_lift, $_2_lift){
+    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__freshVars(null, (new $JSRTS.jsbn.BigInteger(("1"))), "y"), $partial_3_5$$_6161_Backend__Haskell__decode_58_f_58_2_95_lam($_0_lift, $_2_lift, $_1_lift));
 }
 
-// {Parse.tdef:nary:0_lam_5270}
+// {Backend.Haskell.encode:injectionInv:2_lam_6175}
 
-function $_5270_Parse__tdef_58_nary_58_0_95_lam($_0_lift, $_1_lift, $_2_lift){
-    return $partial_8_11$TParsec__Combinators__andbind(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), null, Parse__ignorespaces(null, null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), $_1_lift, $_0_lift($_1_lift)($_2_lift)), $partial_3_8$$_5269_Parse__tdef_58_nary_58_0_95_lam($_1_lift, $_0_lift, $_2_lift));
+function $_6175_Backend__Haskell__encode_58_injectionInv_58_2_95_lam($_0_lift){
+    
+    const $cg$3 = $_0_lift.$2;
+    return new $HC_2_0$Builtins__MkPair(new $HC_2_4$Backend__Haskell__HsInn("Right", new $HC_2_1$Prelude__List___58__58_($_0_lift.$1, $HC_0_0$Prelude__List__Nil)), new $HC_2_0$Builtins__MkPair(($cg$3.$1 + 1), $cg$3.$2));
 }
 
-// {Parse.tdef:nary:0_lam_5271}
+// {Backend.Haskell.encode:injectionInv:2_lam_6176}
 
-function $_5271_Parse__tdef_58_nary_58_0_95_lam($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift, $_6_lift){
-    return TParsec__Combinators__rand(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), null, null, Parse__ignorespaces(null, null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), $_0_lift, TParsec__Combinators__Chars__char(null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), $_1_lift)($_0_lift)), $partial_1_3$$_5270_Parse__tdef_58_nary_58_0_95_lam($_2_lift))($_5_lift)(Prelude__Nat__lteTransitive(null, null, null, $_6_lift, null));
+function $_6176_Backend__Haskell__encode_58_injectionInv_58_2_95_lam($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    return new $HC_2_0$Builtins__MkPair(new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair(new $HC_2_4$Backend__Haskell__HsInn("Left", new $HC_2_1$Prelude__List___58__58_($_0_lift, $HC_0_0$Prelude__List__Nil)), new $HC_2_0$Builtins__MkPair(0, $_1_lift)), Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $partial_0_1$$_6175_Backend__Haskell__encode_58_injectionInv_58_2_95_lam(), $_2_lift)), $_3_lift);
+}
+
+// {Backend.Haskell.encode:injectionInv:2_lam_6177}
+
+function $_6177_Backend__Haskell__encode_58_injectionInv_58_2_95_lam($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift){
+    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__encode_58_injectionInv_58_2($_0_lift, null, null, null, null, null, new $HC_2_1$Data__Vect___58__58_($_1_lift, new $HC_2_1$Data__Vect___58__58_($_2_lift, $_3_lift))), $partial_2_4$$_6176_Backend__Haskell__encode_58_injectionInv_58_2_95_lam($_4_lift, $_5_lift));
+}
+
+// {Backend.Haskell.encode:injectionInv:2_lam_6178}
+
+function $_6178_Backend__Haskell__encode_58_injectionInv_58_2_95_lam($_0_lift, $_1_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift){
+    
+    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__encode($_0_lift, $_1_lift, $_5_lift.$1), $partial_5_6$$_6177_Backend__Haskell__encode_58_injectionInv_58_2_95_lam($_0_lift, $_2_lift, $_3_lift, $_4_lift, $_5_lift.$1));
+}
+
+// {Backend.Haskell.encode:injectionInv:2_lam_6191}
+
+function $_6191_Backend__Haskell__encode_58_injectionInv_58_2_95_lam($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    return new $HC_2_0$Builtins__MkPair(new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair(new $HC_2_4$Backend__Haskell__HsInn("Left", new $HC_2_1$Prelude__List___58__58_($_0_lift, $HC_0_0$Prelude__List__Nil)), new $HC_2_0$Builtins__MkPair(0, $_1_lift)), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair(new $HC_2_4$Backend__Haskell__HsInn("Right", new $HC_2_1$Prelude__List___58__58_($_0_lift, $HC_0_0$Prelude__List__Nil)), new $HC_2_0$Builtins__MkPair(1, $_2_lift)), $HC_0_0$Prelude__List__Nil)), $_3_lift);
+}
+
+// {Backend.Haskell.encode:injectionInv:2_lam_6192}
+
+function $_6192_Backend__Haskell__encode_58_injectionInv_58_2_95_lam($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__encode($_0_lift, $_1_lift, $_2_lift), $partial_2_4$$_6191_Backend__Haskell__encode_58_injectionInv_58_2_95_lam($_2_lift, $_3_lift));
+}
+
+// {Backend.Haskell.encode:injectionInv:2_lam_6193}
+
+function $_6193_Backend__Haskell__encode_58_injectionInv_58_2_95_lam($_0_lift, $_1_lift, $_2_lift, $_3_lift){
+    
+    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__encode($_0_lift, $_1_lift, $_3_lift.$1), $partial_3_4$$_6192_Backend__Haskell__encode_58_injectionInv_58_2_95_lam($_0_lift, $_2_lift, $_3_lift.$1));
 }
 
 // Prelude.Bits.b8ToHexString, getDigit
@@ -8415,6 +12580,102 @@ function Prelude__Bits__b8ToHexString_58_getDigit_58_0($_0_arg, $_1_arg){
     }
 }
 
+// Backend.Haskell.decodeDef, genCase
+
+function Backend__Haskell__decodeDef_58_genCase_58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg){
+    
+    if(($_7_arg.type === 5)) {
+        const $cg$3 = $_7_arg.$2;
+        if(($cg$3.type === 1)) {
+            const $cg$5 = $cg$3.$1;
+            
+            if(($cg$3.$2.type === 0)) {
+                
+                if($_7_arg.$1.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
+                    return Backend__Haskell__runTermGen(null, null, new $HC_2_1$Data__Vect___58__58_(new $HC_2_0$Builtins__MkPair($_4_arg, $_5_arg), $_6_arg), $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Utils__mapWithIndexA(null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), null, $partial_5_7$Backend__Haskell__decodeDef_58_genCases_58_0(null, null, null, null, $_3_arg.add((new $JSRTS.jsbn.BigInteger(("1"))))), $_7_arg.$2), $partial_0_1$$_5900_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam()));
+                } else {
+                    const $_82_in = $_7_arg.$1.subtract((new $JSRTS.jsbn.BigInteger(("1"))));
+                    
+                    if($_82_in.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
+                        const $cg$10 = Backend__Haskell__runTermGen(null, null, new $HC_2_1$Data__Vect___58__58_(new $HC_2_0$Builtins__MkPair($_4_arg, $_5_arg), $_6_arg), Backend__Haskell__decodeDef_58_genCases_58_0(null, null, null, null, $_3_arg.add((new $JSRTS.jsbn.BigInteger(("1")))), $HC_0_0$Data__Fin__FZ, new $HC_2_0$Builtins__MkPair($cg$5.$1, $cg$5.$2)));
+                        let $cg$9 = null;
+                        $cg$9 = $cg$10.$2;
+                        return Backend__Haskell__simplify($cg$9);
+                    } else {
+                        return Backend__Haskell__runTermGen(null, null, new $HC_2_1$Data__Vect___58__58_(new $HC_2_0$Builtins__MkPair($_4_arg, $_5_arg), $_6_arg), $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Utils__mapWithIndexA(null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), null, $partial_5_7$Backend__Haskell__decodeDef_58_genCases_58_0(null, null, null, null, $_3_arg.add((new $JSRTS.jsbn.BigInteger(("1"))))), $_7_arg.$2), $partial_0_1$$_5920_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam()));
+                    }
+                }
+            } else {
+                return Backend__Haskell__runTermGen(null, null, new $HC_2_1$Data__Vect___58__58_(new $HC_2_0$Builtins__MkPair($_4_arg, $_5_arg), $_6_arg), $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Utils__mapWithIndexA(null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), null, $partial_5_7$Backend__Haskell__decodeDef_58_genCases_58_0(null, null, null, null, $_3_arg.add((new $JSRTS.jsbn.BigInteger(("1"))))), $_7_arg.$2), $partial_0_1$$_5940_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam()));
+            }
+        } else {
+            return Backend__Haskell__runTermGen(null, null, new $HC_2_1$Data__Vect___58__58_(new $HC_2_0$Builtins__MkPair($_4_arg, $_5_arg), $_6_arg), $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Utils__mapWithIndexA(null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), null, $partial_5_7$Backend__Haskell__decodeDef_58_genCases_58_0(null, null, null, null, $_3_arg.add((new $JSRTS.jsbn.BigInteger(("1"))))), $_7_arg.$2), $partial_0_1$$_5960_Backend__Haskell__decodeDef_58_genCase_58_0_95_lam()));
+        }
+    } else {
+        return Backend__Haskell__simplify(Backend__Haskell__runTermGen(null, null, $_6_arg, Backend__Haskell__decode($_3_arg, $_7_arg)));
+    }
+}
+
+// Backend.Haskell.decodeDef, genCases
+
+function Backend__Haskell__decodeDef_58_genCases_58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg){
+    
+    
+    if(($_6_arg.$2.type === 1)) {
+        return $partial_2_3$$_5961_Backend__Haskell__decodeDef_58_genCases_58_0_95_lam($_5_arg, $_6_arg.$1);
+    } else {
+        return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__decodeDef_58_genConstructor_58_0(null, null, null, $_4_arg, null, $_6_arg.$2), $partial_2_4$$_5968_Backend__Haskell__decodeDef_58_genCases_58_0_95_lam($_5_arg, $_6_arg.$1));
+    }
+}
+
+// Backend.Haskell.decodeDef, genConstructor
+
+function Backend__Haskell__decodeDef_58_genConstructor_58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg){
+    
+    if(($_5_arg.type === 3)) {
+        return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__freshVars(null, (new $JSRTS.jsbn.BigInteger(("2"))).add($_5_arg.$1), "x"), $partial_2_3$$_5994_Backend__Haskell__decodeDef_58_genConstructor_58_0_95_lam($_3_arg, $_5_arg.$2));
+    } else {
+        return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__freshVars(null, (new $JSRTS.jsbn.BigInteger(("1"))), "x"), $partial_2_3$$_6004_Backend__Haskell__decodeDef_58_genConstructor_58_0_95_lam($_3_arg, $_5_arg));
+    }
+}
+
+// Backend.Haskell.dependencies, go
+
+function Backend__Haskell__dependencies_58_go_58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg){
+    
+    if(($_5_arg.type === 0)) {
+        return $HC_0_0$Prelude__List__Nil;
+    } else if(($_5_arg.type === 1)) {
+        return $HC_0_0$Prelude__List__Nil;
+    } else if(($_5_arg.type === 6)) {
+        const $cg$3 = $_5_arg.$2;
+        const $_11_in = new $HC_2_0$Typedefs__TName($cg$3.$1, $cg$3.$2);
+        const $cg$5 = $cg$3.$2;
+        let $cg$4 = null;
+        if(($cg$5.type === 5)) {
+            $cg$4 = Backend__Haskell__dependencies_58_goMu_58_0($_5_arg.$1, null, null, null, null, null, $cg$5.$2);
+        } else {
+            $cg$4 = Backend__Haskell__dependencies_58_go_58_0($_5_arg.$1, null, null, null, null, $cg$3.$2);
+        }
+        
+        return Prelude__List___43__43_(null, $cg$4, Prelude__List___43__43_(null, new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkDPair($_5_arg.$1, $_11_in), $HC_0_0$Prelude__List__Nil), Prelude__List___43__43_(null, Data__Vect__foldrImpl(null, null, null, $partial_1_3$$_6005_Backend__Haskell__dependencies_58_go_58_0_95_lam($_0_arg), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $_5_arg.$3), Data__Vect__foldrImpl(null, null, null, $partial_1_3$$_6007_Backend__Haskell__dependencies_58_go_58_0_95_lam($_0_arg), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $_5_arg.$3))));
+    } else if(($_5_arg.type === 5)) {
+        return new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkDPair($_0_arg, new $HC_2_0$Typedefs__TName(Backend__Utils__nameMu(null, null, $_5_arg.$2), new $HC_2_5$Typedefs__TMu($_5_arg.$1, $_5_arg.$2))), Backend__Haskell__dependencies_58_goMu_58_0($_0_arg, null, null, null, null, null, $_5_arg.$2));
+    } else if(($_5_arg.type === 3)) {
+        return Data__Vect__foldrImpl(null, null, null, $partial_1_3$$_6005_Backend__Haskell__dependencies_58_go_58_0_95_lam($_0_arg), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $_5_arg.$2);
+    } else if(($_5_arg.type === 2)) {
+        return Data__Vect__foldrImpl(null, null, null, $partial_1_3$$_6005_Backend__Haskell__dependencies_58_go_58_0_95_lam($_0_arg), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $_5_arg.$2);
+    } else {
+        return $HC_0_0$Prelude__List__Nil;
+    }
+}
+
+// Backend.Haskell.dependencies, goMu
+
+function Backend__Haskell__dependencies_58_goMu_58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg){
+    return Data__Vect__foldrImpl(null, null, null, $partial_1_3$$_6013_Backend__Haskell__dependencies_58_goMu_58_0_95_lam($_0_arg), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), $_6_arg);
+}
+
 // Backend.JSON.disjointSubSchema, makeCase
 
 function Backend__JSON__disjointSubSchema_58_makeCase_58_0($_0_arg, $_1_arg, $_2_arg){
@@ -8422,15 +12683,72 @@ function Backend__JSON__disjointSubSchema_58_makeCase_58_0($_0_arg, $_1_arg, $_2
     return new $HC_1_5$Language__JSON__Data__JObject(new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair("type", new $HC_1_3$Language__JSON__Data__JString("object")), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair("required", new $HC_1_4$Language__JSON__Data__JArray(new $HC_2_1$Prelude__List___58__58_(new $HC_1_3$Language__JSON__Data__JString($_2_arg.$1), $HC_0_0$Prelude__List__Nil))), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair("additionalProperties", new $HC_1_1$Language__JSON__Data__JBoolean(false)), new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair("properties", new $HC_1_5$Language__JSON__Data__JObject(new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair($_2_arg.$1, Backend__JSON__makeSubSchema($_2_arg.$2)), $HC_0_0$Prelude__List__Nil))), $HC_0_0$Prelude__List__Nil)))));
 }
 
+// Backend.Haskell.encodeDef, genClause
+
+function Backend__Haskell__encodeDef_58_genClause_58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg){
+    
+    
+    if(($_7_arg.$2.type === 1)) {
+        return $partial_3_4$$_6015_Backend__Haskell__encodeDef_58_genClause_58_0_95_lam($_5_arg, $_7_arg.$1, $_6_arg);
+    } else {
+        return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__encodeDef_58_genConstructor_58_0(null, null, null, $_4_arg, $_7_arg.$1, $_7_arg.$2), $partial_2_4$$_6020_Backend__Haskell__encodeDef_58_genClause_58_0_95_lam($_5_arg, $_6_arg));
+    }
+}
+
+// Backend.Haskell.encodeDef, genClauses
+
+function Backend__Haskell__encodeDef_58_genClauses_58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg, $_8_arg){
+    
+    if(($_8_arg.type === 5)) {
+        const $cg$3 = $_8_arg.$2;
+        if(($cg$3.type === 1)) {
+            const $cg$5 = $cg$3.$1;
+            
+            if(($cg$3.$2.type === 0)) {
+                
+                if($_8_arg.$1.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
+                    return Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), Backend__Haskell__runTermGen(null, null, new $HC_2_1$Data__Vect___58__58_(new $HC_2_0$Builtins__MkPair($_4_arg, $_5_arg), $_6_arg), Backend__Utils__mapWithIndexA(null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), null, $partial_6_8$Backend__Haskell__encodeDef_58_genClause_58_0(null, null, null, null, $_3_arg.add((new $JSRTS.jsbn.BigInteger(("1")))), $_7_arg), $_8_arg.$2)));
+                } else {
+                    const $_47_in = $_8_arg.$1.subtract((new $JSRTS.jsbn.BigInteger(("1"))));
+                    
+                    if($_47_in.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
+                        return Backend__Haskell__runTermGen(null, null, new $HC_2_1$Data__Vect___58__58_(new $HC_2_0$Builtins__MkPair($_4_arg, $_5_arg), $_6_arg), $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__encodeDef_58_genConstructor_58_0(null, null, null, $_3_arg.add((new $JSRTS.jsbn.BigInteger(("1")))), $cg$5.$1, $cg$5.$2), $partial_1_3$$_6035_Backend__Haskell__encodeDef_58_genClauses_58_0_95_lam($_7_arg)));
+                    } else {
+                        return Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), Backend__Haskell__runTermGen(null, null, new $HC_2_1$Data__Vect___58__58_(new $HC_2_0$Builtins__MkPair($_4_arg, $_5_arg), $_6_arg), Backend__Utils__mapWithIndexA(null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), null, $partial_6_8$Backend__Haskell__encodeDef_58_genClause_58_0(null, null, null, null, $_3_arg.add((new $JSRTS.jsbn.BigInteger(("1")))), $_7_arg), $_8_arg.$2)));
+                    }
+                }
+            } else {
+                return Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), Backend__Haskell__runTermGen(null, null, new $HC_2_1$Data__Vect___58__58_(new $HC_2_0$Builtins__MkPair($_4_arg, $_5_arg), $_6_arg), Backend__Utils__mapWithIndexA(null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), null, $partial_6_8$Backend__Haskell__encodeDef_58_genClause_58_0(null, null, null, null, $_3_arg.add((new $JSRTS.jsbn.BigInteger(("1")))), $_7_arg), $_8_arg.$2)));
+            }
+        } else {
+            return Data__Vect__foldrImpl(null, null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, $partial_0_1$TParsec__Combinators___123_anyTokenBut_95_15_125_(), Backend__Haskell__runTermGen(null, null, new $HC_2_1$Data__Vect___58__58_(new $HC_2_0$Builtins__MkPair($_4_arg, $_5_arg), $_6_arg), Backend__Utils__mapWithIndexA(null, null, null, new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Backend__Haskell___123_decode_95_48_125_(), $partial_0_3$Backend__Haskell___123_decode_95_49_125_(), $partial_0_4$Backend__Haskell___123_decode_95_54_125_()), null, $partial_6_8$Backend__Haskell__encodeDef_58_genClause_58_0(null, null, null, null, $_3_arg.add((new $JSRTS.jsbn.BigInteger(("1")))), $_7_arg), $_8_arg.$2)));
+        }
+    } else {
+        const $_162_in = new $HC_1_2$Backend__Haskell__HsTermVar("x");
+        return new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair(Prelude__List___43__43_(null, $_7_arg, new $HC_2_1$Prelude__List___58__58_($_162_in, $HC_0_0$Prelude__List__Nil)), Backend__Haskell__simplify(Backend__Haskell__runTermGen(null, null, $_6_arg, Backend__Haskell__encode($_3_arg, $_8_arg, $_162_in)))), $HC_0_0$Prelude__List__Nil);
+    }
+}
+
+// Backend.Haskell.encodeDef, genConstructor
+
+function Backend__Haskell__encodeDef_58_genConstructor_58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg){
+    
+    if(($_5_arg.type === 3)) {
+        return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__freshVars(null, (new $JSRTS.jsbn.BigInteger(("2"))).add($_5_arg.$1), "x"), $partial_3_4$$_6088_Backend__Haskell__encodeDef_58_genConstructor_58_0_95_lam($_3_arg, $_5_arg.$2, $_4_arg));
+    } else {
+        return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__freshVars(null, (new $JSRTS.jsbn.BigInteger(("1"))), "x"), $partial_3_4$$_6098_Backend__Haskell__encodeDef_58_genConstructor_58_0_95_lam($_3_arg, $_5_arg, $_4_arg));
+    }
+}
+
 // Induction.Nat.fixBox, go
 
 function Induction__Nat__fixBox_58_go_58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_in){
     
     if($_3_arg.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
-        return $partial_0_1$$_4513_Induction__Nat__fixBox_58_go_58_0_95_lam();
+        return $partial_0_1$$_6099_Induction__Nat__fixBox_58_go_58_0_95_lam();
     } else {
         const $_6_in = $_3_arg.subtract((new $JSRTS.jsbn.BigInteger(("1"))));
-        return $partial_3_4$$_4515_Induction__Nat__fixBox_58_go_58_0_95_lam($_1_arg, $_4_in, $_6_in);
+        return $partial_3_4$$_6101_Induction__Nat__fixBox_58_go_58_0_95_lam($_1_arg, $_4_in, $_6_in);
     }
 }
 
@@ -8445,7 +12763,7 @@ function Backend__Utils__flattenMus_58_flattenMu_58_0($_0_arg, $_1_arg, $_2_arg,
     } else if(($_3_arg.type === 6)) {
         return new $HC_3_6$Typedefs__TApp($_3_arg.$1, $_3_arg.$2, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_3_4$Backend__Utils__flattenMus_58_flattenMu_58_0($_0_arg, null, $_2_arg), $_3_arg.$3));
     } else if(($_3_arg.type === 5)) {
-        return new $HC_2_5$Typedefs__TMu($_3_arg.$1, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_3_4$$_4516_Backend__Utils__flattenMus_58_flattenMu_58_0_95_lam($_0_arg, $_3_arg.$2, $_2_arg), $_3_arg.$2));
+        return new $HC_2_5$Typedefs__TMu($_3_arg.$1, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_3_4$$_6102_Backend__Utils__flattenMus_58_flattenMu_58_0_95_lam($_0_arg, $_3_arg.$2, $_2_arg), $_3_arg.$2));
     } else if(($_3_arg.type === 3)) {
         return new $HC_2_3$Typedefs__TProd($_3_arg.$1, Prelude__Functor__Data__Vect___64_Prelude__Functor__Functor_36_Vect_32_n_58__33_map_58_0(null, null, null, $partial_3_4$Backend__Utils__flattenMus_58_flattenMu_58_0($_0_arg, null, $_2_arg), $_3_arg.$2));
     } else if(($_3_arg.type === 2)) {
@@ -8506,6 +12824,27 @@ function Parse__fromVMax_58_go_58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg,
     }
 }
 
+// Main.generateType, genType
+
+function Main__generateType_58_genType_58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg){
+    
+    if(($_2_arg === "json")) {
+        
+        const $cg$4 = $_3_arg.$1;
+        if($cg$4.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
+            return new $HC_1_1$Prelude__Either__Right(Text__PrettyPrint__WL__Core__toString(0.4, 120, Backend__generate(null, null, null, new $HC_3_0$Backend__ASTGen_95_ictor($partial_0_1$$_6103_Main__generateType_58_genType_58_0_95_lam(), $partial_0_1$$_6104_Main__generateType_58_genType_58_0_95_lam(), $partial_0_1$$_6105_Main__generateType_58_genType_58_0_95_lam()), $partial_0_2$$_6106_Main__generateType_58_genType_58_0_95_lam(), $_3_arg.$2)));
+        } else {
+            const $_13_in = $_3_arg.$1.subtract((new $JSRTS.jsbn.BigInteger(("1"))));
+            return new $HC_1_0$Prelude__Either__Left("<error : cannot generate JSON schema for open typedefs>");
+        }
+    } else if(($_2_arg === "reasonml")) {
+        
+        return new $HC_1_1$Prelude__Either__Right(Text__PrettyPrint__WL__Core__toString(0.4, 120, Backend__generateDefs(null, null, null, new $HC_3_0$Backend__ASTGen_95_ictor($partial_1_2$$_6107_Main__generateType_58_genType_58_0_95_lam($_3_arg.$1), $partial_1_2$$_6108_Main__generateType_58_genType_58_0_95_lam($_3_arg.$1), $partial_0_1$$_6105_Main__generateType_58_genType_58_0_95_lam()), new $HC_2_0$Backend__CodegenIndep_95_ictor($partial_0_1$Backend__ReasonML__renderDef(), $HC_0_0$Text__PrettyPrint__WL__Core__Empty), $_3_arg.$2)));
+    } else {
+        return new $HC_1_0$Prelude__Either__Left("<error : unsupported backend>");
+    }
+}
+
 // Text.PrettyPrint.WL.Combinators.literal, mkLiteral
 
 function Text__PrettyPrint__WL__Combinators__literal_58_mkLiteral_58_0($_0_arg, $_1_arg){
@@ -8557,7 +12896,7 @@ function Text__PrettyPrint__WL__Core__render_58_best_58_0($_0_arg, $_1_arg, $_2_
     for(;;) {
         
         if(($_6_arg.type === 4)) {
-            $tco$$_7_arg = $partial_6_7$$_4517_Text__PrettyPrint__WL__Core__render_58_best_58_0_95_lam($_0_arg, $_1_arg, $_3_arg, $_5_arg, $_6_arg.$2, $_7_arg);
+            $tco$$_7_arg = $partial_6_7$$_6110_Text__PrettyPrint__WL__Core__render_58_best_58_0_95_lam($_0_arg, $_1_arg, $_3_arg, $_5_arg, $_6_arg.$2, $_7_arg);
             $_0_arg = $_0_arg;
             $_1_arg = $_1_arg;
             $_2_arg = null;
@@ -8606,7 +12945,7 @@ function Text__PrettyPrint__WL__Core__render_58_best_58_0($_0_arg, $_1_arg, $_2_
         } else {
             return Text__PrettyPrint__WL__Core__render_58_nicest_58_0($_0_arg, $_1_arg, null, $_3_arg, $_4_arg, Text__PrettyPrint__WL__Core__render_58_best_58_0($_0_arg, $_1_arg, null, $_3_arg, $_4_arg, $_5_arg, $_6_arg.$1, $_7_arg), new $JSRTS.Lazy((function(){
                 return (function(){
-                    return $_4518_Text__PrettyPrint__WL__Core__render_58_best_58_0_95_lam($_0_arg, $_1_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg.$2, $_7_arg);
+                    return $_6111_Text__PrettyPrint__WL__Core__render_58_best_58_0_95_lam($_0_arg, $_1_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg.$2, $_7_arg);
                 })();
             })));
         }
@@ -8688,10 +13027,55 @@ function Text__PrettyPrint__WL__Core__showPrettyDoc_58_showPrettyDocS_58_0($_0_a
     }
 }
 
-// Parse.tdef, nary
+// Backend.Haskell.simplify, simpDo
 
-function Parse__tdef_58_nary_58_0($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg){
-    return $partial_8_11$TParsec__Combinators__map(null, null, null, null, $partial_0_4$Parse___123_tdef_95_434_125_(), $partial_1_2$$_4523_Parse__tdef_58_nary_58_0_95_lam($_4_arg), null, TParsec__Combinators__Chars__parens(null, null, $partial_0_3$Parse___123_tdef_95_431_125_(), new $HC_3_0$Prelude__Applicative__Alternative_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_1$Parse___123_tdef_95_477_125_(), $partial_0_3$Parse___123_tdef_95_491_125_()), new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_4$Parse___123_tdef_95_434_125_(), $partial_0_2$Parse___123_tdef_95_448_125_(), $partial_0_4$Parse___123_tdef_95_462_125_()), $partial_0_4$Parse___123_tdef_95_536_125_()), $partial_0_1$Typedefs___123_apN_95_20_125_(), new $HC_2_0$Prelude__Interfaces__Eq_95_ictor($partial_0_2$Parse___123_tdef_95_538_125_(), $partial_0_2$Parse___123_tdef_95_539_125_()), $partial_0_2$Parse___123_tdef_95_540_125_(), $_1_arg, $partial_3_7$$_5271_Parse__tdef_58_nary_58_0_95_lam($_1_arg, $_3_arg, $_2_arg)));
+function Backend__Haskell__simplify_58_simpDo_58_0($_0_arg, $_1_arg){
+    for(;;) {
+        
+        if(($_1_arg.type === 1)) {
+            const $cg$3 = $_1_arg.$1;
+            const $_6_in = Backend__Haskell__simplify($cg$3.$2);
+            const $cg$5 = $cg$3.$1;
+            if(($cg$5.type === 1)) {
+                const $cg$7 = $cg$5.$1;
+                if(($cg$7.type === 2)) {
+                    
+                    if(($_6_in.type === 6)) {
+                        const $cg$10 = $_6_in.$1;
+                        if(($cg$10.type === 7)) {
+                            
+                            if(($cg$10.$1 === "return")) {
+                                const $cg$13 = $_6_in.$2;
+                                if(($cg$13.type === 1)) {
+                                    
+                                    if(($cg$13.$2.type === 0)) {
+                                        $_0_arg = null;
+                                        $_1_arg = Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $partial_2_3$$_6112_Backend__Haskell__simplify_58_simpDo_58_0_95_lam($cg$13.$1, $cg$7.$1), $_1_arg.$2);
+                                    } else {
+                                        return new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair($cg$3.$1, $_6_in), Backend__Haskell__simplify_58_simpDo_58_0(null, $_1_arg.$2));
+                                    }
+                                } else {
+                                    return new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair($cg$3.$1, $_6_in), Backend__Haskell__simplify_58_simpDo_58_0(null, $_1_arg.$2));
+                                }
+                            } else {
+                                return new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair($cg$3.$1, $_6_in), Backend__Haskell__simplify_58_simpDo_58_0(null, $_1_arg.$2));
+                            }
+                        } else {
+                            return new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair($cg$3.$1, $_6_in), Backend__Haskell__simplify_58_simpDo_58_0(null, $_1_arg.$2));
+                        }
+                    } else {
+                        return new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair($cg$3.$1, $_6_in), Backend__Haskell__simplify_58_simpDo_58_0(null, $_1_arg.$2));
+                    }
+                } else {
+                    return new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair($cg$3.$1, $_6_in), Backend__Haskell__simplify_58_simpDo_58_0(null, $_1_arg.$2));
+                }
+            } else {
+                return new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair($cg$3.$1, $_6_in), Backend__Haskell__simplify_58_simpDo_58_0(null, $_1_arg.$2));
+            }
+        } else {
+            return $_1_arg;
+        }
+    }
 }
 
 // Data.Inspect.Data.Inspect.SizedList a, a implementation of Data.Inspect.Inspect, method inspect, go
@@ -8832,6 +13216,78 @@ function Language__JSON__Data__format_58_formatValue_58_0_58_formatValues_58_1($
     return ((Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldr_58_0(null, null, $partial_0_2$prim_95__95_strCons(), "", Prelude__List__replicate(null, $_3_arg.add($_4_arg), " ")) + Language__JSON__Data__format_58_formatValue_58_0(null, null, null, $_3_arg.add($_4_arg), $_4_arg, $_7_arg.$1)) + $cg$2);
 }
 
+// Backend.Haskell.decode, f
+
+function Backend__Haskell__decode_58_f_58_2($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg){
+    return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__decode($_0_arg, $_5_arg), $partial_2_3$$_6162_Backend__Haskell__decode_58_f_58_2_95_lam($_4_arg, $_1_arg));
+}
+
+// Backend.Haskell.decode, injection
+
+function Backend__Haskell__decode_58_injection_58_2($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg){
+    
+    if(($_4_arg.type === 1)) {
+        
+        if(($_4_arg.$1.type === 0)) {
+            
+            if($_0_arg.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
+                return new $HC_2_4$Backend__Haskell__HsInn("Right", new $HC_2_1$Prelude__List___58__58_(Backend__Haskell__decode_58_injection_58_2($_0_arg.subtract((new $JSRTS.jsbn.BigInteger(("1")))), null, null, null, $_4_arg.$1, $_5_arg), $HC_0_0$Prelude__List__Nil));
+            } else {
+                const $_7_in = $_0_arg.subtract((new $JSRTS.jsbn.BigInteger(("1"))));
+                
+                if($_7_in.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
+                    return new $HC_2_4$Backend__Haskell__HsInn("Right", new $HC_2_1$Prelude__List___58__58_(Backend__Haskell__decode_58_injection_58_2($_0_arg.subtract((new $JSRTS.jsbn.BigInteger(("1")))), null, null, null, $_4_arg.$1, $_5_arg), $HC_0_0$Prelude__List__Nil));
+                } else {
+                    const $_8_in = $_7_in.subtract((new $JSRTS.jsbn.BigInteger(("1"))));
+                    
+                    if($_8_in.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
+                        return new $HC_2_4$Backend__Haskell__HsInn("Right", new $HC_2_1$Prelude__List___58__58_($_5_arg, $HC_0_0$Prelude__List__Nil));
+                    } else {
+                        return new $HC_2_4$Backend__Haskell__HsInn("Right", new $HC_2_1$Prelude__List___58__58_(Backend__Haskell__decode_58_injection_58_2($_0_arg.subtract((new $JSRTS.jsbn.BigInteger(("1")))), null, null, null, $_4_arg.$1, $_5_arg), $HC_0_0$Prelude__List__Nil));
+                    }
+                }
+            }
+        } else {
+            return new $HC_2_4$Backend__Haskell__HsInn("Right", new $HC_2_1$Prelude__List___58__58_(Backend__Haskell__decode_58_injection_58_2($_0_arg.subtract((new $JSRTS.jsbn.BigInteger(("1")))), null, null, null, $_4_arg.$1, $_5_arg), $HC_0_0$Prelude__List__Nil));
+        }
+    } else {
+        return new $HC_2_4$Backend__Haskell__HsInn("Left", new $HC_2_1$Prelude__List___58__58_($_5_arg, $HC_0_0$Prelude__List__Nil));
+    }
+}
+
+// Backend.Haskell.encode, injectionInv
+
+function Backend__Haskell__encode_58_injectionInv_58_2($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg){
+    
+    const $cg$3 = $_6_arg.$2;
+    const $cg$5 = $cg$3.$2;
+    if(($cg$5.type === 1)) {
+        return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__freshVars(null, (new $JSRTS.jsbn.BigInteger(("1"))), "z"), $partial_5_6$$_6178_Backend__Haskell__encode_58_injectionInv_58_2_95_lam($_0_arg, $_6_arg.$1, $cg$3.$1, $cg$5.$1, $cg$5.$2));
+    } else {
+        return $partial_7_8$Prelude__Monad__Control__Monad__State___64_Prelude__Monad__Monad_36_StateT_32_stateType_32_m_58__33__62__62__61__58_0(null, null, null, null, new $HC_2_0$Prelude__Monad__Monad_95_ictor(new $HC_3_0$Prelude__Applicative__Applicative_95_ictor($partial_0_3$Backend__Haskell___123_decode_95_39_125_(), $partial_0_2$TParsec__Combinators___123_anyTok_95_13_125_(), $partial_0_3$Backend__Haskell___123_decode_95_39_125_()), $partial_0_4$Backend__Haskell___123_decode_95_42_125_()), Backend__Haskell__freshVars(null, (new $JSRTS.jsbn.BigInteger(("1"))), "z"), $partial_3_4$$_6193_Backend__Haskell__encode_58_injectionInv_58_2_95_lam($_0_arg, $_6_arg.$1, $cg$3.$1));
+    }
+}
+
+// Backend.Haskell.renderDef, renderClause
+
+function Backend__Haskell__renderDef_58_renderClause_58_2($_0_arg, $_1_arg, $_2_arg, $_3_arg){
+    
+    
+    if(($_3_arg.$1.type === 0)) {
+        return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__text($_0_arg), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char("="), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), Backend__Haskell__renderTerm($_3_arg.$2)))));
+    } else {
+        const $cg$4 = Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldr_58_0(null, null, $partial_0_2$Backend__Haskell___123_decode_95_58_125_(), $HC_0_0$Prelude__List__Nil, Prelude__Functor__Prelude__List___64_Prelude__Functor__Functor_36_List_58__33_map_58_0(null, null, $partial_0_1$Backend__Haskell__guardParenTerm(), $_3_arg.$1));
+        let $cg$3 = null;
+        if(($cg$4.type === 1)) {
+            $cg$3 = Prelude__Foldable__Prelude__List___64_Prelude__Foldable__Foldable_36_List_58__33_foldl_58_0(null, null, $partial_0_2$Backend__Haskell___123_renderApp_95_601_125_(), $cg$4.$1, $cg$4.$2);
+        } else {
+            $cg$3 = $HC_0_0$Text__PrettyPrint__WL__Core__Empty;
+        }
+        
+        return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__text($_0_arg), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat($cg$3, new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char("="), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), Backend__Haskell__renderTerm($_3_arg.$2)))))));
+    }
+}
+
 // Backend.ReasonML.makeDefs, eitherDef
 
 function Backend__ReasonML__makeDefs_58_eitherDef_58_3($_0_arg, $_1_arg, $_2_arg){
@@ -8907,6 +13363,88 @@ function Language__JSON__Data__stringify_58_stringifyProps_58_5($_0_arg, $_1_arg
     }
 }
 
+// Backend.Haskell.substHS, captureAvoid
+
+function Backend__Haskell__substHS_58_captureAvoid_58_5($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg){
+    
+    
+    if(Prelude__List__elemBy(null, $partial_0_2$Backend__Haskell___123_freeVars_95_221_125_(), $_1_arg, Backend__Haskell__freeVars($_4_arg.$1))) {
+        return new $HC_2_0$Builtins__MkPair($_4_arg.$1, $_4_arg.$2);
+    } else {
+        return new $HC_2_0$Builtins__MkPair($_4_arg.$1, Backend__Haskell__substHS($_0_arg, $_1_arg, $_4_arg.$2));
+    }
+}
+
+// Backend.Haskell.renderType, renderArrow
+
+function Backend__Haskell__renderType_58_renderArrow_58_6($_0_arg, $_1_arg, $_2_arg, $_3_arg){
+    
+    if(($_3_arg.type === 6)) {
+        const $cg$4 = $_3_arg.$1;
+        let $cg$3 = null;
+        if(($cg$4.type === 5)) {
+            $cg$3 = Backend__Haskell__renderType($_3_arg.$1);
+        } else {
+            $cg$3 = Backend__Haskell__guardParen($_3_arg.$1);
+        }
+        
+        return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat($_2_arg, new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__text("->"), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), Backend__Haskell__renderType_58_renderArrow_58_6(null, null, $cg$3, $_3_arg.$2)))));
+    } else {
+        let $cg$2 = null;
+        if(($_3_arg.type === 5)) {
+            $cg$2 = Backend__Haskell__renderType($_3_arg);
+        } else {
+            $cg$2 = Backend__Haskell__guardParen($_3_arg);
+        }
+        
+        return new $HC_2_4$Text__PrettyPrint__WL__Core__Cat($_2_arg, new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__text("->"), new $HC_2_4$Text__PrettyPrint__WL__Core__Cat(Text__PrettyPrint__WL__Core__char(" "), $cg$2))));
+    }
+}
+
+// Backend.Haskell.dependencies, go, fixup
+
+function Backend__Haskell__dependencies_58_go_58_0_58_fixup_58_6($_0_arg, $_1_arg, $_2_arg, $_3_arg, $_4_arg, $_5_arg, $_6_arg, $_7_arg, $_8_arg, $_9_arg, $_10_arg){
+    
+    if(($_10_arg.type === 6)) {
+        return $HC_0_0$Prelude__List__Nil;
+    } else if(($_10_arg.type === 4)) {
+        
+        if($_9_arg.equals((new $JSRTS.jsbn.BigInteger(("0"))))) {
+            return new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkDPair($_9_arg, new $HC_2_0$Typedefs__TName("", $_10_arg)), $HC_0_0$Prelude__List__Nil);
+        } else {
+            const $_15_in = $_9_arg.subtract((new $JSRTS.jsbn.BigInteger(("1"))));
+            return $HC_0_0$Prelude__List__Nil;
+        }
+    } else {
+        return new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkDPair($_9_arg, new $HC_2_0$Typedefs__TName("", $_10_arg)), $HC_0_0$Prelude__List__Nil);
+    }
+}
+
+// Backend.Haskell.substHS, captureAvoid
+
+function Backend__Haskell__substHS_58_captureAvoid_58_8($_0_arg, $_1_arg, $_2_arg, $_3_arg){
+    
+    if(($_3_arg.type === 1)) {
+        const $cg$3 = $_3_arg.$1;
+        const $cg$5 = $cg$3.$1;
+        let $cg$4 = null;
+        if(($cg$5.type === 1)) {
+            $cg$4 = Backend__Haskell__freeVars($cg$5.$1);
+        } else {
+            $cg$4 = $HC_0_0$Prelude__List__Nil;
+        }
+        
+        
+        if(Prelude__List__elemBy(null, $partial_0_2$Backend__Haskell___123_freeVars_95_221_125_(), $_1_arg, $cg$4)) {
+            return new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair($cg$3.$1, $cg$3.$2), $_3_arg.$2);
+        } else {
+            return new $HC_2_1$Prelude__List___58__58_(new $HC_2_0$Builtins__MkPair($cg$3.$1, Backend__Haskell__substHS($_0_arg, $_1_arg, $cg$3.$2)), Backend__Haskell__substHS_58_captureAvoid_58_8($_0_arg, $_1_arg, null, $_3_arg.$2));
+        }
+    } else {
+        return $_3_arg;
+    }
+}
+
 // with block in Prelude.Strings.unpack
 
 function _95_Prelude__Strings__unpack_95_with_95_36($_0_arg, $_1_arg){
@@ -8935,8 +13473,8 @@ function _95_Prelude__Strings__unpack_95_with_95_36($_0_arg, $_1_arg){
 
 
 module.exports = {
-parseType: function(){ return Main__parseType.apply(this, Array.prototype.slice.call(arguments, 0,0))(arguments[0])},
-generateCode: Main__generateCode
+generateTermSerializers: Main__generateTermSerializers,
+generateType: Main__generateType
 };
 }.call(this))
 }).call(this,require('_process'),require("buffer").Buffer)
