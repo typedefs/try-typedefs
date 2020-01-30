@@ -107,7 +107,7 @@ function doCompile () {
   console.log('doCompile: text:\n', text)
   // $1 exploits the fact that Either values are always placed in $1 and in this case both
   // branches of the Either return strings
-  var g = Typedefs.generateTermSerializers(targetLang, text)
+  var g = Typedefs.generateTermSerialisers(targetLang, text)
   var generated = (g.type == 0 ? Typedefs.generateType(targetLang, text) : g ).$1
 
   console.log('generated =', generated)
